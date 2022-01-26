@@ -10,7 +10,7 @@ public class newrecipedto {
 		return num;
 	}
 	public newrecipedto(int num, String title, String writer, String filename, String content) {
-		super();
+		super(); 
 		this.num = num;
 		this.title = title;
 		this.writer = writer;

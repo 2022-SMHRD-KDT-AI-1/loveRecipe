@@ -13,7 +13,7 @@ public class newrecipedao {
 	int cnt = 0;
 	newrecipedto dto = null;
 
-	public void conn() {
+	public void conn() { 
 		try {
 			Class.forName("oracle.jdbc.driver.OracleDriver");
 			String url = "jdbc:oracle:thin:@localhost:1521:xe";
