@@ -140,17 +140,45 @@
 															멕시코 <input type="radio" name="object"  value="mexico">
 															퓨전<input type="radio" name="object"   value="fuzen"> 
 												</div>
+												<div class="row form-group">
+															<label>종류별레시피</label><br>
+					    						     		구이<input type="radio" name="type"   value="guie">
+															국<input type="radio" name="type"   value="guk">
+															그라탕/리조또<input type="radio" name="type"   value="grtang">
+															나물/생채/샐러드 <input type="radio" name="type"   value="namul">
+															떡/한과 <input type="radio" name="type"  value="ttuk">
+															도시락/간식 <input type="radio" name="type"   value="dosilack">
+															만두/면류 <input type="radio" name="type"  value="mundu">
+															밑반찬/김치<input type="radio" name="type"   value="kimchi"> 
+															
+															밥/죽/스프 <input type="radio" name="type"  value="bap">
+															볶음 <input type="radio" name="type"   value="bokum">
+															부침 <input type="radio" name="type"  value="buchim">
+															빵/과자<input type="radio" name="type"   value="bbang"> 
+															샌드위치/햄버거 <input type="radio" name="type"  value="sandwich">
+															
+															양념장 <input type="radio" name="type"   value="yangnum">
+															양식 <input type="radio" name="type"  value="yangsik">
+															음료<input type="radio" name="type"   value="umryo"> 
+															
+															조림 <input type="radio" name="type"   value="jorim">
+															찌개/전골/스튜 <input type="radio" name="type"  value="zzikae">
+															찜<input type="radio" name="type"   value="zzim"> 
+															피자 <input type="radio" name="type"  value="pizza">
+															후식<input type="radio" name="type"   value="husik"> 
+															튀김/커틀릿<input type="radio" name="type"   value="tikim"> 
+												</div>
 
 												<div class="row form-group">
 													
 														<label>제철구분유무</label>
-														<label>가져오는 레시피의 재료의 제철유무를 판단</label>
+														<label>(가져오는 레시피의 재료의 제철유무를 판단)</label>
 														<select class="form-control" name="seasonal">
 														<option value="o">o</option>
 														<option value="x">x</option>
 														</select>
 														<label>날씨구분유무</label><br>
-														<label>오늘날씨와 관련된 레시피 </label>
+														<label>(오늘날씨와 관련된 레시피) </label>
 														<select class="form-control" name="weather">
 														<option value="o">o</option>
 														<option value="x">x</option>
