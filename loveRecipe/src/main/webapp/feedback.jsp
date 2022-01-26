@@ -1,3 +1,5 @@
+<%@ page language="java" contentType="text/html; charset=EUC-KR"
+    pageEncoding="EUC-KR"%>
 <!DOCTYPE HTML>
 <!--
 	Aesthetic by gettemplates.co
@@ -8,7 +10,7 @@
 	<head>
 	<meta charset="utf-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
-	<title>ë ˆì‹œí”¼ë¥¼ ë¶€íƒí•´ &mdash; Free Website Template, Free HTML5 Template by GetTemplates.co</title>
+	<title>·¹½ÃÇÇ¸¦ ºÎÅ¹ÇØ &mdash; Free Website Template, Free HTML5 Template by GetTemplates.co</title>
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<meta name="description" content="Free HTML5 Website Template by GetTemplates.co" />
 	<meta name="keywords" content="free website templates, free html5, free template, free bootstrap, free website template, html5, css3, mobile first, responsive" />
@@ -73,20 +75,21 @@
 			
 			<div class="row">
 				<div class="col-sm-4 col-xs-12">
-					<div id="gtco-logo"><a href="index.html">ë ˆì‹œí”¼ë¥¼ ë¶€íƒí•´ <em>.</em></a></div>
+					<div id="gtco-logo"><a href="main.jsp">·¹½ÃÇÇ¸¦ ºÎÅ¹ÇØ! <em>.</em></a></div>
 				</div>
 				<div class="col-xs-8 text-right menu-1">
 					<ul>
-						<li><a href="menu.html">Menu</a></li>
+						<li><a href="menu.jsp">Menu</a></li>
 						<li class="has-dropdown">
-							<a href="services.html">Services</a>
+							<a href="services.jsp">Services</a>
 							<ul class="dropdown">
-								<li><a href="refi.html">ë‚˜ë§Œì˜ ëƒ‰ì¥ê³ </a></li>
-								<li><a href="mealplan.html">ì‹ë‹¨ì¶”ì²œ</a></li>
+								<li><a href="refigator.jsp">³ª¸¸ÀÇ ³ÃÀå°í</a></li>
+								<li><a href="mealplan.jsp">½Ä´ÜÂ¥±â</a></li>
+								<li><a href="newrecipe.jsp">·¹½ÃÇÇµî·Ï</a></li>
 							</ul>
 						</li>
-						<li><a href="contact.html">feedback</a></li>
-						<li class="btn-cta"><a href="index.html"><span>login</span></a></li>
+						<li><a href="feedback.jsp">feedback</a></li>
+						<li class="btn-cta"><a href="main.jsp"><span>login</span></a></li>
 					</ul>	
 				</div>
 			</div>
@@ -102,7 +105,7 @@
 
 					<div class="row row-mt-15em">
 						<div class="col-md-12 mt-text animate-box" data-animate-effect="fadeInUp">
-							<h1 class="cursive-font">Mess up. Start over</h1>	
+							<h1 class="cursive-font">Say hello!</h1>	
 						</div>
 						
 					</div>
@@ -118,40 +121,27 @@
 			<div class="row">
 				<div class="col-md-12">
 					<div class="col-md-6 animate-box">
-					<h3>ë ˆì‹œí”¼ ì—…ë¡œë“œ</h3>
+					<h3>feedback</h3>
 					<form action="#">
 						<div class="row form-group">
 							<div class="col-md-12">
-								<label>ì œëª©</label>
-								<input type="text" id="title" class="form-control" placeholder="ì œëª©">
+								<label class="sr-only" for="name">Name</label>
+								<input type="text" id="name" class="form-control" placeholder="Your firstname">
 							</div>
 							
 						</div>
-                        <div class="row form-group">
+						<div class="row form-group">
 							<div class="col-md-12">
-								<label>ì‘ì„±ì</label><br>
-								<input type="text" id="writer" class="writer" placeholder="ì‘ì„±ì">
+								<label class="sr-only" for="message">Message</label>
+								<textarea name="message" id="message" cols="30" rows="10" class="form-control" placeholder="»ç¿ëÇÏ½Ã¸é¼­ ºÒÆíÇŞ´øÁ¡À» º¸³»ÁÖ¼¼¿ä!"></textarea>
 							</div>
-							
 						</div>
-                        <div class="row form-group">
-							<div class="col-md-12">
-								<label>ë‚´ìš©</label>
-                                <input  type="file" name="filename" style="float: right;" class="form-control">
-                                <textarea  rows="10" name="content" style="resize: none;" class="form-control"></textarea>        
-							</div>
-							
-						</div>
-						
 						<div class="form-group">
-                            <input type="reset" value="ì´ˆê¸°í™”" class="btn btn-primary">
-                            <input type="submit" value="ì‘ì„±í•˜ê¸°" class="btn btn-primary">
+							<input type="submit" value="Send Message" class="btn btn-primary">
 						</div>
 
 					</form>		
 				</div>
-
-                
 				<div class="col-md-5 col-md-push-1 animate-box">
 					
 					<div class="gtco-contact-info">
@@ -198,7 +188,7 @@
 						</ul>
 					</div>
 				</div>
-     
+
 		
 
 			</div>

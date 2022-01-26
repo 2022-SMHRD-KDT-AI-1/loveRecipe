@@ -1,3 +1,5 @@
+<%@ page language="java" contentType="text/html; charset=EUC-KR"
+    pageEncoding="EUC-KR"%>
 <!DOCTYPE HTML>
 <!--
 	Aesthetic by gettemplates.co
@@ -8,7 +10,7 @@
 	<head>
 	<meta charset="utf-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
-	<title>ë ˆì‹œí”¼ë¥¼ ë¶€íƒí•´ &mdash; Free Website Template, Free HTML5 Template by GetTemplates.co</title>
+	<title>·¹½ÃÇÇ¸¦ ºÎÅ¹ÇØ &mdash; Free Website Template, Free HTML5 Template by GetTemplates.co</title>
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<meta name="description" content="Free HTML5 Website Template by GetTemplates.co" />
 	<meta name="keywords" content="free website templates, free html5, free template, free bootstrap, free website template, html5, css3, mobile first, responsive" />
@@ -78,21 +80,21 @@
 			
 			<div class="row">
 				<div class="col-sm-4 col-xs-12">
-					<div id="gtco-logo"><a href="index.html">ë ˆì‹œí”¼ë¥¼ ë¶€íƒí•´ <em>.</em></a></div>
+					<div id="gtco-logo"><a href="main.jsp">·¹½ÃÇÇ¸¦ ºÎÅ¹ÇØ!  <em>.</em></a></div>
 				</div>
 				<div class="col-xs-8 text-right menu-1">
 					<ul>
-						<li><a href="menu.html">Menu</a></li>
-						<li class="has-dropdown active">
-							<a href="services.html">Services</a>
+						<li><a href="menu.jsp">Menu</a></li>
+						<li class="has-dropdown">
+							<a href="services.jsp">Services</a>
 							<ul class="dropdown">
-								<li><a href="refi.html">ë‚˜ë§Œì˜ ëƒ‰ìž¥ê³ </a></li>
-								<li><a href="mealplan.html">ì‹ë‹¨ì¶”ì²œ</a></li>
-								<li><a href="newrecipe.html">ë ˆì‹œí”¼ë“±ë¡</a></li>
+								<li><a href="refigator.jsp">³ª¸¸ÀÇ ³ÃÀå°í</a></li>
+								<li><a href="mealplan.jsp">½Ä´ÜÂ¥±â</a></li>
+								<li><a href="newrecipe.jsp">·¹½ÃÇÇµî·Ï</a></li>
 							</ul>
 						</li>
-						<li><a href="contact.html">feedback</a></li>
-						<li class="btn-cta"><a href="index.html"><span>login</span></a></li>
+						<li><a href="feedback.jsp">feedback</a></li>
+						<li class="btn-cta"><a href="main.jsp"><span>login</span></a></li>
 					</ul>	
 				</div>
 			</div>
@@ -137,8 +139,8 @@
 						<span class="icon">
 							<i class="ti-crown"></i>
 						</span>
-						<h3>ì‹¤ì‹œê°„ ê¸‰ìƒìŠ¹ ìš”ë¦¬</h3>
-						<p>ì‹¤ì‹œê°„ ê¸‰ìƒìŠ¹ ìš”ë¦¬ ë ˆì‹œí”¼ ë…¸ì¶œ</p>
+						<h3>½Ç½Ã°£ ±Þ»ó½Â ¿ä¸®</h3>
+						<p>½Ç½Ã°£ ±Þ»ó½Â ¿ä¸® ·¹½ÃÇÇ ³ëÃâ</p>
 					</div>
 				</div>
 				<div class="col-md-4 col-sm-6">
@@ -146,8 +148,8 @@
 						<span class="icon">
 							<i class="ti-apple"></i>
 						</span>
-						<h3>ë ˆì‹œí”¼ì¶”ì²œ</h3>
-						<p>ìž¬ë£Œë“¤ì„ ì¡°í•©í•˜ì—¬ ìµœì ì˜ ë ˆì‹œí”¼ ì¶”ì²œ</p>
+						<h3>·¹½ÃÇÇÃßÃµ</h3>
+						<p>Àç·áµéÀ» Á¶ÇÕÇÏ¿© ÃÖÀûÀÇ ·¹½ÃÇÇ ÃßÃµ</p>
 					</div>
 				</div>
 				<div class="col-md-4 col-sm-6">
@@ -155,8 +157,8 @@
 						<span class="icon">
 							<i class="ti-check-box"></i>
 						</span>
-						<h3>ì‹ë‹¨ì§œê¸°</h3>
-						<p>ì¶”ì²œë°›ì€ ë ˆì‹œí”¼ë¥¼ í™œìš©í•˜ì—¬ ì‹ë‹¨ì§œê¸°</p>
+						<h3>½Ä´ÜÂ¥±â</h3>
+						<p>ÃßÃµ¹ÞÀº ·¹½ÃÇÇ¸¦ È°¿ëÇÏ¿© ½Ä´ÜÂ¥±â</p>
 					</div>
 				</div>
 				<div class="col-md-4 col-sm-6">
@@ -164,8 +166,8 @@
 						<span class="icon">
 							<i class="ti-layout-grid2"></i>
 						</span>
-						<h3>ë‚˜ë§Œì˜ ëƒ‰ìž¥ê³ </h3>
-						<p>ê°€ì§€ê³ ìž‡ëŠ” ìž¬ë£Œ ëƒ‰ìž¥ê³ ì˜ ë³´ê´€,ê´€ë¦¬ê¸°ëŠ¥</p>
+						<h3>³ª¸¸ÀÇ ³ÃÀå°í</h3>
+						<p>°¡Áö°íÀÕ´Â Àç·á ³ÃÀå°íÀÇ º¸°ü,°ü¸®±â´É</p>
 					</div>
 				</div>
 				<div class="col-md-4 col-sm-6">
@@ -173,8 +175,8 @@
 						<span class="icon">
 							<i class="ti-cloud-up"></i>
 						</span>
-						<h3>ë ˆì‹œí”¼ ì—…ë¡œë“œ</h3>
-						<p>ë‚˜ë§Œì˜ ë ˆì‹œí”¼ ì—…ë¡œë“œê¸°ëŠ¥</p>
+						<h3>·¹½ÃÇÇ ¾÷·Îµå</h3>
+						<p>³ª¸¸ÀÇ ·¹½ÃÇÇ ¾÷·Îµå±â´É</p>
 					</div>
 				</div>
 				<div class="col-md-4 col-sm-6">
@@ -182,8 +184,8 @@
 						<span class="icon">
 							<i class="ti-thumb-up"></i>
 						</span>
-						<h3>ì¢‹ì•„ìš”</h3>
-						<p>ë ˆì‹œí”¼ í™œìš© í›„ ë³„ì ê³¼ ì¢‹ì•„ìš” ë‚¨ê¸°ê¸°</p>
+						<h3>ÁÁ¾Æ¿ä</h3>
+						<p>·¹½ÃÇÇ È°¿ë ÈÄ º°Á¡°ú ÁÁ¾Æ¿ä ³²±â±â</p>
 					</div>
 				</div>
 
@@ -197,8 +199,8 @@
 		<div class="gtco-container text-center">
 			<div class="display-t">
 				<div class="display-tc">
-					<h1>&ldquo; ì–´ë¦¬ì„ì€ ìžëŠ” ë©€ë¦¬ì„œ í–‰ë³µì„ ì°¾ê³ , í˜„ëª…í•œ ìžëŠ” ìžì‹ ì˜ ë°œì¹˜ì—ì„œ í–‰ë³µì„ í‚¤ì›Œê°„ë‹¤&rdquo;</h1>
-					<p>&mdash; ì œìž„ìŠ¤ ì˜¤íŽœí•˜ìž„</p>
+					<h1>&ldquo; ¾î¸®¼®Àº ÀÚ´Â ¸Ö¸®¼­ Çàº¹À» Ã£°í, Çö¸íÇÑ ÀÚ´Â ÀÚ½ÅÀÇ ¹ßÄ¡¿¡¼­ Çàº¹À» Å°¿ö°£´Ù&rdquo;</h1>
+					<p>&mdash; Á¦ÀÓ½º ¿ÀÆæÇÏÀÓ</p>
 				</div>	
 			</div>
 		</div>
