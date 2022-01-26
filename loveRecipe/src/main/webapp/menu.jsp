@@ -45,8 +45,6 @@
 	<!-- Bootstrap DateTimePicker -->
 	<link rel="stylesheet" href="css/bootstrap-datetimepicker.min.css">
 
-
-
 	<!-- Owl Carousel  -->
 	<link rel="stylesheet" href="css/owl.carousel.min.css">
 	<link rel="stylesheet" href="css/owl.theme.default.min.css">
@@ -61,6 +59,7 @@
 	<script src="js/respond.min.js"></script>
 	<![endif]-->
 
+
 	</head>
 	<body>
 		
@@ -70,7 +69,7 @@
 
 	
 	<!-- <div class="page-inner"> -->
-<nav class="gtco-nav" role="navigation">
+	<nav class="gtco-nav" role="navigation">
 		<div class="gtco-container">
 			
 			<div class="row">
@@ -97,18 +96,92 @@
 		</div>
 	</nav>
 	
-	<header id="gtco-header" class="gtco-cover gtco-cover-sm" role="banner" style="background-image: url(images/img_bg_1.jpg)" data-stellar-background-ratio="0.5">
+	<header id="gtco-header" class="gtco-cover gtco-cover-md" role="banner" style="background-image: url(images/img_bg_1.jpg)" data-stellar-background-ratio="0.5">
 		<div class="overlay"></div>
 		<div class="gtco-container">
 			<div class="row">
-				<div class="col-md-12 col-md-offset-0 text-center">
+				<div class="col-md-12 col-md-offset-0 text-left">
 					
 
 					<div class="row row-mt-15em">
-						<div class="col-md-12 mt-text animate-box" data-animate-effect="fadeInUp">
-							<h1 class="cursive-font">오늘의 메뉴를 추천!</h1>	
+						<div class="col-md-7 mt-text animate-box" data-animate-effect="fadeInUp">
+							<h1 > find your recipe </h1>	
 						</div>
-						
+						<div class="col-md-4 col-md-push-1 animate-box" data-animate-effect="fadeInRight">
+							<div class="form-wrap">
+								<div class="tab">
+									
+									<div class="tab-content">
+										<div class="tab-content-inner active" data-content="signup">
+											<h3 class="cursive-font">
+												search</h3>
+											<form action="#">
+											
+												<div class="row form-group">
+															<label>주재료별</label><br>
+					    						     		돼지고기<input type="radio" name="ingrident"   value="fork">
+															소고기<input type="radio" name="ingrident"   value="beaf">
+															닭고기<input type="radio" name="ingrident"   value="chiken">
+															생선 <input type="radio" name="ingrident"   value="fish">
+															면 <input type="radio" name="ingrident"  value="noodle">
+															과일 <input type="radio" name="ingrident"   value="apple">
+															쌀 <input type="radio" name="ingrident"  value="rice">
+															오리고기<input type="radio" name="ingrident"   value="duck"> 
+												</div>
+												
+												<div class="row form-group">
+															<label>나라별레시피</label><br>
+					    						     		한식<input type="radio" name="object"   value="korea">
+															중식<input type="radio" name="object"   value="china">
+															일식<input type="radio" name="object"   value="japan">
+															양식 <input type="radio" name="object"   value="euro">
+															동남아 <input type="radio" name="object"  value="phlipean">
+															이탈리아 <input type="radio" name="object"   value="italy">
+															멕시코 <input type="radio" name="object"  value="mexico">
+															퓨전<input type="radio" name="object"   value="fuzen"> 
+												</div>
+
+												<div class="row form-group">
+													
+														<label>제철구분유무</label>
+														<label>가져오는 레시피의 재료의 제철유무를 판단</label>
+														<select class="form-control" name="seasonal">
+														<option value="o">o</option>
+														<option value="x">x</option>
+														</select>
+														<label>날씨구분유무</label><br>
+														<label>오늘날씨와 관련된 레시피 </label>
+														<select class="form-control" name="weather">
+														<option value="o">o</option>
+														<option value="x">x</option>
+														</select>
+													
+												</div>
+												<div class="row form-group">
+													
+														<label>최대 칼로리 지정</label>
+														<input type="number" name="kcal" class="form-control" placeholder="원하시는 칼로리의 최대값">
+														</div>
+									
+												
+
+												<div class="row form-group">
+													<div class="col-md-12">
+														<input type="submit" class="btn btn-primary btn-block" value="search">
+														
+													</div>
+													
+												</div>
+
+									
+											</form>	
+										</div>
+
+										
+									</div>
+								</div>
+							</div>
+						</div>
 					</div>
 							
 					
@@ -119,115 +192,21 @@
 
 	
 	
-	<div class="gtco-section">
-		<div class="gtco-container">
-			<div class="row">
-				<div class="col-md-8 col-md-offset-2 text-center gtco-heading">
-					<h2 class="cursive-font primary-color">이밑에 재료검색및 레시피 추천기능잇어야함</h2>
-					<p>실시간으로 급상승중인 레시피를 추천받으세요!</p>
-				</div>
-			</div>
-			<div class="row">
-
-				<div class="col-lg-4 col-md-4 col-sm-6">
-					<a href="images/img_1.jpg" class="fh5co-card-item image-popup">
-						<figure>
-							<div class="overlay"><i class="ti-plus"></i></div>
-							<img src="images/img_1.jpg" alt="Image" class="img-responsive">
-						</figure>
-						<div class="fh5co-text">
-							<h2>Fresh Mushrooms</h2>
-							<p>Far far away, behind the word mountains, far from the countries Vokalia..</p>
-							<p><span class="price cursive-font">$19.15</span></p>
-						</div>
-					</a>
-				</div>
-				<div class="col-lg-4 col-md-4 col-sm-6">
-					<a href="images/img_2.jpg" class="fh5co-card-item image-popup">
-						<figure>
-							<div class="overlay"><i class="ti-plus"></i></div>
-							<img src="images/img_2.jpg" alt="Image" class="img-responsive">
-						</figure>
-						<div class="fh5co-text">
-							<h2>Cheese and Garlic Toast</h2>
-							<p>Far far away, behind the word mountains, far from the countries Vokalia..</p>
-							<p><span class="price cursive-font">$20.99</span></p>
-						</div>
-					</a>
-				</div>
-				<div class="col-lg-4 col-md-4 col-sm-6">
-					<a href="images/img_3.jpg" class="fh5co-card-item image-popup">
-						<figure>
-							<div class="overlay"><i class="ti-plus"></i></div>
-							<img src="images/img_3.jpg" alt="Image" class="img-responsive">
-						</figure>
-						<div class="fh5co-text">
-							<h2>Grilled Chiken Salad</h2>
-							<p>Far far away, behind the word mountains, far from the countries Vokalia..</p>
-							<p><span class="price cursive-font">$8.99</span></p>
-
-						</div>
-					</a>
-				</div>
-
-
-				<div class="col-lg-4 col-md-4 col-sm-6">
-					<a href="images/img_4.jpg" class="fh5co-card-item image-popup">
-						<figure>
-							<div class="overlay"><i class="ti-plus"></i></div>
-							<img src="images/img_4.jpg" alt="Image" class="img-responsive">
-						</figure>
-						<div class="fh5co-text">
-							<h2>Organic Egg</h2>
-							<p>Far far away, behind the word mountains, far from the countries Vokalia..</p>
-							<p><span class="price cursive-font">$12.99</span></p>
-						</div>
-					</a>
-				</div>
-
-				<div class="col-lg-4 col-md-4 col-sm-6">
-					<a href="images/img_5.jpg" class="fh5co-card-item image-popup">
-						<figure>
-							<div class="overlay"><i class="ti-plus"></i></div>
-							<img src="images/img_5.jpg" alt="Image" class="img-responsive">
-						</figure>
-						<div class="fh5co-text">
-							<h2>Tomato Soup with Chicken</h2>
-							<p>Far far away, behind the word mountains, far from the countries Vokalia..</p>
-							<p><span class="price cursive-font">$23.10</span></p>
-						</div>
-					</a>
-				</div>
-
-				<div class="col-lg-4 col-md-4 col-sm-6">
-					<a href="images/img_6.jpg" class="fh5co-card-item image-popup">
-						<figure>
-							<div class="overlay"><i class="ti-plus"></i></div>
-							<img src="images/img_6.jpg" alt="Image" class="img-responsive">
-						</figure>
-						<div class="fh5co-text">
-							<h2>Salad with Crispy Chicken</h2>
-							<p>Far far away, behind the word mountains, far from the countries Vokalia..</p>
-							<p><span class="price cursive-font">$5.59</span></p>
-						</div>
-					</a>
-				</div>
-
-			</div>
-		</div>
-	</div>
 
 	<div class="gtco-cover gtco-cover-sm" style="background-image: url(images/img_bg_1.jpg)"  data-stellar-background-ratio="0.5">
 		<div class="overlay"></div>
 		<div class="gtco-container text-center">
 			<div class="display-t">
 				<div class="display-tc">
-					<h1>&ldquo; 음식에 대한 사랑처럼  진실된 사랑은 없다.&rdquo;</h1>
+					<h1>&ldquo; 음식에 대한 사랑처럼 진실된 사랑은 없다.&rdquo;</h1>
 					<p>&mdash; - 조지 버나드 쇼-</p>
 				</div>	
 			</div>
 		</div>
 	</div>
+
+	
+	
 
 	<div id="gtco-subscribe">
 		<div class="gtco-container">
@@ -265,14 +244,6 @@
 				
 				<div class="col-md-12 text-center">
 					<div class="gtco-widget">
-						<h3>Get In Touch</h3>
-						<ul class="gtco-quick-contact">
-							<li><a href="#"><i class="icon-phone"></i> +1 234 567 890</a></li>
-							<li><a href="#"><i class="icon-mail2"></i> info@GetTemplates.co</a></li>
-							<li><a href="#"><i class="icon-chat"></i> Live Chat</a></li>
-						</ul>
-					</div>
-					<div class="gtco-widget">
 						<h3>Get Social</h3>
 						<ul class="gtco-social-icons">
 							<li><a href="#"><i class="icon-twitter"></i></a></li>
@@ -282,8 +253,6 @@
 						</ul>
 					</div>
 				</div>
-
-			
 
 			</div>
 
