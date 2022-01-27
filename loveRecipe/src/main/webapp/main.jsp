@@ -89,7 +89,7 @@
 						</li>
 						<li><a href="feedback.jsp">feedback</a></li>
 						<li class="btn-cta"><a href="main.jsp"><span>login</span></a></li>
-					</ul>	
+					</ul>	 
 				</div>
 			</div>
 			
@@ -105,7 +105,7 @@
 
 					<div class="row row-mt-15em">
 						<div class="col-md-7 mt-text animate-box" data-animate-effect="fadeInUp">
-							<h1 class="cursive-font"> the start of the trip</h1>	
+							<h1 class="cursive-font"> 로그인을 하세요!</h1>	
 						</div>
 						<div class="col-md-4 col-md-push-1 animate-box" data-animate-effect="fadeInRight">
 							<div class="form-wrap">

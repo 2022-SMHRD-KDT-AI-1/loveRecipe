@@ -123,6 +123,48 @@
 					<div class="col-md-6 animate-box">
 					<h3>레시피 업로드</h3>
 					<form action="#">
+					<div class="row form-group">
+															<label>레시피국가</label><br>
+					    						     		한식<input type="radio" name="object"   value="korea">
+															중식<input type="radio" name="object"   value="china">
+															일식<input type="radio" name="object"   value="japan">
+															양식 <input type="radio" name="object"   value="euro">
+															동남아 <input type="radio" name="object"  value="phlipean">
+															이탈리아 <input type="radio" name="object"   value="italy">
+															멕시코 <input type="radio" name="object"  value="mexico">
+															퓨전<input type="radio" name="object"   value="fuzen"> 
+												</div>
+												<div class="row form-group">
+															<label>레시피종류</label><br>
+					    						     		구이<input type="radio" name="type"   value="guie">
+															국<input type="radio" name="type"   value="guk">
+															그라탕/리조또<input type="radio" name="type"   value="grtang">
+															나물/생채/샐러드 <input type="radio" name="type"   value="namul">
+															떡/한과 <input type="radio" name="type"  value="ttuk">
+															도시락/간식 <input type="radio" name="type"   value="dosilack">
+															만두/면류 <input type="radio" name="type"  value="mundu">
+															밑반찬/김치<input type="radio" name="type"   value="kimchi"> 
+															
+															밥/죽/스프 <input type="radio" name="type"  value="bap">
+															볶음 <input type="radio" name="type"   value="bokum">
+															부침 <input type="radio" name="type"  value="buchim">
+															빵/과자<input type="radio" name="type"   value="bbang"> 
+															샌드위치/햄버거 <input type="radio" name="type"  value="sandwich">
+															
+															양념장 <input type="radio" name="type"   value="yangnum">
+															양식 <input type="radio" name="type"  value="yangsik">
+															음료<input type="radio" name="type"   value="umryo"> 
+															
+															조림 <input type="radio" name="type"   value="jorim">
+															찌개/전골/스튜 <input type="radio" name="type"  value="zzikae">
+															찜<input type="radio" name="type"   value="zzim"> 
+															피자 <input type="radio" name="type"  value="pizza">
+															후식<input type="radio" name="type"   value="husik"> 
+															튀김/커틀릿<input type="radio" name="type"   value="tikim"> 
+												</div>
+							
+						</div>
+						
 						<div class="row form-group">
 							<div class="col-md-12">
 								<label>제목</label>
@@ -139,12 +181,15 @@
 						</div>
                         <div class="row form-group">
 							<div class="col-md-12">
-								<label>내용</label>
+								<label>조리순서</label>
                                 <input  type="file" name="filename" style="float: right;" class="form-control">
                                 <textarea  rows="10" name="content" style="resize: none;" class="form-control"></textarea>        
 							</div>
-							
-						</div>
+							<div class="row form-group">
+													
+														<label>레시피 칼로리</label>
+														<input type="number" name="kcal" class="form-control" placeholder="원하시는 칼로리의 최대값">
+														</div>
 						
 						<div class="form-group">
                             <input type="reset" value="초기화" class="btn btn-primary">

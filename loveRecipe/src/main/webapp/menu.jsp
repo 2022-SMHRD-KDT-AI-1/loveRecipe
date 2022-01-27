@@ -191,7 +191,7 @@
 														<input type="number" name="kcal" class="form-control" placeholder="원하시는 칼로리의 최대값">
 														</div>
 									
-												
+												 
 
 												<div class="row form-group">
 													<div class="col-md-12">
