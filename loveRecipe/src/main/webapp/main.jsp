@@ -29,6 +29,7 @@
 
 	<link href="https://fonts.googleapis.com/css?family=Lato:300,400,700" rel="stylesheet">
 	<link href="https://fonts.googleapis.com/css?family=Kaushan+Script" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css2?family=Nanum+Brush+Script&display=swap" rel="stylesheet">
 	
 	<!-- Animate.css -->
 	<link rel="stylesheet" href="css/animate.css">
@@ -74,7 +75,7 @@
 			
 			<div class="row">
 				<div class="col-sm-4 col-xs-12">
-					<div id="gtco-logo"><a href="main.jsp">레시피를 부탁해! <em>.</em></a></div>
+					<div id="gtco-logo"><a href="main.jsp"><em class="cursive-font" style="font-size: 3rem">레시피를 부탁해</em></a></div>
 				</div>
 				<div class="col-xs-8 text-right menu-1">
 					<ul>
@@ -105,7 +106,7 @@
 
 					<div class="row row-mt-15em">
 						<div class="col-md-7 mt-text animate-box" data-animate-effect="fadeInUp">
-							<h1 class="cursive-font"> 로그인을 하세요!</h1>	
+							<h1 class="cursive-font">로그인을 하세요!</h1>	
 						</div>
 						<div class="col-md-4 col-md-push-1 animate-box" data-animate-effect="fadeInRight">
 							<div class="form-wrap">
@@ -315,8 +316,8 @@
 		<div class="gtco-container text-center">
 			<div class="display-t">
 				<div class="display-tc">
-					<h1>&ldquo; 음식에 대한 사랑처럼 진실된 사랑은 없다.&rdquo;</h1>
-					<p>&mdash; - 조지 버나드 쇼-</p>
+					<h1 class="cursive-font">&ldquo;음식에 대한 사랑처럼 진실된 사랑은 없다.&rdquo;</h1>
+					<p>&mdash; 조지 버나드 쇼</p>
 				</div>	
 			</div>
 		</div>
@@ -372,7 +373,7 @@
 			<div class="row animate-box">
 				<div class="col-md-8 col-md-offset-2 text-center gtco-heading">
 					<h2 class="cursive-font">feedback</h2>
-					<p>사이트를 쓰면서 불편햇던점을 보내주세요!</p>
+					<p>사이트를 쓰면서 불편했던 점을 보내주세요.</p>
 				</div>
 			</div>
 			<div class="row animate-box">

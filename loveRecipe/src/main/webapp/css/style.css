@@ -284,7 +284,7 @@ h1, h2, h3, h4, h5, h6, figure {
   font-size: 80px;
   line-height: 1.5;
   font-weight: 300;
-  font-family: "Kaushan Script", cursive !important;
+  font-family: 'Nanum Brush Script', cursive !important;
 }
 @media screen and (max-width: 768px) {
   #gtco-header h1 {
@@ -657,7 +657,7 @@ form label {
 }
 
 .cursive-font {
-  font-family: "Kaushan Script", cursive;
+  font-family: 'Nanum Brush Script', cursive;
 }
 
 .primary-color {
