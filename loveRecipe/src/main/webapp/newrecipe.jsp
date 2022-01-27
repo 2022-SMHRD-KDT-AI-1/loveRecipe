@@ -122,21 +122,22 @@
 				<div class="col-md-12">
 					<div class="col-md-6 animate-box">
 					<h3>레시피 업로드</h3>
-					<form action="BoardService">
-					<div class="row form-group">
-															<label>레시피국가</label><br>
-					    						     		한식<input type="radio" name="object"   value="korea">
-															중식<input type="radio" name="object"   value="china">
-															일식<input type="radio" name="object"   value="japan">
-															양식 <input type="radio" name="object"   value="euro">
-															동남아 <input type="radio" name="object"  value="phlipean">
-															이탈리아 <input type="radio" name="object"   value="italy">
-															멕시코 <input type="radio" name="object"  value="mexico">
-															퓨전<input type="radio" name="object"   value="fuzen"> 
+					
+					<form action="recipeuploadService" method="post" enctype="multipart/form-data">
+						<div>
+							<label>레시피국가</label><br>
+					    			 한식<input type="radio" name="object"   value="korea">
+									중식<input type="radio" name="object"   value="china">
+									일식<input type="radio" name="object"   value="japan">
+									양식 <input type="radio" name="object"   value="euro">
+									동남아 <input type="radio" name="object"  value="phlipean">
+									이탈리아 <input type="radio" name="object"   value="italy">
+									멕시코 <input type="radio" name="object"  value="mexico">
+									퓨전<input type="radio" name="object"   value="fuzen"> 
 												</div>
-												<div class="row form-group">
-															<label>레시피종류</label><br>
-					    						     		구이<input type="radio" name="type"   value="guie">
+						<div >
+									<label>레시피종류</label><br>
+					    			구이<input type="radio" name="type"   value="guie">
 															국<input type="radio" name="type"   value="guk">
 															그라탕/리조또<input type="radio" name="type"   value="grtang">
 															나물/생채/샐러드 <input type="radio" name="type"   value="namul">
@@ -163,41 +164,45 @@
 															튀김/커틀릿<input type="radio" name="type"   value="tikim"> 
 												</div>
 							
-						</div>
 						
-						<div class="row form-group">
-							<div class="col-md-12">
+						
+						<div >
 								<label>제목</label>
-								<input type="text" id="title" class="form-control" placeholder="제목">
+								<input type="text" id="title"  name="title" class="form-control" placeholder="제목">
 							</div>
-							
-						</div>
-                        <div class="row form-group">
-							<div class="col-md-12">
+           
+							<div>
 								<label>작성자</label><br>
-								<input type="text" id="writer" class="writer" placeholder="작성자">
+								<input type="text" id="writer" name="writer" class="writer" placeholder="작성자">
 							</div>
 							
-						</div>
-                        <div class="row form-group">
-							<div class="col-md-12">
+						
+                       
+							<div>
 								<label>조리순서</label>
                                 <input  type="file" name="filename" style="float: right;" class="form-control">
                                 <textarea  rows="10" name="content" style="resize: none;" class="form-control"></textarea>        
 							</div>
-							<div class="row form-group">
+							<div >
 													
-														<label>레시피 칼로리</label>
-														<input type="number" name="kcal" class="form-control" placeholder="원하시는 칼로리의 최대값">
-														</div>
+								<label>레시피 칼로리</label>
+								<input type="number" name="kcal" class="form-control" placeholder="원하시는 칼로리의 최대값">
+							</div>
 						
-						<div class="form-group">
+						<div>
                             <input type="reset" value="초기화" class="btn btn-primary">
                             <input type="submit" value="작성하기" class="btn btn-primary">
 						</div>
 
-					</form>		
-				</div>
+					</form>						
+				
+
+</div>
+
+
+
+
+
 
                 
 				<div class="col-md-5 col-md-push-1 animate-box">

@@ -89,7 +89,7 @@
 						</li>
 						<li><a href="feedback.jsp">feedback</a></li>
 						<li class="btn-cta"><a href="main.jsp"><span>login</span></a></li>
-					</ul>	
+					</ul>	 
 				</div>
 			</div>
 			
@@ -105,7 +105,7 @@
 
 					<div class="row row-mt-15em">
 						<div class="col-md-7 mt-text animate-box" data-animate-effect="fadeInUp">
-							<h1 > find your recipe </h1>	
+							<h1 class="cursive-font"> 로그인을 하세요!</h1>	
 						</div>
 						<div class="col-md-4 col-md-push-1 animate-box" data-animate-effect="fadeInRight">
 							<div class="form-wrap">
@@ -114,89 +114,28 @@
 									<div class="tab-content">
 										<div class="tab-content-inner active" data-content="signup">
 											<h3 class="cursive-font">
-												search</h3>
-											<form action="recipesearch">
-											
+												login</h3>
+											<form action="LoginService" method="POST"">
 												<div class="row form-group">
-															<label>주재료별</label><br>
-					    						     		돼지고기<input type="radio" name="ingrident"   value="fork">
-															소고기<input type="radio" name="ingrident"   value="beaf">
-															닭고기<input type="radio" name="ingrident"   value="chiken">
-															생선 <input type="radio" name="ingrident"   value="fish">
-															면 <input type="radio" name="ingrident"  value="noodle">
-															과일 <input type="radio" name="ingrident"   value="apple">
-															쌀 <input type="radio" name="ingrident"  value="rice">
-															오리고기<input type="radio" name="ingrident"   value="duck"> 
-												</div>
-												
-												<div class="row form-group">
-															<label>나라별레시피</label><br>
-					    						     		한식<input type="radio" name="object"   value="korea">
-															중식<input type="radio" name="object"   value="china">
-															일식<input type="radio" name="object"   value="japan">
-															양식 <input type="radio" name="object"   value="euro">
-															동남아 <input type="radio" name="object"  value="phlipean">
-															이탈리아 <input type="radio" name="object"   value="italy">
-															멕시코 <input type="radio" name="object"  value="mexico">
-															퓨전<input type="radio" name="object"   value="fuzen"> 
 												</div>
 												<div class="row form-group">
-															<label>종류별레시피</label><br>
-					    						     		구이<input type="radio" name="type"   value="guie">
-															국<input type="radio" name="type"   value="guk">
-															그라탕/리조또<input type="radio" name="type"   value="grtang">
-															나물/생채/샐러드 <input type="radio" name="type"   value="namul">
-															떡/한과 <input type="radio" name="type"  value="ttuk">
-															도시락/간식 <input type="radio" name="type"   value="dosilack">
-															만두/면류 <input type="radio" name="type"  value="mundu">
-															밑반찬/김치<input type="radio" name="type"   value="kimchi"> 
-															
-															밥/죽/스프 <input type="radio" name="type"  value="bap">
-															볶음 <input type="radio" name="type"   value="bokum">
-															부침 <input type="radio" name="type"  value="buchim">
-															빵/과자<input type="radio" name="type"   value="bbang"> 
-															샌드위치/햄버거 <input type="radio" name="type"  value="sandwich">
-															
-															양념장 <input type="radio" name="type"   value="yangnum">
-															양식 <input type="radio" name="type"  value="yangsik">
-															음료<input type="radio" name="type"   value="umryo"> 
-															
-															조림 <input type="radio" name="type"   value="jorim">
-															찌개/전골/스튜 <input type="radio" name="type"  value="zzikae">
-															찜<input type="radio" name="type"   value="zzim"> 
-															피자 <input type="radio" name="type"  value="pizza">
-															후식<input type="radio" name="type"   value="husik"> 
-															튀김/커틀릿<input type="radio" name="type"   value="tikim"> 
+													<div class="col-md-12">
+														<label>id</label>
+														<input type="text" name="id" class="form-control">
+													</div>
 												</div>
-
-												<div class="row form-group">
-													
-														<label>제철구분유무</label>
-														<label>(가져오는 레시피의 재료의 제철유무를 판단)</label>
-														<select class="form-control" name="seasonal">
-														<option value="o">o</option>
-														<option value="x">x</option>
-														</select>
-														<label>날씨구분유무</label><br>
-														<label>(오늘날씨와 관련된 레시피) </label>
-														<select class="form-control" name="weather">
-														<option value="o">o</option>
-														<option value="x">x</option>
-														</select>
-													
-												</div>
-												<div class="row form-group">
-													
-														<label>최대 칼로리 지정</label>
-														<input type="number" name="kcal" class="form-control" placeholder="원하시는 칼로리의 최대값">
-														</div>
-									
-												 
 
 												<div class="row form-group">
 													<div class="col-md-12">
-														<input type="submit" class="btn btn-primary btn-block" value="search">
-														
+														<label>pw</label>
+														<input type="password" name="pw" class="form-control">
+													</div>
+												</div>
+
+												<div class="row form-group">
+													<div class="col-md-12">
+														<input type="submit" class="btn btn-primary btn-block" value="login">
+														<a href="new.jsp">회원가입</a>
 													</div>
 													
 												</div>
@@ -220,18 +159,155 @@
 
 	
 	
+	<div class="gtco-section">
+		<div class="gtco-container">
+			<div class="row">
+				<div class="col-md-8 col-md-offset-2 text-center gtco-heading">
+					<h2 class="cursive-font primary-color">검색결과창 필요</h2>
+				</div>
+			</div>
+			<div class="row">
 
-	<div class="gtco-cover gtco-cover-sm" style="background-image: url(images/img_bg_1.jpg)"  data-stellar-background-ratio="0.5">
-		<div class="overlay"></div>
-		<div class="gtco-container text-center">
-			<div class="display-t">
-				<div class="display-tc">
-					<h1>&ldquo; 음식에 대한 사랑처럼 진실된 사랑은 없다.&rdquo;</h1> 
-					<p>&mdash; - 조지 버나드 쇼-</p>
-				</div>	
+				<div class="col-lg-4 col-md-4 col-sm-6">
+					<a href="images/img_1.jpg" class="fh5co-card-item image-popup">
+						<figure>
+							<div class="overlay"><i class="ti-plus"></i></div>
+							<img src="images/img_1.jpg" alt="Image" class="img-responsive">
+						</figure>
+						<div class="fh5co-text">
+							<h2>Fresh Mushrooms</h2>
+							<p>Far far away, behind the word mountains, far from the countries Vokalia..</p>
+							<p><span class="price cursive-font">$19.15</span></p>
+						</div>
+					</a>
+				</div>
+				<div class="col-lg-4 col-md-4 col-sm-6">
+					<a href="images/img_2.jpg" class="fh5co-card-item image-popup">
+						<figure>
+							<div class="overlay"><i class="ti-plus"></i></div>
+							<img src="images/img_2.jpg" alt="Image" class="img-responsive">
+						</figure>
+						<div class="fh5co-text">
+							<h2>Cheese and Garlic Toast</h2>
+							<p>Far far away, behind the word mountains, far from the countries Vokalia..</p>
+							<p><span class="price cursive-font">$20.99</span></p>
+						</div>
+					</a>
+				</div>
+				<div class="col-lg-4 col-md-4 col-sm-6">
+					<a href="images/img_3.jpg" class="fh5co-card-item image-popup">
+						<figure>
+							<div class="overlay"><i class="ti-plus"></i></div>
+							<img src="images/img_3.jpg" alt="Image" class="img-responsive">
+						</figure>
+						<div class="fh5co-text">
+							<h2>Grilled Chiken Salad</h2>
+							<p>Far far away, behind the word mountains, far from the countries Vokalia..</p>
+							<p><span class="price cursive-font">$8.99</span></p>
+
+						</div>
+					</a>
+				</div>
+
+
+				<div class="col-lg-4 col-md-4 col-sm-6">
+					<a href="images/img_4.jpg" class="fh5co-card-item image-popup">
+						<figure>
+							<div class="overlay"><i class="ti-plus"></i></div>
+							<img src="images/img_4.jpg" alt="Image" class="img-responsive">
+						</figure>
+						<div class="fh5co-text">
+							<h2>Organic Egg</h2>
+							<p>Far far away, behind the word mountains, far from the countries Vokalia..</p>
+							<p><span class="price cursive-font">$12.99</span></p>
+						</div>
+					</a>
+				</div>
+
+				<div class="col-lg-4 col-md-4 col-sm-6">
+					<a href="images/img_5.jpg" class="fh5co-card-item image-popup">
+						<figure>
+							<div class="overlay"><i class="ti-plus"></i></div>
+							<img src="images/img_5.jpg" alt="Image" class="img-responsive">
+						</figure>
+						<div class="fh5co-text">
+							<h2>Tomato Soup with Chicken</h2>
+							<p>Far far away, behind the word mountains, far from the countries Vokalia..</p>
+							<p><span class="price cursive-font">$23.10</span></p>
+						</div>
+					</a>
+				</div>
+
+				<div class="col-lg-4 col-md-4 col-sm-6">
+					<a href="images/img_6.jpg" class="fh5co-card-item image-popup">
+						<figure>
+							<div class="overlay"><i class="ti-plus"></i></div>
+							<img src="images/img_6.jpg" alt="Image" class="img-responsive">
+						</figure>
+						<div class="fh5co-text">
+							<h2>Salad with Crispy Chicken</h2>
+							<p>Far far away, behind the word mountains, far from the countries Vokalia..</p>
+							<p><span class="price cursive-font">$5.59</span></p>
+						</div>
+					</a>
+				</div>
+
 			</div>
 		</div>
 	</div>
+	
+	<div id="gtco-features">
+		<div class="gtco-container">
+			<div class="row">
+				<div class="col-md-8 col-md-offset-2 text-center gtco-heading animate-box">
+					<h2 class="cursive-font">Our Services</h2>
+					<p>사용자들의 행복은 언제나 개발자의 행복</p>
+				</div>
+			</div>
+			<div class="row">
+				<div class="col-md-4 col-sm-6">
+					<div class="feature-center animate-box" data-animate-effect="fadeIn">
+						<span class="icon">
+							<i class="ti-face-smile"></i>
+						</span>
+						<h3>Happy</h3>
+						<p>요리하는 즐거움</p>
+					</div>
+				</div>
+				<div class="col-md-4 col-sm-6">
+					<div class="feature-center animate-box" data-animate-effect="fadeIn">
+						<span class="icon">
+							<i class="ti-thought"></i>
+						</span>
+						<h3>Creative</h3>
+						<p>창의적인 레시피</p>
+					</div>
+				</div>
+				<div class="col-md-4 col-sm-6">
+					<div class="feature-center animate-box" data-animate-effect="fadeIn">
+						<span class="icon">
+							<i class="ti-check"></i>
+						</span>
+						<h3>check</h3>
+						<p>냉장고 관리</p>
+					</div>
+				</div>
+				<div class="col-md-4 col-sm-6">
+					<div class="feature-center animate-box" data-animate-effect="fadeIn">
+						<span class="icon">
+							<i class="ti-timer"></i>
+						</span>
+						<h3>Time</h3>
+						<p>레시피 고민시간 감소</p>
+					</div>
+				</div>
+				
+
+			</div>
+		
+		</div>
+	</div>
+
 
 	
 	
