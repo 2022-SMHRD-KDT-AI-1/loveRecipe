@@ -1,3 +1,5 @@
+<%@ page language="java" contentType="text/html; charset=EUC-KR"
+    pageEncoding="EUC-KR"%>
 <!DOCTYPE HTML>
 <!--
 	Aesthetic by gettemplates.co
@@ -8,7 +10,7 @@
 	<head>
 	<meta charset="utf-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
-	<title>레시피를 부탁해 &mdash; Free Website Template, Free HTML5 Template by GetTemplates.co</title>
+	<title>�����Ǹ� ��Ź�� &mdash; Free Website Template, Free HTML5 Template by GetTemplates.co</title>
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<meta name="description" content="Free HTML5 Website Template by GetTemplates.co" />
 	<meta name="keywords" content="free website templates, free html5, free template, free bootstrap, free website template, html5, css3, mobile first, responsive" />
@@ -30,11 +32,6 @@
 	
 	<!-- Animate.css -->
 	<link rel="stylesheet" href="css/animate.css">
-	
-	
-	
-	
-	
 	<!-- Icomoon Icon Fonts-->
 	<link rel="stylesheet" href="css/icomoon.css">
 	<!-- Themify Icons-->
@@ -78,21 +75,21 @@
 			
 			<div class="row">
 				<div class="col-sm-4 col-xs-12">
-					<div id="gtco-logo"><a href="index.html">레시피를 부탁해 <em>.</em></a></div>
+					<div id="gtco-logo"><a href="main.jsp">�����Ǹ� ��Ź��! <em>.</em></a></div>
 				</div>
 				<div class="col-xs-8 text-right menu-1">
 					<ul>
-						<li><a href="menu.html">Menu</a></li>
-						<li class="has-dropdown active">
-							<a href="services.html">Services</a>
+						<li><a href="menu.jsp">Menu</a></li>
+						<li class="has-dropdown">
+							<a href="services.jsp">Services</a>
 							<ul class="dropdown">
-								<li><a href="refi.html">나만의 냉장고</a></li>
-								<li><a href="mealplan.html">식단추천</a></li>
-								<li><a href="newrecipe.html">레시피등록</a></li>
+								<li><a href="refigator.jsp">������ �����</a></li>
+								<li><a href="mealplan.jsp">�Ĵ�¥��</a></li>
+								<li><a href="newrecipe.jsp">�����ǵ��</a></li>
 							</ul>
 						</li>
-						<li><a href="contact.html">feedback</a></li>
-						<li class="btn-cta"><a href="index.html"><span>login</span></a></li>
+						<li><a href="feedback.jsp">feedback</a></li>
+						<li class="btn-cta"><a href="main.jsp"><span>login</span></a></li>
 					</ul>	
 				</div>
 			</div>
@@ -100,131 +97,65 @@
 		</div>
 	</nav>
 	
-	<header id="gtco-header" class="gtco-cover gtco-cover-sm" role="banner" style="background-image: url(images/img_bg_1.jpg)" data-stellar-background-ratio="0.5">
+	<header id="gtco-header" class="gtco-cover gtco-cover-sm" role="banner" style="background-image: url(images/img_bg_3.jpg)">
 		<div class="overlay"></div>
 		<div class="gtco-container">
 			<div class="row">
 				<div class="col-md-12 col-md-offset-0 text-center">
-					
 
 					<div class="row row-mt-15em">
 						<div class="col-md-12 mt-text animate-box" data-animate-effect="fadeInUp">
-							<span class="intro-text-small">Hand-crafted by <a href="http://gettemplates.co" target="_blank">GetTemplates.co</a></span>
-							<h1 class="cursive-font">It's our pleasure to serve!</h1>	
+							<h1 class="cursive-font">Say hello!</h1>	
 						</div>
 						
 					</div>
-							
 					
 				</div>
 			</div>
 		</div>
 	</header>
-
 	
 	
-	<div id="gtco-features">
+	<div class="gtco-section">
 		<div class="gtco-container">
 			<div class="row">
-				<div class="col-md-8 col-md-offset-2 text-center gtco-heading animate-box">
-					<h2 class="cursive-font">Our Services</h2>
-					<p>Dignissimos asperiores vitae velit veniam totam fuga molestias accusamus alias autem provident. Odit ab aliquam dolor eius.</p>
-				</div>
-			</div>
-			<div class="row">
-				<div class="col-md-4 col-sm-6">
-					<div class="feature-center animate-box" data-animate-effect="fadeIn">
-						<span class="icon">
-							<i class="ti-crown"></i>
-						</span>
-						<h3>실시간 급상승 요리</h3>
-						<p>실시간 급상승 요리 레시피 노출</p>
-					</div>
-				</div>
-				<div class="col-md-4 col-sm-6">
-					<div class="feature-center animate-box" data-animate-effect="fadeIn">
-						<span class="icon">
-							<i class="ti-apple"></i>
-						</span>
-						<h3>레시피추천</h3>
-						<p>재료들을 조합하여 최적의 레시피 추천</p>
-					</div>
-				</div>
-				<div class="col-md-4 col-sm-6">
-					<div class="feature-center animate-box" data-animate-effect="fadeIn">
-						<span class="icon">
-							<i class="ti-check-box"></i>
-						</span>
-						<h3>식단짜기</h3>
-						<p>추천받은 레시피를 활용하여 식단짜기</p>
-					</div>
-				</div>
-				<div class="col-md-4 col-sm-6">
-					<div class="feature-center animate-box" data-animate-effect="fadeIn">
-						<span class="icon">
-							<i class="ti-layout-grid2"></i>
-						</span>
-						<h3>나만의 냉장고</h3>
-						<p>가지고잇는 재료 냉장고의 보관,관리기능</p>
-					</div>
-				</div>
-				<div class="col-md-4 col-sm-6">
-					<div class="feature-center animate-box" data-animate-effect="fadeIn">
-						<span class="icon">
-							<i class="ti-cloud-up"></i>
-						</span>
-						<h3>레시피 업로드</h3>
-						<p>나만의 레시피 업로드기능</p>
-					</div>
-				</div>
-				<div class="col-md-4 col-sm-6">
-					<div class="feature-center animate-box" data-animate-effect="fadeIn">
-						<span class="icon">
-							<i class="ti-thumb-up"></i>
-						</span>
-						<h3>좋아요</h3>
-						<p>레시피 활용 후 별점과 좋아요 남기기</p>
-					</div>
-				</div>
-
-			</div>
-		</div>
-	</div>
-
-
-	<div class="gtco-cover gtco-cover-sm" style="background-image: url(images/img_bg_1.jpg)"  data-stellar-background-ratio="0.5">
-		<div class="overlay"></div>
-		<div class="gtco-container text-center">
-			<div class="display-t">
-				<div class="display-tc">
-					<h1>&ldquo; 어리석은 자는 멀리서 행복을 찾고, 현명한 자는 자신의 발치에서 행복을 키워간다&rdquo;</h1>
-					<p>&mdash; 제임스 오펜하임</p>
-				</div>	
-			</div>
-		</div>
-	</div>
-
-	<div id="gtco-subscribe">
-		<div class="gtco-container">
-			<div class="row animate-box">
-				<div class="col-md-8 col-md-offset-2 text-center gtco-heading">
-					<h2 class="cursive-font">Subscribe</h2>
-					<p>Be the first to know about the new templates.</p>
-				</div>
-			</div>
-			<div class="row animate-box">
-				<div class="col-md-8 col-md-offset-2">
-					<form class="form-inline">
-						<div class="col-md-6 col-sm-6">
-							<div class="form-group">
-								<label for="email" class="sr-only">Email</label>
-								<input type="email" class="form-control" id="email" placeholder="Your Email">
+				<div class="col-md-12">
+					<div class="col-md-6 animate-box">
+					<h3>feedback</h3>
+					<form action="#">
+						<div class="row form-group">
+							<div class="col-md-12">
+								<label class="sr-only" for="name">Name</label>
+								<input type="text" id="name" class="form-control" placeholder="Your firstname">
+							</div>
+							
+						</div>
+						<div class="row form-group">
+							<div class="col-md-12">
+								<label class="sr-only" for="message">Message</label>
+								<textarea name="message" id="message" cols="30" rows="10" class="form-control" placeholder="����Ͻø鼭 �����޴����� �����ּ���!"></textarea>
 							</div>
 						</div>
-						<div class="col-md-6 col-sm-6">
-							<button type="submit" class="btn btn-default btn-block">Subscribe</button>
+						<div class="form-group">
+							<input type="submit" value="Send Message" class="btn btn-primary">
 						</div>
-					</form>
+
+					</form>		
+				</div>
+				<div class="col-md-5 col-md-push-1 animate-box">
+					
+					<div class="gtco-contact-info">
+						<h3>Contact Information</h3>
+						<ul>
+							<li class="address">198 West 21th Street, <br> Suite 721 New York NY 10016</li>
+							<li class="phone"><a href="tel://1234567920">+ 1235 2355 98</a></li>
+							<li class="email"><a href="mailto:info@yoursite.com">info@yoursite.com</a></li>
+							<li class="url"><a href="http://FreeHTML5.co">FreeHTML5.co</a></li>
+						</ul>
+					</div>
+
+
+				</div>
 				</div>
 			</div>
 		</div>
@@ -257,6 +188,10 @@
 						</ul>
 					</div>
 				</div>
+
+		
+
+			</div>
 
 			
 

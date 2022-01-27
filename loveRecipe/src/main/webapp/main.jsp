@@ -1,3 +1,5 @@
+<%@ page language="java" contentType="text/html; charset=EUC-KR"
+    pageEncoding="EUC-KR"%>
 <!DOCTYPE HTML>
 <!--
 	Aesthetic by gettemplates.co
@@ -8,7 +10,7 @@
 	<head>
 	<meta charset="utf-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
-	<title>ë ˆì‹œí”¼ë¥¼ ë¶€íƒí•´ &mdash; Free Website Template, Free HTML5 Template by GetTemplates.co</title>
+	<title>·¹½ÃÇÇ¸¦ ºÎÅ¹ÇØ &mdash; Free Website Template, Free HTML5 Template by GetTemplates.co</title>
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<meta name="description" content="Free HTML5 Website Template by GetTemplates.co" />
 	<meta name="keywords" content="free website templates, free html5, free template, free bootstrap, free website template, html5, css3, mobile first, responsive" />
@@ -43,8 +45,6 @@
 	<!-- Bootstrap DateTimePicker -->
 	<link rel="stylesheet" href="css/bootstrap-datetimepicker.min.css">
 
-
-
 	<!-- Owl Carousel  -->
 	<link rel="stylesheet" href="css/owl.carousel.min.css">
 	<link rel="stylesheet" href="css/owl.theme.default.min.css">
@@ -58,6 +58,7 @@
 	<!--[if lt IE 9]>
 	<script src="js/respond.min.js"></script>
 	<![endif]-->
+
 
 	</head>
 	<body>
@@ -73,40 +74,81 @@
 			
 			<div class="row">
 				<div class="col-sm-4 col-xs-12">
-					<div id="gtco-logo"><a href="index.html">ë ˆì‹œí”¼ë¥¼ ë¶€íƒí•´ <em>.</em></a></div>
+					<div id="gtco-logo"><a href="main.jsp">·¹½ÃÇÇ¸¦ ºÎÅ¹ÇØ! <em>.</em></a></div>
 				</div>
 				<div class="col-xs-8 text-right menu-1">
 					<ul>
-						<li class="active"><a href="menu.html">Menu</a></li>
+						<li><a href="menu.jsp">Menu</a></li>
 						<li class="has-dropdown">
-							<a href="services.html">Services</a>
+							<a href="services.jsp">Services</a>
 							<ul class="dropdown">
-								<li><a href="refi.html">ë‚˜ë§Œì˜ ëƒ‰ìž¥ê³ </a></li>
-								<li><a href="mealplan.html">ì‹ë‹¨ì¶”ì²œ</a></li>
-								<li><a href="newrecipe.html">ë ˆì‹œí”¼ë“±ë¡</a></li>
+								<li><a href="refigator.jsp">³ª¸¸ÀÇ ³ÃÀå°í</a></li>
+								<li><a href="mealplan.jsp">½Ä´ÜÂ¥±â</a></li>
+								<li><a href="newrecipe.jsp">·¹½ÃÇÇµî·Ï</a></li>
 							</ul>
 						</li>
-						<li><a href="contact.html">feedback</a></li>
-						<li class="btn-cta"><a href="index.html"><span>login</span></a></li>
-					</ul>	
+						<li><a href="feedback.jsp">feedback</a></li>
+						<li class="btn-cta"><a href="main.jsp"><span>login</span></a></li>
+					</ul>	 
 				</div>
 			</div>
 			
 		</div>
 	</nav>
 	
-	<header id="gtco-header" class="gtco-cover gtco-cover-sm" role="banner" style="background-image: url(images/img_bg_1.jpg)" data-stellar-background-ratio="0.5">
+	<header id="gtco-header" class="gtco-cover gtco-cover-md" role="banner" style="background-image: url(images/img_bg_1.jpg)" data-stellar-background-ratio="0.5">
 		<div class="overlay"></div>
 		<div class="gtco-container">
 			<div class="row">
-				<div class="col-md-12 col-md-offset-0 text-center">
+				<div class="col-md-12 col-md-offset-0 text-left">
 					
 
 					<div class="row row-mt-15em">
-						<div class="col-md-12 mt-text animate-box" data-animate-effect="fadeInUp">
-							<h1 class="cursive-font">ì˜¤ëŠ˜ì˜ ë©”ë‰´ë¥¼ ì¶”ì²œ!</h1>	
+						<div class="col-md-7 mt-text animate-box" data-animate-effect="fadeInUp">
+							<h1 class="cursive-font"> ·Î±×ÀÎÀ» ÇÏ¼¼¿ä!</h1>	
 						</div>
-						
+						<div class="col-md-4 col-md-push-1 animate-box" data-animate-effect="fadeInRight">
+							<div class="form-wrap">
+								<div class="tab">
+									
+									<div class="tab-content">
+										<div class="tab-content-inner active" data-content="signup">
+											<h3 class="cursive-font">
+												login</h3>
+											<form action="#">
+												<div class="row form-group">
+												</div>
+												<div class="row form-group">
+													<div class="col-md-12">
+														<label>id</label>
+														<input type="text" name="id" class="form-control">
+													</div>
+												</div>
+
+												<div class="row form-group">
+													<div class="col-md-12">
+														<label>pw</label>
+														<input type="password" name="pw" class="form-control">
+													</div>
+												</div>
+
+												<div class="row form-group">
+													<div class="col-md-12">
+														<input type="submit" class="btn btn-primary btn-block" value="login">
+														<a href="new.jsp">È¸¿ø°¡ÀÔ</a>
+													</div>
+													
+												</div>
+
+									
+											</form>	
+										</div>
+
+										
+									</div>
+								</div>
+							</div>
+						</div>
 					</div>
 							
 					
@@ -121,8 +163,8 @@
 		<div class="gtco-container">
 			<div class="row">
 				<div class="col-md-8 col-md-offset-2 text-center gtco-heading">
-					<h2 class="cursive-font primary-color">ì´ë°‘ì— ëƒ‰ìž¥ê³  ìž¬ë£Œ ìž…ë ¥ë° ë³´ìœ í•œ ìž¬ë£Œ ë³´ì—¬ì£¼ëŠ”ê¸°ëŠ¥ í•„ìš”</h2>
-					<p>ì‹¤ì‹œê°„ìœ¼ë¡œ ê¸‰ìƒìŠ¹ì¤‘ì¸ ë ˆì‹œí”¼ë¥¼ ì¶”ì²œë°›ìœ¼ì„¸ìš”!</p>
+					<h2 class="cursive-font primary-color">½Ç½Ã°£ ±Þ»ó½Â ·¹½ÃÇÇ</h2>
+					<p>½Ç½Ã°£À¸·Î ±Þ»ó½ÂÁßÀÎ ·¹½ÃÇÇ¸¦ ±¸°æÇÏ¼¼¿ä!</p>
 				</div>
 			</div>
 			<div class="row">
@@ -214,25 +256,123 @@
 			</div>
 		</div>
 	</div>
+	
+	<div id="gtco-features">
+		<div class="gtco-container">
+			<div class="row">
+				<div class="col-md-8 col-md-offset-2 text-center gtco-heading animate-box">
+					<h2 class="cursive-font">Our Services</h2>
+					<p>»ç¿ëÀÚµéÀÇ Çàº¹Àº ¾ðÁ¦³ª °³¹ßÀÚÀÇ Çàº¹</p>
+				</div>
+			</div>
+			<div class="row">
+				<div class="col-md-4 col-sm-6">
+					<div class="feature-center animate-box" data-animate-effect="fadeIn">
+						<span class="icon">
+							<i class="ti-face-smile"></i>
+						</span>
+						<h3>Happy</h3>
+						<p>¿ä¸®ÇÏ´Â Áñ°Å¿ò</p>
+					</div>
+				</div>
+				<div class="col-md-4 col-sm-6">
+					<div class="feature-center animate-box" data-animate-effect="fadeIn">
+						<span class="icon">
+							<i class="ti-thought"></i>
+						</span>
+						<h3>Creative</h3>
+						<p>Ã¢ÀÇÀûÀÎ ·¹½ÃÇÇ</p>
+					</div>
+				</div>
+				<div class="col-md-4 col-sm-6">
+					<div class="feature-center animate-box" data-animate-effect="fadeIn">
+						<span class="icon">
+							<i class="ti-check"></i>
+						</span>
+						<h3>check</h3>
+						<p>³ÃÀå°í °ü¸®</p>
+					</div>
+				</div>
+				<div class="col-md-4 col-sm-6">
+					<div class="feature-center animate-box" data-animate-effect="fadeIn">
+						<span class="icon">
+							<i class="ti-timer"></i>
+						</span>
+						<h3>Time</h3>
+						<p>·¹½ÃÇÇ °í¹Î½Ã°£ °¨¼Ò</p>
+					</div>
+				</div>
+				
+
+			</div>
+		
+		</div>
+	</div>
+
 
 	<div class="gtco-cover gtco-cover-sm" style="background-image: url(images/img_bg_1.jpg)"  data-stellar-background-ratio="0.5">
 		<div class="overlay"></div>
 		<div class="gtco-container text-center">
 			<div class="display-t">
 				<div class="display-tc">
-					<h1>&ldquo; ìŒì‹ì— ëŒ€í•œ ì‚¬ëž‘ì²˜ëŸ¼  ì§„ì‹¤ëœ ì‚¬ëž‘ì€ ì—†ë‹¤.&rdquo;</h1>
-					<p>&mdash; - ì¡°ì§€ ë²„ë‚˜ë“œ ì‡¼-</p>
+					<h1>&ldquo; À½½Ä¿¡ ´ëÇÑ »ç¶ûÃ³·³ Áø½ÇµÈ »ç¶ûÀº ¾ø´Ù.&rdquo;</h1>
+					<p>&mdash; - Á¶Áö ¹ö³ªµå ¼î-</p>
 				</div>	
 			</div>
 		</div>
 	</div>
+
+	<div id="gtco-counter" class="gtco-section">
+		<div class="gtco-container">
+
+			<div class="row">
+				<div class="col-md-8 col-md-offset-2 text-center gtco-heading animate-box">
+					<h2 class="cursive-font primary-color">±×°Å ¾Æ¼¼¿ä? </h2>
+					<p>½Ä»ç¹ýÀÌ Àß¸øµÇ¾ú´Ù¸é ¾àÀÌ ¼Ò¿ë¾ø°í, ½Ä»ç¹ýÀÌ ¿Ç´Ù¸é ¾àÀÌ ÇÊ¿ä¾ø´Ù</p>
+				</div>
+			</div>
+
+			<div class="row">
+				
+				<div class="col-md-3 col-sm-6 animate-box" data-animate-effect="fadeInUp">
+					<div class="feature-center">
+						<span class="counter js-counter" data-from="0" data-to="5" data-speed="5000" data-refresh-interval="50">1</span>
+						<span class="counter-label">Æò±Õ º°</span>
+
+					</div>
+				</div>
+				<div class="col-md-3 col-sm-6 animate-box" data-animate-effect="fadeInUp">
+					<div class="feature-center">
+						<span class="counter js-counter" data-from="0" data-to="43" data-speed="5000" data-refresh-interval="50">1</span>
+						<span class="counter-label">Á¶¸® ¹æ¹ý</span>
+					</div>
+				</div>
+				<div class="col-md-3 col-sm-6 animate-box" data-animate-effect="fadeInUp">
+					<div class="feature-center">
+						<span class="counter js-counter" data-from="0" data-to="32" data-speed="5000" data-refresh-interval="50">1</span>
+						<span class="counter-label">ÃÑ È¸¿ø¼ö</span>
+					</div>
+				</div>
+				<div class="col-md-3 col-sm-6 animate-box" data-animate-effect="fadeInUp">
+					<div class="feature-center">
+						<span class="counter js-counter" data-from="0" data-to="1985" data-speed="5000" data-refresh-interval="50">1</span>
+						<span class="counter-label">·¹½ÃÇÇ ¼ö</span>
+
+					</div>
+				</div>
+					
+			</div>
+		</div>
+	</div>
+
+	
 
 	<div id="gtco-subscribe">
 		<div class="gtco-container">
 			<div class="row animate-box">
 				<div class="col-md-8 col-md-offset-2 text-center gtco-heading">
 					<h2 class="cursive-font">feedback</h2>
-					<p>ì‚¬ì´íŠ¸ë¥¼ ì“°ë©´ì„œ ë¶ˆíŽ¸í–‡ë˜ì ì„ ë³´ë‚´ì£¼ì„¸ìš”!</p>
+					<p>»çÀÌÆ®¸¦ ¾²¸é¼­ ºÒÆíÇÞ´øÁ¡À» º¸³»ÁÖ¼¼¿ä!</p>
 				</div>
 			</div>
 			<div class="row animate-box">
@@ -241,7 +381,7 @@
 						<div class="col-md-6 col-sm-6">
 							<div class="form-group">
 								<label for="feedback" class="sr-only">feedback</label>
-								<input type="feedback" class="form-control" id="feedback" placeholder="ë¶ˆíŽ¸í–ˆë˜ì ì„ ë³´ë‚´ì£¼ì„¸ìš”!">
+								<input type="feedback" class="form-control" id="feedback" placeholder="ºÒÆíÇß´øÁ¡À» º¸³»ÁÖ¼¼¿ä!">
 							</div>
 						</div>
 						<div class="col-md-6 col-sm-6">
@@ -263,14 +403,6 @@
 				
 				<div class="col-md-12 text-center">
 					<div class="gtco-widget">
-						<h3>Get In Touch</h3>
-						<ul class="gtco-quick-contact">
-							<li><a href="#"><i class="icon-phone"></i> +1 234 567 890</a></li>
-							<li><a href="#"><i class="icon-mail2"></i> info@GetTemplates.co</a></li>
-							<li><a href="#"><i class="icon-chat"></i> Live Chat</a></li>
-						</ul>
-					</div>
-					<div class="gtco-widget">
 						<h3>Get Social</h3>
 						<ul class="gtco-social-icons">
 							<li><a href="#"><i class="icon-twitter"></i></a></li>
@@ -281,7 +413,8 @@
 					</div>
 				</div>
 
-		
+			</div>
+
 			
 
 		</div>
