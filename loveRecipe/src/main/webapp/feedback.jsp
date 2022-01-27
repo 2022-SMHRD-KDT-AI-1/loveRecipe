@@ -29,6 +29,7 @@
 
 	<link href="https://fonts.googleapis.com/css?family=Lato:300,400,700" rel="stylesheet">
 	<link href="https://fonts.googleapis.com/css?family=Kaushan+Script" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css2?family=Nanum+Brush+Script&display=swap" rel="stylesheet">
 	
 	<!-- Animate.css -->
 	<link rel="stylesheet" href="css/animate.css">
@@ -75,7 +76,7 @@
 			
 			<div class="row">
 				<div class="col-sm-4 col-xs-12">
-					<div id="gtco-logo"><a href="main.jsp">레시피를 부탁해! <em>.</em></a></div>
+					<div id="gtco-logo"><a href="main.jsp"><em class="cursive-font" style="font-size: 3rem">레시피를 부탁해!</em></a></div>
 				</div>
 				<div class="col-xs-8 text-right menu-1">
 					<ul>

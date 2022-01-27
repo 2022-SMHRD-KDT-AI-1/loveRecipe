@@ -29,6 +29,7 @@
 
 	<link href="https://fonts.googleapis.com/css?family=Lato:300,400,700" rel="stylesheet">
 	<link href="https://fonts.googleapis.com/css?family=Kaushan+Script" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css2?family=Nanum+Brush+Script&display=swap" rel="stylesheet">
 	
 	<!-- Animate.css -->
 	<link rel="stylesheet" href="css/animate.css">
@@ -74,7 +75,7 @@
 			
 			<div class="row">
 				<div class="col-sm-4 col-xs-12">
-					<div id="gtco-logo"><a href="main.jsp">레시피를 부탁해! <em>.</em></a></div>
+					<div id="gtco-logo"><a href="main.jsp"><em class="cursive-font" style="font-size: 3rem">레시피를 부탁해!</em></a></div>
 				</div>
 				<div class="col-xs-8 text-right menu-1">
 					<ul>
@@ -115,58 +116,58 @@
 										<div class="tab-content-inner active" data-content="signup">
 											<h3 class="cursive-font">
 												search</h3>
-											<form action="#">
+											<form action="recipesearch">
 											
 												<div class="row form-group">
 															<label>주재료별</label><br>
-					    						     		돼지고기<input type="radio" name="ingrident"   value="fork">
-															소고기<input type="radio" name="ingrident"   value="beaf">
-															닭고기<input type="radio" name="ingrident"   value="chiken">
-															생선 <input type="radio" name="ingrident"   value="fish">
-															면 <input type="radio" name="ingrident"  value="noodle">
-															과일 <input type="radio" name="ingrident"   value="apple">
-															쌀 <input type="radio" name="ingrident"  value="rice">
-															오리고기<input type="radio" name="ingrident"   value="duck"> 
+					    						     		<label><input type="radio" name="ingrident" value="fork">돼지고기</label>
+															<label><input type="radio" name="ingrident" value="beaf">소고기</label>
+															<label><input type="radio" name="ingrident" value="chicken">닭고기</label>
+															<label><input type="radio" name="ingrident" value="fish">생선</label>
+															<label><input type="radio" name="ingrident" value="noodle">면</label>
+															<label><input type="radio" name="ingrident" value="fruit">과일</label>
+															<label><input type="radio" name="ingrident" value="rice">쌀</label>
+															<label><input type="radio" name="ingrident" value="duck">오리고기</label>
 												</div>
 												
 												<div class="row form-group">
 															<label>나라별레시피</label><br>
-					    						     		한식<input type="radio" name="object"   value="korea">
-															중식<input type="radio" name="object"   value="china">
-															일식<input type="radio" name="object"   value="japan">
-															양식 <input type="radio" name="object"   value="euro">
-															동남아 <input type="radio" name="object"  value="phlipean">
-															이탈리아 <input type="radio" name="object"   value="italy">
-															멕시코 <input type="radio" name="object"  value="mexico">
-															퓨전<input type="radio" name="object"   value="fuzen"> 
+					    						     		<label><input type="radio" name="object" value="korea">한식</label>
+					    						     		<label><input type="radio" name="object" value="western">양식</label>
+															<label><input type="radio" name="object" value="china">중식</label>
+															<label><input type="radio" name="object" value="japan">일식</label>
+															<label><input type="radio" name="object" value="se_asia">동남아</label>
+															<label><input type="radio" name="object" value="italy">이탈리아</label>
+															<label><input type="radio" name="object" value="mexico">멕시코</label>
+															<label><input type="radio" name="object" value="fusion">퓨전</label>
 												</div>
 												<div class="row form-group">
 															<label>종류별레시피</label><br>
-					    						     		구이<input type="radio" name="type"   value="guie">
-															국<input type="radio" name="type"   value="guk">
-															그라탕/리조또<input type="radio" name="type"   value="grtang">
-															나물/생채/샐러드 <input type="radio" name="type"   value="namul">
-															떡/한과 <input type="radio" name="type"  value="ttuk">
-															도시락/간식 <input type="radio" name="type"   value="dosilack">
-															만두/면류 <input type="radio" name="type"  value="mundu">
-															밑반찬/김치<input type="radio" name="type"   value="kimchi"> 
+					    						     		<label><input type="radio" name="type" value="guie">구이</label>
+															<label><input type="radio" name="type" value="guk">국</label>
+															<label><input type="radio" name="type" value="grtang">그라탕/리조또</label>
+															<label><input type="radio" name="type" value="namul">나물/생채/샐러드</label>
+															<label><input type="radio" name="type" value="ttuk">떡/한과</label>
+															<label><input type="radio" name="type" value="dosilack">도시락/간식</label>
+															<label><input type="radio" name="type" value="mundu">만두/면류</label>
+															<label><input type="radio" name="type" value="kimchi">밑반찬/김치</label>
 															
-															밥/죽/스프 <input type="radio" name="type"  value="bap">
-															볶음 <input type="radio" name="type"   value="bokum">
-															부침 <input type="radio" name="type"  value="buchim">
-															빵/과자<input type="radio" name="type"   value="bbang"> 
-															샌드위치/햄버거 <input type="radio" name="type"  value="sandwich">
+															<label><input type="radio" name="type" value="bap">밥/죽/스프</label>
+															<label><input type="radio" name="type" value="bokum">볶음</label>
+															<label><input type="radio" name="type" value="buchim">부침</label>
+															<label><input type="radio" name="type" value="bbang">빵/과자</label>
+															<label><input type="radio" name="type" value="sandwich">샌드위치/햄버거</label>
 															
-															양념장 <input type="radio" name="type"   value="yangnum">
-															양식 <input type="radio" name="type"  value="yangsik">
-															음료<input type="radio" name="type"   value="umryo"> 
+															<label><input type="radio" name="type" value="yangnum">양념장</label>
+															<label><input type="radio" name="type" value="yangsik">양식</label>
+															<label><input type="radio" name="type" value="umryo">음료</label>
 															
-															조림 <input type="radio" name="type"   value="jorim">
-															찌개/전골/스튜 <input type="radio" name="type"  value="zzikae">
-															찜<input type="radio" name="type"   value="zzim"> 
-															피자 <input type="radio" name="type"  value="pizza">
-															후식<input type="radio" name="type"   value="husik"> 
-															튀김/커틀릿<input type="radio" name="type"   value="tikim"> 
+															<label><input type="radio" name="type" value="jorim">조림</label>
+															<label><input type="radio" name="type" value="zzikae">찌개/전골/스튜</label>
+															<label><input type="radio" name="type" value="zzim">찜</label>
+															<label><input type="radio" name="type" value="pizza">피자</label>
+															<label><input type="radio" name="type" value="husik">후식</label>
+															<label><input type="radio" name="type" value="tikim">튀김/커틀릿</label>
 												</div>
 
 												<div class="row form-group">
@@ -226,8 +227,8 @@
 		<div class="gtco-container text-center">
 			<div class="display-t">
 				<div class="display-tc">
-					<h1>&ldquo; 음식에 대한 사랑처럼 진실된 사랑은 없다.&rdquo;</h1> 
-					<p>&mdash; - 조지 버나드 쇼-</p>
+					<h1 class="cursive-font">&ldquo;음식에 대한 사랑처럼 진실된 사랑은 없다.&rdquo;</h1> 
+					<p>&mdash; 조지 버나드 쇼</p>
 				</div>	
 			</div>
 		</div>
