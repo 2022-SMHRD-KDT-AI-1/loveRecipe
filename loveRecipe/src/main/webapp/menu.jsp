@@ -226,7 +226,7 @@
 		<div class="gtco-container text-center">
 			<div class="display-t">
 				<div class="display-tc">
-					<h1>&ldquo; 음식에 대한 사랑처럼 진실된 사랑은 없다.&rdquo;</h1>
+					<h1>&ldquo; 음식에 대한 사랑처럼 진실된 사랑은 없다.&rdquo;</h1> 
 					<p>&mdash; - 조지 버나드 쇼-</p>
 				</div>	
 			</div>
