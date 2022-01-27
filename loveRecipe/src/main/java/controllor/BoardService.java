@@ -58,9 +58,9 @@ protected void service(HttpServletRequest request, HttpServletResponse response)
     int cnt = dao.upload(dto);
     
     if(cnt>0) {
-    	System.out.println("�̹��� ���ε� ����");
+    	System.out.println("메세지 전송성공");
     }else {
-    	System.out.println("�̹��� ���ε� ����");
+    	System.out.println("메세지 전송실패");
     }
     response.sendRedirect("newrecipe.jsp");
     

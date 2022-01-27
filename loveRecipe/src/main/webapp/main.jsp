@@ -249,12 +249,14 @@
 							<h2>Salad with Crispy Chicken</h2>
 							<p>Far far away, behind the word mountains, far from the countries Vokalia..</p>
 							<p><span class="price cursive-font">$5.59</span></p>
+							
 						</div>
 					</a>
 				</div>
 
 			</div>
 		</div>
+		<input type="submit" class="btn btn-primary btn-block" value="새로고침">
 	</div>
 	
 	<div id="gtco-features">

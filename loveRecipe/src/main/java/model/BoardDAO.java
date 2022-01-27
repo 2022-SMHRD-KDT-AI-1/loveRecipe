@@ -78,15 +78,15 @@ public class BoardDAO {
 			rs = psmt.executeQuery();
 			
 			while(rs.next()) {
-				int num =rs.getInt(1);
-				String title =rs.getString(2);
-				String writer = rs.getString(3);
-				String fileName = rs.getString(4);
-				String content =rs.getString(5);
-				String b_date =rs.getString(6);
+				String a =rs.getString(1);
+				String b =rs.getString(2);
+				String c = rs.getString(3);
+				String d = rs.getString(4);
+				String e =rs.getString(5);
+				String f =rs.getString(6);
+				
 			
-			
-			BoardDTO dto =new BoardDTO(num, title, writer, fileName, content, b_date);
+			BoardDTO dto =new BoardDTO(a, b, c, d, e, f);
 			list.add(dto);
 		   }
 		} catch (Exception e) {
