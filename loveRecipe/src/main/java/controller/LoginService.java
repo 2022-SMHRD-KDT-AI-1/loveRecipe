@@ -1,4 +1,4 @@
-package controllor;
+package controller;
 
 import java.io.IOException;
 import java.lang.reflect.Member;
