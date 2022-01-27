@@ -122,48 +122,49 @@
 				<div class="col-md-12">
 					<div class="col-md-6 animate-box">
 					<h3>회원가입</h3>
-					<form action="#">
+					<form action="JoinService" method="POST">
 						<div class="row form-group">
 							<div class="col-md-12">
 								<label>id</label>
-								<input type="text" id="name" class="form-control" placeholder="아이디">
+								<input type="text"  name="id" class="form-control" placeholder="아이디">
 							</div>
 							
 						</div>
                         <div class="row form-group">
 							<div class="col-md-12">
 								<label>pw</label>
-								<input type="password" id="pw" class="form-control" placeholder="비밀번호">
+								<input type="password" name="pw" class="form-control" placeholder="비밀번호">
 							</div>
 							
 						</div>
                         <div class="row form-group">
 							<div class="col-md-12">
 								<label>nickname</label>
-								<input type="text" id="nickname" class="form-control" placeholder="닉네임">
+								<input type="text" name="nickname" class="form-control" placeholder="닉네임">
 							</div>
 							
 						</div>
                         <div class="row form-group">
 							<div class="col-md-12">
 								<label>email</label>
-								<input type="text" id="email" class="form-control" placeholder="이메일">
+								<input type="text" name="email" class="form-control" placeholder="이메일">
 							</div>
 							
 						</div>
                         <div class="row form-group">
 							<div class="col-md-12">
 								<label>phone</label>
-								<input type="text" id="name" class="form-control" placeholder="전화번호">
+								<input type="text" name="phone" class="form-control" placeholder="전화번호">
 							</div>
 							
 						</div>
 						
-						<div class="form-group">
-							<input type="submit" value="newid" class="btn btn-primary">
+						<div class="row form-group">
+							<input type="submit"  class="btn btn-primary">
 						</div>
 
 					</form>		
+							
 				</div>
 				<div class="col-md-5 col-md-push-1 animate-box">
 					

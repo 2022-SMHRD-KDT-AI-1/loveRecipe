@@ -62,7 +62,7 @@ protected void service(HttpServletRequest request, HttpServletResponse response)
     }else {
     	System.out.println("�̹��� ���ε� ����");
     }
-    response.sendRedirect("newrecipe2.html");
+    response.sendRedirect("newrecipe.html");
     
 	}
 
