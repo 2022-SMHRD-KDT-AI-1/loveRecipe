@@ -122,7 +122,7 @@
 				<div class="col-md-12">
 					<div class="col-md-6 animate-box">
 					<h3>레시피 업로드</h3>
-					<form action="#">
+					<form action="BoardService">
 					<div class="row form-group">
 															<label>레시피국가</label><br>
 					    						     		한식<input type="radio" name="object"   value="korea">
