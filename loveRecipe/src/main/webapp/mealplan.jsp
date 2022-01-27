@@ -106,7 +106,7 @@
 
 					<div class="row row-mt-15em">
 						<div class="col-md-12 mt-text animate-box" data-animate-effect="fadeInUp">
-							<h1 class="cursive-font">오늘의 메뉴를 추천!</h1>	
+							<h1 class="cursive-font">원하는레시피로 일주일 식단을 꾸려보세요!</h1>	
 						</div>
 						
 					</div>
@@ -130,90 +130,138 @@
 			<div class="row">
 
 				<div class="col-lg-4 col-md-4 col-sm-6">
-					<a href="images/img_1.jpg" class="fh5co-card-item image-popup">
+				<!--  가져온 레시피의 첫번째 이미지가 들어가야함 -->
+					<a href="images/img_1.jpg" class="fh5co-card-item image-popup">	
 						<figure>
 							<div class="overlay"><i class="ti-plus"></i></div>
 							<img src="images/img_1.jpg" alt="Image" class="img-responsive">
 						</figure>
+						</a>
 						<div class="fh5co-text">
-							<h2>Fresh Mushrooms</h2>
-							<p>Far far away, behind the word mountains, far from the countries Vokalia..</p>
-							<p><span class="price cursive-font">$19.15</span></p>
+							<h2>월요일</h2>
+							<form action="#">
+							<input type="text" name="mon1"  placeholder="원하시는 레시피를 선택해주세요  단 이름이 같아야합니다">
+							<input type="text" name="mon2"  placeholder="원하시는 레시피를 선택해주세요  단 이름이 같아야합니다">
+							<input type="text" name="mon3"  placeholder="원하시는 레시피를 선택해주세요  단 이름이 같아야합니다"><br>
+							<input type="submit" value="저장">
+							</form>
+							<p><span class="price cursive-font">모든 레시피의 칼로리를 합한 값</span></p>
 						</div>
-					</a>
 				</div>
 				<div class="col-lg-4 col-md-4 col-sm-6">
-					<a href="images/img_2.jpg" class="fh5co-card-item image-popup">
+				<!--  가져온 레시피의 첫번째 이미지가 들어가야함 -->
+					<a href="images/img_1.jpg" class="fh5co-card-item image-popup">	
 						<figure>
 							<div class="overlay"><i class="ti-plus"></i></div>
-							<img src="images/img_2.jpg" alt="Image" class="img-responsive">
+							<img src="images/img_1.jpg" alt="Image" class="img-responsive">
 						</figure>
-						<div class="fh5co-text">
-							<h2>Cheese and Garlic Toast</h2>
-							<p>Far far away, behind the word mountains, far from the countries Vokalia..</p>
-							<p><span class="price cursive-font">$20.99</span></p>
-						</div>
 					</a>
-				</div>
-				<div class="col-lg-4 col-md-4 col-sm-6">
-					<a href="images/img_3.jpg" class="fh5co-card-item image-popup">
+						<div class="fh5co-text">
+							<h2>화요일</h2>
+							<form action="#">
+							<input type="text" name="mon1"  placeholder="원하시는 레시피를 선택해주세요  단 이름이 같아야합니다">
+							<input type="text" name="mon2"  placeholder="원하시는 레시피를 선택해주세요  단 이름이 같아야합니다">
+							<input type="text" name="mon3"  placeholder="원하시는 레시피를 선택해주세요  단 이름이 같아야합니다"><br>
+							<input type="submit" value="저장">
+							</form>
+							<p><span class="price cursive-font">모든 레시피의 칼로리를 합한 값</span></p>
+						</div>
+					
+				</div><div class="col-lg-4 col-md-4 col-sm-6">
+				<!--  가져온 레시피의 첫번째 이미지가 들어가야함 -->
+					<a href="images/img_1.jpg" class="fh5co-card-item image-popup">	
 						<figure>
 							<div class="overlay"><i class="ti-plus"></i></div>
-							<img src="images/img_3.jpg" alt="Image" class="img-responsive">
+							<img src="images/img_1.jpg" alt="Image" class="img-responsive">
 						</figure>
-						<div class="fh5co-text">
-							<h2>Grilled Chiken Salad</h2>
-							<p>Far far away, behind the word mountains, far from the countries Vokalia..</p>
-							<p><span class="price cursive-font">$8.99</span></p>
-
-						</div>
 					</a>
-				</div>
-
-
-				<div class="col-lg-4 col-md-4 col-sm-6">
-					<a href="images/img_4.jpg" class="fh5co-card-item image-popup">
+						<div class="fh5co-text">
+							<h2>수요일</h2>
+							<form action="#">
+							<input type="text" name="mon1"  placeholder="원하시는 레시피를 선택해주세요  단 이름이 같아야합니다">
+							<input type="text" name="mon2"  placeholder="원하시는 레시피를 선택해주세요  단 이름이 같아야합니다">
+							<input type="text" name="mon3"  placeholder="원하시는 레시피를 선택해주세요  단 이름이 같아야합니다"><br>
+							<input type="submit" value="저장">
+							</form>
+							<p><span class="price cursive-font">모든 레시피의 칼로리를 합한 값</span></p>
+						</div>
+					
+				</div><div class="col-lg-4 col-md-4 col-sm-6">
+				<!--  가져온 레시피의 첫번째 이미지가 들어가야함 -->
+					<a href="images/img_1.jpg" class="fh5co-card-item image-popup">	
 						<figure>
 							<div class="overlay"><i class="ti-plus"></i></div>
-							<img src="images/img_4.jpg" alt="Image" class="img-responsive">
+							<img src="images/img_1.jpg" alt="Image" class="img-responsive">
 						</figure>
-						<div class="fh5co-text">
-							<h2>Organic Egg</h2>
-							<p>Far far away, behind the word mountains, far from the countries Vokalia..</p>
-							<p><span class="price cursive-font">$12.99</span></p>
-						</div>
 					</a>
-				</div>
-
-				<div class="col-lg-4 col-md-4 col-sm-6">
-					<a href="images/img_5.jpg" class="fh5co-card-item image-popup">
+						<div class="fh5co-text">
+							<h2>목요일</h2>
+							<form action="#">
+							<input type="text" name="mon1"  placeholder="원하시는 레시피를 선택해주세요  단 이름이 같아야합니다">
+							<input type="text" name="mon2"  placeholder="원하시는 레시피를 선택해주세요  단 이름이 같아야합니다">
+							<input type="text" name="mon3"  placeholder="원하시는 레시피를 선택해주세요  단 이름이 같아야합니다"><br>
+							<input type="submit" value="저장">
+							</form>
+							<p><span class="price cursive-font">모든 레시피의 칼로리를 합한 값</span></p>
+						</div>
+					
+				</div><div class="col-lg-4 col-md-4 col-sm-6">
+				<!--  가져온 레시피의 첫번째 이미지가 들어가야함 -->
+					<a href="images/img_1.jpg" class="fh5co-card-item image-popup">	
 						<figure>
 							<div class="overlay"><i class="ti-plus"></i></div>
-							<img src="images/img_5.jpg" alt="Image" class="img-responsive">
+							<img src="images/img_1.jpg" alt="Image" class="img-responsive">
 						</figure>
-						<div class="fh5co-text">
-							<h2>Tomato Soup with Chicken</h2>
-							<p>Far far away, behind the word mountains, far from the countries Vokalia..</p>
-							<p><span class="price cursive-font">$23.10</span></p>
-						</div>
 					</a>
-				</div>
-
-				<div class="col-lg-4 col-md-4 col-sm-6">
-					<a href="images/img_6.jpg" class="fh5co-card-item image-popup">
+						<div class="fh5co-text">
+							<h2>금요일</h2>
+							<form action="#">
+							<input type="text" name="mon1"  placeholder="원하시는 레시피를 선택해주세요  단 이름이 같아야합니다">
+							<input type="text" name="mon2"  placeholder="원하시는 레시피를 선택해주세요  단 이름이 같아야합니다">
+							<input type="text" name="mon3"  placeholder="원하시는 레시피를 선택해주세요  단 이름이 같아야합니다"><br>
+							<input type="submit" value="저장">
+							</form>
+							<p><span class="price cursive-font">모든 레시피의 칼로리를 합한 값</span></p>
+						</div>
+					
+				</div><div class="col-lg-4 col-md-4 col-sm-6">
+				<!--  가져온 레시피의 첫번째 이미지가 들어가야함 -->
+					<a href="images/img_1.jpg" class="fh5co-card-item image-popup">	
 						<figure>
 							<div class="overlay"><i class="ti-plus"></i></div>
-							<img src="images/img_6.jpg" alt="Image" class="img-responsive">
+							<img src="images/img_1.jpg" alt="Image" class="img-responsive">
 						</figure>
-						<div class="fh5co-text">
-							<h2>Salad with Crispy Chicken</h2>
-							<p>Far far away, behind the word mountains, far from the countries Vokalia..</p>
-							<p><span class="price cursive-font">$5.59</span></p>
-						</div>
 					</a>
+						<div class="fh5co-text">
+							<h2>토요일</h2>
+							<form action="#">
+							<input type="text" name="mon1"  placeholder="원하시는 레시피를 선택해주세요  단 이름이 같아야합니다">
+							<input type="text" name="mon2"  placeholder="원하시는 레시피를 선택해주세요  단 이름이 같아야합니다">
+							<input type="text" name="mon3"  placeholder="원하시는 레시피를 선택해주세요  단 이름이 같아야합니다"><br>
+							<input type="submit" value="저장">
+							</form>
+							<p><span class="price cursive-font">모든 레시피의 칼로리를 합한 값</span></p>
+						</div>
+					
+				</div><div class="col-lg-4 col-md-4 col-sm-6">
+				<!--  가져온 레시피의 첫번째 이미지가 들어가야함 -->
+					<a href="images/img_1.jpg" class="fh5co-card-item image-popup">	
+						<figure>
+							<div class="overlay"><i class="ti-plus"></i></div>
+							<img src="images/img_1.jpg" alt="Image" class="img-responsive">
+						</figure>
+					</a>
+						<div class="fh5co-text">
+							<h2>일요일</h2>
+							<form action="#">
+							<input type="text" name="mon1"  placeholder="원하시는 레시피를 선택해주세요  단 이름이 같아야합니다">
+							<input type="text" name="mon2"  placeholder="원하시는 레시피를 선택해주세요  단 이름이 같아야합니다">
+							<input type="text" name="mon3"  placeholder="원하시는 레시피를 선택해주세요  단 이름이 같아야합니다"><br>
+							<input type="submit" value="저장">
+							</form>
+							<p><span class="price cursive-font">모든 레시피의 칼로리를 합한 값</span></p>
+						</div>
 				</div>
-
-			</div>
 		</div>
 	</div>
 

@@ -149,7 +149,7 @@
 							<i class="ti-apple"></i>
 						</span>
 						<h3>레시피추천</h3>
-						<p>재료들을 조합하여 최적의 레시피 추천</p>
+						<p>검색필터링을 통한 최적의 레시피 추천</p>
 					</div>
 				</div>
 				<div class="col-md-4 col-sm-6">
@@ -206,12 +206,13 @@
 		</div>
 	</div>
 
+	
 	<div id="gtco-subscribe">
 		<div class="gtco-container">
 			<div class="row animate-box">
 				<div class="col-md-8 col-md-offset-2 text-center gtco-heading">
-					<h2 class="cursive-font">Subscribe</h2>
-					<p>Be the first to know about the new templates.</p>
+					<h2 class="cursive-font">feedback</h2>
+					<p>사이트를 쓰면서 불편햇던점을 보내주세요!</p>
 				</div>
 			</div>
 			<div class="row animate-box">
@@ -219,12 +220,12 @@
 					<form class="form-inline">
 						<div class="col-md-6 col-sm-6">
 							<div class="form-group">
-								<label for="email" class="sr-only">Email</label>
-								<input type="email" class="form-control" id="email" placeholder="Your Email">
+								<label for="feedback" class="sr-only">feedback</label>
+								<input type="feedback" class="form-control" id="feedback" placeholder="불편했던점을 보내주세요!">
 							</div>
 						</div>
 						<div class="col-md-6 col-sm-6">
-							<button type="submit" class="btn btn-default btn-block">Subscribe</button>
+							<button type="submit" class="btn btn-default btn-block">send</button>
 						</div>
 					</form>
 				</div>
