@@ -13,20 +13,20 @@ public class BoardDAO {
 	int cnt=0;
 	
 	public void DBconn() {
-		// 1.. jar���� ����ְ�, Class �����ε�
+
 		try {
 					Class.forName("oracle.jdbc.driver.OracleDriver");
-					// 2. Connection ��ü ����
+				
 					String url = "jdbc:oracle:thin:@localhost:1521:xe";
-					String dbid = "hr"; // ���Ⱑ ����־ ���̵����� �����ϱ� ���� �Ұ����̿���! hr hr ä���ֽø� �˴ϴٳ�,,
-					String dbpw = "hr"; // ���غ����
+					String dbid = "hr"; 
+					String dbpw = "hr";
 					conn = DriverManager.getConnection(url, dbid, dbpw);
 				
 					} catch (Exception e) {
 					e.printStackTrace();
 					}
 	}
-	//DB Close �޼ҵ�
+	
 	public void DBclose() {
 		try {
 			if(rs != null) {
@@ -65,7 +65,7 @@ public class BoardDAO {
 	      } return cnt;
 	   }
 	   
-	// ��ü �Խñ� �����ִ� �޼ҵ�
+	
 	   public ArrayList<BoardDTO> showBoard() {
 		   ArrayList<BoardDTO> list =new ArrayList<BoardDTO>();
 		   try {
@@ -96,7 +96,7 @@ public class BoardDAO {
 		} return list;
 			
 		}
-	// �Խñ� �� ���� �޼ҵ�
+	
 	   public BoardDTO selectOne(int choice) {
 
 	      BoardDTO dto = null;
@@ -122,7 +122,7 @@ public class BoardDAO {
 	         }
 
 	      } catch (Exception e) {
-	         // TODO Auto-generated catch block
+	      
 	         e.printStackTrace();
 	      } finally {
 	         DBclose();

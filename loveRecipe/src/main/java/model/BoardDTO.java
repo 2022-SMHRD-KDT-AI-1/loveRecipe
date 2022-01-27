@@ -17,7 +17,7 @@ public class BoardDTO {
 		this.content = content;
 		this.b_date = b_date;
 	}
-	// title, writer, fileName, content 4�� ���� ������
+	
 	public BoardDTO(String title, String writer, String fileName, String content) {
 		this.title = title;
 		this.writer = writer;
