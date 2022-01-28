@@ -1,3 +1,4 @@
+<%@page import="model.MemberVO"%>
 <%@ page language="java" contentType="text/html; charset=EUC-KR"
     pageEncoding="EUC-KR"%>
 <!DOCTYPE HTML>
@@ -63,6 +64,15 @@
 
 	</head>
 	<body>
+	
+	<%
+	
+	
+	MemberVO info = (MemberVO)session.getAttribute("info");
+	
+	
+	
+	%>
 		
 	<div class="gtco-loader"></div>
 	
@@ -106,7 +116,10 @@
 
 					<div class="row row-mt-15em">
 						<div class="col-md-7 mt-text animate-box" data-animate-effect="fadeInUp">
-							<h1 class="cursive-font">로그인을 하세요!</h1>	
+							<h1 class="cursive-font">
+							<%if (info != null) { %>
+							<% info.getId();
+							} %>로그인을 하세요!</h1>	
 						</div>
 						<div class="col-md-4 col-md-push-1 animate-box" data-animate-effect="fadeInRight">
 							<div class="form-wrap">
@@ -370,33 +383,7 @@
 
 	
 
-	<div id="gtco-subscribe">
-		<div class="gtco-container">
-			<div class="row animate-box">
-				<div class="col-md-8 col-md-offset-2 text-center gtco-heading">
-					<h2 class="cursive-font">feedback</h2>
-					<p>사이트를 쓰면서 불편했던 점을 보내주세요.</p>
-				</div>
-			</div>
-			<div class="row animate-box">
-				<div class="col-md-8 col-md-offset-2">
-					<form class="form-inline">
-						<div class="col-md-6 col-sm-6">
-							<div class="feedbackservice">
-								<label for="feedback" class="sr-only">feedback</label>
-								<input type="text" class="form-control" id="name" placeholder="작성자 이름">
-								<input type="text" class="form-control" id="feedback" placeholder="불편했던점을 보내주세요!">
-								
-							</div>
-						</div>
-						<div class="col-md-6 col-sm-6">
-							<button type="submit" class="btn btn-default btn-block">send</button>
-						</div>
-					</form>
-				</div>
-			</div>
-		</div>
-	</div>
+	
 
 	<footer id="gtco-footer" role="contentinfo" style="background-image: url(images/img_bg_1.jpg)" data-stellar-background-ratio="0.5">
 		<div class="overlay"></div>

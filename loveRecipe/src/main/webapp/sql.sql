@@ -1,15 +1,17 @@
 -- 1. 회원가입한 정보를 저장할 수 있는 'web_member'테이블을 만드시오.
 create table test_member (  
+num number,
 id varchar2(100),
 pw varchar2(100) not null,
 nickname varchar2(100) not null,
 email varchar2(100) not null,
 phone varchar2(100) not null,
+testdate date,
 constraint test_id_pk primary key(id)
 );
 
 -- 2. web_member 테이블에 가데이터 넣기
-insert into test_member values('a','a','a','a','a');
+insert into test_member values(test_seq.nextval,'test','test','test','test','test',sysdate);
 
 -- 3. 가데이터 조회하기
 select * from test_member;
@@ -21,6 +23,8 @@ update test_member set 컬럼명 = '바꿀값' where email ='바꾸고자하는�
 
 -- 테이블 전체 삭제
 drop table test_member;
+
+create sequence test_seq start with 1 increment by 1
 
 
 

@@ -12,7 +12,7 @@ import javax.servlet.http.HttpServletResponse;
 import com.oreilly.servlet.MultipartRequest;
 import com.oreilly.servlet.multipart.DefaultFileRenamePolicy;
 
-import model.BoardDAO;
+import model.DAO;
 import model.BoardDTO;
 
 
@@ -53,7 +53,7 @@ protected void service(HttpServletRequest request, HttpServletResponse response)
     System.out.println("content :"+ content);
     System.out.println("fileName :"+ fileName);
     
-    BoardDAO dao = new BoardDAO();
+    DAO dao = new DAO();
     BoardDTO dto = new BoardDTO(title , writer,fileName, content);
     int cnt = dao.upload(dto);
     
