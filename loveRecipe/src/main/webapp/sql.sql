@@ -121,7 +121,7 @@ increment by 1;
 -- num : 만들어진 시퀀스로 넣기
 -- m_date : 현재 시간
 insert into recipe
-values(recipe_seq.nextval,'가자미구이', '구이', '한식',
+values(recipe_seq.nextval,'가자미구이', '구이', '한식', '148',
 '가자미, 카놀라유, 소금',
 '1. 가자미는 머리와 내장을 뺀 후 비늘을 긁어내고 깨끗이 씻는다. 2. 소금을 적당량 뿌려 간이 배어들도록 준비한다. 3. 프라이팬에 식용유를 넉넉히 두르고 가자미를 튀기듯이 굽는다.',
 'https://www.menupan.com/cook/cookimg/141700.jpg', sysdate);
