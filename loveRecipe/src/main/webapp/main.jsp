@@ -69,6 +69,8 @@
 	
 	
 	MemberVO info = (MemberVO)session.getAttribute("info");
+	String name = info.getId();
+	
 	
 	
 	
@@ -116,15 +118,16 @@
 
 					<div class="row row-mt-15em">
 						<div class="col-md-7 mt-text animate-box" data-animate-effect="fadeInUp">
-							<h1 class="cursive-font">
-							<%if (info != null) { %>
-							<% info.getId();
-							} %>로그인을 하세요!</h1>	
+							<%if(info!= null) {%>
+										<h1><%=info.getId()  %> 님 환영합니다</h1>
+										<%}else{ %>
+										<h1> 로그인을 하세요!</h1>
+										<%} %>
 						</div>
 						<div class="col-md-4 col-md-push-1 animate-box" data-animate-effect="fadeInRight">
 							<div class="form-wrap">
 								<div class="tab">
-									
+										
 									<div class="tab-content">
 										<div class="tab-content-inner active" data-content="signup">
 											<h3 class="cursive-font">
@@ -134,22 +137,33 @@
 												</div>
 												<div class="row form-group">
 													<div class="col-md-12">
+														<%if(info!= null) {%>														
+																<%}else{ %>
 														<label>id</label>
 														<input type="text" name="id" class="form-control">
+														<%} %>
 													</div>
 												</div>
 
 												<div class="row form-group">
 													<div class="col-md-12">
+													<%if(info!= null) {%>														
+																<%}else{ %>
 														<label>pw</label>
 														<input type="password" name="pw" class="form-control">
+														<%} %>
 													</div>
 												</div>
 
 												<div class="row form-group">
 													<div class="col-md-12">
+													<%if(info!= null) {%>
+														<a href="update.jsp" class="btn btn-primary btn-block">개인정보수정</a>
+														<a href="logoutservice" class="btn btn-primary btn-block">로그아웃</a>													
+																<%}else{ %>
 														<input type="submit" class="btn btn-primary btn-block" value="login">
 														<a href="new.jsp">회원가입</a>
+														<%} %>
 													</div>
 													
 												</div>
