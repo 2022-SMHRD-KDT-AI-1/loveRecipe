@@ -1,4 +1,8 @@
+<<<<<<< HEAD
 <%@page import="model.MemberDTO"%>
+=======
+<%@page import="model.MemberVO"%>
+>>>>>>> branch 'master' of https://github.com/2022-SMHRD-KDT-AI-1/loveRecipe.git
 <%@ page language="java" contentType="text/html; charset=EUC-KR"
     pageEncoding="EUC-KR"%>
 <!DOCTYPE HTML>
@@ -64,7 +68,20 @@
 
 	</head>
 	<body>
+<<<<<<< HEAD
 	<% MemberDTO info = (MemberDTO)session.getAttribute("info");  %>	
+=======
+	
+	<%
+	
+	
+	MemberVO info = (MemberVO)session.getAttribute("info");
+	
+	
+	
+	%>
+		
+>>>>>>> branch 'master' of https://github.com/2022-SMHRD-KDT-AI-1/loveRecipe.git
 	<div class="gtco-loader"></div>
 	
 	<div id="page">
@@ -107,7 +124,10 @@
 
 					<div class="row row-mt-15em">
 						<div class="col-md-7 mt-text animate-box" data-animate-effect="fadeInUp">
-							<h1 class="cursive-font">로그인을 하세요!</h1>	
+							<h1 class="cursive-font">
+							<%if (info != null) { %>
+							<% info.getId();
+							} %>로그인을 하세요!</h1>	
 						</div>
 						<div class="col-md-4 col-md-push-1 animate-box" data-animate-effect="fadeInRight">
 							<div class="form-wrap">
@@ -339,7 +359,7 @@
 				<div class="col-md-3 col-sm-6 animate-box" data-animate-effect="fadeInUp">
 					<div class="feature-center">
 						<span class="counter js-counter" data-from="0" data-to="5" data-speed="5000" data-refresh-interval="50">1</span>
-						<span class="counter-label">평균 별</span>
+						<span class="counter-label">평균 평점</span>
 
 					</div>
 				</div>
@@ -357,7 +377,7 @@
 				</div>
 				<div class="col-md-3 col-sm-6 animate-box" data-animate-effect="fadeInUp">
 					<div class="feature-center">
-						<span class="counter js-counter" data-from="0" data-to="1985" data-speed="5000" data-refresh-interval="50">1</span>
+						<span class="counter js-counter" data-from="0" data-to="300" data-speed="5000" data-refresh-interval="50">1</span>
 						<span class="counter-label">레시피 수</span>
 
 					</div>
@@ -369,31 +389,7 @@
 
 	
 
-	<div id="gtco-subscribe">
-		<div class="gtco-container">
-			<div class="row animate-box">
-				<div class="col-md-8 col-md-offset-2 text-center gtco-heading">
-					<h2 class="cursive-font">feedback</h2>
-					<p>사이트를 쓰면서 불편했던 점을 보내주세요.</p>
-				</div>
-			</div>
-			<div class="row animate-box">
-				<div class="col-md-8 col-md-offset-2">
-					<form class="form-inline">
-						<div class="col-md-6 col-sm-6">
-							<div class="form-group">
-								<label for="feedback" class="sr-only">feedback</label>
-								<input type="feedback" class="form-control" id="feedback" placeholder="불편했던점을 보내주세요!">
-							</div>
-						</div>
-						<div class="col-md-6 col-sm-6">
-							<button type="submit" class="btn btn-default btn-block">send</button>
-						</div>
-					</form>
-				</div>
-			</div>
-		</div>
-	</div>
+	
 
 	<footer id="gtco-footer" role="contentinfo" style="background-image: url(images/img_bg_1.jpg)" data-stellar-background-ratio="0.5">
 		<div class="overlay"></div>

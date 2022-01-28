@@ -140,6 +140,7 @@
 															<label><input type="radio" name="object" value="italy">이탈리아</label>
 															<label><input type="radio" name="object" value="mexico">멕시코</label>
 															<label><input type="radio" name="object" value="fusion">퓨전</label>
+															<label><input type="radio" name="object" value="fusion">날씨</label>
 												</div>
 												<div class="row form-group">
 															<label>종류별레시피</label><br>
@@ -175,12 +176,6 @@
 														<label>제철구분유무</label>
 														<label>(가져오는 레시피의 재료의 제철유무를 판단)</label>
 														<select class="form-control" name="seasonal">
-														<option value="o">o</option>
-														<option value="x">x</option>
-														</select>
-														<label>날씨구분유무</label><br>
-														<label>(오늘날씨와 관련된 레시피) </label>
-														<select class="form-control" name="weather">
 														<option value="o">o</option>
 														<option value="x">x</option>
 														</select>
@@ -237,31 +232,6 @@
 	
 	
 
-	<div id="gtco-subscribe">
-		<div class="gtco-container">
-			<div class="row animate-box">
-				<div class="col-md-8 col-md-offset-2 text-center gtco-heading">
-					<h2 class="cursive-font">feedback</h2>
-					<p>사이트를 쓰면서 불편햇던점을 보내주세요!</p>
-				</div>
-			</div>
-			<div class="row animate-box">
-				<div class="col-md-8 col-md-offset-2">
-					<form class="form-inline">
-						<div class="col-md-6 col-sm-6">
-							<div class="form-group">
-								<label for="feedback" class="sr-only">feedback</label>
-								<input type="feedback" class="form-control" id="feedback" placeholder="불편했던점을 보내주세요!">
-							</div>
-						</div>
-						<div class="col-md-6 col-sm-6">
-							<button type="submit" class="btn btn-default btn-block">send</button>
-						</div>
-					</form>
-				</div>
-			</div>
-		</div>
-	</div>
 
 	<footer id="gtco-footer" role="contentinfo" style="background-image: url(images/img_bg_1.jpg)" data-stellar-background-ratio="0.5">
 		<div class="overlay"></div>

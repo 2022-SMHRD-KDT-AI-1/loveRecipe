@@ -4,6 +4,7 @@ import java.sql.Connection;
 import java.sql.DriverManager;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
+import java.util.ArrayList;
 
 public class DAO {
 	Connection conn = null;
@@ -42,6 +43,8 @@ public class DAO {
 		}
 	
 	}
+	
+	//로그인!
 	public MemberVO login(String id, String pw) {
 		MemberVO vo = null;
 		
@@ -84,12 +87,20 @@ public class DAO {
 		return vo;
 	}
 
-	public int join(MemberDTO dto) {
+	
+	//회원가입!
+	public int join(MemberVO dto) {
 		
 		try {
 			DBconn();
 			
-			String sql = "insert into test_member values(?,?,?,?,?)";
+			System.out.println(dto.getId());
+			System.out.println(dto.getPw());
+			System.out.println(dto.getNickname());
+			System.out.println(dto.getemail());
+			System.out.println(dto.getPhone());
+			
+			String sql = "insert into test_member values(test_seq.nextval, ? , ? , ? , ? , ? ,sysdate)";
 			
 			// sql -> DB에 전달
 			psmt = conn.prepareStatement(sql);
@@ -98,7 +109,7 @@ public class DAO {
 			psmt.setString(1, dto.getId());
 			psmt.setString(2, dto.getPw());
 			psmt.setString(3, dto.getNickname());
-			psmt.setString(4, dto.getEmail());
+			psmt.setString(4, dto.getemail());
 			psmt.setString(5, dto.getPhone());
 			// 실행
 			cnt = psmt.executeUpdate();
@@ -110,4 +121,88 @@ public class DAO {
 		} return cnt;
 	}
 
+
+	
+	//게시물 업로드 메소드
+	   public int upload(BoardDTO dto) {
+		      try {
+		         DBconn();
+		         
+		         String sql = "insert into web_board values(num_board.nextval, ?, ?, ?, ?, sysdate)";
+		         
+		         psmt = conn.prepareStatement(sql);
+		         
+		         psmt.setString(1, dto.getTitle());
+		         psmt.setString(2, dto.getWriter());
+		         psmt.setString(3, dto.getFileName());
+		         psmt.setString(4, dto.getContent());
+		         
+		         cnt = psmt.executeUpdate();
+		      } catch (Exception e) {
+		         e.printStackTrace();
+		      } finally {
+		         DBclose();
+		      } return cnt;
+		   }
+
+
+ // 메세지 보내기 관련
+	   public int insertMessage(String sendName, String receiveEmail, String message) {
+			try {
+				DBconn();
+
+			
+				String sql = "insert into web_message values(num_message.nextval, , , , sysdate)";
+				
+				psmt = conn.prepareStatement(sql);
+
+				
+		
+				psmt.setString(1, message);
+			
+
+				
+				cnt = psmt.executeUpdate();
+			} catch (Exception e) {
+				e.printStackTrace();
+			} finally {
+				DBclose();
+			}
+			return cnt;
+		}
+
+	   //피드백 업로드 메소드
+	   public int feedupload(feedDTO dto) {
+		      try {
+		         DBconn();
+		         
+		         String sql = "insert into feed_board values(feed_seq.nextval, ?, ?, sysdate)";
+		         
+		         psmt = conn.prepareStatement(sql);
+		         
+		         psmt.setString(1, dto.getName());
+		         psmt.setString(2, dto.getmessage());
+		      
+		         cnt = psmt.executeUpdate();
+		      } catch (Exception e) {
+		         e.printStackTrace();
+		      } finally {
+		         DBclose();
+		      } return cnt;
+		   }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 }
+
