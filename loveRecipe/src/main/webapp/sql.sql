@@ -1,19 +1,18 @@
-1. 회원가입한 정보를 저장할 수 있는 'web_member'테이블을 만드시오.
- create table test_member 
-  (  
-    id varchar2(100),
- 	pw varchar2(100)not null,
- 	nickname varchar2(100)not null,
- 	emaill varchar2(100)not null,
- 	phone varchar2(100)not null,
- 
- 	constraint test_id_pk primary key(id)
- )
+-- 1. 회원가입한 정보를 저장할 수 있는 'web_member'테이블을 만드시오.
+create table test_member (  
+id varchar2(100),
+pw varchar2(100) not null,
+nickname varchar2(100) not null,
+email varchar2(100) not null,
+phone varchar2(100) not null,
+constraint test_id_pk primary key(id)
+);
 
+-- 2. web_member 테이블에 가데이터 넣기
 insert into test_member values('a','a','a','a','a');
 
-
-select* from test_member;
+-- 3. 가데이터 조회하기
+select * from test_member;
 
 delete from web_member where pw in('1');
 
