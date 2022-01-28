@@ -108,6 +108,10 @@ r_date date,
 constraint recipe_seq primary key(num)
 );
 
+-- 테이블 컬럼 사이즈 변경방법
+-- 조리 방법이 너무 길어서 ORA-12899 에러 떴었음.
+ALTER TABLE recipe MODIFY(cooking_method varchar2(1000));
+
 -- 2. num컬럼에 넣을 시퀀스 생성
 -- 시퀀스 이름 : recipe_seq
 -- 시작숫자 : 1
@@ -121,12 +125,12 @@ increment by 1;
 -- num : 만들어진 시퀀스로 넣기
 -- m_date : 현재 시간
 insert into recipe
-values(recipe_seq.nextval,'가자미구이', '구이', '한식', '148',
-'가자미, 카놀라유, 소금',
-'1. 가자미는 머리와 내장을 뺀 후 비늘을 긁어내고 깨끗이 씻는다. 2. 소금을 적당량 뿌려 간이 배어들도록 준비한다. 3. 프라이팬에 식용유를 넉넉히 두르고 가자미를 튀기듯이 굽는다.',
-'https://www.menupan.com/cook/cookimg/141700.jpg', sysdate);
+values(recipe_seq.nextval,'약과', '떡,한과', '한식', '135',
+'밀가루, 참기름, 소금, 조청, 생강즙, 청주, 설탕, 검은깨, 물',
+'1. 밀가루에 소금, 참기름을 넣어 고루 비벼 체에 내린다. 2. ①의 밀가루에 분량의 조청, 생강즙, 청주를 넣어서 반죽을 질지 않게 한다. 3. 반죽을 밀대로 0.5cm 정도로 밀고 원형 틀로 찍어 모양을 잡는다. 4. 분량의 물과 설탕을 냄비에 넣고 반으로 줄 때까지  졸여 집청시럽을 만든다. 5. 130~140℃의 기름에서 천천히 색이 나도록 튀긴다. 6. 약과가 튀겨지면 집청시럽에 담갔다가 건진다. 7. 약과를 잣과 검은깨로 장식해서 마무리한다.',
+'https://www.menupan.com/cook/cookimg/066400.jpg', sysdate);
 
--- 3. 가데이터 조회하기
+-- 4. 가데이터 조회하기
 select * from recipe;
 
 -- 데이터 삭제 (레시피 이름으로 지정)
