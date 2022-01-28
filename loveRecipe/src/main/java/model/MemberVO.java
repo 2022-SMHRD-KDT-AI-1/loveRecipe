@@ -1,35 +1,52 @@
 package model;
 
 public class MemberVO {
+		private String num;
 		private String id;
 	    private String pw;
 	    private String nickname;
 	    private String email;
-	    private String phone;
-	  
-		public MemberVO(String id, String pw, String nickname, String phone, String email) {
+	    public MemberVO(String num, String id, String pw, String nickname, String email, String phone, String date) {
+			super();
+			this.num = num;
 			this.id = id;
 			this.pw = pw;
 			this.nickname = nickname;
-			this.phone = phone;
 			this.email = email;
+			this.phone = phone;
+			this.date = date;
+		}
+	    
+		public MemberVO(String id, String pw, String nickname, String email, String phone) {
+			super();
+			this.id = id;
+			this.pw = pw;
+			this.nickname = nickname;
+			this.email = email;
+			this.phone = phone;
+		}
+
+		public MemberVO(String id, String pw, String nickname) {
+			super();
+			this.id = id;
+			this.pw = pw;
+			this.nickname = nickname;
+			
+		}
+
+		private String phone;
+	    private String date;
+		public String getNum() {
+			return num;
+		}
+		public void setNum(String num) {
+			this.num = num;
 		}
 		public String getId() {
 			return id;
 		}
 		public void setId(String id) {
 			this.id = id;
-		}
-		public MemberVO(String id, String pw) {
-			
-			this.id = id;
-			this.pw = pw;
-		}
-		public MemberVO(String id, String pw, String nickname) {
-			
-			this.id = id;
-			this.pw = pw;
-			this.nickname = nickname;
 		}
 		public String getPw() {
 			return pw;
@@ -43,18 +60,24 @@ public class MemberVO {
 		public void setNickname(String nickname) {
 			this.nickname = nickname;
 		}
+		public String getEmail() {
+			return email;
+		}
+		public void setEmail(String email) {
+			this.email = email;
+		}
 		public String getPhone() {
 			return phone;
 		}
 		public void setPhone(String phone) {
 			this.phone = phone;
-			
 		}
-		public String getemail() {
-			return email;
+		public String getDate() {
+			return date;
 		}
-		public void setemail(String email) {
-			this.email = email;
-	    
-}
+		public void setDate(String date) {
+			this.date = date;
+		}
+	  
+		
 }

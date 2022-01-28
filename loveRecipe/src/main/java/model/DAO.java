@@ -11,6 +11,7 @@ public class DAO {
 	PreparedStatement psmt =null;
 	ResultSet rs= null;
 	int cnt = 0;
+    MemberVO vo = null;
 
 	public void DBconn() {
 		
@@ -69,13 +70,13 @@ public class DAO {
 			
 			if (rs.next()) {
 		
-				String uid = rs.getString(1);
-				String upw = rs.getString(2);
-				String nickname = rs.getString(3);
+				String uid = rs.getString(2);
+				String upw = rs.getString(3);
+				String nickname = rs.getString(4);
 			
 
 				
-				vo = new MemberVO(uid, upw , nickname);
+				vo = new MemberVO(uid, upw , nickname );
 
 			}
 	
@@ -97,7 +98,7 @@ public class DAO {
 			System.out.println(dto.getId());
 			System.out.println(dto.getPw());
 			System.out.println(dto.getNickname());
-			System.out.println(dto.getemail());
+			System.out.println(dto.getEmail());
 			System.out.println(dto.getPhone());
 			
 			String sql = "insert into test_member values(test_seq.nextval, ? , ? , ? , ? , ? ,sysdate)";
@@ -109,7 +110,7 @@ public class DAO {
 			psmt.setString(1, dto.getId());
 			psmt.setString(2, dto.getPw());
 			psmt.setString(3, dto.getNickname());
-			psmt.setString(4, dto.getemail());
+			psmt.setString(4, dto.getEmail());
 			psmt.setString(5, dto.getPhone());
 			// 실행
 			cnt = psmt.executeUpdate();
@@ -192,7 +193,36 @@ public class DAO {
 		   }
 
 
-
+	   //회원정보 확인 메소드
+	 public ArrayList<MemberVO> showmember() {
+			
+			//dto을 담을수 있는 Arraylist
+			ArrayList<MemberVO> list = new ArrayList<MemberVO>();
+			try {
+				DBconn();
+				
+				String sql ="select id,pw,nickname from test_member";
+				
+				psmt=conn.prepareStatement(sql);
+				rs = psmt.executeQuery();
+				
+				while(rs.next()) {
+					
+					String id = rs.getString(1);
+					String pw = rs.getString(2);
+					String nickname = rs.getString(3);
+					
+					vo = new MemberVO(id,pw,nickname);
+					list.add(vo);
+				}
+				
+			} catch (Exception e) {
+				e.printStackTrace();
+			} finally {
+				DBclose();
+			} return list;
+			
+		}	
 
 
 

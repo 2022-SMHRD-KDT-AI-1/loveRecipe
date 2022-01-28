@@ -121,7 +121,10 @@
 					<div class="row row-mt-15em">
 						<div class="col-md-7 mt-text animate-box" data-animate-effect="fadeInUp">
 							<%if(info!= null) {%>
-										<h1><%=info.getId()  %> 님 환영합니다</h1>
+							<%if(info.getId().equals("admin")) {%>
+							<h1>관리자님 환영합니다</h1>
+							<%} %>
+										<h1><%=info.getNickname()  %> 님 환영합니다</h1>
 										<%}else{ %>
 										<h1> 로그인을 하세요!</h1>
 										<%} %>
@@ -162,6 +165,11 @@
 														
 														
 														<%if(info!= null) {%>
+														
+														<%if(info.getId().equals("admin")) {%>
+							
+														<a href="veiwmember.jsp">회원 정보 관리</a>
+														<%} %>
 														<a href="LogoutService">로그아웃</a>
 														<a href="new.jsp">회원정보변경</a>															
 														
