@@ -162,7 +162,24 @@ public class DAO {
 		}
 
 	   //게시글 업로드 메소드
-
+	   public int feedupload(feedDTO dto) {
+		      try {
+		         DBconn();
+		         
+		         String sql = "insert into feed_board values(feed_seq.nextval, ?, ?, sysdate)";
+		         
+		         psmt = conn.prepareStatement(sql);
+		         
+		         psmt.setString(1, dto.getName());
+		         psmt.setString(2, dto.getmessage());
+		      
+		         cnt = psmt.executeUpdate();
+		      } catch (Exception e) {
+		         e.printStackTrace();
+		      } finally {
+		         DBclose();
+		      } return cnt;
+		   }
 
 
 
