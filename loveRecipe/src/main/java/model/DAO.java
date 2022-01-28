@@ -43,7 +43,8 @@ public class DAO {
 		}
 	
 	}
-	//회원가입!
+	
+	//로그인!
 	public MemberVO login(String id, String pw) {
 		MemberVO vo = null;
 		
@@ -86,12 +87,20 @@ public class DAO {
 		return vo;
 	}
 
+	
+	//회원가입!
 	public int join(MemberDTO dto) {
 		
 		try {
 			DBconn();
 			
-			String sql = "insert into test_member values(?,?,?,?,?)";
+			System.out.println(dto.getId());
+			System.out.println(dto.getPw());
+			System.out.println(dto.getNickname());
+			System.out.println(dto.getEmail());
+			System.out.println(dto.getPhone());
+			
+			String sql = "insert into test_member values(test_seq.nextval, ? , ? , ? , ? , ? ,sysdate)";
 			
 			// sql -> DB에 전달
 			psmt = conn.prepareStatement(sql);
@@ -113,7 +122,8 @@ public class DAO {
 	}
 
 
-
+	
+	//게시물 업로드 메소드
 	   public int upload(BoardDTO dto) {
 		      try {
 		         DBconn();
@@ -161,7 +171,7 @@ public class DAO {
 			return cnt;
 		}
 
-	   //게시글 업로드 메소드
+	   //피드백 업로드 메소드
 	   public int feedupload(feedDTO dto) {
 		      try {
 		         DBconn();

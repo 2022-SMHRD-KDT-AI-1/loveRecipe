@@ -1,3 +1,4 @@
+<%@page import="model.MemberVO"%>
 <%@ page language="java" contentType="text/html; charset=EUC-KR"
     pageEncoding="EUC-KR"%>
 <!DOCTYPE HTML>
@@ -63,6 +64,15 @@
 
 	</head>
 	<body>
+	
+	<%
+	
+	
+	MemberVO info = (MemberVO)session.getAttribute("info");
+	
+	
+	
+	%>
 		
 	<div class="gtco-loader"></div>
 	
@@ -106,7 +116,10 @@
 
 					<div class="row row-mt-15em">
 						<div class="col-md-7 mt-text animate-box" data-animate-effect="fadeInUp">
-							<h1 class="cursive-font">로그인을 하세요!</h1>	
+							<h1 class="cursive-font">
+							<%if (info != null) { %>
+							<% info.getId();
+							} %>로그인을 하세요!</h1>	
 						</div>
 						<div class="col-md-4 col-md-push-1 animate-box" data-animate-effect="fadeInRight">
 							<div class="form-wrap">
