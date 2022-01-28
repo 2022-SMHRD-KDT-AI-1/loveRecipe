@@ -1,5 +1,4 @@
-<<<<<<< HEAD
-<%@page import="model.MemberDTO"%>
+
 =======
 <%@page import="model.MemberVO"%>
 >>>>>>> branch 'master' of https://github.com/2022-SMHRD-KDT-AI-1/loveRecipe.git
@@ -68,9 +67,8 @@
 
 	</head>
 	<body>
-<<<<<<< HEAD
-	<% MemberDTO info = (MemberDTO)session.getAttribute("info");  %>	
-=======
+	
+
 	
 	<%
 	
