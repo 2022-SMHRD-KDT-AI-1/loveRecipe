@@ -53,7 +53,7 @@ public class LoginService extends HttpServlet {
 	}
 	
 	
-	response.sendRedirect("join_succes.jsp");
+	response.sendRedirect("main.jsp");
 	
 }
 }

@@ -1,8 +1,5 @@
-<<<<<<< HEAD
-<%@page import="model.MemberDTO"%>
-=======
+
 <%@page import="model.MemberVO"%>
->>>>>>> branch 'master' of https://github.com/2022-SMHRD-KDT-AI-1/loveRecipe.git
 <%@ page language="java" contentType="text/html; charset=EUC-KR"
     pageEncoding="EUC-KR"%>
 <!DOCTYPE HTML>
@@ -68,22 +65,16 @@
 
 	</head>
 	<body>
-<<<<<<< HEAD
-	<% MemberDTO info = (MemberDTO)session.getAttribute("info");  %>	
-=======
 	
 	<%
 	
 	
 	MemberVO info = (MemberVO)session.getAttribute("info");
-	String name = info.getId();
 	
 	
 	
 	
 	%>
-		
->>>>>>> branch 'master' of https://github.com/2022-SMHRD-KDT-AI-1/loveRecipe.git
 	<div class="gtco-loader"></div>
 	
 	<div id="page">
@@ -140,13 +131,13 @@
 										<div class="tab-content-inner active" data-content="signup">
 											<h3 class="cursive-font">
 												login</h3>
-											<form action="LoginService" method="POST"">
+											<form action="LoginService" method="POST">
 												<div class="row form-group">
 												</div>
 												<div class="row form-group">
 													<div class="col-md-12">
-														<%if(info!= null) {%>														
-																<%}else{ %>
+													<%if(info!= null) {%>
+														<%}else{ %>
 														<label>id</label>
 														<input type="text" name="id" class="form-control">
 														<%} %>
@@ -155,23 +146,27 @@
 
 												<div class="row form-group">
 													<div class="col-md-12">
-													<%if(info!= null) {%>														
-																<%}else{ %>
+													<%if(info!= null) {%>
+														<%}else{ %>
 														<label>pw</label>
 														<input type="password" name="pw" class="form-control">
-														<%} %>
+															<%} %>
 													</div>
 												</div>
 
 												<div class="row form-group">
 													<div class="col-md-12">
-													<%if(info!= null) {%>
-														<a href="update.jsp" class="btn btn-primary btn-block">개인정보수정</a>
-														<a href="logoutservice" class="btn btn-primary btn-block">로그아웃</a>													
-																<%}else{ %>
+														
+														
+														<%if(info!= null) {%>
+														<a href="new.jsp">로그아웃</a>
+														<a href="new.jsp">회원정보변경</a>															
+														
+															<%}else{ %>		
 														<input type="submit" class="btn btn-primary btn-block" value="login">
-														<a href="new.jsp">회원가입</a>
+														<a href="new.jsp">회원가입</a>	
 														<%} %>
+														
 													</div>
 													
 							
