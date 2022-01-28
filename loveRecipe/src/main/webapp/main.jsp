@@ -1,4 +1,3 @@
-
 <%@page import="model.MemberVO"%>
 <%@ page language="java" contentType="text/html; charset=EUC-KR"
     pageEncoding="EUC-KR"%>
@@ -78,6 +77,7 @@
 	
 	
 	%>
+<<<<<<< HEAD
 	<div class="gtco-loader"></div>
 	
 	<div id="page">
@@ -142,6 +142,69 @@
 												</div>
 												<div class="row form-group">
 													<div class="col-md-12">
+=======
+	<div class="gtco-loader"></div>
+	
+	<div id="page">
+
+	
+	<!-- <div class="page-inner"> -->
+	<nav class="gtco-nav" role="navigation">
+		<div class="gtco-container">
+			
+			<div class="row">
+				<div class="col-sm-4 col-xs-12">
+					<div id="gtco-logo"><a href="main.jsp"><em class="cursive-font" style="font-size: 3rem">레시피를 부탁해</em></a></div>
+				</div>
+				<div class="col-xs-8 text-right menu-1">
+					<ul>
+						<li><a href="menu.jsp">Menu</a></li>
+						<li class="has-dropdown">
+							<a href="services.jsp">Services</a>
+							<ul class="dropdown">
+								<li><a href="refigator.jsp">나만의 냉장고</a></li>
+								<li><a href="mealplan.jsp">식단짜기</a></li>
+								<li><a href="newrecipe.jsp">레시피등록</a></li>
+							</ul>
+						</li>
+						<li><a href="feedback.jsp">feedback</a></li>
+						<li class="btn-cta"><a href="main.jsp"><span>login</span></a></li>
+					</ul>	 
+				</div>
+			</div>
+			
+		</div>
+	</nav>
+	
+	<header id="gtco-header" class="gtco-cover gtco-cover-md" role="banner" style="background-image: url(images/img_bg_1.jpg)" data-stellar-background-ratio="0.5">
+		<div class="overlay"></div>
+		<div class="gtco-container">
+			<div class="row">
+				<div class="col-md-12 col-md-offset-0 text-left">
+					
+
+					<div class="row row-mt-15em">
+						<div class="col-md-7 mt-text animate-box" data-animate-effect="fadeInUp">
+							<%if(info!= null) {%>
+										<h1><%=info.getId()  %> 님 환영합니다</h1>
+										<%}else{ %>
+										<h1> 로그인을 하세요!</h1>
+										<%} %>
+						</div>
+						<div class="col-md-4 col-md-push-1 animate-box" data-animate-effect="fadeInRight">
+							<div class="form-wrap">
+								<div class="tab">
+										
+									<div class="tab-content">
+										<div class="tab-content-inner active" data-content="signup">
+											<h3 class="cursive-font">
+												login</h3>
+											<form action="LoginService" method="POST">
+												<div class="row form-group">
+												</div>
+												<div class="row form-group">
+													<div class="col-md-12">
+>>>>>>> branch 'master' of https://github.com/2022-SMHRD-KDT-AI-1/loveRecipe.git
 													<%if(info!= null) {%>
 														<%}else{ %>
 														<label>id</label>
@@ -474,4 +537,3 @@
 
 	</body>
 </html>
-
