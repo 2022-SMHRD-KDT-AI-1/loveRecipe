@@ -53,7 +53,7 @@ drop sequence num_message
 
 -- 1. 게시판 테이블 만들기
 -- tile, writer, fileName, content, b_date
-create table test_board(
+create table web_board(
    num number,
    title varchar2(500),
    writer varchar2(500),
