@@ -1,12 +1,5 @@
-<<<<<<< HEAD
 
 <%@page import="model.MemberVO"%>
-=======
-
-=======
-<%@page import="model.MemberVO"%>
->>>>>>> branch 'master' of https://github.com/2022-SMHRD-KDT-AI-1/loveRecipe.git
->>>>>>> branch 'master' of https://github.com/2022-SMHRD-KDT-AI-1/loveRecipe.git
 <%@ page language="java" contentType="text/html; charset=EUC-KR"
     pageEncoding="EUC-KR"%>
 <!DOCTYPE HTML>
@@ -71,14 +64,11 @@
 
 
 	</head>
-<<<<<<< HEAD
-	<body>
-=======
+
 	<body>
 	
 
->>>>>>> branch 'master' of https://github.com/2022-SMHRD-KDT-AI-1/loveRecipe.git
-	
+
 	<%
 	
 	
@@ -172,7 +162,7 @@
 														
 														
 														<%if(info!= null) {%>
-														<a href="new.jsp">로그아웃</a>
+														<a href="LogoutService">로그아웃</a>
 														<a href="new.jsp">회원정보변경</a>															
 														
 															<%}else{ %>		
