@@ -133,6 +133,9 @@ values(recipe_seq.nextval,'약과', '떡,한과', '한식', '135',
 -- 4. 가데이터 조회하기
 select * from recipe;
 
+-- 전체 행 갯수 가져오기
+select count * from recipe;
+
 -- 데이터 삭제 (레시피 이름으로 지정)
 delete from recipe where recipe_name in('abc');
 
