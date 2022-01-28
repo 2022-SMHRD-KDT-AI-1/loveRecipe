@@ -140,6 +140,7 @@
 															<label><input type="radio" name="object" value="italy">이탈리아</label>
 															<label><input type="radio" name="object" value="mexico">멕시코</label>
 															<label><input type="radio" name="object" value="fusion">퓨전</label>
+															<label><input type="radio" name="object" value="fusion">날씨</label>
 												</div>
 												<div class="row form-group">
 															<label>종류별레시피</label><br>
@@ -175,12 +176,6 @@
 														<label>제철구분유무</label>
 														<label>(가져오는 레시피의 재료의 제철유무를 판단)</label>
 														<select class="form-control" name="seasonal">
-														<option value="o">o</option>
-														<option value="x">x</option>
-														</select>
-														<label>날씨구분유무</label><br>
-														<label>(오늘날씨와 관련된 레시피) </label>
-														<select class="form-control" name="weather">
 														<option value="o">o</option>
 														<option value="x">x</option>
 														</select>
