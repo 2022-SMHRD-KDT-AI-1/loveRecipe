@@ -48,7 +48,7 @@ drop table test_member
  
 select * from web_message
 
-drop sequence num_message
+drop table feed_board
 
 
 -- 1. 게시판 테이블 만들기
@@ -73,7 +73,21 @@ insert into WEB_BOARD values(num_board.nextval, 'test', 'test', 'test', 'test', 
 -- 4. 조회하기
 select * from web_board
 
-해결
+
+----- 피드백 db 가설정
+create sequence feed_seq start with 1 increment by 1
+
+create table feed_board (
+	num number,
+	writer varchar2(500),
+	content varchar2(500),
+	f_date date,
+	constraint board_pk primary key(num)
+)
+
+insert into feed_board values(feed_seq.nextval, 'test', 'test', sysdate);
+
+select * from feed_board
 
 
 

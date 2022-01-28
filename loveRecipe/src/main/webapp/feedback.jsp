@@ -123,11 +123,11 @@
 				<div class="col-md-12">
 					<div class="col-md-6 animate-box">
 					<h3>feedback</h3>
-					<form action="#">
+					<form action="feedbackservice">
 						<div class="row form-group">
 							<div class="col-md-12">
 								<label class="sr-only" for="name">Name</label>
-								<input type="text" id="name" class="form-control" placeholder="Your firstname">
+								<input type="text" id="name" name="name" class="form-control" placeholder="Your firstname">
 							</div>
 							
 						</div>

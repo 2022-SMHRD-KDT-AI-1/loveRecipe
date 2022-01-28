@@ -4,6 +4,7 @@ import java.sql.Connection;
 import java.sql.DriverManager;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
+import java.util.ArrayList;
 
 public class DAO {
 	Connection conn = null;
@@ -42,6 +43,7 @@ public class DAO {
 		}
 	
 	}
+	//회원가입!
 	public MemberVO login(String id, String pw) {
 		MemberVO vo = null;
 		
@@ -110,4 +112,70 @@ public class DAO {
 		} return cnt;
 	}
 
+
+
+	   public int upload(BoardDTO dto) {
+		      try {
+		         DBconn();
+		         
+		         String sql = "insert into web_board values(num_board.nextval, ?, ?, ?, ?, sysdate)";
+		         
+		         psmt = conn.prepareStatement(sql);
+		         
+		         psmt.setString(1, dto.getTitle());
+		         psmt.setString(2, dto.getWriter());
+		         psmt.setString(3, dto.getFileName());
+		         psmt.setString(4, dto.getContent());
+		         
+		         cnt = psmt.executeUpdate();
+		      } catch (Exception e) {
+		         e.printStackTrace();
+		      } finally {
+		         DBclose();
+		      } return cnt;
+		   }
+
+
+ // 메세지 보내기 관련
+	   public int insertMessage(String sendName, String receiveEmail, String message) {
+			try {
+				DBconn();
+
+			
+				String sql = "insert into web_message values(num_message.nextval, , , , sysdate)";
+				
+				psmt = conn.prepareStatement(sql);
+
+				
+		
+				psmt.setString(1, message);
+			
+
+				
+				cnt = psmt.executeUpdate();
+			} catch (Exception e) {
+				e.printStackTrace();
+			} finally {
+				DBclose();
+			}
+			return cnt;
+		}
+
+	   //게시글 업로드 메소드
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 }
+

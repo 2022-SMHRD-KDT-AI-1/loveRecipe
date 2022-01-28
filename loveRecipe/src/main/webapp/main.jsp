@@ -340,7 +340,7 @@
 				<div class="col-md-3 col-sm-6 animate-box" data-animate-effect="fadeInUp">
 					<div class="feature-center">
 						<span class="counter js-counter" data-from="0" data-to="5" data-speed="5000" data-refresh-interval="50">1</span>
-						<span class="counter-label">평균 별</span>
+						<span class="counter-label">평균 평점</span>
 
 					</div>
 				</div>
@@ -358,7 +358,7 @@
 				</div>
 				<div class="col-md-3 col-sm-6 animate-box" data-animate-effect="fadeInUp">
 					<div class="feature-center">
-						<span class="counter js-counter" data-from="0" data-to="1985" data-speed="5000" data-refresh-interval="50">1</span>
+						<span class="counter js-counter" data-from="0" data-to="300" data-speed="5000" data-refresh-interval="50">1</span>
 						<span class="counter-label">레시피 수</span>
 
 					</div>
@@ -382,9 +382,11 @@
 				<div class="col-md-8 col-md-offset-2">
 					<form class="form-inline">
 						<div class="col-md-6 col-sm-6">
-							<div class="form-group">
+							<div class="feedbackservice">
 								<label for="feedback" class="sr-only">feedback</label>
-								<input type="feedback" class="form-control" id="feedback" placeholder="불편했던점을 보내주세요!">
+								<input type="text" class="form-control" id="name" placeholder="작성자 이름">
+								<input type="text" class="form-control" id="feedback" placeholder="불편했던점을 보내주세요!">
+								
 							</div>
 						</div>
 						<div class="col-md-6 col-sm-6">
