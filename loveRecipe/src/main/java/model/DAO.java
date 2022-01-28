@@ -89,7 +89,7 @@ public class DAO {
 
 	
 	//회원가입!
-	public int join(MemberDTO dto) {
+	public int join(MemberVO dto) {
 		
 		try {
 			DBconn();
@@ -97,7 +97,7 @@ public class DAO {
 			System.out.println(dto.getId());
 			System.out.println(dto.getPw());
 			System.out.println(dto.getNickname());
-			System.out.println(dto.getEmail());
+			System.out.println(dto.getemail());
 			System.out.println(dto.getPhone());
 			
 			String sql = "insert into test_member values(test_seq.nextval, ? , ? , ? , ? , ? ,sysdate)";
@@ -109,7 +109,7 @@ public class DAO {
 			psmt.setString(1, dto.getId());
 			psmt.setString(2, dto.getPw());
 			psmt.setString(3, dto.getNickname());
-			psmt.setString(4, dto.getEmail());
+			psmt.setString(4, dto.getemail());
 			psmt.setString(5, dto.getPhone());
 			// 실행
 			cnt = psmt.executeUpdate();

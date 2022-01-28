@@ -36,7 +36,7 @@ public class JoinService extends HttpServlet {
 		String email =request.getParameter("email");
 		String phone =request.getParameter("phone");
 		
-		MemberDTO dto =new MemberDTO(id,pw, nickname, email, phone);
+		MemberVO dto =new MemberVO(id,pw, nickname, email, phone);
 		
 		System.out.println("id :"+ id);
 		System.out.println("pw :"+ pw);
