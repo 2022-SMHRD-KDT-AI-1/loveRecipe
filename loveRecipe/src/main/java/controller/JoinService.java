@@ -9,7 +9,6 @@ import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.HttpSession;
 
 import model.DAO;
-import model.MemberDTO;
 import model.MemberVO;
 
 
