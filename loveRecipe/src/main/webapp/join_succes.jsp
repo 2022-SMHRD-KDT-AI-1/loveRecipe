@@ -64,7 +64,7 @@
 
 	</head>
 	<body>
-	<% MemberDTO info = (MemberDTO)session.getAttribute("info");  %>	
+		<% MemberDTO info = (MemberDTO)session.getAttribute("info");  %>
 	<div class="gtco-loader"></div>
 	
 	<div id="page">
@@ -104,7 +104,7 @@
 			<div class="row">
 				<div class="col-md-12 col-md-offset-0 text-left">
 					
-
+				<% if(info !=null){ %>
 					<div class="row row-mt-15em">
 						<div class="col-md-7 mt-text animate-box" data-animate-effect="fadeInUp">
 							<h1 class="cursive-font">로그인을 하세요!</h1>	
@@ -112,7 +112,6 @@
 						<div class="col-md-4 col-md-push-1 animate-box" data-animate-effect="fadeInRight">
 							<div class="form-wrap">
 								<div class="tab">
-									
 									<div class="tab-content">
 										<div class="tab-content-inner active" data-content="signup">
 											<h3 class="cursive-font">
@@ -140,7 +139,9 @@
 														<a href="new.jsp">회원가입</a>
 													</div>
 													
-							
+												</div>
+
+									
 											</form>	
 										</div>
 
@@ -150,7 +151,15 @@
 							</div>
 						</div>
 					</div>
-							
+				 %>
+            <h1><%=info.getId()%>님 환영합니다</h1>
+            <%
+               } else {
+            %>
+            <a href="LoginService">로그인 한 사람의 이메일을 출력</a>
+            <%
+               }
+            %>	
 					
 				</div>
 			</div>
