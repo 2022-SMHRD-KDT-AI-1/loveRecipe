@@ -1,8 +1,4 @@
-<<<<<<< HEAD
 <%@page import="model.MemberDTO"%>
-=======
-<%@page import="model.MemberVO"%>
->>>>>>> branch 'master' of https://github.com/2022-SMHRD-KDT-AI-1/loveRecipe.git
 <%@ page language="java" contentType="text/html; charset=EUC-KR"
     pageEncoding="EUC-KR"%>
 <!DOCTYPE HTML>
@@ -68,22 +64,7 @@
 
 	</head>
 	<body>
-<<<<<<< HEAD
-	<% MemberDTO info = (MemberDTO)session.getAttribute("info");  %>	
-=======
-	
-	<%
-	
-	
-	MemberVO info = (MemberVO)session.getAttribute("info");
-	String name = info.getId();
-	
-	
-	
-	
-	%>
-		
->>>>>>> branch 'master' of https://github.com/2022-SMHRD-KDT-AI-1/loveRecipe.git
+		<% MemberDTO info = (MemberDTO)session.getAttribute("info");  %>
 	<div class="gtco-loader"></div>
 	
 	<div id="page">
@@ -123,19 +104,14 @@
 			<div class="row">
 				<div class="col-md-12 col-md-offset-0 text-left">
 					
-
+				<% if(info !=null){ %>
 					<div class="row row-mt-15em">
 						<div class="col-md-7 mt-text animate-box" data-animate-effect="fadeInUp">
-							<%if(info!= null) {%>
-										<h1><%=info.getId()  %> 님 환영합니다</h1>
-										<%}else{ %>
-										<h1> 로그인을 하세요!</h1>
-										<%} %>
+							<h1 class="cursive-font">로그인을 하세요!</h1>	
 						</div>
 						<div class="col-md-4 col-md-push-1 animate-box" data-animate-effect="fadeInRight">
 							<div class="form-wrap">
 								<div class="tab">
-										
 									<div class="tab-content">
 										<div class="tab-content-inner active" data-content="signup">
 											<h3 class="cursive-font">
@@ -145,36 +121,27 @@
 												</div>
 												<div class="row form-group">
 													<div class="col-md-12">
-														<%if(info!= null) {%>														
-																<%}else{ %>
 														<label>id</label>
 														<input type="text" name="id" class="form-control">
-														<%} %>
 													</div>
 												</div>
 
 												<div class="row form-group">
 													<div class="col-md-12">
-													<%if(info!= null) {%>														
-																<%}else{ %>
 														<label>pw</label>
 														<input type="password" name="pw" class="form-control">
-														<%} %>
 													</div>
 												</div>
 
 												<div class="row form-group">
 													<div class="col-md-12">
-													<%if(info!= null) {%>
-														<a href="update.jsp" class="btn btn-primary btn-block">개인정보수정</a>
-														<a href="logoutservice" class="btn btn-primary btn-block">로그아웃</a>													
-																<%}else{ %>
 														<input type="submit" class="btn btn-primary btn-block" value="login">
 														<a href="new.jsp">회원가입</a>
-														<%} %>
 													</div>
 													
-							
+												</div>
+
+									
 											</form>	
 										</div>
 
@@ -184,7 +151,15 @@
 							</div>
 						</div>
 					</div>
-							
+				 %>
+            <h1><%=info.getId()%>님 환영합니다</h1>
+            <%
+               } else {
+            %>
+            <a href="LoginService">로그인 한 사람의 이메일을 출력</a>
+            <%
+               }
+            %>	
 					
 				</div>
 			</div>
@@ -373,7 +348,7 @@
 				<div class="col-md-3 col-sm-6 animate-box" data-animate-effect="fadeInUp">
 					<div class="feature-center">
 						<span class="counter js-counter" data-from="0" data-to="5" data-speed="5000" data-refresh-interval="50">1</span>
-						<span class="counter-label">평균 평점</span>
+						<span class="counter-label">평균 별</span>
 
 					</div>
 				</div>
@@ -391,7 +366,7 @@
 				</div>
 				<div class="col-md-3 col-sm-6 animate-box" data-animate-effect="fadeInUp">
 					<div class="feature-center">
-						<span class="counter js-counter" data-from="0" data-to="300" data-speed="5000" data-refresh-interval="50">1</span>
+						<span class="counter js-counter" data-from="0" data-to="1985" data-speed="5000" data-refresh-interval="50">1</span>
 						<span class="counter-label">레시피 수</span>
 
 					</div>
@@ -403,7 +378,31 @@
 
 	
 
-	
+	<div id="gtco-subscribe">
+		<div class="gtco-container">
+			<div class="row animate-box">
+				<div class="col-md-8 col-md-offset-2 text-center gtco-heading">
+					<h2 class="cursive-font">feedback</h2>
+					<p>사이트를 쓰면서 불편했던 점을 보내주세요.</p>
+				</div>
+			</div>
+			<div class="row animate-box">
+				<div class="col-md-8 col-md-offset-2">
+					<form class="form-inline">
+						<div class="col-md-6 col-sm-6">
+							<div class="form-group">
+								<label for="feedback" class="sr-only">feedback</label>
+								<input type="feedback" class="form-control" id="feedback" placeholder="불편했던점을 보내주세요!">
+							</div>
+						</div>
+						<div class="col-md-6 col-sm-6">
+							<button type="submit" class="btn btn-default btn-block">send</button>
+						</div>
+					</form>
+				</div>
+			</div>
+		</div>
+	</div>
 
 	<footer id="gtco-footer" role="contentinfo" style="background-image: url(images/img_bg_1.jpg)" data-stellar-background-ratio="0.5">
 		<div class="overlay"></div>
