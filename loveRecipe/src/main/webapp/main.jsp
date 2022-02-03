@@ -81,6 +81,8 @@
 	%>
 
 	<%
+		int memberCount = new DAO().memberCount();
+		System.out.println("memberCount : " + memberCount);
 		int recipeCount = new DAO().recipeCount();
 		System.out.println("recipeCount : " + recipeCount);
 	%>
@@ -452,7 +454,7 @@
 					<div class="col-md-3 col-sm-6 animate-box"
 						data-animate-effect="fadeInUp">
 						<div class="feature-center">
-							<span class="counter js-counter" data-from="0" data-to="32"
+							<span class="counter js-counter" data-from="0" data-to="<%=memberCount %>"
 								data-speed="3000" data-refresh-interval="50">1</span> <span
 								class="counter-label">ÃÑ È¸¿ø¼ö</span>
 						</div>

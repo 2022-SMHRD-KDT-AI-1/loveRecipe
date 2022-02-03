@@ -210,6 +210,34 @@ public class DAO {
 
 	}
 
+	// 그거 아세요? 총 회원 수 카운트 메소드
+	public int memberCount() {
+		int memberCount = 0;
+		try {
+
+			DBconn();
+			// 5. SQL문 작성
+			String sql = "select count (*) from test_member";
+
+			// 6. preparestatement 메소드 사용해서 sql문을 DB에 전달
+			psmt = conn.prepareStatement(sql);
+
+			// 8. 실행
+			// Update : select구문을 제외한 다른 구문, int형태로 변환
+			// Query : select구문에서 사용, Resultset형태로 반환
+			rs = psmt.executeQuery();
+
+			if (rs.next()) {
+				memberCount = rs.getInt("COUNT(*)");
+			}
+		} catch (Exception e) {
+			e.printStackTrace();
+		} finally {
+			DBclose();
+		}
+		return memberCount;
+	}
+
 	// 그거 아세요? 레시피 수 카운트 메소드
 	public int recipeCount() {
 		int recipeCount = 0;
