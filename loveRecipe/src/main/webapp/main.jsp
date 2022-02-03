@@ -70,14 +70,10 @@
 
 	<%
 	
-	
 	MemberVO info = (MemberVO)session.getAttribute("info");
-	
-	
-	
-	
+		
 	%>
-<<<<<<< HEAD
+	
 	<div class="gtco-loader"></div>
 	
 	<div id="page">
@@ -142,69 +138,6 @@
 												</div>
 												<div class="row form-group">
 													<div class="col-md-12">
-=======
-	<div class="gtco-loader"></div>
-	
-	<div id="page">
-
-	
-	<!-- <div class="page-inner"> -->
-	<nav class="gtco-nav" role="navigation">
-		<div class="gtco-container">
-			
-			<div class="row">
-				<div class="col-sm-4 col-xs-12">
-					<div id="gtco-logo"><a href="main.jsp"><em class="cursive-font" style="font-size: 3rem">레시피를 부탁해</em></a></div>
-				</div>
-				<div class="col-xs-8 text-right menu-1">
-					<ul>
-						<li><a href="menu.jsp">Menu</a></li>
-						<li class="has-dropdown">
-							<a href="services.jsp">Services</a>
-							<ul class="dropdown">
-								<li><a href="refigator.jsp">나만의 냉장고</a></li>
-								<li><a href="mealplan.jsp">식단짜기</a></li>
-								<li><a href="newrecipe.jsp">레시피등록</a></li>
-							</ul>
-						</li>
-						<li><a href="feedback.jsp">feedback</a></li>
-						<li class="btn-cta"><a href="main.jsp"><span>login</span></a></li>
-					</ul>	 
-				</div>
-			</div>
-			
-		</div>
-	</nav>
-	
-	<header id="gtco-header" class="gtco-cover gtco-cover-md" role="banner" style="background-image: url(images/img_bg_1.jpg)" data-stellar-background-ratio="0.5">
-		<div class="overlay"></div>
-		<div class="gtco-container">
-			<div class="row">
-				<div class="col-md-12 col-md-offset-0 text-left">
-					
-
-					<div class="row row-mt-15em">
-						<div class="col-md-7 mt-text animate-box" data-animate-effect="fadeInUp">
-							<%if(info!= null) {%>
-										<h1><%=info.getId()  %> 님 환영합니다</h1>
-										<%}else{ %>
-										<h1> 로그인을 하세요!</h1>
-										<%} %>
-						</div>
-						<div class="col-md-4 col-md-push-1 animate-box" data-animate-effect="fadeInRight">
-							<div class="form-wrap">
-								<div class="tab">
-										
-									<div class="tab-content">
-										<div class="tab-content-inner active" data-content="signup">
-											<h3 class="cursive-font">
-												login</h3>
-											<form action="LoginService" method="POST">
-												<div class="row form-group">
-												</div>
-												<div class="row form-group">
-													<div class="col-md-12">
->>>>>>> branch 'master' of https://github.com/2022-SMHRD-KDT-AI-1/loveRecipe.git
 													<%if(info!= null) {%>
 														<%}else{ %>
 														<label>id</label>
@@ -234,7 +167,7 @@
 														<a href="veiwmember.jsp">회원 정보 관리</a>
 														<%} %>
 														<a href="LogoutService">로그아웃</a>
-														<a href="new.jsp">회원정보변경</a>															
+														<a href="updateuser.jsp">회원정보변경</a>															
 														
 															<%}else{ %>		
 														<input type="submit" class="btn btn-primary btn-block" value="login">
@@ -413,6 +346,87 @@
 		
 		</div>
 	</div>
+
+
+  <!-- 
+form의 name의 목적 : 자바스크립트에서 접근이 용이하게 하기 위해서 사용
+-->
+
+  <form action="" name="frm">
+    <div align="center">
+      <strong></strong><br><br>
+
+      <select id="selid" name="myChoice">
+        <option value="180">원하는 시간을 선택해주십시오(기본:3분)</option>
+        <option value="300">5분</option>
+        <option value="180">3분</option>
+        <option value="150">2분 30초</option>
+        <option value="120">2분</option>
+        <option value="60">1분</option>
+        <option value="30">30초</option>
+      </select>
+
+      <input type="button" value="GO!" onclick="noodle()">
+      <br><br>
+
+      <span id="countdown">time selected</span>
+      <br><br>
+
+      <input type="button" value="Close" onclick='window.close()'>
+
+    </div>
+
+  </form>
+  
+  <script type="text/javascript">
+    var count = 0;
+    var time = 0;
+    var choice = 0;
+
+    function noodle() {
+
+      clearInterval(time); // 타이머 우선 초기화 시켜주기(time initialize)
+      /* 
+       
+          ID로 가져오기
+         // select의 value를 가져오기 : value
+         var val = document.getElementById("selid").value;
+         alert(val);   // 확인용
+         // select의 index값을 가져오기 : selectedIndex
+         var indexNum = document.getElementById("selid").selectedIndex;
+         alert(indexNum);   // 확인용
+       */
+
+
+      //    name으로 index 찾기
+      choice = document.frm.myChoice.selectedIndex;
+      //   alert(choice);
+
+      // 찾은 index로 value찾기
+      count = parseInt(document.frm.myChoice.options[choice].value);
+
+      alert(count);
+
+      // 타이머 함수 1초씩 호출하는 함수 만들기
+      time = setInterval("myTimer()", 1000);
+
+    }
+
+    function myTimer() {
+      count = count - 1; // 타이머 선택 숫자에서 -1씩 감산함(갱신되기 때문)
+
+      document.getElementById("countdown").innerHTML = "완료까지 <b>" + count + "</b>초 남았습니다.";
+      if (count == 0) {
+        clearInterval(time); // 시간 초기화
+        alert("시간이 완료되었습니다.")
+      }
+    }
+
+    document.oncontextmenu = function () {
+      alert("마우스의 우클릭은 사용할 수 없습니다.")
+      return false;
+    }
+  </script>
 
 
 	<div class="gtco-cover gtco-cover-sm" style="background-image: url(images/img_bg_1.jpg)"  data-stellar-background-ratio="0.5">

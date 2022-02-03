@@ -226,6 +226,34 @@ public class DAO {
 
 
 
+	 public int update(MemberVO vo) {
+		 try {
+			 	DBconn();
+				String sql = "update test_member set pw=?, nickname =?, email=? where id=? ";
+
+				psmt = conn.prepareStatement(sql);
+
+				psmt.setString(1, vo.getPw());
+				psmt.setString(2, vo.getNickname());
+				psmt.setString(3, vo.getEmail());
+				psmt.setString(4, vo.getId());
+
+				cnt= psmt.executeUpdate();
+
+				if (cnt!=0) {
+					System.out.print("수정성공 ");
+					
+				}else {
+					System.out.println("수정실패");
+				}
+
+				
+
+			} catch (Exception e) {
+				e.printStackTrace();
+			} finally {
+				DBclose();
+	 } return cnt;
 
 
 
@@ -233,6 +261,5 @@ public class DAO {
 
 
 
-
-}
+}}
 
