@@ -1,3 +1,4 @@
+<%@page import="model.DAO"%>
 <%@page import="model.MemberVO"%>
 <%@ page language="java" contentType="text/html; charset=EUC-KR"
     pageEncoding="EUC-KR"%>
@@ -69,15 +70,14 @@
 
 
 	<%
-	
-	
-	MemberVO info = (MemberVO)session.getAttribute("info");
-	
-	
-	
-	
+		MemberVO info = (MemberVO)session.getAttribute("info");	
 	%>
-<<<<<<< HEAD
+
+	<%
+		int recipeCount = new DAO().recipeCount();
+		System.out.println("recipeCount : "+recipeCount); 
+	%>
+	
 	<div class="gtco-loader"></div>
 	
 	<div id="page">
@@ -460,7 +460,7 @@
 				</div>
 				<div class="col-md-3 col-sm-6 animate-box" data-animate-effect="fadeInUp">
 					<div class="feature-center">
-						<span class="counter js-counter" data-from="0" data-to="300" data-speed="5000" data-refresh-interval="50">1</span>
+						<span class="counter js-counter" data-from="0" data-to="<%=recipeCount %>" data-speed="5000" data-refresh-interval="50">1</span>
 						<span class="counter-label">레시피 수</span>
 
 					</div>
