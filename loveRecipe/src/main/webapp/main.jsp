@@ -119,6 +119,7 @@
 			</div>
 			
 		</div>
+		
 	</nav>
 	
 	<header id="gtco-header" class="gtco-cover gtco-cover-md" role="banner" style="background-image: url(images/img_bg_1.jpg)" data-stellar-background-ratio="0.5">
@@ -172,8 +173,8 @@
 														
 														
 														<%if(info!= null) {%>
-														<a href="new.jsp">로그아웃</a>
-														<a href="new.jsp">회원정보변경</a>															
+														<a href="LogoutService">로그아웃</a>
+														<a href="UpdateService">회원정보변경</a>															
 														
 															<%}else{ %>		
 														<input type="submit" class="btn btn-primary btn-block" value="login">

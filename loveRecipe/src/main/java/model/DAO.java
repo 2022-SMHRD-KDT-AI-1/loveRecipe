@@ -6,6 +6,8 @@ import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.util.ArrayList;
 
+import Model.MemberDTO;
+
 public class DAO {
 	Connection conn = null;
 	PreparedStatement psmt =null;
@@ -189,9 +191,32 @@ public class DAO {
 		      } finally {
 		         DBclose();
 		      } return cnt;
+		      
 		   }
 
+	   public int update(MemberVO info) {
 
+		      try {
+		         DBconn();
+		         
+		         String sql = "update test_member set pw=?, nickname=?, email=?, phone=?, where Id=?";
+		         
+		         psmt = conn.prepareStatement(sql);
+		         
+		
+		         psmt.setString(1, info.getPw());
+		         psmt.setString(2, info.getNickname());
+		         psmt.setString(3, info.getemail());
+		         psmt.setString(4, info.getPhone());
+		         psmt.setString(5, info.getId());
+		         cnt = psmt.executeUpdate();
+		      } catch (Exception e) {
+		         e.printStackTrace();
+		      } finally {
+		         DBclose();
+		      } return cnt;
+		   }
+	
 
 
 

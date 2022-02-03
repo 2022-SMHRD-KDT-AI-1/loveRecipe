@@ -13,8 +13,9 @@ import model.MemberVO;
 
 @WebServlet("/UpdateService")
 public class UpdateService extends HttpServlet {
-   protected void service(HttpServletRequest phone, HttpServletResponse response) throws ServletException, IOException {
-      System.out.println("[UpdateService]");
+	   protected void service(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+	      System.out.println("[UpdateService]");
+     
       
      
       request.setCharacterEncoding("UTF-8");
@@ -28,7 +29,7 @@ public class UpdateService extends HttpServlet {
       System.out.println("pw : "+pw);
       System.out.println("nickname : "+nickname);
       System.out.println("email : "+email);
-      System.out.println("address : "+phone);
+      System.out.println("phone : "+phone);
     
       HttpSession session = request.getSession();
       MemberVO info = (MemberVO)session.getAttribute("info");
@@ -41,7 +42,7 @@ public class UpdateService extends HttpServlet {
       
   
       DAO dao = new DAO();
-      int cnt = vo.update(info);
+      int cnt = dao.update(info);
       
 
     
@@ -59,9 +60,9 @@ public class UpdateService extends HttpServlet {
       
       
       
-      
+   }
       
       
    }
 
-}
+
