@@ -27,29 +27,29 @@
 			<version>4.11</version>
 			<scope>test</scope>
 		</dependency>
-
+	
 		<!-- https://mvnrepository.com/artifact/org.apache.tomcat/tomcat-servlet-api -->
 		<dependency>
 			<groupId>org.apache.tomcat</groupId>
 			<artifactId>tomcat-servlet-api</artifactId>
 			<version>8.5.38</version>
 		</dependency>
-    <!-- ojdbc6 라이브러리추가 -->
-    <!-- https://mvnrepository.com/artifact/com.oracle.database.jdbc/ojdbc6 -->
-<dependency>
-    <groupId>com.oracle.database.jdbc</groupId>
-    <artifactId>ojdbc6</artifactId>
-    <version>11.2.0.4</version>
-</dependency>
-<!-- 파일업로드용 cos추가 -->
-   <!-- https://mvnrepository.com/artifact/servlets.com/cos -->
-<dependency>
-    <groupId>servlets.com</groupId>
-    <artifactId>cos</artifactId>
-    <version>05Nov2002</version>
-</dependency>
-    
-		
+		<!-- ojdbc6 라이브러리추가 -->
+		<!-- https://mvnrepository.com/artifact/com.oracle.database.jdbc/ojdbc6 -->
+		<dependency>
+			<groupId>com.oracle.database.jdbc</groupId>
+			<artifactId>ojdbc6</artifactId>
+			<version>11.2.0.4</version>
+		</dependency>
+		<!-- 파일업로드용 cos추가 -->
+		<!-- https://mvnrepository.com/artifact/servlets.com/cos -->
+		<dependency>
+			<groupId>servlets.com</groupId>
+			<artifactId>cos</artifactId>
+			<version>05Nov2002</version>
+		</dependency>
+
+
 
 	</dependencies>
 
