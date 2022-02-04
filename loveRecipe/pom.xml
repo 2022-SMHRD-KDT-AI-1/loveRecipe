@@ -37,19 +37,7 @@
 </dependency>
 
 
-		<!-- ojdbc6 라이브러리추가 -->
-		<!-- https://mvnrepository.com/artifact/com.oracle.database.jdbc/ojdbc6 -->
-=======
-	
-		<!-- https://mvnrepository.com/artifact/org.apache.tomcat/tomcat-servlet-api -->
->>>>>>> branch 'master' of https://github.com/2022-SMHRD-KDT-AI-1/loveRecipe.git
-		<dependency>
-			<groupId>com.oracle.database.jdbc</groupId>
-			<artifactId>ojdbc6</artifactId>
-			<version>11.2.0.4</version>
-		</dependency>
-<<<<<<< HEAD
-=======
+
 		<!-- ojdbc6 라이브러리추가 -->
 		<!-- https://mvnrepository.com/artifact/com.oracle.database.jdbc/ojdbc6 -->
 		<dependency>
@@ -57,7 +45,7 @@
 			<artifactId>ojdbc6</artifactId>
 			<version>11.2.0.4</version>
 		</dependency>
->>>>>>> branch 'master' of https://github.com/2022-SMHRD-KDT-AI-1/loveRecipe.git
+
 		<!-- 파일업로드용 cos추가 -->
 		<!-- https://mvnrepository.com/artifact/servlets.com/cos -->
 		<dependency>
@@ -72,9 +60,23 @@
 
 	<build>
 		<finalName>loveRecipe</finalName>
-		<pluginManagement><!-- lock down plugins versions to avoid using Maven 
-				defaults (may be moved to parent pom) -->
-			<plugins>
+	<pluginManagement>
+    <plugins>
+    <!-- 서버 배포 셋팅 -->
+    <plugin>
+    <groupId>org.apache.tomcat.maven</groupId>
+    <artifactId>tomcat7-maven-plugin</artifactId>
+    <version>2.2</version>
+    <configuration>
+        <server>github</server>
+        <path>/${project.build.finalName}</path>
+        <url>${my.url}</url>
+        <username>${my.username}</username>
+        <password>${my.password}</password>
+        <update>true</update>
+    </configuration>
+    </plugin>
+   
 				<plugin>
 					<artifactId>maven-clean-plugin</artifactId>
 					<version>3.1.0</version>
