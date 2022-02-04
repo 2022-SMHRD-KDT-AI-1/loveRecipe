@@ -27,7 +27,6 @@
 			<version>4.11</version>
 			<scope>test</scope>
 		</dependency>
-<<<<<<< HEAD
 
 <!-- https://mvnrepository.com/artifact/org.apache.tomcat/tomcat-servlet-api -->
 <dependency>
