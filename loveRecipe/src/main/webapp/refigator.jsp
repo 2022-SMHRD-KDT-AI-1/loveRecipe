@@ -1,3 +1,5 @@
+<%@page import="model.MemberVO"%>
+<%@page import="model.DAO"%>
 <%@ page language="java" contentType="text/html; charset=EUC-KR"
     pageEncoding="EUC-KR"%>
 <!DOCTYPE HTML>
@@ -63,6 +65,12 @@
 
 	</head>
 	<body>
+	<%
+	 	DAO dao = new DAO();
+		MemberVO info = (MemberVO) session.getAttribute("info");
+		
+
+	%>
 		
 	<div class="gtco-loader"></div>
 	
@@ -106,7 +114,11 @@
 
 					<div class="row row-mt-15em">
 						<div class="col-md-12 mt-text animate-box" data-animate-effect="fadeInUp">
-							<h1 class="cursive-font">§∑§∑§∑¥‘¿« ≥√¿Â∞Ì</h1>	
+									<%if(info!= null) {%>					
+										<h1><%=info.getNickname()  %>¥‘¿« ≥√¿Â∞Ì</h1>
+										<%}else{ %>
+										<h1> ∑Œ±◊¿Œ¿ª «œººø‰!</h1>
+										<%} %>
 						</div>
 						
 					</div>
