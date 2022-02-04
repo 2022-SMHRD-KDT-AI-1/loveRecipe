@@ -10,7 +10,7 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
 
-@WebServlet("/menu")
+@WebServlet("")
 public class menu extends HttpServlet {
 
 	protected void service(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
@@ -148,4 +148,4 @@ public class menu extends HttpServlet {
 		        return list;
 
 
-		출처: https://all-record.tistory.com/129 [세상의 모든 기록]
+		
