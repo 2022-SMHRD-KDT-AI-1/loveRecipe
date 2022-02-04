@@ -75,7 +75,7 @@
 			
 			<div class="row">
 				<div class="col-sm-4 col-xs-12">
-					<div id="gtco-logo"><a href="main.jsp">레시피를 부탁해!  <em>.</em></a></div>
+					<div id="gtco-logo"><a href="main.jsp">레시피를 부탁해!  <em></em></a></div>
 				</div>
 				<div class="col-xs-8 text-right menu-1">
 					<ul>
@@ -106,7 +106,7 @@
 
 					<div class="row row-mt-15em">
 						<div class="col-md-12 mt-text animate-box" data-animate-effect="fadeInUp">
-							<h1 class="cursive-font">오늘의 메뉴를 추천!</h1>	
+							<h1 class="cursive-font">ㅇㅇㅇ님의 냉장고</h1>	
 						</div>
 						
 					</div>
@@ -116,114 +116,32 @@
 			</div>
 		</div>
 	</header>
-
-	
-	
-	<div class="gtco-section">
+	<div id="gtco-subscribe" style="background-color: green">
 		<div class="gtco-container">
-			<div class="row">
+			<div class="row animate-box">
 				<div class="col-md-8 col-md-offset-2 text-center gtco-heading">
-					<h2 class="cursive-font primary-color">이밑에 냉장고 재료 입력및 보유한 재료 보여주는기능 필요</h2>
-					<p>실시간으로 급상승중인 레시피를 추천받으세요!</p>
-				</div>
-			</div>
-			<div class="row">
-
-				<div class="col-lg-4 col-md-4 col-sm-6">
-					<a href="images/img_1.jpg" class="fh5co-card-item image-popup">
-						<figure>
-							<div class="overlay"><i class="ti-plus"></i></div>
-							<img src="images/img_1.jpg" alt="Image" class="img-responsive">
-						</figure>
-						<div class="fh5co-text">
-							<h2>Fresh Mushrooms</h2>
-							<p>Far far away, behind the word mountains, far from the countries Vokalia..</p>
-							<p><span class="price cursive-font">$19.15</span></p>
-						</div>
-					</a>
-				</div>
-				<div class="col-lg-4 col-md-4 col-sm-6">
-					<a href="images/img_2.jpg" class="fh5co-card-item image-popup">
-						<figure>
-							<div class="overlay"><i class="ti-plus"></i></div>
-							<img src="images/img_2.jpg" alt="Image" class="img-responsive">
-						</figure>
-						<div class="fh5co-text">
-							<h2>Cheese and Garlic Toast</h2>
-							<p>Far far away, behind the word mountains, far from the countries Vokalia..</p>
-							<p><span class="price cursive-font">$20.99</span></p>
-						</div>
-					</a>
-				</div>
-				<div class="col-lg-4 col-md-4 col-sm-6">
-					<a href="images/img_3.jpg" class="fh5co-card-item image-popup">
-						<figure>
-							<div class="overlay"><i class="ti-plus"></i></div>
-							<img src="images/img_3.jpg" alt="Image" class="img-responsive">
-						</figure>
-						<div class="fh5co-text">
-							<h2>Grilled Chiken Salad</h2>
-							<p>Far far away, behind the word mountains, far from the countries Vokalia..</p>
-							<p><span class="price cursive-font">$8.99</span></p>
-
-						</div>
-					</a>
-				</div>
-
-
-				<div class="col-lg-4 col-md-4 col-sm-6">
-					<a href="images/img_4.jpg" class="fh5co-card-item image-popup">
-						<figure>
-							<div class="overlay"><i class="ti-plus"></i></div>
-							<img src="images/img_4.jpg" alt="Image" class="img-responsive">
-						</figure>
-						<div class="fh5co-text">
-							<h2>Organic Egg</h2>
-							<p>Far far away, behind the word mountains, far from the countries Vokalia..</p>
-							<p><span class="price cursive-font">$12.99</span></p>
-						</div>
-					</a>
-				</div>
-
-				<div class="col-lg-4 col-md-4 col-sm-6">
-					<a href="images/img_5.jpg" class="fh5co-card-item image-popup">
-						<figure>
-							<div class="overlay"><i class="ti-plus"></i></div>
-							<img src="images/img_5.jpg" alt="Image" class="img-responsive">
-						</figure>
-						<div class="fh5co-text">
-							<h2>Tomato Soup with Chicken</h2>
-							<p>Far far away, behind the word mountains, far from the countries Vokalia..</p>
-							<p><span class="price cursive-font">$23.10</span></p>
-						</div>
-					</a>
-				</div>
-
-				<div class="col-lg-4 col-md-4 col-sm-6">
-					<a href="images/img_6.jpg" class="fh5co-card-item image-popup">
-						<figure>
-							<div class="overlay"><i class="ti-plus"></i></div>
-							<img src="images/img_6.jpg" alt="Image" class="img-responsive">
-						</figure>
-						<div class="fh5co-text">
-							<h2>Salad with Crispy Chicken</h2>
-							<p>Far far away, behind the word mountains, far from the countries Vokalia..</p>
-							<p><span class="price cursive-font">$5.59</span></p>
-						</div>
-					</a>
-				</div>
-
-			</div>
-		</div>
-	</div>
-
-	<div class="gtco-cover gtco-cover-sm" style="background-image: url(images/img_bg_1.jpg)"  data-stellar-background-ratio="0.5">
-		<div class="overlay"></div>
-		<div class="gtco-container text-center">
-			<div class="display-t">
-				<div class="display-tc">
-					<h1>&ldquo; 음식에 대한 사랑처럼  진실된 사랑은 없다.&rdquo;</h1>
-					<p>&mdash; - 조지 버나드 쇼-</p>
+					<h2 class="cursive-font">냉동실</h2>
+					<fieldset>
+						<form action="#">
+							재료 : <input type="text" name = "ingre1"><br>
+							갯수 :<input type="number" name="number1"><br>
+							<input type = "button" value="등록" onClick="low_save();">
+						</form>
+					</fieldset>
+					<div id = "ref1" style = "background-color: blue; color:white">
+						<table>
+							<thead>
+								<tr>
+									<td>재료</td>
+									<td>갯수</td>
+								</tr>
+							</thead>
+							
+							<tbody id="low">
+							
+							</tbody>
+						</table>
+					</div>
 				</div>	
 			</div>
 		</div>
@@ -233,61 +151,189 @@
 		<div class="gtco-container">
 			<div class="row animate-box">
 				<div class="col-md-8 col-md-offset-2 text-center gtco-heading">
-					<h2 class="cursive-font">feedback</h2>
-					<p>사이트를 쓰면서 불편햇던점을 보내주세요!</p>
-				</div>
-			</div>
-			<div class="row animate-box">
-				<div class="col-md-8 col-md-offset-2">
-					<form class="form-inline">
-						<div class="col-md-6 col-sm-6">
-							<div class="form-group">
-								<label for="feedback" class="sr-only">feedback</label>
-								<input type="feedback" class="form-control" id="feedback" placeholder="불편했던점을 보내주세요!">
-							</div>
-						</div>
-						<div class="col-md-6 col-sm-6">
-							<button type="submit" class="btn btn-default btn-block">send</button>
-						</div>
-					</form>
+					<h2 class="cursive-font">냉장실</h2>			
+						<fieldset>
+						<form action="#">
+							재료 : <input type="text" name = "ingre2"><br>
+							갯수 :<input type="number" name="number2"><br>
+							<input type = "button" value="등록" onClick="mid_save()">
+						</form>
+					</fieldset>
+					<div id = "ref2" style = "background-color: blue; color:white">
+						<table>
+							<thead>
+								<tr>
+									<td>재료</td>
+									<td>갯수</td>
+								</tr>
+							</thead>
+							
+							<tbody id="mid">
+							
+							</tbody>
+						</table>
+					</div>
 				</div>
 			</div>
 		</div>
 	</div>
 
-	<footer id="gtco-footer" role="contentinfo" style="background-image: url(images/img_bg_1.jpg)" data-stellar-background-ratio="0.5">
-		<div class="overlay"></div>
+	<div id="gtco-subscribe" style="background-color: gray">
 		<div class="gtco-container">
-			<div class="row row-pb-md">
-
-				
-
-				
-				<div class="col-md-12 text-center">
-					<div class="gtco-widget">
-						<h3>Get In Touch</h3>
-						<ul class="gtco-quick-contact">
-							<li><a href="#"><i class="icon-phone"></i> +1 234 567 890</a></li>
-							<li><a href="#"><i class="icon-mail2"></i> info@GetTemplates.co</a></li>
-							<li><a href="#"><i class="icon-chat"></i> Live Chat</a></li>
-						</ul>
-					</div>
-					<div class="gtco-widget">
-						<h3>Get Social</h3>
-						<ul class="gtco-social-icons">
-							<li><a href="#"><i class="icon-twitter"></i></a></li>
-							<li><a href="#"><i class="icon-facebook"></i></a></li>
-							<li><a href="#"><i class="icon-linkedin"></i></a></li>
-							<li><a href="#"><i class="icon-dribbble"></i></a></li>
-						</ul>
+			<div class="row animate-box">
+				<div class="col-md-8 col-md-offset-2 text-center gtco-heading">
+					<h2 class="cursive-font">상온</h2>
+						<fieldset> 
+							<form action="#">
+								재료 : <input type="text" name = "ingre3"><br>
+								갯수 :<input type="number" name="number3"><br>
+								<input type = "button" value="등록" onClick="high_save()">
+							</form>
+						</fieldset>
+						<div id = "ref3" style = "background-color: blue; color:white">
+						<table>
+							<thead>
+								<tr>
+									<td>재료</td>
+									<td>갯수</td>
+								</tr>
+							</thead>
+							
+							<tbody id="high">
+							
+							</tbody>
+						</table>
 					</div>
 				</div>
-
-		
-			
-
+			</div>
 		</div>
-	</footer>
+	</div>
+	
+	<script type="text/javascript" src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+	<script type="text/javascript">
+	
+	function low_save() {
+		// input태그 값 가져오기
+		var ingre1 = $('input[name=ingre1]').val();
+		var number1 = $('input[name=number1]').val();
+		// ajax 
+		// 비동기 통신
+		
+		$.ajax({
+			url : 'refService', // 값을 보낼 주소
+			type : 'POST', // get or post
+			data : { // 전달하고자하는 데이터
+				ingre1 : ingre1, //  javascript 객체 형태로  name : value
+				number1 : number1
+			},
+			//dataType : 'json', // json 데이터로 응답받을 때,
+			success : function(res){ // 통신이 성공했을 때 실행되는 함수
+				// res --> Server에서 응답해준 데이터가 매개변수에 자동으로 담김
+				low_print(ingre1, number1);
+
+			},
+			error : function(){ // 통신이 실패한경우에 실행되는 함수 
+				alert("error");
+			}
+		});
+		
+	}
+	
+	function low_print(ingre1, number1){
+		// div에 추가
+		// jqury 에서 html 하는 코드
+		// $('선택자').html('문자열'); --> 덮어쓰기 내용물을 싹 지워버리고 '문자열'교체
+		// $('선택자').after(); --> 선택자 바로 앞에
+		// $('선택자').before(); --> 바로뒤
+		// $('선택자').append(); --> 선택자 안에 요소 추가 
+		tr = `
+			<tr> 
+				<td><a href="detail?ingre1=`+ ingre1 +`&number1=`+ number1+`">` + ingre1 +`</a></td>
+				<td>` + number1 + `</td>
+			</tr>
+		`;
+		
+		
+		$('tbody[id=low]').append(tr);
+		
+	}
+	function mid_save() {
+		// input태그 값 가져오기
+		var ingre2 = $('input[name=ingre2]').val()
+		var number2 = $('input[name=number2]').val()
+
+		// ajax 
+		// 비동기 통신
+		
+		$.ajax({
+			url : 'refService', 
+			type : 'post', 
+			data : {
+				'ingre2' : ingre2,
+				'number2' : number2
+			},
+			success : function(res){ 
+				mid_print(ingre2, number2);
+
+			},
+			error : function(){ 
+				alert("error");
+			}
+		});
+		
+	}
+	function mid_print(ingre2, number2){
+		tr = `
+			<tr> 
+				<td><a href="detail?ingre2=`+ ingre2 +`&number2=`+ number2+`">` + ingre2 +`</a></td>
+				<td>` + number2 + `</td>
+			</tr>
+		`;
+		
+		
+		$('tbody[id=mid]').append(tr);
+		
+	}
+	function high_save() {
+		// input태그 값 가져오기
+		var ingre3 = $('input[name=ingre3]').val()
+		var number3 = $('input[name=number3]').val()
+
+		// ajax 
+		// 비동기 통신
+		
+		$.ajax({
+			url : 'refService', 
+			type : 'post', 
+			data : { 
+				'ingre3' : ingre3,
+				'number3' : number3
+			},
+			success : function(res){ 
+				high_print(ingre3, number3);
+			},
+			error : function(){ 
+				alert("error");
+			}
+		});
+		
+	}
+
+	function high_print(ingre3, number3){
+
+		tr = `
+			<tr> 
+				<td><a href="detail?ingre3=`+ ingre3 +`&number3=`+ number3+`">` + ingre3 +`</a></td>
+				<td>` + number3 + `</td>
+			</tr>
+		`;
+		
+		
+		$('tbody[id=high]').append(tr);
+		
+	}
+	</script>
+	
 	<!-- </div> -->
 
 	</div>

@@ -13,9 +13,10 @@ import model.MemberVO;
 
 @WebServlet("/UpdateService")
 public class UpdateService extends HttpServlet {
+
 	   protected void service(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 	      System.out.println("[UpdateService]");
-     
+
       
      
       request.setCharacterEncoding("UTF-8");
@@ -37,6 +38,7 @@ public class UpdateService extends HttpServlet {
   
       String id = info.getId();
       
+      System.out.println("id : "+id);
    
       info = new MemberVO(id, pw, nickname, email, phone);
       
@@ -47,12 +49,12 @@ public class UpdateService extends HttpServlet {
 
     
       if(cnt >0) {
-         System.out.println("회원정보수정 성공");
+         System.out.println("�쉶�썝�젙蹂댁닔�젙 �꽦怨�");
          
         
          session.setAttribute("info", info);
       }else {
-         System.out.println("회원정보수정 실패");
+         System.out.println("�쉶�썝�젙蹂댁닔�젙 �떎�뙣");
       }
       
       response.sendRedirect("main.jsp");

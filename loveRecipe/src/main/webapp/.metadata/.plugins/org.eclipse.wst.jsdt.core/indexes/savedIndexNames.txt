@@ -1,9 +1,0 @@
-INDEX VERSION 1.4+C:\Users\smhrd\Desktop\savory (2)\.metadata\.plugins\org.eclipse.wst.jsdt.core\indexes
-2259753476.index
-2982705913.index
-3010717853.index
-3677366730.index
-2364959802.index
-2224506818.index
-2982304743.index
-4005953615.index

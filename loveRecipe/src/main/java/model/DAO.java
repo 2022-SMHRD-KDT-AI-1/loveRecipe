@@ -163,12 +163,101 @@ public class DAO {
 				psmt.setString(1, message);
 			
 
+<<<<<<< HEAD
 				
 				cnt = psmt.executeUpdate();
 			} catch (Exception e) {
 				e.printStackTrace();
 			} finally {
 				DBclose();
+=======
+			String sql = "insert into web_message values(num_message.nextval, , , , sysdate)";
+
+			psmt = conn.prepareStatement(sql);
+
+			psmt.setString(1, message);
+
+			cnt = psmt.executeUpdate();
+		} catch (Exception e) {
+			e.printStackTrace();
+		} finally {
+			DBclose();
+		}
+		return cnt;
+	}
+
+	public int update(MemberVO vo) {
+		try {
+			DBconn();
+			String sql = "update test_member set pw=?, nickname =?, email=? where id=? ";
+
+			psmt = conn.prepareStatement(sql);
+
+			psmt.setString(1, vo.getPw());
+			psmt.setString(2, vo.getNickname());
+			psmt.setString(3, vo.getEmail());
+			psmt.setString(4, vo.getId());
+
+			cnt = psmt.executeUpdate();
+
+			if (cnt != 0) {
+				System.out.print("수정성공 ");
+
+			} else {
+				System.out.println("수정실패");
+			}
+
+		} catch (Exception e) {
+			e.printStackTrace();
+		} finally {
+			DBclose();
+		}
+		return cnt;
+	}
+
+	// 피드백 업로드 메소드
+	public int feedupload(feedDTO dto) {
+		try {
+			DBconn();
+
+			String sql = "insert into feed_board values(feed_seq.nextval, ?, ?, sysdate)";
+
+			psmt = conn.prepareStatement(sql);
+
+			psmt.setString(1, dto.getName());
+			psmt.setString(2, dto.getmessage());
+
+			cnt = psmt.executeUpdate();
+		} catch (Exception e) {
+			e.printStackTrace();
+		} finally {
+			DBclose();
+		}
+		return cnt;
+	}
+
+	// 회원정보 확인 메소드
+	public ArrayList<MemberVO> showmember() {
+
+		// dto을 담을수 있는 Arraylist
+		ArrayList<MemberVO> list = new ArrayList<MemberVO>();
+		try {
+			DBconn();
+
+			String sql = "select id,pw,nickname from test_member";
+
+			psmt = conn.prepareStatement(sql);
+			rs = psmt.executeQuery();
+
+			while (rs.next()) {
+
+				String id = rs.getString(1);
+				String pw = rs.getString(2);
+				String nickname = rs.getString(3);
+
+				vo = new MemberVO(id, pw, nickname);
+				list.add(vo);
+>>>>>>> branch 'master' of https://github.com/2022-SMHRD-KDT-AI-1/loveRecipe.git
 			}
 			return cnt;
 		}
@@ -194,7 +283,42 @@ public class DAO {
 		      
 		   }
 
+<<<<<<< HEAD
 	   public int update(MemberVO info) {
+=======
+	// 그거 아세요? 총 회원 수 카운트 메소드
+	public int memberCount() {
+		int memberCount = 0;
+		try {
+
+			DBconn();
+			// 5. SQL문 작성
+			String sql = "select count (*) from test_member";
+
+			// 6. preparestatement 메소드 사용해서 sql문을 DB에 전달
+			psmt = conn.prepareStatement(sql);
+
+			// 8. 실행
+			// Update : select구문을 제외한 다른 구문, int형태로 변환
+			// Query : select구문에서 사용, Resultset형태로 반환
+			rs = psmt.executeQuery();
+
+			if (rs.next()) {
+				memberCount = rs.getInt("COUNT(*)");
+			}
+		} catch (Exception e) {
+			e.printStackTrace();
+		} finally {
+			DBclose();
+		}
+		return memberCount;
+	}
+
+	// 그거 아세요? 레시피 수 카운트 메소드
+	public int recipeCount() {
+		int recipeCount = 0;
+		try {
+>>>>>>> branch 'master' of https://github.com/2022-SMHRD-KDT-AI-1/loveRecipe.git
 
 		      try {
 		         DBconn();

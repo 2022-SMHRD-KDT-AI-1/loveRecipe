@@ -10,11 +10,16 @@ testdate date,
 constraint test_id_pk primary key(id)
 );
 
+create sequence test_seq start with 1 increment by 1;
+
 -- 2. web_member 테이블에 가데이터 넣기
 insert into test_member values(test_seq.nextval,'test','test','test','test','test',sysdate);
 
 -- 3. 가데이터 조회하기
 select * from test_member;
+
+-- 전체 행 갯수 가져오기
+select count (*) from test_member;
 
 -- 데이터 삭제 (pw로 지정)
 delete from test_member where pw in('ㅁ');
@@ -24,7 +29,7 @@ update test_member set 컬럼명 = '바꿀값' where email ='바꾸고자하는�
 -- 테이블 전체 삭제
 drop table test_member;
 
-create sequence test_seq start with 1 increment by 1
+
 
 
 
