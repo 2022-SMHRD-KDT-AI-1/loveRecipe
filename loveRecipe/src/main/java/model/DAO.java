@@ -157,7 +157,11 @@ public class DAO {
 		return cnt;
 	}
 
+<<<<<<< HEAD
 	//회원정보변경 메소드
+=======
+	//회원정보변경 메소드
+>>>>>>> branch 'master' of https://github.com/2022-SMHRD-KDT-AI-1/loveRecipe.git
 	 public int update(MemberVO vo) {
 		 try {
 			 	DBconn();
@@ -188,7 +192,11 @@ public class DAO {
 				DBclose();
 	 }return cnt;
 		 }
+<<<<<<< HEAD
 
+=======
+
+>>>>>>> branch 'master' of https://github.com/2022-SMHRD-KDT-AI-1/loveRecipe.git
 	// 피드백 업로드 메소드
 	public int feedupload(feedDTO dto) {
 		try {
@@ -216,11 +224,16 @@ public class DAO {
 		// dto을 담을수 있는 Arraylist
 		ArrayList<MemberVO> list = new ArrayList<MemberVO>();
 		try {
+<<<<<<< HEAD
 			DBconn();
+=======
+			DBconn();
+>>>>>>> branch 'master' of https://github.com/2022-SMHRD-KDT-AI-1/loveRecipe.git
 			String sql = "select id,pw,nickname from test_member";
 
 			psmt = conn.prepareStatement(sql);
 			rs = psmt.executeQuery();
+
 
 
 			while (rs.next()) {
