@@ -1,25 +1,24 @@
-<<<<<<< HEAD
 <%@page import="model.DAO"%>
 <%@page import="model.MemberVO"%>
 <%@ page language="java" contentType="text/html; charset=EUC-KR"
-	pageEncoding="EUC-KR"%>
+   pageEncoding="EUC-KR"%>
 <!DOCTYPE HTML>
 <!--
-	Aesthetic by gettemplates.co
-	Twitter: http://twitter.com/gettemplateco
-	URL: http://gettemplates.co
+   Aesthetic by gettemplates.co
+   Twitter: http://twitter.com/gettemplateco
+   URL: http://gettemplates.co
 -->
 <html>
 <head>
 <meta charset="utf-8">
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
-<title>·¹½ÃÇÇ¸¦ ºÎÅ¹ÇØ &mdash; Free Website Template, Free HTML5
-	Template by GetTemplates.co</title>
+<title>ë ˆì‹œí”¼ë¥¼ ë¶€íƒí•´ &mdash; Free Website Template, Free HTML5
+   Template by GetTemplates.co</title>
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <meta name="description"
-	content="Free HTML5 Website Template by GetTemplates.co" />
+   content="Free HTML5 Website Template by GetTemplates.co" />
 <meta name="keywords"
-	content="free website templates, free html5, free template, free bootstrap, free website template, html5, css3, mobile first, responsive" />
+   content="free website templates, free html5, free template, free bootstrap, free website template, html5, css3, mobile first, responsive" />
 <meta name="author" content="GetTemplates.co" />
 
 <!-- Facebook and Twitter integration -->
@@ -34,14 +33,12 @@
 <meta name="twitter:card" content="" />
 
 <link href="https://fonts.googleapis.com/css?family=Lato:300,400,700"
-	rel="stylesheet">
+   rel="stylesheet">
 <link href="https://fonts.googleapis.com/css?family=Kaushan+Script"
-	rel="stylesheet">
+   rel="stylesheet">
 <link
-	href="https://fonts.googleapis.com/css2?family=Nanum+Brush+Script&display=swap"
-	rel="stylesheet">
-<link href="https://fonts.googleapis.com/icon?family=Material+Icons"
-      rel="stylesheet">
+   href="https://fonts.googleapis.com/css2?family=Nanum+Brush+Script&display=swap"
+   rel="stylesheet">
 
 <!-- Animate.css -->
 <link rel="stylesheet" href="css/animate.css">
@@ -69,99 +66,8 @@
 <script src="js/modernizr-2.6.2.min.js"></script>
 <!-- FOR IE9 below -->
 <!--[if lt IE 9]>
-	<script src="js/respond.min.js"></script>
-	<![endif]-->
-
-
-</head>
-
-<body>
-
-	<%
-		MemberVO info = (MemberVO)session.getAttribute("info");
-	%>
-	
-	<%
-		DAO dao = new DAO();
-		int foodType = dao.foodType();
-		System.out.println("foodType : "+foodType);
-		int memberCount = dao.memberCount();
-		System.out.println("memberCount : "+memberCount);
-		int recipeCount = dao.recipeCount();
-		System.out.println("recipeCount : "+recipeCount);
-	%>
-	
-=======
-<%@page import="model.DAO"%>
-<%@page import="model.MemberVO"%>
-<%@ page language="java" contentType="text/html; charset=EUC-KR"
-	pageEncoding="EUC-KR"%>
-<!DOCTYPE HTML>
-<!--
-	Aesthetic by gettemplates.co
-	Twitter: http://twitter.com/gettemplateco
-	URL: http://gettemplates.co
--->
-<html>
-<head>
-<meta charset="utf-8">
-<meta http-equiv="X-UA-Compatible" content="IE=edge">
-<title>·¹½ÃÇÇ¸¦ ºÎÅ¹ÇØ &mdash; Free Website Template, Free HTML5
-	Template by GetTemplates.co</title>
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<meta name="description"
-	content="Free HTML5 Website Template by GetTemplates.co" />
-<meta name="keywords"
-	content="free website templates, free html5, free template, free bootstrap, free website template, html5, css3, mobile first, responsive" />
-<meta name="author" content="GetTemplates.co" />
-
-<!-- Facebook and Twitter integration -->
-<meta property="og:title" content="" />
-<meta property="og:image" content="" />
-<meta property="og:url" content="" />
-<meta property="og:site_name" content="" />
-<meta property="og:description" content="" />
-<meta name="twitter:title" content="" />
-<meta name="twitter:image" content="" />
-<meta name="twitter:url" content="" />
-<meta name="twitter:card" content="" />
-
-<link href="https://fonts.googleapis.com/css?family=Lato:300,400,700"
-	rel="stylesheet">
-<link href="https://fonts.googleapis.com/css?family=Kaushan+Script"
-	rel="stylesheet">
-<link
-	href="https://fonts.googleapis.com/css2?family=Nanum+Brush+Script&display=swap"
-	rel="stylesheet">
-
-<!-- Animate.css -->
-<link rel="stylesheet" href="css/animate.css">
-<!-- Icomoon Icon Fonts-->
-<link rel="stylesheet" href="css/icomoon.css">
-<!-- Themify Icons-->
-<link rel="stylesheet" href="css/themify-icons.css">
-<!-- Bootstrap  -->
-<link rel="stylesheet" href="css/bootstrap.css">
-
-<!-- Magnific Popup -->
-<link rel="stylesheet" href="css/magnific-popup.css">
-
-<!-- Bootstrap DateTimePicker -->
-<link rel="stylesheet" href="css/bootstrap-datetimepicker.min.css">
-
-<!-- Owl Carousel  -->
-<link rel="stylesheet" href="css/owl.carousel.min.css">
-<link rel="stylesheet" href="css/owl.theme.default.min.css">
-
-<!-- Theme style  -->
-<link rel="stylesheet" href="css/style.css">
-
-<!-- Modernizr JS -->
-<script src="js/modernizr-2.6.2.min.js"></script>
-<!-- FOR IE9 below -->
-<!--[if lt IE 9]>
-	<script src="js/respond.min.js"></script>
-	<![endif]-->
+   <script src="js/respond.min.js"></script>
+   <![endif]-->
 
 
 </head>
@@ -170,639 +76,297 @@
 
 
 
-	<%
-	 	DAO dao = new DAO();
-		MemberVO info = (MemberVO) session.getAttribute("info");
-		
-		int recipeCount = dao.recipeCount();
-		System.out.println("recipeCount : " + recipeCount);
-		int membercount = dao.memberCount();
-		System.out.println("memberCount : " + membercount);
+   <%
+       DAO dao = new DAO();
+      MemberVO info = (MemberVO) session.getAttribute("info");
+      
+      int recipeCount = dao.recipeCount();
+      System.out.println("recipeCount : " + recipeCount);
+      int membercount = dao.memberCount();
+      System.out.println("memberCount : " + membercount);
 
-	%>
+   %>
 
-	
->>>>>>> branch 'master' of https://github.com/2022-SMHRD-KDT-AI-1/loveRecipe.git
-	<div class="gtco-loader"></div>
-	
-	<div id="page">
+   
+   <div class="gtco-loader"></div>
+   
+   <div id="page">
 
-	
-	<!-- <div class="page-inner"> -->
-	<nav class="gtco-nav" role="navigation">
-		<div class="gtco-container">
-			
-			<div class="row">
-				<div class="col-sm-4 col-xs-12">
-					<div id="gtco-logo"><a href="main.jsp"><em class="cursive-font" style="font-size: 3rem">·¹½ÃÇÇ¸¦ ºÎÅ¹ÇØ</em></a></div>
-				</div>
-				<div class="col-xs-8 text-right menu-1">
-					<ul>
-						<li><a href="menu.jsp">Menu</a></li>
-						<li class="has-dropdown">
-							<a href="services.jsp">Services</a>
-							<ul class="dropdown">
-								<li><a href="refigator.jsp">³ª¸¸ÀÇ ³ÃÀå°í</a></li>
-								<li><a href="mealplan.jsp">½Ä´ÜÂ¥±â</a></li>
-								<li><a href="newrecipe.jsp">·¹½ÃÇÇµî·Ï</a></li>
-							</ul>
-						</li>
-						<li><a href="feedback.jsp">feedback</a></li>
-						<li class="btn-cta"><a href="main.jsp"><span>login</span></a></li>
-					</ul>
-				</div>
-			</div>
-			
-		</div>
-	</nav>
-	
-	<header id="gtco-header" class="gtco-cover gtco-cover-md" role="banner" style="background-image: url(images/img_bg_1.jpg)" data-stellar-background-ratio="0.5">
-		<div class="overlay"></div>
-		<div class="gtco-container">
-			<div class="row">
-				<div class="col-md-12 col-md-offset-0 text-left">
-					
+   
+   <!-- <div class="page-inner"> -->
+   <nav class="gtco-nav" role="navigation">
+      <div class="gtco-container">
+         
+         <div class="row">
+            <div class="col-sm-4 col-xs-12">
+               <div id="gtco-logo"><a href="main.jsp"><em class="cursive-font" style="font-size: 3rem">ë ˆì‹œí”¼ë¥¼ ë¶€íƒí•´</em></a></div>
+            </div>
+            <div class="col-xs-8 text-right menu-1">
+               <ul>
+                  <li><a href="menu.jsp">Menu</a></li>
+                  <li class="has-dropdown">
+                     <a href="services.jsp">Services</a>
+                     <ul class="dropdown">
+                        <li><a href="refigator.jsp">ë‚˜ë§Œì˜ ëƒ‰ì¥ê³ </a></li>
+                        <li><a href="mealplan.jsp">ì‹ë‹¨ì§œê¸°</a></li>
+                        <li><a href="newrecipe.jsp">ë ˆì‹œí”¼ë“±ë¡</a></li>
+                     </ul>
+                  </li>
+                  <li><a href="feedback.jsp">feedback</a></li>
+                  <li class="btn-cta"><a href="main.jsp"><span>login</span></a></li>
+               </ul>    
+            </div>
+         </div>
+         
+      </div>
+   </nav>
+   
+   <header id="gtco-header" class="gtco-cover gtco-cover-md" role="banner" style="background-image: url(images/img_bg_1.jpg)" data-stellar-background-ratio="0.5">
+      <div class="overlay"></div>
+      <div class="gtco-container">
+         <div class="row">
+            <div class="col-md-12 col-md-offset-0 text-left">
+               
 
-					<div class="row row-mt-15em">
-						<div class="col-md-7 mt-text animate-box" data-animate-effect="fadeInUp">
-							<%if(info!= null) {%>
-							<%if(info.getId().equals("admin")) {%>
-							<h1>°ü¸®ÀÚ´Ô È¯¿µÇÕ´Ï´Ù</h1>
-							<%} %>
-										<h1><%=info.getNickname()  %> ´Ô È¯¿µÇÕ´Ï´Ù</h1>
-										<%}else{ %>
-										<h1> ·Î±×ÀÎÀ» ÇÏ¼¼¿ä!</h1>
-										<%} %>
-						</div>
-						<div class="col-md-4 col-md-push-1 animate-box" data-animate-effect="fadeInRight">
-							<div class="form-wrap">
-								<div class="tab">
-										
-									<div class="tab-content">
-										<div class="tab-content-inner active" data-content="signup">
-											<h3 class="cursive-font">
-												login</h3>
-											<form action="LoginService" method="POST">
-												<div class="row form-group">
-												</div>
-												<div class="row form-group">
-<<<<<<< HEAD
-													<div class="col-md-12">
-													<%if(info!= null) {%>
-														<%}else{ %>
-														<label>id</label>
-														<input type="text" name="id" class="form-control">
-														<%} %>
-													</div>
-												</div>
-
-												<div class="row form-group">
-													<div class="col-md-12">
-													<%if(info!= null) {%>
-														<%}else{ %>
-														<label>pw</label>
-														<input type="password" name="pw" class="form-control">
-															<%} %>
-													</div>
-												</div>
-
-												<div class="row form-group">
-													<div class="col-md-12">
-														
-														
-														<%if(info!= null) {%>
-														<a href="LogoutService">·Î±×¾Æ¿ô</a>
-														<a href="new.jsp">È¸¿øÁ¤º¸º¯°æ</a>															
-														
-															<%}else{ %>		
-														<input type="submit" class="btn btn-primary btn-block" value="login">
-														<a href="new.jsp">È¸¿ø°¡ÀÔ</a>	
-														<%} %>
-														
-													</div>
-													
-							
-											</form>	
-										</div>
-
-										
-									</div>
-								</div>
-							</div>
-						</div>
-					</div>
-							
-					
-				</div>
-			</div>
-		</div>
-	</header>
-
-	
-	
-	<div class="gtco-section">
-		<div class="gtco-container">
-			<div class="row">
-				<div class="col-md-8 col-md-offset-2 text-center gtco-heading">
-					<h2 class="cursive-font primary-color">½Ç½Ã°£ ±Ş»ó½Â ·¹½ÃÇÇ</h2>
-					<p>½Ç½Ã°£À¸·Î ±Ş»ó½ÂÁßÀÎ ·¹½ÃÇÇ¸¦ ±¸°æÇÏ¼¼¿ä!</p>
-				</div>
-			</div>
-			<div class="row">
-
-				<div class="col-lg-4 col-md-4 col-sm-6">
-					<a href="images/img_1.jpg" class="fh5co-card-item image-popup">
-						<figure>
-							<div class="overlay"><i class="ti-plus"></i></div>
-							<img src="images/img_1.jpg" alt="Image" class="img-responsive">
-						</figure>
-						<div class="fh5co-text">
-							<h2>Fresh Mushrooms</h2>
-							<p>Far far away, behind the word mountains, far from the countries Vokalia..</p>
-							<p><span class="price cursive-font">$19.15</span></p>
-						</div>
-					</a>
-				</div>
-				<div class="col-lg-4 col-md-4 col-sm-6">
-					<a href="images/img_2.jpg" class="fh5co-card-item image-popup">
-						<figure>
-							<div class="overlay"><i class="ti-plus"></i></div>
-							<img src="images/img_2.jpg" alt="Image" class="img-responsive">
-						</figure>
-						<div class="fh5co-text">
-							<h2>Cheese and Garlic Toast</h2>
-							<p>Far far away, behind the word mountains, far from the countries Vokalia..</p>
-							<p><span class="price cursive-font">$20.99</span></p>
-						</div>
-					</a>
-				</div>
-				<div class="col-lg-4 col-md-4 col-sm-6">
-					<a href="images/img_3.jpg" class="fh5co-card-item image-popup">
-						<figure>
-							<div class="overlay"><i class="ti-plus"></i></div>
-							<img src="images/img_3.jpg" alt="Image" class="img-responsive">
-						</figure>
-						<div class="fh5co-text">
-							<h2>Grilled Chiken Salad</h2>
-							<p>Far far away, behind the word mountains, far from the countries Vokalia..</p>
-							<p><span class="price cursive-font">$8.99</span></p>
-
-						</div>
-					</a>
-				</div>
+               <div class="row row-mt-15em">
+                  <div class="col-md-7 mt-text animate-box" data-animate-effect="fadeInUp">
+                     <%if(info!= null) {%>
+                     <%if(info.getId().equals("admin")) {%>
+                     <h1>ê´€ë¦¬ìë‹˜ í™˜ì˜í•©ë‹ˆë‹¤</h1>
+                     <%} %>
+                              <h1><%=info.getNickname()  %> ë‹˜ í™˜ì˜í•©ë‹ˆë‹¤</h1>
+                              <%}else{ %>
+                              <h1> ë¡œê·¸ì¸ì„ í•˜ì„¸ìš”!</h1>
+                              <%} %>
+                  </div>
+                  <div class="col-md-4 col-md-push-1 animate-box" data-animate-effect="fadeInRight">
+                     <div class="form-wrap">
+                        <div class="tab">
+                              
+                           <div class="tab-content">
+                              <div class="tab-content-inner active" data-content="signup">
+                                 <h3 class="cursive-font">
+                                    login</h3>
+                                 <form action="LoginService" method="POST">
+                                    <div class="row form-group">
+                                    </div>
+                                    <div class="row form-group">
+                                       <div class="col-md-12">
+                                       <%if(info!= null) {%>
+                                          <%}else{ %>
+                                          <label>id</label>
+                                          <input type="text" name="id" class="form-control">
+                                          <%} %>
+                                       </div>
+                                    </div>
 
 
-				<div class="col-lg-4 col-md-4 col-sm-6">
-					<a href="images/img_4.jpg" class="fh5co-card-item image-popup">
-						<figure>
-							<div class="overlay"><i class="ti-plus"></i></div>
-							<img src="images/img_4.jpg" alt="Image" class="img-responsive">
-						</figure>
-						<div class="fh5co-text">
-							<h2>Organic Egg</h2>
-							<p>Far far away, behind the word mountains, far from the countries Vokalia..</p>
-							<p><span class="price cursive-font">$12.99</span></p>
-						</div>
-					</a>
-				</div>
+                                    <div class="row form-group">
+                                       <div class="col-md-12">
+                                       <%if(info!= null) {%>
+                                          <%}else{ %>
+                                          <label>pw</label>
+                                          <input type="password" name="pw" class="form-control">
+                                             <%} %>
+                                       </div>
+                                    </div>
 
-				<div class="col-lg-4 col-md-4 col-sm-6">
-					<a href="images/img_5.jpg" class="fh5co-card-item image-popup">
-						<figure>
-							<div class="overlay"><i class="ti-plus"></i></div>
-							<img src="images/img_5.jpg" alt="Image" class="img-responsive">
-						</figure>
-						<div class="fh5co-text">
-							<h2>Tomato Soup with Chicken</h2>
-							<p>Far far away, behind the word mountains, far from the countries Vokalia..</p>
-							<p><span class="price cursive-font">$23.10</span></p>
-						</div>
-					</a>
-				</div>
+                                    <div class="row form-group">
+                                       <div class="col-md-12">
+                                          
+                                          
+                                          <%if(info!= null) {%>
+                                          
+                                          <%if(info.getId().equals("admin")) {%>
+                     
+                                          <a href="veiwmember.jsp">íšŒì› ì •ë³´ ê´€ë¦¬</a>
+                                          <%} %>
+                                          <a href="LogoutService">ë¡œê·¸ì•„ì›ƒ</a>
+                                          <a href="updateuser.jsp">íšŒì›ì •ë³´ë³€ê²½</a>                                             
+                                          
+                                             <%}else{ %>      
+                                          <input type="submit" class="btn btn-primary btn-block" value="login">
+                                          <a href="new.jsp">íšŒì›ê°€ì…</a>   
+                                          <%} %>
+                                          
+                                       </div>
+                                       
+                     
+                                 </form>   
+                              </div>
 
-				<div class="col-lg-4 col-md-4 col-sm-6">
-					<a href="images/img_6.jpg" class="fh5co-card-item image-popup">
-						<figure>
-							<div class="overlay"><i class="ti-plus"></i></div>
-							<img src="images/img_6.jpg" alt="Image" class="img-responsive">
-						</figure>
-						<div class="fh5co-text">
-							<h2>Salad with Crispy Chicken</h2>
-							<p>Far far away, behind the word mountains, far from the countries Vokalia..</p>
-							<p><span class="price cursive-font">$5.59</span></p>
-							
-						</div>
-					</a>
-				</div>
+                              
+                           </div>
+                        </div>
+                     </div>
 
-			</div>
-		</div>
-		<input type="submit" class="btn btn-primary btn-block" value="»õ·Î°íÄ§">
-	</div>
-	
-	<div id="gtco-features">
-		<div class="gtco-container">
-			<div class="row">
-				<div class="col-md-8 col-md-offset-2 text-center gtco-heading animate-box">
-					<h2 class="cursive-font">Our Services</h2>
-					<p>»ç¿ëÀÚµéÀÇ Çàº¹Àº ¾ğÁ¦³ª °³¹ßÀÚÀÇ Çàº¹</p>
-				</div>
-			</div>
-			<div class="row">
-				<div class="col-md-4 col-sm-6">
-					<div class="feature-center animate-box" data-animate-effect="fadeIn">
-						<span class="icon">
-							<i class="ti-face-smile"></i>
-						</span>
-						<h3>Happy</h3>
-						<p>¿ä¸®ÇÏ´Â Áñ°Å¿ò</p>
-					</div>
-				</div>
-				<div class="col-md-4 col-sm-6">
-					<div class="feature-center animate-box" data-animate-effect="fadeIn">
-						<span class="icon">
-							<i class="ti-thought"></i>
-						</span>
-						<h3>Creative</h3>
-						<p>Ã¢ÀÇÀûÀÎ ·¹½ÃÇÇ</p>
-					</div>
-				</div>
-				<div class="col-md-4 col-sm-6">
-					<div class="feature-center animate-box" data-animate-effect="fadeIn">
-						<span class="icon">
-							<i class="ti-check"></i>
-						</span>
-						<h3>check</h3>
-						<p>³ÃÀå°í °ü¸®</p>
-					</div>
-				</div>
-				<div class="col-md-4 col-sm-6">
-					<div class="feature-center animate-box" data-animate-effect="fadeIn">
-						<span class="icon">
-							<i class="ti-timer"></i>
-						</span>
-						<h3>Time</h3>
-						<p>·¹½ÃÇÇ °í¹Î½Ã°£ °¨¼Ò</p>
-					</div>
-				</div>
-				
+                  </div>
+               </div>
 
-			</div>
-		
-		</div>
-	</div>
+                     
+               
+            </div>
+         </div>
+      </div>
+   </header>
 
+   
+   
+   <div class="gtco-section">
+      <div class="gtco-container">
+         <div class="row">
+            <div class="col-md-8 col-md-offset-2 text-center gtco-heading">
+               <h2 class="cursive-font primary-color">ì‹¤ì‹œê°„ ê¸‰ìƒìŠ¹ ë ˆì‹œí”¼</h2>
+               <p>ì‹¤ì‹œê°„ìœ¼ë¡œ ê¸‰ìƒìŠ¹ì¤‘ì¸ ë ˆì‹œí”¼ë¥¼ êµ¬ê²½í•˜ì„¸ìš”!</p>
+            </div>
+         </div>
+         <div class="row">
 
+            <div class="col-lg-4 col-md-4 col-sm-6">
+               <a href="images/img_1.jpg" class="fh5co-card-item image-popup">
+                  <figure>
+                     <div class="overlay"><i class="ti-plus"></i></div>
+                     <img src="images/img_1.jpg" alt="Image" class="img-responsive">
+                  </figure>
+                  <div class="fh5co-text">
+                     <h2>Fresh Mushrooms</h2>
+                     <p>Far far away, behind the word mountains, far from the countries Vokalia..</p>
+                     <p><span class="price cursive-font">$19.15</span></p>
+                  </div>
+               </a>
+            </div>
+            <div class="col-lg-4 col-md-4 col-sm-6">
+               <a href="images/img_2.jpg" class="fh5co-card-item image-popup">
+                  <figure>
+                     <div class="overlay"><i class="ti-plus"></i></div>
+                     <img src="images/img_2.jpg" alt="Image" class="img-responsive">
+                  </figure>
+                  <div class="fh5co-text">
+                     <h2>Cheese and Garlic Toast</h2>
+                     <p>Far far away, behind the word mountains, far from the countries Vokalia..</p>
+                     <p><span class="price cursive-font">$20.99</span></p>
+                  </div>
+               </a>
+            </div>
+            <div class="col-lg-4 col-md-4 col-sm-6">
+               <a href="images/img_3.jpg" class="fh5co-card-item image-popup">
+                  <figure>
+                     <div class="overlay"><i class="ti-plus"></i></div>
+                     <img src="images/img_3.jpg" alt="Image" class="img-responsive">
+                  </figure>
+                  <div class="fh5co-text">
+                     <h2>Grilled Chiken Salad</h2>
+                     <p>Far far away, behind the word mountains, far from the countries Vokalia..</p>
+                     <p><span class="price cursive-font">$8.99</span></p>
 
-
-
-	<div class="gtco-cover gtco-cover-sm" style="background-image: url(images/img_bg_1.jpg)"  data-stellar-background-ratio="0.5">
-		<div class="overlay"></div>
-		<div class="gtco-container text-center">
-			<div class="display-t">
-				<div class="display-tc">
-					<h1 class="cursive-font">&ldquo;À½½Ä¿¡ ´ëÇÑ »ç¶ûÃ³·³ Áø½ÇµÈ »ç¶ûÀº ¾ø´Ù.&rdquo;</h1>
-					<p>&mdash; Á¶Áö ¹ö³ªµå ¼î</p>
-				</div>	
-			</div>
-		</div>
-	</div>
-
-	<div id="gtco-counter" class="gtco-section">
-		<div class="gtco-container">
-
-			<div class="row">
-				<div class="col-md-8 col-md-offset-2 text-center gtco-heading animate-box">
-					<h2 class="cursive-font primary-color">±×°Å ¾Æ¼¼¿ä? </h2>
-					<p>½Ä»ç¹ıÀÌ Àß¸øµÇ¾ú´Ù¸é ¾àÀÌ ¼Ò¿ë¾ø°í, ½Ä»ç¹ıÀÌ ¿Ç´Ù¸é ¾àÀÌ ÇÊ¿ä¾ø´Ù</p>
-				</div>
-			</div>
-
-			<div class="row">
-				
-				<div class="col-md-3 col-sm-6 animate-box" data-animate-effect="fadeInUp">
-					<div class="feature-center">
-						<span class="counter js-counter" data-from="0" data-to="5" data-speed="5000" data-refresh-interval="50">1</span>
-						<span class="counter-label">Æò±Õ ÆòÁ¡</span>
-
-					</div>
-				</div>
-				<div class="col-md-3 col-sm-6 animate-box" data-animate-effect="fadeInUp">
-					<div class="feature-center">
-						<span class="counter js-counter" data-from="0" data-to="<%=foodType %>" data-speed="5000" data-refresh-interval="50">1</span>
-						<span class="counter-label">Á¶¸® ¹æ¹ı</span>
-					</div>
-				</div>
-				<div class="col-md-3 col-sm-6 animate-box" data-animate-effect="fadeInUp">
-					<div class="feature-center">
-						<span class="counter js-counter" data-from="0" data-to="<%=memberCount %>" data-speed="5000" data-refresh-interval="50">1</span>
-						<span class="counter-label">ÃÑ È¸¿ø¼ö</span>
-					</div>
-				</div>
-				<div class="col-md-3 col-sm-6 animate-box" data-animate-effect="fadeInUp">
-					<div class="feature-center">
-						<span class="counter js-counter" data-from="0" data-to="<%=recipeCount %>" data-speed="5000" data-refresh-interval="50">1</span>
-						<span class="counter-label">·¹½ÃÇÇ ¼ö</span>
-
-					</div>
-				</div>
-					
-			</div>
-		</div>
-	</div>
-
-	
-
-	
-
-	<footer id="gtco-footer" role="contentinfo" style="background-image: url(images/img_bg_1.jpg)" data-stellar-background-ratio="0.5">
-		<div class="overlay"></div>
-		<div class="gtco-container">
-			<div class="row row-pb-md">
-
-				
-
-				
-				<div class="col-md-12 text-center">
-					<div class="gtco-widget">
-						<h3>Get Social</h3>
-						<ul class="gtco-social-icons">
-							<li><a href="#"><i class="icon-twitter"></i></a></li>
-							<li><a href="#"><i class="icon-facebook"></i></a></li>
-							<li><a href="#"><i class="icon-linkedin"></i></a></li>
-							<li><a href="#"><i class="icon-dribbble"></i></a></li>
-						</ul>
-					</div>
-				</div>
-
-			</div>
-
-			
-
-		</div>
-	</footer>
-	<!-- </div> -->
-
-	</div>
-
-	<div class="gototop js-top">
-		<a href="#" class="js-gotop"><i class="icon-arrow-up"></i></a>
-	</div>
-	
-	<!-- 
-formÀÇ nameÀÇ ¸ñÀû : ÀÚ¹Ù½ºÅ©¸³Æ®¿¡¼­ Á¢±ÙÀÌ ¿ëÀÌÇÏ°Ô ÇÏ±â À§ÇØ¼­ »ç¿ë
--->
-
-<div class="timer">
-</div>
-  
-<script src="js/timerMain.js" type="module"></script>
-	
-	<!-- jQuery -->
-	<script src="js/jquery.min.js"></script>
-	<!-- jQuery Easing -->
-	<script src="js/jquery.easing.1.3.js"></script>
-	<!-- Bootstrap -->
-	<script src="js/bootstrap.min.js"></script>
-	<!-- Waypoints -->
-	<script src="js/jquery.waypoints.min.js"></script>
-	<!-- Carousel -->
-	<script src="js/owl.carousel.min.js"></script>
-	<!-- countTo -->
-	<script src="js/jquery.countTo.js"></script>
-
-	<!-- Stellar Parallax -->
-	<script src="js/jquery.stellar.min.js"></script>
-
-	<!-- Magnific Popup -->
-	<script src="js/jquery.magnific-popup.min.js"></script>
-	<script src="js/magnific-popup-options.js"></script>
-	
-	<script src="js/moment.min.js"></script>
-	<script src="js/bootstrap-datetimepicker.min.js"></script>
+                  </div>
+               </a>
+            </div>
 
 
-	<!-- Main -->
-	<script src="js/main.js"></script>
+            <div class="col-lg-4 col-md-4 col-sm-6">
+               <a href="images/img_4.jpg" class="fh5co-card-item image-popup">
+                  <figure>
+                     <div class="overlay"><i class="ti-plus"></i></div>
+                     <img src="images/img_4.jpg" alt="Image" class="img-responsive">
+                  </figure>
+                  <div class="fh5co-text">
+                     <h2>Organic Egg</h2>
+                     <p>Far far away, behind the word mountains, far from the countries Vokalia..</p>
+                     <p><span class="price cursive-font">$12.99</span></p>
+                  </div>
+               </a>
+            </div>
 
-	</body>
-=======
-													<div class="col-md-12">
-													<%if(info!= null) {%>
-														<%}else{ %>
-														<label>id</label>
-														<input type="text" name="id" class="form-control">
-														<%} %>
-													</div>
-												</div>
+            <div class="col-lg-4 col-md-4 col-sm-6">
+               <a href="images/img_5.jpg" class="fh5co-card-item image-popup">
+                  <figure>
+                     <div class="overlay"><i class="ti-plus"></i></div>
+                     <img src="images/img_5.jpg" alt="Image" class="img-responsive">
+                  </figure>
+                  <div class="fh5co-text">
+                     <h2>Tomato Soup with Chicken</h2>
+                     <p>Far far away, behind the word mountains, far from the countries Vokalia..</p>
+                     <p><span class="price cursive-font">$23.10</span></p>
+                  </div>
+               </a>
+            </div>
 
+            <div class="col-lg-4 col-md-4 col-sm-6">
+               <a href="images/img_6.jpg" class="fh5co-card-item image-popup">
+                  <figure>
+                     <div class="overlay"><i class="ti-plus"></i></div>
+                     <img src="images/img_6.jpg" alt="Image" class="img-responsive">
+                  </figure>
+                  <div class="fh5co-text">
+                     <h2>Salad with Crispy Chicken</h2>
+                     <p>Far far away, behind the word mountains, far from the countries Vokalia..</p>
+                     <p><span class="price cursive-font">$5.59</span></p>
+                     
+                  </div>
+               </a>
+            </div>
 
-												<div class="row form-group">
-													<div class="col-md-12">
-													<%if(info!= null) {%>
-														<%}else{ %>
-														<label>pw</label>
-														<input type="password" name="pw" class="form-control">
-															<%} %>
-													</div>
-												</div>
+         </div>
+      </div>
+      <input type="submit" class="btn btn-primary btn-block" value="ìƒˆë¡œê³ ì¹¨">
+   </div>
+   
+   <div id="gtco-features">
+      <div class="gtco-container">
+         <div class="row">
+            <div class="col-md-8 col-md-offset-2 text-center gtco-heading animate-box">
+               <h2 class="cursive-font">Our Services</h2>
+               <p>ì‚¬ìš©ìë“¤ì˜ í–‰ë³µì€ ì–¸ì œë‚˜ ê°œë°œìì˜ í–‰ë³µ</p>
+            </div>
+         </div>
+         <div class="row">
+            <div class="col-md-4 col-sm-6">
+               <div class="feature-center animate-box" data-animate-effect="fadeIn">
+                  <span class="icon">
+                     <i class="ti-face-smile"></i>
+                  </span>
+                  <h3>Happy</h3>
+                  <p>ìš”ë¦¬í•˜ëŠ” ì¦ê±°ì›€</p>
+               </div>
+            </div>
+            <div class="col-md-4 col-sm-6">
+               <div class="feature-center animate-box" data-animate-effect="fadeIn">
+                  <span class="icon">
+                     <i class="ti-thought"></i>
+                  </span>
+                  <h3>Creative</h3>
+                  <p>ì°½ì˜ì ì¸ ë ˆì‹œí”¼</p>
+               </div>
+            </div>
+            <div class="col-md-4 col-sm-6">
+               <div class="feature-center animate-box" data-animate-effect="fadeIn">
+                  <span class="icon">
+                     <i class="ti-check"></i>
+                  </span>
+                  <h3>check</h3>
+                  <p>ëƒ‰ì¥ê³  ê´€ë¦¬</p>
+               </div>
+            </div>
+            <div class="col-md-4 col-sm-6">
+               <div class="feature-center animate-box" data-animate-effect="fadeIn">
+                  <span class="icon">
+                     <i class="ti-timer"></i>
+                  </span>
+                  <h3>Time</h3>
+                  <p>ë ˆì‹œí”¼ ê³ ë¯¼ì‹œê°„ ê°ì†Œ</p>
+               </div>
+            </div>
+            
 
-												<div class="row form-group">
-													<div class="col-md-12">
-														
-														
-														<%if(info!= null) {%>
-														
-														<%if(info.getId().equals("admin")) {%>
-							
-														<a href="veiwmember.jsp">È¸¿ø Á¤º¸ °ü¸®</a>
-														<%} %>
-														<a href="LogoutService">·Î±×¾Æ¿ô</a>
-														<a href="updateuser.jsp">È¸¿øÁ¤º¸º¯°æ</a>															
-														
-															<%}else{ %>		
-														<input type="submit" class="btn btn-primary btn-block" value="login">
-														<a href="new.jsp">È¸¿ø°¡ÀÔ</a>	
-														<%} %>
-														
-													</div>
-													
-							
-											</form>	
-										</div>
-
-										
-									</div>
-								</div>
-							</div>
-
-						</div>
-					</div>
-
-							
-					
-				</div>
-			</div>
-		</div>
-	</header>
-
-	
-	
-	<div class="gtco-section">
-		<div class="gtco-container">
-			<div class="row">
-				<div class="col-md-8 col-md-offset-2 text-center gtco-heading">
-					<h2 class="cursive-font primary-color">½Ç½Ã°£ ±Ş»ó½Â ·¹½ÃÇÇ</h2>
-					<p>½Ç½Ã°£À¸·Î ±Ş»ó½ÂÁßÀÎ ·¹½ÃÇÇ¸¦ ±¸°æÇÏ¼¼¿ä!</p>
-				</div>
-			</div>
-			<div class="row">
-
-				<div class="col-lg-4 col-md-4 col-sm-6">
-					<a href="images/img_1.jpg" class="fh5co-card-item image-popup">
-						<figure>
-							<div class="overlay"><i class="ti-plus"></i></div>
-							<img src="images/img_1.jpg" alt="Image" class="img-responsive">
-						</figure>
-						<div class="fh5co-text">
-							<h2>Fresh Mushrooms</h2>
-							<p>Far far away, behind the word mountains, far from the countries Vokalia..</p>
-							<p><span class="price cursive-font">$19.15</span></p>
-						</div>
-					</a>
-				</div>
-				<div class="col-lg-4 col-md-4 col-sm-6">
-					<a href="images/img_2.jpg" class="fh5co-card-item image-popup">
-						<figure>
-							<div class="overlay"><i class="ti-plus"></i></div>
-							<img src="images/img_2.jpg" alt="Image" class="img-responsive">
-						</figure>
-						<div class="fh5co-text">
-							<h2>Cheese and Garlic Toast</h2>
-							<p>Far far away, behind the word mountains, far from the countries Vokalia..</p>
-							<p><span class="price cursive-font">$20.99</span></p>
-						</div>
-					</a>
-				</div>
-				<div class="col-lg-4 col-md-4 col-sm-6">
-					<a href="images/img_3.jpg" class="fh5co-card-item image-popup">
-						<figure>
-							<div class="overlay"><i class="ti-plus"></i></div>
-							<img src="images/img_3.jpg" alt="Image" class="img-responsive">
-						</figure>
-						<div class="fh5co-text">
-							<h2>Grilled Chiken Salad</h2>
-							<p>Far far away, behind the word mountains, far from the countries Vokalia..</p>
-							<p><span class="price cursive-font">$8.99</span></p>
-
-						</div>
-					</a>
-				</div>
-
-
-				<div class="col-lg-4 col-md-4 col-sm-6">
-					<a href="images/img_4.jpg" class="fh5co-card-item image-popup">
-						<figure>
-							<div class="overlay"><i class="ti-plus"></i></div>
-							<img src="images/img_4.jpg" alt="Image" class="img-responsive">
-						</figure>
-						<div class="fh5co-text">
-							<h2>Organic Egg</h2>
-							<p>Far far away, behind the word mountains, far from the countries Vokalia..</p>
-							<p><span class="price cursive-font">$12.99</span></p>
-						</div>
-					</a>
-				</div>
-
-				<div class="col-lg-4 col-md-4 col-sm-6">
-					<a href="images/img_5.jpg" class="fh5co-card-item image-popup">
-						<figure>
-							<div class="overlay"><i class="ti-plus"></i></div>
-							<img src="images/img_5.jpg" alt="Image" class="img-responsive">
-						</figure>
-						<div class="fh5co-text">
-							<h2>Tomato Soup with Chicken</h2>
-							<p>Far far away, behind the word mountains, far from the countries Vokalia..</p>
-							<p><span class="price cursive-font">$23.10</span></p>
-						</div>
-					</a>
-				</div>
-
-				<div class="col-lg-4 col-md-4 col-sm-6">
-					<a href="images/img_6.jpg" class="fh5co-card-item image-popup">
-						<figure>
-							<div class="overlay"><i class="ti-plus"></i></div>
-							<img src="images/img_6.jpg" alt="Image" class="img-responsive">
-						</figure>
-						<div class="fh5co-text">
-							<h2>Salad with Crispy Chicken</h2>
-							<p>Far far away, behind the word mountains, far from the countries Vokalia..</p>
-							<p><span class="price cursive-font">$5.59</span></p>
-							
-						</div>
-					</a>
-				</div>
-
-			</div>
-		</div>
-		<input type="submit" class="btn btn-primary btn-block" value="»õ·Î°íÄ§">
-	</div>
-	
-	<div id="gtco-features">
-		<div class="gtco-container">
-			<div class="row">
-				<div class="col-md-8 col-md-offset-2 text-center gtco-heading animate-box">
-					<h2 class="cursive-font">Our Services</h2>
-					<p>»ç¿ëÀÚµéÀÇ Çàº¹Àº ¾ğÁ¦³ª °³¹ßÀÚÀÇ Çàº¹</p>
-				</div>
-			</div>
-			<div class="row">
-				<div class="col-md-4 col-sm-6">
-					<div class="feature-center animate-box" data-animate-effect="fadeIn">
-						<span class="icon">
-							<i class="ti-face-smile"></i>
-						</span>
-						<h3>Happy</h3>
-						<p>¿ä¸®ÇÏ´Â Áñ°Å¿ò</p>
-					</div>
-				</div>
-				<div class="col-md-4 col-sm-6">
-					<div class="feature-center animate-box" data-animate-effect="fadeIn">
-						<span class="icon">
-							<i class="ti-thought"></i>
-						</span>
-						<h3>Creative</h3>
-						<p>Ã¢ÀÇÀûÀÎ ·¹½ÃÇÇ</p>
-					</div>
-				</div>
-				<div class="col-md-4 col-sm-6">
-					<div class="feature-center animate-box" data-animate-effect="fadeIn">
-						<span class="icon">
-							<i class="ti-check"></i>
-						</span>
-						<h3>check</h3>
-						<p>³ÃÀå°í °ü¸®</p>
-					</div>
-				</div>
-				<div class="col-md-4 col-sm-6">
-					<div class="feature-center animate-box" data-animate-effect="fadeIn">
-						<span class="icon">
-							<i class="ti-timer"></i>
-						</span>
-						<h3>Time</h3>
-						<p>·¹½ÃÇÇ °í¹Î½Ã°£ °¨¼Ò</p>
-					</div>
-				</div>
-				
-
-			</div>
-		
-		</div>
-	</div>
+         </div>
+      
+      </div>
+   </div>
 
 
   <!-- 
-formÀÇ nameÀÇ ¸ñÀû : ÀÚ¹Ù½ºÅ©¸³Æ®¿¡¼­ Á¢±ÙÀÌ ¿ëÀÌÇÏ°Ô ÇÏ±â À§ÇØ¼­ »ç¿ë
+formì˜ nameì˜ ëª©ì  : ìë°”ìŠ¤í¬ë¦½íŠ¸ì—ì„œ ì ‘ê·¼ì´ ìš©ì´í•˜ê²Œ í•˜ê¸° ìœ„í•´ì„œ ì‚¬ìš©
 -->
 
   <form action="" name="frm">
@@ -810,13 +374,13 @@ formÀÇ nameÀÇ ¸ñÀû : ÀÚ¹Ù½ºÅ©¸³Æ®¿¡¼­ Á¢±ÙÀÌ ¿ëÀÌÇÏ°Ô ÇÏ±â À§ÇØ¼­ »ç¿ë
       <strong></strong><br><br>
 
       <select id="selid" name="myChoice">
-        <option value="180">¿øÇÏ´Â ½Ã°£À» ¼±ÅÃÇØÁÖ½Ê½Ã¿À(±âº»:3ºĞ)</option>
-        <option value="300">5ºĞ</option>
-        <option value="180">3ºĞ</option>
-        <option value="150">2ºĞ 30ÃÊ</option>
-        <option value="120">2ºĞ</option>
-        <option value="60">1ºĞ</option>
-        <option value="30">30ÃÊ</option>
+        <option value="180">ì›í•˜ëŠ” ì‹œê°„ì„ ì„ íƒí•´ì£¼ì‹­ì‹œì˜¤(ê¸°ë³¸:3ë¶„)</option>
+        <option value="300">5ë¶„</option>
+        <option value="180">3ë¶„</option>
+        <option value="150">2ë¶„ 30ì´ˆ</option>
+        <option value="120">2ë¶„</option>
+        <option value="60">1ë¶„</option>
+        <option value="30">30ì´ˆ</option>
       </select>
 
       <input type="button" value="GO!" onclick="noodle()">
@@ -838,166 +402,165 @@ formÀÇ nameÀÇ ¸ñÀû : ÀÚ¹Ù½ºÅ©¸³Æ®¿¡¼­ Á¢±ÙÀÌ ¿ëÀÌÇÏ°Ô ÇÏ±â À§ÇØ¼­ »ç¿ë
 
     function noodle() {
 
-      clearInterval(time); // Å¸ÀÌ¸Ó ¿ì¼± ÃÊ±âÈ­ ½ÃÄÑÁÖ±â(time initialize)
+      clearInterval(time); // íƒ€ì´ë¨¸ ìš°ì„  ì´ˆê¸°í™” ì‹œì¼œì£¼ê¸°(time initialize)
       /* 
        
-          ID·Î °¡Á®¿À±â
-         // selectÀÇ value¸¦ °¡Á®¿À±â : value
+          IDë¡œ ê°€ì ¸ì˜¤ê¸°
+         // selectì˜ valueë¥¼ ê°€ì ¸ì˜¤ê¸° : value
          var val = document.getElementById("selid").value;
-         alert(val);   // È®ÀÎ¿ë
-         // selectÀÇ index°ªÀ» °¡Á®¿À±â : selectedIndex
+         alert(val);   // í™•ì¸ìš©
+         // selectì˜ indexê°’ì„ ê°€ì ¸ì˜¤ê¸° : selectedIndex
          var indexNum = document.getElementById("selid").selectedIndex;
-         alert(indexNum);   // È®ÀÎ¿ë
+         alert(indexNum);   // í™•ì¸ìš©
        */
 
 
-      //    nameÀ¸·Î index Ã£±â
+      //    nameìœ¼ë¡œ index ì°¾ê¸°
       choice = document.frm.myChoice.selectedIndex;
       //   alert(choice);
 
-      // Ã£Àº index·Î valueÃ£±â
+      // ì°¾ì€ indexë¡œ valueì°¾ê¸°
       count = parseInt(document.frm.myChoice.options[choice].value);
 
       alert(count);
 
-      // Å¸ÀÌ¸Ó ÇÔ¼ö 1ÃÊ¾¿ È£ÃâÇÏ´Â ÇÔ¼ö ¸¸µé±â
+      // íƒ€ì´ë¨¸ í•¨ìˆ˜ 1ì´ˆì”© í˜¸ì¶œí•˜ëŠ” í•¨ìˆ˜ ë§Œë“¤ê¸°
       time = setInterval("myTimer()", 1000);
 
     }
 
     function myTimer() {
-      count = count - 1; // Å¸ÀÌ¸Ó ¼±ÅÃ ¼ıÀÚ¿¡¼­ -1¾¿ °¨»êÇÔ(°»½ÅµÇ±â ¶§¹®)
+      count = count - 1; // íƒ€ì´ë¨¸ ì„ íƒ ìˆ«ìì—ì„œ -1ì”© ê°ì‚°í•¨(ê°±ì‹ ë˜ê¸° ë•Œë¬¸)
 
-      document.getElementById("countdown").innerHTML = "¿Ï·á±îÁö <b>" + count + "</b>ÃÊ ³²¾Ò½À´Ï´Ù.";
+      document.getElementById("countdown").innerHTML = "ì™„ë£Œê¹Œì§€ <b>" + count + "</b>ì´ˆ ë‚¨ì•˜ìŠµë‹ˆë‹¤.";
       if (count == 0) {
-        clearInterval(time); // ½Ã°£ ÃÊ±âÈ­
-        alert("½Ã°£ÀÌ ¿Ï·áµÇ¾ú½À´Ï´Ù.")
+        clearInterval(time); // ì‹œê°„ ì´ˆê¸°í™”
+        alert("ì‹œê°„ì´ ì™„ë£Œë˜ì—ˆìŠµë‹ˆë‹¤.")
       }
     }
 
     document.oncontextmenu = function () {
-      alert("¸¶¿ì½ºÀÇ ¿ìÅ¬¸¯Àº »ç¿ëÇÒ ¼ö ¾ø½À´Ï´Ù.")
+      alert("ë§ˆìš°ìŠ¤ì˜ ìš°í´ë¦­ì€ ì‚¬ìš©í•  ìˆ˜ ì—†ìŠµë‹ˆë‹¤.")
       return false;
     }
   </script>
 
 
-	<div class="gtco-cover gtco-cover-sm" style="background-image: url(images/img_bg_1.jpg)"  data-stellar-background-ratio="0.5">
-		<div class="overlay"></div>
-		<div class="gtco-container text-center">
-			<div class="display-t">
-				<div class="display-tc">
-					<h1 class="cursive-font">&ldquo;À½½Ä¿¡ ´ëÇÑ »ç¶ûÃ³·³ Áø½ÇµÈ »ç¶ûÀº ¾ø´Ù.&rdquo;</h1>
-					<p>&mdash; Á¶Áö ¹ö³ªµå ¼î</p>
-				</div>	
-			</div>
-		</div>
-	</div>
+   <div class="gtco-cover gtco-cover-sm" style="background-image: url(images/img_bg_1.jpg)"  data-stellar-background-ratio="0.5">
+      <div class="overlay"></div>
+      <div class="gtco-container text-center">
+         <div class="display-t">
+            <div class="display-tc">
+               <h1 class="cursive-font">&ldquo;ìŒì‹ì— ëŒ€í•œ ì‚¬ë‘ì²˜ëŸ¼ ì§„ì‹¤ëœ ì‚¬ë‘ì€ ì—†ë‹¤.&rdquo;</h1>
+               <p>&mdash; ì¡°ì§€ ë²„ë‚˜ë“œ ì‡¼</p>
+            </div>   
+         </div>
+      </div>
+   </div>
 
-	<div id="gtco-counter" class="gtco-section">
-		<div class="gtco-container">
+   <div id="gtco-counter" class="gtco-section">
+      <div class="gtco-container">
 
-			<div class="row">
-				<div class="col-md-8 col-md-offset-2 text-center gtco-heading animate-box">
-					<h2 class="cursive-font primary-color">±×°Å ¾Æ¼¼¿ä? </h2>
-					<p>½Ä»ç¹ıÀÌ Àß¸øµÇ¾ú´Ù¸é ¾àÀÌ ¼Ò¿ë¾ø°í, ½Ä»ç¹ıÀÌ ¿Ç´Ù¸é ¾àÀÌ ÇÊ¿ä¾ø´Ù</p>
-				</div>
-			</div>
+         <div class="row">
+            <div class="col-md-8 col-md-offset-2 text-center gtco-heading animate-box">
+               <h2 class="cursive-font primary-color">ê·¸ê±° ì•„ì„¸ìš”? </h2>
+               <p>ì‹ì‚¬ë²•ì´ ì˜ëª»ë˜ì—ˆë‹¤ë©´ ì•½ì´ ì†Œìš©ì—†ê³ , ì‹ì‚¬ë²•ì´ ì˜³ë‹¤ë©´ ì•½ì´ í•„ìš”ì—†ë‹¤</p>
+            </div>
+         </div>
 
-			<div class="row">
-				
-				<div class="col-md-3 col-sm-6 animate-box" data-animate-effect="fadeInUp">
-					<div class="feature-center">
-						<span class="counter js-counter" data-from="0" data-to="5" data-speed="5000" data-refresh-interval="50">1</span>
-						<span class="counter-label">Æò±Õ ÆòÁ¡</span>
+         <div class="row">
+            
+            <div class="col-md-3 col-sm-6 animate-box" data-animate-effect="fadeInUp">
+               <div class="feature-center">
+                  <span class="counter js-counter" data-from="0" data-to="5" data-speed="5000" data-refresh-interval="50">1</span>
+                  <span class="counter-label">í‰ê·  í‰ì </span>
 
-					</div>
-				</div>
-				<div class="col-md-3 col-sm-6 animate-box" data-animate-effect="fadeInUp">
-					<div class="feature-center">
-						<span class="counter js-counter" data-from="0" data-to="43" data-speed="5000" data-refresh-interval="50">1</span>
-						<span class="counter-label">Á¶¸® ¹æ¹ı</span>
-					</div>
-				</div>
-				<div class="col-md-3 col-sm-6 animate-box" data-animate-effect="fadeInUp">
-					<div class="feature-center">
-						<span class="counter js-counter" data-from="0" data-to="<%=membercount%>" data-speed="5000" data-refresh-interval="50">1</span>
-						<span class="counter-label">ÃÑ È¸¿ø¼ö</span>
-					</div>
-				</div>
-				<div class="col-md-3 col-sm-6 animate-box" data-animate-effect="fadeInUp">
-					<div class="feature-center">
-						<span class="counter js-counter" data-from="0" data-to="<%=recipeCount %>"  data-speed="5000" data-refresh-interval="50">1</span>
-						<span class="counter-label">·¹½ÃÇÇ ¼ö</span>
+               </div>
+            </div>
+            <div class="col-md-3 col-sm-6 animate-box" data-animate-effect="fadeInUp">
+               <div class="feature-center">
+                  <span class="counter js-counter" data-from="0" data-to="43" data-speed="5000" data-refresh-interval="50">1</span>
+                  <span class="counter-label">ì¡°ë¦¬ ë°©ë²•</span>
+               </div>
+            </div>
+            <div class="col-md-3 col-sm-6 animate-box" data-animate-effect="fadeInUp">
+               <div class="feature-center">
+                  <span class="counter js-counter" data-from="0" data-to="<%=membercount%>" data-speed="5000" data-refresh-interval="50">1</span>
+                  <span class="counter-label">ì´ íšŒì›ìˆ˜</span>
+               </div>
+            </div>
+            <div class="col-md-3 col-sm-6 animate-box" data-animate-effect="fadeInUp">
+               <div class="feature-center">
+                  <span class="counter js-counter" data-from="0" data-to="<%=recipeCount %>"  data-speed="5000" data-refresh-interval="50">1</span>
+                  <span class="counter-label">ë ˆì‹œí”¼ ìˆ˜</span>
 
-					</div>
-				</div>
-					
-			</div>
-		</div>
-	</div>
+               </div>
+            </div>
+               
+         </div>
+      </div>
+   </div>
 
-	
+   
 
-	
+   
 
-	<footer id="gtco-footer" role="contentinfo" style="background-image: url(images/img_bg_1.jpg)" data-stellar-background-ratio="0.5">
-		<div class="overlay"></div>
-		<div class="gtco-container">
-			<div class="row row-pb-md">
+   <footer id="gtco-footer" role="contentinfo" style="background-image: url(images/img_bg_1.jpg)" data-stellar-background-ratio="0.5">
+      <div class="overlay"></div>
+      <div class="gtco-container">
+         <div class="row row-pb-md">
 
-				
+            
 
-				
-				<div class="col-md-12 text-center">
-					<div class="gtco-widget">
-						<h3>Get Social</h3>
-						<ul class="gtco-social-icons">
-							<li><a href="#"><i class="icon-twitter"></i></a></li>
-							<li><a href="#"><i class="icon-facebook"></i></a></li>
-							<li><a href="#"><i class="icon-linkedin"></i></a></li>
-							<li><a href="#"><i class="icon-dribbble"></i></a></li>
+            
+            <div class="col-md-12 text-center">
+               <div class="gtco-widget">
+                  <h3>Get Social</h3>
+                  <ul class="gtco-social-icons">
+                     <li><a href="#"><i class="icon-twitter"></i></a></li>
+                     <li><a href="#"><i class="icon-facebook"></i></a></li>
+                     <li><a href="#"><i class="icon-linkedin"></i></a></li>
+                     <li><a href="#"><i class="icon-dribbble"></i></a></li>
 
-						</ul>
-					</div>
-				</div>
+                  </ul>
+               </div>
+            </div>
 
-			</div>
-	
+         </div>
+   
 
-	</div>
+   </div>
 
-	<div class="gototop js-top">
-		<a href="#" class="js-gotop"><i class="icon-arrow-up"></i></a>
-	</div>
+   <div class="gototop js-top">
+      <a href="#" class="js-gotop"><i class="icon-arrow-up"></i></a>
+   </div>
 
-	<!-- jQuery -->
-	<script src="js/jquery.min.js"></script>
-	<!-- jQuery Easing -->
-	<script src="js/jquery.easing.1.3.js"></script>
-	<!-- Bootstrap -->
-	<script src="js/bootstrap.min.js"></script>
-	<!-- Waypoints -->
-	<script src="js/jquery.waypoints.min.js"></script>
-	<!-- Carousel -->
-	<script src="js/owl.carousel.min.js"></script>
-	<!-- countTo -->
-	<script src="js/jquery.countTo.js"></script>
+   <!-- jQuery -->
+   <script src="js/jquery.min.js"></script>
+   <!-- jQuery Easing -->
+   <script src="js/jquery.easing.1.3.js"></script>
+   <!-- Bootstrap -->
+   <script src="js/bootstrap.min.js"></script>
+   <!-- Waypoints -->
+   <script src="js/jquery.waypoints.min.js"></script>
+   <!-- Carousel -->
+   <script src="js/owl.carousel.min.js"></script>
+   <!-- countTo -->
+   <script src="js/jquery.countTo.js"></script>
 
-	<!-- Stellar Parallax -->
-	<script src="js/jquery.stellar.min.js"></script>
+   <!-- Stellar Parallax -->
+   <script src="js/jquery.stellar.min.js"></script>
 
-	<!-- Magnific Popup -->
-	<script src="js/jquery.magnific-popup.min.js"></script>
-	<script src="js/magnific-popup-options.js"></script>
+   <!-- Magnific Popup -->
+   <script src="js/jquery.magnific-popup.min.js"></script>
+   <script src="js/magnific-popup-options.js"></script>
 
-	<script src="js/moment.min.js"></script>
-	<script src="js/bootstrap-datetimepicker.min.js"></script>
+   <script src="js/moment.min.js"></script>
+   <script src="js/bootstrap-datetimepicker.min.js"></script>
 
 
-	<!-- Main -->
-	<script src="js/main.js"></script>
+   <!-- Main -->
+   <script src="js/main.js"></script>
 
 </body>
->>>>>>> branch 'master' of https://github.com/2022-SMHRD-KDT-AI-1/loveRecipe.git
 </html>
