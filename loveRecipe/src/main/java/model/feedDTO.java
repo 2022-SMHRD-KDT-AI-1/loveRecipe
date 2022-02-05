@@ -4,7 +4,7 @@ public class feedDTO {
 
 	private String name;
 	private String message;
-	
+
 	public feedDTO(String name, String message) {
 		super();
 		this.name = name;
@@ -26,4 +26,5 @@ public class feedDTO {
 	public void setmessage(String message) {
 		this.message = message;
 	}
+
 }
