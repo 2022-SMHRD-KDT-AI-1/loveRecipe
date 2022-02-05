@@ -60,7 +60,6 @@ public class JoinService extends HttpServlet {
 			response.sendRedirect("new.jsp");
 		}
 		
-		
 	}
 
 }

@@ -14,17 +14,18 @@ import model.viewrefVO;
 public class vrecipeService extends HttpServlet {
 	private static final long serialVersionUID = 1L;
 
-	protected void service(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-		
-		String rname=request.getParameter("rname");
+	protected void service(HttpServletRequest request, HttpServletResponse response)
+			throws ServletException, IOException {
+
+		String rname = request.getParameter("rname");
 		String ingre = request.getParameter("ingre");
 		String type = request.getParameter("type");
 		int calory = Integer.parseInt(request.getParameter("calory"));
-		
+
 		viewrefVO vo = new viewrefVO(rname, ingre, calory, type);
-		
+
 		request.setAttribute("vo", vo);
-		
+
 		RequestDispatcher rd = request.getRequestDispatcher("detailvrec.jsp");
 		rd.forward(request, response);
 	}
