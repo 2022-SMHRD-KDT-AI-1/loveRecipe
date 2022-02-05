@@ -157,34 +157,37 @@ public class DAO {
 		return cnt;
 	}
 
-	public int update(MemberVO vo) {
-		try {
-			DBconn();
-			String sql = "update test_member set pw=?, nickname =?, email=? where id=? ";
+	//회원정보변경 메소드
+	 public int update(MemberVO vo) {
+		 try {
+			 	DBconn();
+				String sql = "update test_member set pw=?, nickname =?, email=? where id=? ";
 
-			psmt = conn.prepareStatement(sql);
+				psmt = conn.prepareStatement(sql);
 
-			psmt.setString(1, vo.getPw());
-			psmt.setString(2, vo.getNickname());
-			psmt.setString(3, vo.getEmail());
-			psmt.setString(4, vo.getId());
+				psmt.setString(1, vo.getPw());
+				psmt.setString(2, vo.getNickname());
+				psmt.setString(3, vo.getEmail());
+				psmt.setString(4, vo.getId());
 
-			cnt = psmt.executeUpdate();
+				cnt= psmt.executeUpdate();
+				
 
-			if (cnt != 0) {
-				System.out.print("수정성공 ");
+				if (cnt!=0) {
+					System.out.print("수정성공 ");
+					
+				}else {
+					System.out.println("수정실패");
+				}
 
-			} else {
-				System.out.println("수정실패");
-			}
+				
 
-		} catch (Exception e) {
-			e.printStackTrace();
-		} finally {
-			DBclose();
-		}
-		return cnt;
-	}
+			} catch (Exception e) {
+				e.printStackTrace();
+			} finally {
+				DBclose();
+	 }return cnt;
+		 }
 
 	// 피드백 업로드 메소드
 	public int feedupload(feedDTO dto) {
@@ -214,11 +217,11 @@ public class DAO {
 		ArrayList<MemberVO> list = new ArrayList<MemberVO>();
 		try {
 			DBconn();
-
 			String sql = "select id,pw,nickname from test_member";
 
 			psmt = conn.prepareStatement(sql);
 			rs = psmt.executeQuery();
+
 
 			while (rs.next()) {
 
@@ -294,5 +297,4 @@ public class DAO {
 		}
 		return recipeCount;
 	}
-
 }

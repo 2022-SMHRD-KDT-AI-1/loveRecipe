@@ -39,6 +39,8 @@
 <link
 	href="https://fonts.googleapis.com/css2?family=Nanum+Brush+Script&display=swap"
 	rel="stylesheet">
+<link href="https://fonts.googleapis.com/icon?family=Material+Icons"
+      rel="stylesheet">
 
 <!-- Animate.css -->
 <link rel="stylesheet" href="css/animate.css">
@@ -80,10 +82,12 @@
 	
 	<%
 		DAO dao = new DAO();
-		int recipeCount = dao.recipeCount();
-		System.out.println("recipeCount : "+recipeCount);
+		int foodType = dao.foodType();
+		System.out.println("foodType : "+foodType);
 		int memberCount = dao.memberCount();
 		System.out.println("memberCount : "+memberCount);
+		int recipeCount = dao.recipeCount();
+		System.out.println("recipeCount : "+recipeCount);
 	%>
 	
 	<div class="gtco-loader"></div>
@@ -112,7 +116,7 @@
 						</li>
 						<li><a href="feedback.jsp">feedback</a></li>
 						<li class="btn-cta"><a href="main.jsp"><span>login</span></a></li>
-					</ul>	 
+					</ul>
 				</div>
 			</div>
 			
@@ -353,75 +357,6 @@
 
 
 
-<!-- 
-form의 name의 목적 : 자바스크립트에서 접근이 용이하게 하기 위해서 사용
--->
-
-  <form action="" name="frm">
-    <div align="center">
-      <strong></strong><br><br>
-
-      <select id="selid" name="myChoice">
-        <option value="180">원하는 시간을 선택해주십시오(기본:3분)</option>
-        <option value="300">5분</option>
-        <option value="180">3분</option>
-        <option value="150">2분 30초</option>
-        <option value="120">2분</option>
-        <option value="60">1분</option>
-        <option value="30">30초</option>
-      </select>
-
-      <input type="button" value="GO!" onclick="noodle()">
-      <br><br>
-
-      <span id="countdown">time selected</span>
-      <br><br>
-
-      <input type="button" value="Close" onclick='window.close()'>
-
-    </div>
-
-  </form>
-  
-  <script type="text/javascript">
-    var count = 0;
-    var time = 0;
-    var choice = 0;
-    function noodle() {
-      clearInterval(time); // 타이머 우선 초기화 시켜주기(time initialize)
-      /* 
-       
-          ID로 가져오기
-         // select의 value를 가져오기 : value
-         var val = document.getElementById("selid").value;
-         alert(val);   // 확인용
-         // select의 index값을 가져오기 : selectedIndex
-         var indexNum = document.getElementById("selid").selectedIndex;
-         alert(indexNum);   // 확인용
-       */
-      //    name으로 index 찾기
-      choice = document.frm.myChoice.selectedIndex;
-      //   alert(choice);
-      // 찾은 index로 value찾기
-      count = parseInt(document.frm.myChoice.options[choice].value);
-      alert(count);
-      // 타이머 함수 1초씩 호출하는 함수 만들기
-      time = setInterval("myTimer()", 1000);
-    }
-    function myTimer() {
-      count = count - 1; // 타이머 선택 숫자에서 -1씩 감산함(갱신되기 때문)
-      document.getElementById("countdown").innerHTML = "완료까지 <b>" + count + "</b>초 남았습니다.";
-      if (count == 0) {
-        clearInterval(time); // 시간 초기화
-        alert("시간이 완료되었습니다.")
-      }
-    }
-    document.oncontextmenu = function () {
-      alert("마우스의 우클릭은 사용할 수 없습니다.")
-      return false;
-    }
-  </script>
-
 
 
 	<div class="gtco-cover gtco-cover-sm" style="background-image: url(images/img_bg_1.jpg)"  data-stellar-background-ratio="0.5">
@@ -457,7 +392,7 @@ form의 name의 목적 : 자바스크립트에서 접근이 용이하게 하기 위해서 사용
 				</div>
 				<div class="col-md-3 col-sm-6 animate-box" data-animate-effect="fadeInUp">
 					<div class="feature-center">
-						<span class="counter js-counter" data-from="0" data-to="43" data-speed="5000" data-refresh-interval="50">1</span>
+						<span class="counter js-counter" data-from="0" data-to="<%=foodType %>" data-speed="5000" data-refresh-interval="50">1</span>
 						<span class="counter-label">조리 방법</span>
 					</div>
 				</div>
@@ -516,6 +451,15 @@ form의 name의 목적 : 자바스크립트에서 접근이 용이하게 하기 위해서 사용
 	<div class="gototop js-top">
 		<a href="#" class="js-gotop"><i class="icon-arrow-up"></i></a>
 	</div>
+	
+	<!-- 
+form의 name의 목적 : 자바스크립트에서 접근이 용이하게 하기 위해서 사용
+-->
+
+<div class="timer">
+</div>
+  
+<script src="js/timerMain.js" type="module"></script>
 	
 	<!-- jQuery -->
 	<script src="js/jquery.min.js"></script>
