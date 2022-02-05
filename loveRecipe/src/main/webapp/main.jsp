@@ -78,12 +78,11 @@
 
 	<%
 		DAO dao = new DAO();
-	MemberVO info = (MemberVO) session.getAttribute("info");
+		MemberVO info = (MemberVO) session.getAttribute("info");
 
-	int recipeCount = dao.recipeCount();
-	System.out.println("recipeCount : " + recipeCount);
-	int membercount = dao.memberCount();
-	System.out.println("memberCount : " + membercount);
+		int foodType = dao.foodType();
+		int memberCount = dao.memberCount();
+		int recipeCount = dao.recipeCount();
 	%>
 
 
@@ -526,7 +525,7 @@ form의 name의 목적 : 자바스크립트에서 접근이 용이하게 하기 위해서 사용
 						data-animate-effect="fadeInUp">
 						<div class="feature-center">
 							<span class="counter js-counter" data-from="0" data-to="5"
-								data-speed="5000" data-refresh-interval="50">1</span> <span
+								data-speed="3000" data-refresh-interval="50">1</span> <span
 								class="counter-label">평균 평점</span>
 
 						</div>
@@ -534,8 +533,8 @@ form의 name의 목적 : 자바스크립트에서 접근이 용이하게 하기 위해서 사용
 					<div class="col-md-3 col-sm-6 animate-box"
 						data-animate-effect="fadeInUp">
 						<div class="feature-center">
-							<span class="counter js-counter" data-from="0" data-to="43"
-								data-speed="5000" data-refresh-interval="50">1</span> <span
+							<span class="counter js-counter" data-from="0" data-to="<%=foodType %>"
+								data-speed="3000" data-refresh-interval="50">1</span> <span
 								class="counter-label">조리 방법</span>
 						</div>
 					</div>
@@ -543,7 +542,7 @@ form의 name의 목적 : 자바스크립트에서 접근이 용이하게 하기 위해서 사용
 						data-animate-effect="fadeInUp">
 						<div class="feature-center">
 							<span class="counter js-counter" data-from="0"
-								data-to="<%=membercount%>" data-speed="5000"
+								data-to="<%=memberCount %>" data-speed="3000"
 								data-refresh-interval="50">1</span> <span class="counter-label">총
 								회원수</span>
 						</div>
@@ -552,7 +551,7 @@ form의 name의 목적 : 자바스크립트에서 접근이 용이하게 하기 위해서 사용
 						data-animate-effect="fadeInUp">
 						<div class="feature-center">
 							<span class="counter js-counter" data-from="0"
-								data-to="<%=recipeCount%>" data-speed="5000"
+								data-to="<%=recipeCount %>" data-speed="3000"
 								data-refresh-interval="50">1</span> <span class="counter-label">레시피
 								수</span>
 
