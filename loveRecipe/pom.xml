@@ -60,21 +60,21 @@
 	<build>
 		<finalName>loveRecipe</finalName>
 	<pluginManagement>
-    <plugins>
-    <!-- 서버 배포 셋팅 -->
-    <plugin>
-    <groupId>org.apache.tomcat.maven</groupId>
-    <artifactId>tomcat7-maven-plugin</artifactId>
-    <version>2.2</version>
-    <configuration>
-        <server>github</server>
-        <path>/${project.build.finalName}</path>
-        <url>${my.url}</url>
-        <username>${my.username}</username>
-        <password>${my.password}</password>
-        <update>true</update>
-    </configuration>
-    </plugin>
+	    <plugins>
+	    <!-- 서버 배포 셋팅 -->
+		    <plugin>
+			    <groupId>org.apache.tomcat.maven</groupId>
+			    <artifactId>tomcat7-maven-plugin</artifactId>
+			    <version>2.2</version>
+			    <configuration>
+			        <server>github</server>
+			        <path>/${project.build.finalName}</path>
+			        <url>${my.url}</url>
+			        <username>${my.username}</username>
+			        <password>${my.password}</password>
+			        <update>true</update>
+			    </configuration>
+		    </plugin>
    
 				<plugin>
 					<artifactId>maven-clean-plugin</artifactId>
