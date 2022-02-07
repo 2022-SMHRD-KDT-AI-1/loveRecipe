@@ -58,7 +58,7 @@ protected void service(HttpServletRequest request, HttpServletResponse response)
     int cnt = dao.upload(dto);
     
     if(cnt>0) {
-    	System.out.println("�̹��� ���ε� ����");
+    	System.out.println("�̹�� ���ε� �����");
     }else {
     	System.out.println("�̹��� ���ε� ����");
     }

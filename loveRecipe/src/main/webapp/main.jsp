@@ -77,15 +77,16 @@
 
 
 	<%
-<<<<<<< HEAD
-	
-	MemberVO info = (MemberVO)session.getAttribute("info");
-		
-=======
+	 	DAO dao = new DAO();
 		MemberVO info = (MemberVO) session.getAttribute("info");
->>>>>>> branch 'master' of https://github.com/2022-SMHRD-KDT-AI-1/loveRecipe.git
+		
+		int recipeCount = dao.recipeCount();
+		System.out.println("recipeCount : " + recipeCount);
+		int membercount = dao.memberCount();
+		System.out.println("memberCount : " + membercount);
+
 	%>
-<<<<<<< HEAD
+
 	
 	<div class="gtco-loader"></div>
 	
@@ -158,24 +159,8 @@
 														<%} %>
 													</div>
 												</div>
-=======
-
-	<%
-		int recipeCount = new DAO().recipeCount();
-		System.out.println("recipeCount : " + recipeCount);
-	%>
-
-	<div class="gtco-loader"></div>
-
-	<div id="page">
 
 
-		<!-- <div class="page-inner"> -->
-		<nav class="gtco-nav" role="navigation">
-			<div class="gtco-container">
->>>>>>> branch 'master' of https://github.com/2022-SMHRD-KDT-AI-1/loveRecipe.git
-
-<<<<<<< HEAD
 												<div class="row form-group">
 													<div class="col-md-12">
 													<%if(info!= null) {%>
@@ -214,16 +199,10 @@
 									</div>
 								</div>
 							</div>
-=======
-				<div class="row">
-					<div class="col-sm-4 col-xs-12">
-						<div id="gtco-logo">
-							<a href="main.jsp"><em class="cursive-font"
-								style="font-size: 3rem">레시피를 부탁해</em></a>
->>>>>>> branch 'master' of https://github.com/2022-SMHRD-KDT-AI-1/loveRecipe.git
+
 						</div>
 					</div>
-<<<<<<< HEAD
+
 							
 					
 				</div>
@@ -506,13 +485,13 @@ form의 name의 목적 : 자바스크립트에서 접근이 용이하게 하기 위해서 사용
 				</div>
 				<div class="col-md-3 col-sm-6 animate-box" data-animate-effect="fadeInUp">
 					<div class="feature-center">
-						<span class="counter js-counter" data-from="0" data-to="32" data-speed="5000" data-refresh-interval="50">1</span>
+						<span class="counter js-counter" data-from="0" data-to="<%=membercount%>" data-speed="5000" data-refresh-interval="50">1</span>
 						<span class="counter-label">총 회원수</span>
 					</div>
 				</div>
 				<div class="col-md-3 col-sm-6 animate-box" data-animate-effect="fadeInUp">
 					<div class="feature-center">
-						<span class="counter js-counter" data-from="0" data-to="300" data-speed="5000" data-refresh-interval="50">1</span>
+						<span class="counter js-counter" data-from="0" data-to="<%=recipeCount %>"  data-speed="5000" data-refresh-interval="50">1</span>
 						<span class="counter-label">레시피 수</span>
 
 					</div>
@@ -542,412 +521,13 @@ form의 name의 목적 : 자바스크립트에서 접근이 용이하게 하기 위해서 사용
 							<li><a href="#"><i class="icon-facebook"></i></a></li>
 							<li><a href="#"><i class="icon-linkedin"></i></a></li>
 							<li><a href="#"><i class="icon-dribbble"></i></a></li>
-=======
-					<div class="col-xs-8 text-right menu-1">
-						<ul>
-							<li><a href="menu.jsp">Menu</a></li>
-							<li class="has-dropdown"><a href="services.jsp">Services</a>
-								<ul class="dropdown">
-									<li><a href="refigator.jsp">나만의 냉장고</a></li>
-									<li><a href="mealplan.jsp">식단짜기</a></li>
-									<li><a href="newrecipe.jsp">레시피등록</a></li>
-								</ul></li>
-							<li><a href="feedback.jsp">feedback</a></li>
-							<li class="btn-cta"><a href="main.jsp"><span>login</span></a></li>
->>>>>>> branch 'master' of https://github.com/2022-SMHRD-KDT-AI-1/loveRecipe.git
+
 						</ul>
 					</div>
 				</div>
 
 			</div>
-		</nav>
-
-		<header id="gtco-header" class="gtco-cover gtco-cover-md"
-			role="banner" style="background-image: url(images/img_bg_1.jpg)"
-			data-stellar-background-ratio="0.5">
-			<div class="overlay"></div>
-			<div class="gtco-container">
-				<div class="row">
-					<div class="col-md-12 col-md-offset-0 text-left">
-
-
-						<div class="row row-mt-15em">
-							<div class="col-md-7 mt-text animate-box"
-								data-animate-effect="fadeInUp">
-								<%
-									if (info != null) {
-								%>
-								<h1><%=info.getId()%>
-									님 환영합니다
-								</h1>
-								<%
-									} else {
-								%>
-								<h1>로그인을 하세요!</h1>
-								<%
-									}
-								%>
-							</div>
-							<div class="col-md-4 col-md-push-1 animate-box"
-								data-animate-effect="fadeInRight">
-								<div class="form-wrap">
-									<div class="tab">
-
-										<div class="tab-content">
-											<div class="tab-content-inner active" data-content="signup">
-												<h3 class="cursive-font">login</h3>
-												<form action="LoginService" method="POST">
-													<div class="row form-group"></div>
-													<div class="row form-group">
-														<div class="col-md-12">
-															<%
-																if (info != null) {
-															%>
-															<%
-																} else {
-															%>
-															<label>id</label> <input type="text" name="id"
-																class="form-control">
-															<%
-																}
-															%>
-														</div>
-													</div>
-
-													<div class="row form-group">
-														<div class="col-md-12">
-															<%
-																if (info != null) {
-															%>
-															<%
-																} else {
-															%>
-															<label>pw</label> <input type="password" name="pw"
-																class="form-control">
-															<%
-																}
-															%>
-														</div>
-													</div>
-
-													<div class="row form-group">
-														<div class="col-md-12">
-
-
-															<%
-																if (info != null) {
-															%>
-															<a href="LogoutService">로그아웃</a> <a href="new.jsp">회원정보변경</a>
-
-															<%
-																} else {
-															%>
-															<input type="submit" class="btn btn-primary btn-block"
-																value="login"> <a href="new.jsp">회원가입</a>
-															<%
-																}
-															%>
-
-														</div>
-												</form>
-											</div>
-										</div>
-									</div>
-								</div>
-							</div>
-						</div>
-					</div>
-				</div>
-			</div>
-		</header>
-
-
-
-		<div class="gtco-section">
-			<div class="gtco-container">
-				<div class="row">
-					<div class="col-md-8 col-md-offset-2 text-center gtco-heading">
-						<h2 class="cursive-font primary-color">실시간 급상승 레시피</h2>
-						<p>실시간으로 급상승중인 레시피를 구경하세요!</p>
-					</div>
-				</div>
-				<div class="row">
-
-					<div class="col-lg-4 col-md-4 col-sm-6">
-						<a href="images/img_1.jpg" class="fh5co-card-item image-popup">
-							<figure>
-								<div class="overlay">
-									<i class="ti-plus"></i>
-								</div>
-								<img src="images/img_1.jpg" alt="Image" class="img-responsive">
-							</figure>
-							<div class="fh5co-text">
-								<h2>Fresh Mushrooms</h2>
-								<p>Far far away, behind the word mountains, far from the
-									countries Vokalia..</p>
-								<p>
-									<span class="price cursive-font">$19.15</span>
-								</p>
-							</div>
-						</a>
-					</div>
-					<div class="col-lg-4 col-md-4 col-sm-6">
-						<a href="images/img_2.jpg" class="fh5co-card-item image-popup">
-							<figure>
-								<div class="overlay">
-									<i class="ti-plus"></i>
-								</div>
-								<img src="images/img_2.jpg" alt="Image" class="img-responsive">
-							</figure>
-							<div class="fh5co-text">
-								<h2>Cheese and Garlic Toast</h2>
-								<p>Far far away, behind the word mountains, far from the
-									countries Vokalia..</p>
-								<p>
-									<span class="price cursive-font">$20.99</span>
-								</p>
-							</div>
-						</a>
-					</div>
-					<div class="col-lg-4 col-md-4 col-sm-6">
-						<a href="images/img_3.jpg" class="fh5co-card-item image-popup">
-							<figure>
-								<div class="overlay">
-									<i class="ti-plus"></i>
-								</div>
-								<img src="images/img_3.jpg" alt="Image" class="img-responsive">
-							</figure>
-							<div class="fh5co-text">
-								<h2>Grilled Chiken Salad</h2>
-								<p>Far far away, behind the word mountains, far from the
-									countries Vokalia..</p>
-								<p>
-									<span class="price cursive-font">$8.99</span>
-								</p>
-
-							</div>
-						</a>
-					</div>
-
-
-					<div class="col-lg-4 col-md-4 col-sm-6">
-						<a href="images/img_4.jpg" class="fh5co-card-item image-popup">
-							<figure>
-								<div class="overlay">
-									<i class="ti-plus"></i>
-								</div>
-								<img src="images/img_4.jpg" alt="Image" class="img-responsive">
-							</figure>
-							<div class="fh5co-text">
-								<h2>Organic Egg</h2>
-								<p>Far far away, behind the word mountains, far from the
-									countries Vokalia..</p>
-								<p>
-									<span class="price cursive-font">$12.99</span>
-								</p>
-							</div>
-						</a>
-					</div>
-
-					<div class="col-lg-4 col-md-4 col-sm-6">
-						<a href="images/img_5.jpg" class="fh5co-card-item image-popup">
-							<figure>
-								<div class="overlay">
-									<i class="ti-plus"></i>
-								</div>
-								<img src="images/img_5.jpg" alt="Image" class="img-responsive">
-							</figure>
-							<div class="fh5co-text">
-								<h2>Tomato Soup with Chicken</h2>
-								<p>Far far away, behind the word mountains, far from the
-									countries Vokalia..</p>
-								<p>
-									<span class="price cursive-font">$23.10</span>
-								</p>
-							</div>
-						</a>
-					</div>
-
-					<div class="col-lg-4 col-md-4 col-sm-6">
-						<a href="images/img_6.jpg" class="fh5co-card-item image-popup">
-							<figure>
-								<div class="overlay">
-									<i class="ti-plus"></i>
-								</div>
-								<img src="images/img_6.jpg" alt="Image" class="img-responsive">
-							</figure>
-							<div class="fh5co-text">
-								<h2>Salad with Crispy Chicken</h2>
-								<p>Far far away, behind the word mountains, far from the
-									countries Vokalia..</p>
-								<p>
-									<span class="price cursive-font">$5.59</span>
-								</p>
-
-							</div>
-						</a>
-					</div>
-
-				</div>
-			</div>
-			<input type="submit" class="btn btn-primary btn-block" value="새로고침">
-		</div>
-
-		<div id="gtco-features">
-			<div class="gtco-container">
-				<div class="row">
-					<div
-						class="col-md-8 col-md-offset-2 text-center gtco-heading animate-box">
-						<h2 class="cursive-font">Our Services</h2>
-						<p>사용자들의 행복은 언제나 개발자의 행복</p>
-					</div>
-				</div>
-				<div class="row">
-					<div class="col-md-4 col-sm-6">
-						<div class="feature-center animate-box"
-							data-animate-effect="fadeIn">
-							<span class="icon"> <i class="ti-face-smile"></i>
-							</span>
-							<h3>Happy</h3>
-							<p>요리하는 즐거움</p>
-						</div>
-					</div>
-					<div class="col-md-4 col-sm-6">
-						<div class="feature-center animate-box"
-							data-animate-effect="fadeIn">
-							<span class="icon"> <i class="ti-thought"></i>
-							</span>
-							<h3>Creative</h3>
-							<p>창의적인 레시피</p>
-						</div>
-					</div>
-					<div class="col-md-4 col-sm-6">
-						<div class="feature-center animate-box"
-							data-animate-effect="fadeIn">
-							<span class="icon"> <i class="ti-check"></i>
-							</span>
-							<h3>check</h3>
-							<p>냉장고 관리</p>
-						</div>
-					</div>
-					<div class="col-md-4 col-sm-6">
-						<div class="feature-center animate-box"
-							data-animate-effect="fadeIn">
-							<span class="icon"> <i class="ti-timer"></i>
-							</span>
-							<h3>Time</h3>
-							<p>레시피 고민시간 감소</p>
-						</div>
-					</div>
-
-
-				</div>
-
-			</div>
-		</div>
-
-
-		<div class="gtco-cover gtco-cover-sm"
-			style="background-image: url(images/img_bg_1.jpg)"
-			data-stellar-background-ratio="0.5">
-			<div class="overlay"></div>
-			<div class="gtco-container text-center">
-				<div class="display-t">
-					<div class="display-tc">
-						<h1 class="cursive-font">&ldquo;음식에 대한 사랑처럼 진실된 사랑은
-							없다.&rdquo;</h1>
-						<p>&mdash; 조지 버나드 쇼</p>
-					</div>
-				</div>
-			</div>
-		</div>
-
-		<div id="gtco-counter" class="gtco-section">
-			<div class="gtco-container">
-
-				<div class="row">
-					<div
-						class="col-md-8 col-md-offset-2 text-center gtco-heading animate-box">
-						<h2 class="cursive-font primary-color">그거 아세요?</h2>
-						<p>식사법이 잘못되었다면 약이 소용없고, 식사법이 옳다면 약이 필요없다</p>
-					</div>
-				</div>
-
-				<div class="row">
-
-					<div class="col-md-3 col-sm-6 animate-box"
-						data-animate-effect="fadeInUp">
-						<div class="feature-center">
-							<span class="counter js-counter" data-from="0" data-to="5"
-								data-speed="3000" data-refresh-interval="50">1</span> <span
-								class="counter-label">평균 평점</span>
-
-						</div>
-					</div>
-					<div class="col-md-3 col-sm-6 animate-box"
-						data-animate-effect="fadeInUp">
-						<div class="feature-center">
-							<span class="counter js-counter" data-from="0" data-to="43"
-								data-speed="3000" data-refresh-interval="50">1</span> <span
-								class="counter-label">조리 방법</span>
-						</div>
-					</div>
-					<div class="col-md-3 col-sm-6 animate-box"
-						data-animate-effect="fadeInUp">
-						<div class="feature-center">
-							<span class="counter js-counter" data-from="0" data-to="30"
-								data-speed="3000" data-refresh-interval="50">1</span> <span
-								class="counter-label">총 회원수</span>
-						</div>
-					</div>
-					<div class="col-md-3 col-sm-6 animate-box"
-						data-animate-effect="fadeInUp">
-						<div class="feature-center">
-							<span class="counter js-counter" data-from="0"
-								data-to="<%=recipeCount%>" data-speed="3000"
-								data-refresh-interval="50">1</span> <span class="counter-label">레시피
-								수</span>
-
-						</div>
-					</div>
-
-				</div>
-			</div>
-		</div>
-
-
-
-
-
-		<footer id="gtco-footer" role="contentinfo"
-			style="background-image: url(images/img_bg_1.jpg)"
-			data-stellar-background-ratio="0.5">
-			<div class="overlay"></div>
-			<div class="gtco-container">
-				<div class="row row-pb-md">
-
-
-
-
-					<div class="col-md-12 text-center">
-						<div class="gtco-widget">
-							<h3>Get Social</h3>
-							<ul class="gtco-social-icons">
-								<li><a href="#"><i class="icon-twitter"></i></a></li>
-								<li><a href="#"><i class="icon-facebook"></i></a></li>
-								<li><a href="#"><i class="icon-linkedin"></i></a></li>
-								<li><a href="#"><i class="icon-dribbble"></i></a></li>
-							</ul>
-						</div>
-					</div>
-
-				</div>
-
-
-
-			</div>
-		</footer>
-		<!-- </div> -->
+	
 
 	</div>
 

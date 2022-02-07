@@ -113,6 +113,7 @@ r_date date,
 constraint recipe_seq primary key(num)
 );
 
+select * from recipe
 -- 테이블 컬럼 사이즈 변경방법
 -- 조리 방법이 너무 길어서 ORA-12899 에러 떴었음.
 ALTER TABLE recipe MODIFY(cooking_method varchar2(1000));
@@ -163,6 +164,54 @@ create table feed_board (
 insert into feed_board values(feed_seq.nextval, 'test', 'test', sysdate);
 
 select * from feed_board
+
+drop table test_refi
+
+-------냉장고 테이블 만들기
+create table test_refi (  
+mingre_seq number,
+ingre_seq number,
+ingre_amount number,
+temp varchar2(100) not null,
+refidate date,
+mb_id varchar2(100) not null,
+ingre_name varchar2(100) not null
+);
+
+select * from test_refi
+
+CREATE SEQUENCE refi_seq
+CREATE SEQUENCE refi_seq2
+
+delete from test_refi where mb_id in(1);
+
+select * from test_refi where mb_id = 1
+
+---------재료 테이블
+create table test_ingredient (
+ingre_seq number,
+ingre_name varchar2(100) not null,
+ingre_type varchar2(100),
+ingre_expire number,
+ingre_season varchar2(100),
+ingre_carloy number,
+inger_temp varchar2(100),
+constraint ingredient_pk primary key(ingre_seq)
+);
+
+CREATE SEQUENCE ingre_seq
+
+insert into test_ingredient values(ingre_seq.nextval, '닭가슴살','육류',7,'연중',102,'냉장')
+
+insert into test_ingredient values(ingre_seq.nextval, '사과','과실류',7,'연중',21,'냉장')
+
+select * from test_ingredient
+
+select * from test_refi where mb_id='test'
+
+select * from test_ingredient where ingre_name='사과'
+
+select to_char (sysdate+7) from dual
 
 
 

@@ -1,3 +1,8 @@
+<%@page import="model.ingrivo"%>
+<%@page import="model.refivo"%>
+<%@page import="java.util.ArrayList"%>
+<%@page import="model.MemberVO"%>
+<%@page import="model.DAO"%>
 <%@ page language="java" contentType="text/html; charset=EUC-KR"
     pageEncoding="EUC-KR"%>
 <!DOCTYPE HTML>
@@ -29,6 +34,10 @@
 
 	<link href="https://fonts.googleapis.com/css?family=Lato:300,400,700" rel="stylesheet">
 	<link href="https://fonts.googleapis.com/css?family=Kaushan+Script" rel="stylesheet">
+	<link
+	href="https://fonts.googleapis.com/css2?family=Nanum+Brush+Script&display=swap"
+	rel="stylesheet">
+	
 	
 	<!-- Animate.css -->
 	<link rel="stylesheet" href="css/animate.css">
@@ -63,6 +72,14 @@
 
 	</head>
 	<body>
+	<%
+	 	DAO dao = new DAO();
+		MemberVO info = (MemberVO) session.getAttribute("info");
+		ArrayList<refivo> refilist = null;
+		ArrayList<ingrivo> ingrilist = null;
+		
+		if (info!=null){refilist = dao.selectrefi(info.getId());}
+	%>
 		
 	<div class="gtco-loader"></div>
 	
@@ -106,7 +123,11 @@
 
 					<div class="row row-mt-15em">
 						<div class="col-md-12 mt-text animate-box" data-animate-effect="fadeInUp">
-							<h1 class="cursive-font">ㅇㅇㅇ님의 냉장고</h1>	
+							<%if(info!= null) {%>					
+										<h1 class="cursive-font" ><%=info.getNickname()  %>님의 냉장고</h1>
+										<%}else{ %>
+										<h1 class="cursive-font" > 로그인을 하세요!</h1>
+										<%} %>	
 						</div>
 						
 					</div>
@@ -116,19 +137,66 @@
 			</div>
 		</div>
 	</header>
-	<div id="gtco-subscribe" style="background-color: green">
+	<div id="gtco-features">
 		<div class="gtco-container">
 			<div class="row animate-box">
 				<div class="col-md-8 col-md-offset-2 text-center gtco-heading">
-					<h2 class="cursive-font">냉동실</h2>
-					<fieldset>
-						<form action="#">
-							재료 : <input type="text" name = "ingre1"><br>
-							갯수 :<input type="number" name="number1"><br>
+					<table width="800px" , align="center">
+					<caption><h2 class="cursive-font" >현재 보유 재료</h2></caption>
+					<tr style="font-size:1.5em">
+					<th>재료</th>
+					<th>갯수</th>
+					
+					<th>재료타입</th>
+					<th>유통기한</th>
+					<th>제철</th>
+					<th>칼로리</th>
+					<th>현재장소</th>
+					<th>권장장소</th>
+					</tr>
+					<% if (refilist != null && info!= null){ for (int i=0; i<refilist.size();i++){
+						ingrilist = dao.selectingri(refilist.get(i).getIngre_name());
+						
+					%>
+					<tr>
+					<td><%= refilist.get(i).getIngre_name() %></td>
+					<td><%= refilist.get(i).getIngre_amount() %></td>	
+					
+					<td><%=ingrilist.get(0).getType() %></td>
+					<td><%=dao.expire(ingrilist.get(0).getExpire())%></td>
+					<td><%=ingrilist.get(0).getSeason() %></td>
+					<td><%=ingrilist.get(0).getCarloy() %></td>
+					<td><%= refilist.get(i).getIngre_temp() %></td>
+					<td><%=ingrilist.get(0).getTempt() %></td>
+					
+					<td>
+					<form action="deleteingri">
+					<input type="hidden" name="delete" value="<%= refilist.get(i).getIngre_name() %>">
+					<button type="submit">DELTE</button>
+					</form></td>		
+					</tr>
+					<%}} %>
+					</table>
+						
+					</div>
+				</div>	
+			</div>
+		</div>
+	</div>
+	<div id="gtco-features">
+		<div class="gtco-container" style="right: 400px;  font-size:1.5em">
+			<div class="row animate-box">
+				<div class="col-md-5 col-md-offset-2 text-center gtco-heading">
+					<h2 class="cursive-font" style="border:1px solid gray; color: black">냉동실</h2>
+					<fieldset style="border:1px solid gray;">
+						<label class="cursive-font">재료명: </label>
+							<input type="text" name = "ingre1"><br>
+						<label class="cursive-font">재료수: </label>
+							<input type="number" name="number1"><br>
 							<input type = "button" value="등록" onClick="low_save();">
-						</form>
+						
 					</fieldset>
-					<div id = "ref1" style = "background-color: blue; color:white">
+					<div id = "ref1" style = "background-color: #289AFF	; color:black" class="cursive-font">
 						<table>
 							<thead>
 								<tr>
@@ -147,19 +215,21 @@
 		</div>
 	</div>
 
-	<div id="gtco-subscribe">
-		<div class="gtco-container">
+	<div id="gtco-features">
+		<div class="gtco-container" style="bottom: 630px; left: 170px; font-size:1.5em ">
 			<div class="row animate-box">
-				<div class="col-md-8 col-md-offset-2 text-center gtco-heading">
-					<h2 class="cursive-font">냉장실</h2>			
-						<fieldset>
-						<form action="#">
-							재료 : <input type="text" name = "ingre2"><br>
-							갯수 :<input type="number" name="number2"><br>
+				<div class="col-md-5 col-md-offset-2 text-center gtco-heading">
+					<h2 class="cursive-font" style="border:1px solid gray; color: black">냉장실</h2>			
+						<fieldset style="border:1px solid gray;">
+					
+						<label class="cursive-font">재료명: </label>
+							<input type="text" name = "ingre2"><br>
+						<label class="cursive-font">재료수: </label>
+							<input type="number" name="number2"><br>
 							<input type = "button" value="등록" onClick="mid_save()">
-						</form>
+					
 					</fieldset>
-					<div id = "ref2" style = "background-color: blue; color:white">
+					<div id = "ref2" style = "background-color: #289AFF	; color:black" class="cursive-font">
 						<table>
 							<thead>
 								<tr>
@@ -178,19 +248,21 @@
 		</div>
 	</div>
 
-	<div id="gtco-subscribe" style="background-color: gray">
-		<div class="gtco-container">
+	<div id="gtco-features">
+		<div class="gtco-container" style="bottom: 1250px; left: 800px ;  font-size:1.5em">
 			<div class="row animate-box">
-				<div class="col-md-8 col-md-offset-2 text-center gtco-heading">
-					<h2 class="cursive-font">상온</h2>
-						<fieldset> 
+				<div class="col-md-5 col-md-offset-2 text-center gtco-heading">
+					<h2 class="cursive-font" style="border:1px solid gray; color: black">상온</h2>
+						<fieldset style="border:1px solid gray;"> 
 							<form action="#">
-								재료 : <input type="text" name = "ingre3"><br>
-								갯수 :<input type="number" name="number3"><br>
+							<label class="cursive-font">재료명: </label>
+								<input type="text" name = "ingre3"><br>
+							<label class="cursive-font">재료수: </label>
+								<input type="number" name="number3"><br>
 								<input type = "button" value="등록" onClick="high_save()">
 							</form>
 						</fieldset>
-						<div id = "ref3" style = "background-color: blue; color:white">
+						<div id = "ref3" style = "background-color: #289AFF	; color:black" class="cursive-font">
 						<table>
 							<thead>
 								<tr>

@@ -1,6 +1,7 @@
 package model;
 
 import java.sql.Connection;
+import java.sql.Date;
 import java.sql.DriverManager;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
@@ -12,6 +13,10 @@ public class DAO {
 	ResultSet rs = null;
 	int cnt = 0;
 	MemberVO vo = null;
+	refivo refi = null;
+	ingrivo ingri = null;
+	String expired ;
+
 
 	public void DBconn() {
 
@@ -157,7 +162,7 @@ public class DAO {
 		return cnt;
 	}
 
-<<<<<<< HEAD
+	//회원정보변경 메소드
 	 public int update(MemberVO vo) {
 		 try {
 			 	DBconn();
@@ -171,6 +176,7 @@ public class DAO {
 				psmt.setString(4, vo.getId());
 
 				cnt= psmt.executeUpdate();
+				
 
 				if (cnt!=0) {
 					System.out.print("수정성공 ");
@@ -185,13 +191,13 @@ public class DAO {
 				e.printStackTrace();
 			} finally {
 				DBclose();
-	 } return cnt;
-=======
+	 }return cnt;
+		 }
+
 	// 피드백 업로드 메소드
 	public int feedupload(feedDTO dto) {
 		try {
 			DBconn();
->>>>>>> branch 'master' of https://github.com/2022-SMHRD-KDT-AI-1/loveRecipe.git
 
 			String sql = "insert into feed_board values(feed_seq.nextval, ?, ?, sysdate)";
 
@@ -216,15 +222,11 @@ public class DAO {
 		ArrayList<MemberVO> list = new ArrayList<MemberVO>();
 		try {
 			DBconn();
-
-<<<<<<< HEAD
-}}
-=======
 			String sql = "select id,pw,nickname from test_member";
 
 			psmt = conn.prepareStatement(sql);
 			rs = psmt.executeQuery();
->>>>>>> branch 'master' of https://github.com/2022-SMHRD-KDT-AI-1/loveRecipe.git
+
 
 			while (rs.next()) {
 
@@ -300,5 +302,119 @@ public class DAO {
 		}
 		return recipeCount;
 	}
+	
+	// 냉장고에 재료입력
+	public int insertrefi(int number1,String temp,String id,String ingre1) {
+		
+		try {
+			DBconn();
+			//필요한정보 - 재료이름,재료양,유저아이디
+			String sql = "insert into test_refi values(refi_seq.nextval, "
+					+ "refi_seq2.nextval, ?,?, sysdate ,?,?)";
+			
+			psmt = conn.prepareStatement(sql);
+			
+			psmt.setInt(1,number1);
+			psmt.setString(2,temp);
+			psmt.setString(3,id);
+			psmt.setString(4, ingre1);
 
+			cnt = psmt.executeUpdate();
+			
+		} catch (Exception e) {
+			e.printStackTrace();
+		} finally {
+			DBclose();
+		} return cnt;
+	}
+	
+	//냉장고에 지금 보유한 재료 가져오기
+	public ArrayList<refivo> selectrefi(String id) {
+		ArrayList<refivo> refilist = new ArrayList<refivo>();
+		try {
+			DBconn();
+			//필요한 정보 - 재료명,갯수,현재보관장소
+			String sql ="select * from test_refi where mb_id= ?";
+			
+			psmt = conn.prepareStatement(sql);
+
+			psmt.setString(1, id);
+			rs = psmt.executeQuery();
+			
+			 while(rs.next()) {
+
+				int ingre_amount = rs.getInt(3);
+				String ingre_temp = rs.getString(4);
+				String ingre_name = rs.getString(7);
+				
+//				System.out.println(ingre_amount);
+//				System.out.println(ingre_temp);
+//				System.out.println(ingre_name);
+				
+				refi = new refivo(ingre_amount, ingre_temp, ingre_name);
+				refilist.add(refi);
+				
+			}
+			 
+		} catch (Exception e) {
+			e.printStackTrace();
+		} finally {
+			DBclose();
+		} return refilist;
+	}
+	//냉장고에 보유한 재료의 상세정보 가져오기
+	public ArrayList<ingrivo> selectingri(String name) {
+		ArrayList<ingrivo> ingrilist = new ArrayList<ingrivo>();
+		try {
+			DBconn();
+			//필요한정보 -재료명,재료타입,유통기한,제철,칼로리,권장보관장소
+			String sql ="select * from test_ingredient where ingre_name=?";
+			
+			psmt = conn.prepareStatement(sql);
+			psmt.setString(1, name);
+			rs = psmt.executeQuery();
+			while(rs.next()) {
+				String type = rs.getString(3);
+				int expire = rs.getInt(4);
+				String season = rs.getString(5);
+				int carloy = rs.getInt(6);
+				String tempt = rs.getString(7);
+				
+				System.out.println(type);
+				System.out.println(expire);
+				System.out.println(season);
+				System.out.println(carloy);
+				System.out.println(tempt);
+				
+				ingri = new ingrivo(type, season, tempt, expire, carloy);
+				ingrilist.add(ingri);
+				
+			}
+		} catch (Exception e) {
+			e.printStackTrace();
+		} finally {
+			DBclose();
+		} 
+		return ingrilist;
+	}
+	public String expire(int num) {
+
+		try {
+			DBconn();
+			String sql = "select to_char (sysdate+?) from dual";
+			
+			psmt = conn.prepareStatement(sql);
+			psmt.setInt(1, num); 
+			rs = psmt.executeQuery();
+			
+			if(rs.next()) {
+				expired = rs.getString(1);
+				System.out.println(expired);
+			}
+		} catch (Exception e) {
+			e.printStackTrace();
+		} finally {
+			DBclose();
+		} return expired;
+	}
 }

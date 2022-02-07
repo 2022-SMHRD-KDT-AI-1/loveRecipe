@@ -108,13 +108,20 @@
 						<div class="col-md-7 mt-text animate-box" data-animate-effect="fadeInUp">
 							<h1 > find your recipe </h1>	
 						</div>
-						<div class="col-md-4 col-md-push-1 animate-box" data-animate-effect="fadeInRight">
-							<div class="form-wrap">
-								<div class="tab">
-									
-									<div class="tab-content">
-										<div class="tab-content-inner active" data-content="signup">
-											<h3 class="cursive-font">
+						
+					</div>
+							
+					
+				</div>
+			</div>
+		</div>
+	</header>
+	
+
+					
+										
+		<div class="gtco-container" style=" font-size:1.5em ">
+											<h3 class="cursive-font" style="font-size:1.5em" >
 												search</h3>
 											<form action="recipesearch">
 											
@@ -174,7 +181,6 @@
 												<div class="row form-group">
 													
 														<label>제철구분유무</label>
-														<label>(가져오는 레시피의 재료의 제철유무를 판단)</label>
 														<select class="form-control" name="seasonal">
 														<option value="o">o</option>
 														<option value="x">x</option>
@@ -203,17 +209,7 @@
 
 										
 									</div>
-								</div>
-							</div>
-						</div>
-					</div>
-							
-					
-				</div>
-			</div>
-		</div>
-	</header>
-
+						
 	
 	
 
