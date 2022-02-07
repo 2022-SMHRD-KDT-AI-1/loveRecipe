@@ -15,47 +15,39 @@ import model.DAO;
 import model.MemberVO;
 import model.refivo;
 
-
 @WebServlet("/LoginService")
 public class LoginService extends HttpServlet {
 	private static final long serialVersionUID = 1L;
-	protected void service(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-	
-	System.out.println("[LoginService]");
 
-	
-	request.setCharacterEncoding("UTF-8");
-	
-	
-	String id =request.getParameter("id");
-	String pw =request.getParameter("pw");
-	
-	
-	
-	System.out.println("id:"+ id);
-	System.out.println("pw:"+ pw);
-	
-	
-	DAO dao = new DAO();	 
-	
-	
-	
-	MemberVO info =dao.login(id,pw);
-	
-	
-	
-	if(info !=null) {
-		System.out.println("로그인 성공");
-		
-		HttpSession session = request.getSession();
-		session.setAttribute("info", info);
-		
-	}else {
-		System.out.println("로그인 실패");
+	protected void service(HttpServletRequest request, HttpServletResponse response)
+			throws ServletException, IOException {
+
+		System.out.println("[LoginService]");
+
+		request.setCharacterEncoding("UTF-8");
+
+		String id = request.getParameter("id");
+		String pw = request.getParameter("pw");
+
+		System.out.println("id:" + id);
+		System.out.println("pw:" + pw);
+
+		DAO dao = new DAO();
+
+		MemberVO info = dao.login(id, pw);
+
+		if (info != null) {
+			System.out.println("로그인 성공");
+
+			HttpSession session = request.getSession();
+			session.setAttribute("info", info);
+
+		} else {
+			System.out.println("로그인 실패");
+		}
+
+		response.sendRedirect("main.jsp");
+
 	}
 	
-	
-	response.sendRedirect("main.jsp");
-	
-}
 }

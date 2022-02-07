@@ -103,7 +103,8 @@ h1, h2, h3, h4, h5, h6, figure {
 
 
 .gtco-nav {
-  position: absolute;
+  background: linear-gradient(90deg, #191919, #F5F2E7);
+  position: fixed;
   top: 0;
   left: 0;
   margin: 0;
@@ -1972,5 +1973,7 @@ form label {
     font-size: 26px;
   }
 }
+
+
 
 /*# sourceMappingURL=style.css.map */

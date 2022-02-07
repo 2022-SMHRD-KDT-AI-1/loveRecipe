@@ -17,9 +17,7 @@ public class DAO {
 	ingrivo ingri = null;
 	String expired ;
 
-
 	public void DBconn() {
-
 		try {
 			Class.forName("oracle.jdbc.driver.OracleDriver");
 
@@ -162,42 +160,48 @@ public class DAO {
 		return cnt;
 	}
 
+
 	//회원정보변경 메소드
 	 public int update(MemberVO vo) {
 		 try {
 			 	DBconn();
 				String sql = "update test_member set pw=?, nickname =?, email=? where id=? ";
 
-				psmt = conn.prepareStatement(sql);
 
-				psmt.setString(1, vo.getPw());
-				psmt.setString(2, vo.getNickname());
-				psmt.setString(3, vo.getEmail());
-				psmt.setString(4, vo.getId());
+			psmt = conn.prepareStatement(sql);
+
+			psmt.setString(1, vo.getPw());
+			psmt.setString(2, vo.getNickname());
+			psmt.setString(3, vo.getEmail());
+			psmt.setString(4, vo.getId());
 
 				cnt= psmt.executeUpdate();
 				
 
-				if (cnt!=0) {
-					System.out.print("수정성공 ");
-					
-				}else {
-					System.out.println("수정실패");
-				}
 
-				
+			if (cnt != 0) {
+				System.out.print("수정성공 ");
 
-			} catch (Exception e) {
-				e.printStackTrace();
-			} finally {
-				DBclose();
-	 }return cnt;
-		 }
+			} else {
+				System.out.println("수정실패");
+			}
+
+
+		} catch (Exception e) {
+			e.printStackTrace();
+		} finally {
+			DBclose();
+		}
+		return cnt;
+	}
+
 
 	// 피드백 업로드 메소드
 	public int feedupload(feedDTO dto) {
 		try {
+
 			DBconn();
+
 
 			String sql = "insert into feed_board values(feed_seq.nextval, ?, ?, sysdate)";
 
@@ -221,7 +225,9 @@ public class DAO {
 		// dto을 담을수 있는 Arraylist
 		ArrayList<MemberVO> list = new ArrayList<MemberVO>();
 		try {
+
 			DBconn();
+
 			String sql = "select id,pw,nickname from test_member";
 
 			psmt = conn.prepareStatement(sql);
@@ -247,21 +253,44 @@ public class DAO {
 
 	}
 
+	// 그거 아세요? 조리 방법 카운트 메소드
+	public int foodType() {
+		int foodType = 0;
+		try {
+
+			DBconn();
+			// SQL문 작성
+			String sql = "SELECT count (DISTINCT food_type) FROM recipe";
+
+			// preparestatement 메소드 사용해서 sql문을 DB에 전달
+			psmt = conn.prepareStatement(sql);
+
+			// 실행
+			// Update : select구문을 제외한 다른 구문, int형태로 변환
+			// Query : select구문에서 사용, Resultset형태로 반환
+			rs = psmt.executeQuery();
+
+			if (rs.next()) {
+				foodType = rs.getInt(1);
+			}
+		} catch (Exception e) {
+			e.printStackTrace();
+		} finally {
+			DBclose();
+		}
+		return foodType;
+	}
+
 	// 그거 아세요? 총 회원 수 카운트 메소드
 	public int memberCount() {
 		int memberCount = 0;
 		try {
 
 			DBconn();
-			// 5. SQL문 작성
 			String sql = "select count (*) from test_member";
 
-			// 6. preparestatement 메소드 사용해서 sql문을 DB에 전달
 			psmt = conn.prepareStatement(sql);
 
-			// 8. 실행
-			// Update : select구문을 제외한 다른 구문, int형태로 변환
-			// Query : select구문에서 사용, Resultset형태로 반환
 			rs = psmt.executeQuery();
 
 			if (rs.next()) {
@@ -281,15 +310,10 @@ public class DAO {
 		try {
 
 			DBconn();
-			// 5. SQL문 작성
 			String sql = "select count (*) from recipe";
 
-			// 6. preparestatement 메소드 사용해서 sql문을 DB에 전달
 			psmt = conn.prepareStatement(sql);
 
-			// 8. 실행
-			// Update : select구문을 제외한 다른 구문, int형태로 변환
-			// Query : select구문에서 사용, Resultset형태로 반환
 			rs = psmt.executeQuery();
 
 			if (rs.next()) {

@@ -35,6 +35,7 @@ public class JoinService extends HttpServlet {
 		String email =request.getParameter("email");
 		String phone =request.getParameter("phone");
 		
+		
 		MemberVO dto =new MemberVO(id,pw, nickname, email, phone);
 		
 		System.out.println("id :"+ id);
@@ -58,7 +59,6 @@ public class JoinService extends HttpServlet {
 			System.out.println("회원가입 실패");
 			response.sendRedirect("new.jsp");
 		}
-		
 		
 	}
 

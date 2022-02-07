@@ -131,10 +131,10 @@ increment by 1;
 -- num : 만들어진 시퀀스로 넣기
 -- m_date : 현재 시간
 insert into recipe
-values(recipe_seq.nextval,'약과', '떡,한과', '한식', '135',
-'밀가루, 참기름, 소금, 조청, 생강즙, 청주, 설탕, 검은깨, 물',
-'1. 밀가루에 소금, 참기름을 넣어 고루 비벼 체에 내린다. 2. ①의 밀가루에 분량의 조청, 생강즙, 청주를 넣어서 반죽을 질지 않게 한다. 3. 반죽을 밀대로 0.5cm 정도로 밀고 원형 틀로 찍어 모양을 잡는다. 4. 분량의 물과 설탕을 냄비에 넣고 반으로 줄 때까지  졸여 집청시럽을 만든다. 5. 130~140℃의 기름에서 천천히 색이 나도록 튀긴다. 6. 약과가 튀겨지면 집청시럽에 담갔다가 건진다. 7. 약과를 잣과 검은깨로 장식해서 마무리한다.',
-'https://www.menupan.com/cook/cookimg/066400.jpg', sysdate);
+values(recipe_seq.nextval,'사색경단', '떡,한과', '한식', '240',
+'찹쌀가루 , 물(뜨거운것) , 콩가루 , 흑임자가루 , 인절미가루 , 카스테라가루 , 소금 , 꿀',
+'1. 찹쌀가루에 소금을 넣어 잘 섞은 뒤 뜨거운 물을 부어 익반죽한다. (반죽을 매끄럽게 하기 위해 체에 한번 친다.)   2. 지름 2cm정도로 둥글게 빚는다.   3. 빚은 경단은 펄펄 끓은 물에 삶아 충분히 익으면 찬물에 담갔다가 재빨리 건져 물기를 뺀다.   4. 물기를 뺀 경단은 한 김 나가게 식혀둔다.   5. 어느정도 식은 경단에 꿀이나 물엿을 바른다.   6. 준비해 놓은 콩가루, 인절미 가루, 카스테라 가루, 흑임자 가루에 묻혀 사색으로 만든다.   7. 먹기 직전에 남은 고물을 떡 위에 뿌린다.',
+'https://www.menupan.com/cook/cookimg/094800.jpg', sysdate);
 
 -- 4. 가데이터 조회하기
 select * from recipe;
@@ -148,7 +148,8 @@ delete from recipe where recipe_name in('abc');
 -- 테이블 전체 삭제
 drop table recipe;
 
-
+-- '조리 방법' 카운트
+SELECT count (DISTINCT food_type) FROM recipe;
 
 ----- 피드백 db 가설정
 create sequence feed_seq start with 1 increment by 1
