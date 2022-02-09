@@ -1,18 +1,21 @@
+<%@page import="model.ingrivo"%>
+<%@page import="model.refivo"%>
+<%@page import="java.util.ArrayList"%>
 <%@page import="model.MemberVO"%>
 <%@page import="model.DAO"%>
-<%@ page language="java" contentType="text/html; charset=EUC-KR"
-	pageEncoding="EUC-KR"%>
+<%@ page language="java" contentType="text/html; charset=utf-8"
+	pageEncoding="utf-8"%>
 <!DOCTYPE HTML>
 <!--
-	Aesthetic by gettemplates.co
-	Twitter: http://twitter.com/gettemplateco
-	URL: http://gettemplates.co
+   Aesthetic by gettemplates.co
+   Twitter: http://twitter.com/gettemplateco
+   URL: http://gettemplates.co
 -->
 <html>
 <head>
 <meta charset="utf-8">
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
-<title>·¹½ÃÇÇ¸¦ ºÎÅ¹ÇØ &mdash; Free Website Template, Free HTML5
+<title>ë ˆì‹œí”¼ë¥¼ ë¶€íƒí•´ &mdash; Free Website Template, Free HTML5
 	Template by GetTemplates.co</title>
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <meta name="description"
@@ -36,6 +39,22 @@
 	rel="stylesheet">
 <link href="https://fonts.googleapis.com/css?family=Kaushan+Script"
 	rel="stylesheet">
+<link
+	href="https://fonts.googleapis.com/css2?family=Nanum+Brush+Script&display=swap"
+	rel="stylesheet">
+<link href="https://fonts.googleapis.com/icon?family=Material+Icons"
+      rel="stylesheet">
+
+
+<!-- Animate.css -->
+<link rel="stylesheet" href="css/animate.css">
+<!-- Icomoon Icon Fonts-->
+<link rel="stylesheet" href="css/icomoon.css">
+<!-- Themify Icons-->
+<link rel="stylesheet" href="css/themify-icons.css">
+<!-- Bootstrap  -->
+<link rel="stylesheet" href="css/bootstrap.css">
+
 
 <!-- Animate.css -->
 <link rel="stylesheet" href="css/animate.css">
@@ -65,20 +84,28 @@
 <script src="js/modernizr-2.6.2.min.js"></script>
 <!-- FOR IE9 below -->
 <!--[if lt IE 9]>
-	<script src="js/respond.min.js"></script>
-	<![endif]-->
+   <script src="js/respond.min.js"></script>
+   <![endif]-->
 
+<<<<<<< HEAD
 </head>
 <body>
 	<%
 		DAO dao = new DAO();
-		MemberVO info = (MemberVO) session.getAttribute("info");
+	MemberVO info = (MemberVO) session.getAttribute("info");
+	ArrayList<refivo> refilist = null;
+	ArrayList<ingrivo> ingrilist = null;
+
+	if (info != null) {
+		refilist = dao.selectrefi(info.getId());
+	} else {
+		refilist = null;
+	}
 	%>
 
 	<div class="gtco-loader"></div>
 
 	<div id="page">
-
 
 		<!-- <div class="page-inner"> -->
 		<nav class="gtco-nav" role="navigation">
@@ -87,7 +114,7 @@
 				<div class="row">
 					<div class="col-sm-4 col-xs-12">
 						<div id="gtco-logo">
-							<a href="main.jsp">·¹½ÃÇÇ¸¦ ºÎÅ¹ÇØ! <em></em></a>
+							<a href="main.jsp"><em class="cursive-font" style="font-size: 3rem">ë ˆì‹œí”¼ë¥¼ ë¶€íƒí•´</em></a>
 						</div>
 					</div>
 					<div class="col-xs-8 text-right menu-1">
@@ -95,9 +122,9 @@
 							<li><a href="menu.jsp">Menu</a></li>
 							<li class="has-dropdown"><a href="services.jsp">Services</a>
 								<ul class="dropdown">
-									<li><a href="refigator.jsp">³ª¸¸ÀÇ ³ÃÀå°í</a></li>
-									<li><a href="mealplan.jsp">½Ä´ÜÂ¥±â</a></li>
-									<li><a href="newrecipe.jsp">·¹½ÃÇÇµî·Ï</a></li>
+									<li><a href="refigator.jsp">ë‚˜ë§Œì˜ ëƒ‰ì¥ê³ </a></li>
+									<li><a href="mealplan.jsp">ì‹ë‹¨ì§œê¸°</a></li>
+									<li><a href="newrecipe.jsp">ë ˆì‹œí”¼ë“±ë¡</a></li>
 								</ul></li>
 							<li><a href="feedback.jsp">feedback</a></li>
 							<li class="btn-cta"><a href="main.jsp"><span>login</span></a></li>
@@ -109,7 +136,7 @@
 		</nav>
 
 		<header id="gtco-header" class="gtco-cover gtco-cover-sm"
-			role="banner" style="background-image: url(images/img_bg_1.jpg)"
+			role="banner" style="background-image: url(images/refrigerator2.jpg)"
 			data-stellar-background-ratio="0.5">
 			<div class="overlay"></div>
 			<div class="gtco-container">
@@ -123,12 +150,12 @@
 								<%
 									if (info != null) {
 								%>
-								<h1><%=info.getNickname()%>´ÔÀÇ ³ÃÀå°í
+								<h1><%=info.getNickname()%>ë‹˜ì˜ ëƒ‰ì¥ê³ 
 								</h1>
 								<%
 									} else {
 								%>
-								<h1>·Î±×ÀÎÀ» ÇÏ¼¼¿ä!</h1>
+								<h1>ë¡œê·¸ì¸ì„ í•˜ì„¸ìš”!</h1>
 								<%
 									}
 								%>
@@ -140,233 +167,301 @@
 					</div>
 				</div>
 			</div>
-		</header>
-		<div id="gtco-subscribe" style="background-color: green">
-			<div class="gtco-container">
-				<div class="row animate-box">
-					<div class="col-md-8 col-md-offset-2 text-center gtco-heading">
-						<h2 class="cursive-font">³Ãµ¿½Ç</h2>
-						<fieldset>
-							<form action="#">
-								Àç·á : <input type="text" name="ingre1"><br> °¹¼ö :<input
-									type="number" name="number1"><br> <input
-									type="button" value="µî·Ï" onClick="low_save();">
-							</form>
-						</fieldset>
-						<div id="ref1" style="background-color: blue; color: white">
-							<table>
-								<thead>
-									<tr>
-										<td>Àç·á</td>
-										<td>°¹¼ö</td>
-									</tr>
-								</thead>
+	</div>
+	</header>
+	<div id="gtco-features" style="background-image: url(images/refrigerator4.jpg)">
+		<div class="gtco-container">
+			<div class="row animate-box">
+				<div class="col-md-8 col-md-offset-2 text-center gtco-heading">
+				<div  id="ref1" style="background-color: #464E2E; color: white">
+					<table border="1" width="800px" align="center">
+						<caption>
+							<h2 class="cursive-font">í˜„ì¬ ë³´ìœ  ì¬ë£Œ</h2>
+						</caption>
+						<tr style="font-size: 1.5em">
+							<th>ì¬ë£Œ</th>
+							<th>ê°¯ìˆ˜</th>
 
-								<tbody id="low">
-
-								</tbody>
-							</table>
-						</div>
-					</div>
+							<th>ì¬ë£Œíƒ€ì…</th>
+							<th>ìœ í†µê¸°í•œ</th>
+							<th>ì œì² </th>
+							<th>ì¹¼ë¡œë¦¬</th>
+							<th>í˜„ì¬ì¥ì†Œ</th>
+							<th>ê¶Œì¥ì¥ì†Œ</th>
+						</tr>
+						<%
+							if (refilist != null && info != null) {
+							for (int i = 0; i < refilist.size(); i++) {
+								ingrilist = dao.selectingri(refilist.get(i).getIngre_name());
+								String ingriname = refilist.get(i).getIngre_name();
+						%>
+						<tr>
+							<td><%=refilist.get(i).getIngre_name()%></td>
+							<td><%=refilist.get(i).getIngre_amount()%></td>
+							<%
+								if (ingrilist != null) {
+							%>
+							<td><%=ingrilist.get(0).getType()%></td>
+							<td><%=dao.expire(ingrilist.get(0).getExpire())%></td>
+							<td><%=ingrilist.get(0).getSeason()%></td>
+							<td><%=ingrilist.get(0).getCarloy()%></td>
+							<td><%=refilist.get(i).getIngre_temp()%></td>
+							<td><%=ingrilist.get(0).getTempt()%></td>
+							<%
+								} else {
+							}
+							%>
+							<td>
+								<form action="deleteingri">
+									<input type="hidden" name="ingri" value="<%=ingriname%>">
+									<input type="hidden" name="id" value="<%=info.getId()%>">
+									<button type="submit" style="color: black;"><span class="material-icons">delete_forever</span></button>
+								</form>
+							</td>
+						</tr>
+						<%
+							}
+						}
+						%>
+					</table>
+				</div>
 				</div>
 			</div>
 		</div>
+	</div>
+	</div>
+	<div id="gtco-subscribe" style="background-image: url(images/ice.jpg)">
+         <div class="gtco-container">
+            <div class="row animate-box">
+               <div class="col-md-8 col-md-offset-2 text-right gtco-heading">
+                  <h2 class="cursive-font" style="color: #055052;">ëƒ‰ë™ì‹¤</h2>
+                  <fieldset>
+                     <form action="#">
+                        <input type="text" name="ingre1" placeholder="ì¬ë£Œëª…ì„ ì…ë ¥í•˜ì„¸ìš”."><br>
+                        <input type="number" name="number1" placeholder="ê°¯ìˆ˜ë¥¼ ì…ë ¥í•˜ì„¸ìš”."><br>
+                        <input type="button" value="ë“±ë¡" onClick="low_save();" class="btn">
+                     </form>
+                  </fieldset>
+                  <div id="ref1" style="background-color: green; color: white">
+                     <table>
+                        <thead>
+                           <tr>
+                              <td>ì¬ë£Œ</td>
+                              <td>ã€€ê°¯ìˆ˜</td>
+                           </tr>
+                        </thead>
 
-		<div id="gtco-subscribe">
-			<div class="gtco-container">
-				<div class="row animate-box">
-					<div class="col-md-8 col-md-offset-2 text-center gtco-heading">
-						<h2 class="cursive-font">³ÃÀå½Ç</h2>
-						<fieldset>
-							<form action="#">
-								Àç·á : <input type="text" name="ingre2"><br> °¹¼ö :<input
-									type="number" name="number2"><br> <input
-									type="button" value="µî·Ï" onClick="mid_save()">
-							</form>
-						</fieldset>
-						<div id="ref2" style="background-color: blue; color: white">
-							<table>
-								<thead>
-									<tr>
-										<td>Àç·á</td>
-										<td>°¹¼ö</td>
-									</tr>
-								</thead>
+                        <tbody id="low">
 
-								<tbody id="mid">
+                        </tbody>
+                     </table>
+                  </div>
+               </div>
+            </div>
+         </div>
+      </div>
 
-								</tbody>
-							</table>
-						</div>
-					</div>
-				</div>
-			</div>
-		</div>
+      <div id="gtco-subscribe" style="background-image: url(images/fruit.jpg)">
+         <div class="gtco-container">
+            <div class="row animate-box">
+               <div class="col-md-8 col-md-offset-2 text-right gtco-heading">
+                  <h2 class="cursive-font">ëƒ‰ì¥ì‹¤</h2>
+                  <fieldset>
+                     <form action="#">
+                        <input type="text" name="ingre2" placeholder="ì¬ë£Œëª…ì„ ì…ë ¥í•˜ì„¸ìš”."><br>
+                        <input type="number" name="number2" placeholder="ê°¯ìˆ˜ë¥¼ ì…ë ¥í•˜ì„¸ìš”."><br>
+                        <input type="button" value="ë“±ë¡" onClick="mid_save()" class="btn">
+                     </form>
+                  </fieldset>
+                  <div id="ref2" style="background-color: red; color: white">
+                     <table>
+                        <thead>
+                           <tr>
+                              <td>ì¬ë£Œ</td>
+                              <td>ã€€ê°¯ìˆ˜</td>
+                           </tr>
+                        </thead>
 
-		<div id="gtco-subscribe" style="background-color: gray">
-			<div class="gtco-container">
-				<div class="row animate-box">
-					<div class="col-md-8 col-md-offset-2 text-center gtco-heading">
-						<h2 class="cursive-font">»ó¿Â</h2>
-						<fieldset>
-							<form action="#">
-								Àç·á : <input type="text" name="ingre3"><br> °¹¼ö :<input
-									type="number" name="number3"><br> <input
-									type="button" value="µî·Ï" onClick="high_save()">
-							</form>
-						</fieldset>
-						<div id="ref3" style="background-color: blue; color: white">
-							<table>
-								<thead>
-									<tr>
-										<td>Àç·á</td>
-										<td>°¹¼ö</td>
-									</tr>
-								</thead>
+                        <tbody id="mid">
 
-								<tbody id="high">
+                        </tbody>
+                     </table>
+                  </div>
+               </div>
+            </div>
+         </div>
+      </div>
 
-								</tbody>
-							</table>
-						</div>
-					</div>
-				</div>
-			</div>
-		</div>
+      <div id="gtco-subscribe" style="background-image: url(images/onion.jpg)">
+         <div class="gtco-container">
+            <div class="row animate-box">
+               <div class="col-md-8 col-md-offset-2 text-right gtco-heading">
+                  <h2 class="cursive-font" style="color: #865439">ìƒì˜¨</h2>
+                  <fieldset>
+                     <form action="#">
+                        <input type="text" name="ingre3" placeholder="ì¬ë£Œëª…ì„ ì…ë ¥í•˜ì„¸ìš”."><br>
+                        <input type="number" name="number3" placeholder="ê°¯ìˆ˜ë¥¼ ì…ë ¥í•˜ì„¸ìš”."><br>
+                        <input type="button" value="ë“±ë¡" onClick="high_save()" class="btn">
+                     </form>
+                  </fieldset>
+                  <div id="ref3" style="background-color: #865439; color: white">
+                     <table>
+                        <thead>
+                           <tr>
+                              <td>ì¬ë£Œ</td>
+                              <td>ã€€ê°¯ìˆ˜</td>
+                           </tr>
+                        </thead>
 
-		<script type="text/javascript"
-			src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-		<script type="text/javascript">
+                        <tbody id="high">
+
+                        </tbody>
+                     </table>
+                  </div>
+               </div>
+            </div>
+         </div>
+      </div>
 	
-	function low_save() {
-		// inputÅÂ±× °ª °¡Á®¿À±â
-		var ingre1 = $('input[name=ingre1]').val();
-		var number1 = $('input[name=number1]').val();
-		// ajax 
-		// ºñµ¿±â Åë½Å
-		
-		$.ajax({
-			url : 'refService', // °ªÀ» º¸³¾ ÁÖ¼Ò
-			type : 'POST', // get or post
-			data : { // Àü´ŞÇÏ°íÀÚÇÏ´Â µ¥ÀÌÅÍ
-				ingre1 : ingre1, //  javascript °´Ã¼ ÇüÅÂ·Î  name : value
-				number1 : number1
-			},
-			//dataType : 'json', // json µ¥ÀÌÅÍ·Î ÀÀ´ä¹ŞÀ» ¶§,
-			success : function(res){ // Åë½ÅÀÌ ¼º°øÇßÀ» ¶§ ½ÇÇàµÇ´Â ÇÔ¼ö
-				// res --> Server¿¡¼­ ÀÀ´äÇØÁØ µ¥ÀÌÅÍ°¡ ¸Å°³º¯¼ö¿¡ ÀÚµ¿À¸·Î ´ã±è
-				low_print(ingre1, number1);
 
-			},
-			error : function(){ // Åë½ÅÀÌ ½ÇÆĞÇÑ°æ¿ì¿¡ ½ÇÇàµÇ´Â ÇÔ¼ö 
-				alert("error");
-			}
-		});
-		
-	}
-	
-	function low_print(ingre1, number1){
-		// div¿¡ Ãß°¡
-		// jqury ¿¡¼­ html ÇÏ´Â ÄÚµå
-		// $('¼±ÅÃÀÚ').html('¹®ÀÚ¿­'); --> µ¤¾î¾²±â ³»¿ë¹°À» ½Ï Áö¿ö¹ö¸®°í '¹®ÀÚ¿­'±³Ã¼
-		// $('¼±ÅÃÀÚ').after(); --> ¼±ÅÃÀÚ ¹Ù·Î ¾Õ¿¡
-		// $('¼±ÅÃÀÚ').before(); --> ¹Ù·ÎµÚ
-		// $('¼±ÅÃÀÚ').append(); --> ¼±ÅÃÀÚ ¾È¿¡ ¿ä¼Ò Ãß°¡ 
-		tr = `
-			<tr> 
-				<td><a href="detail?ingre1=`+ ingre1 +`&number1=`+ number1+`">` + ingre1 +`</a></td>
-				<td>` + number1 + `</td>
-			</tr>
-		`;
-		
-		
-		$('tbody[id=low]').append(tr);
-		
-	}
-	function mid_save() {
-		// inputÅÂ±× °ª °¡Á®¿À±â
-		var ingre2 = $('input[name=ingre2]').val()
-		var number2 = $('input[name=number2]').val()
+	<script type="text/javascript"
+		src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+	<script type="text/javascript">
+   
+   function low_save() {
+      // inputíƒœê·¸ ê°’ ê°€ì ¸ì˜¤ê¸°
+      var ingre1 = $('input[name=ingre1]').val();
+      var number1 = $('input[name=number1]').val();
+      // ajax 
+      // ë¹„ë™ê¸° í†µì‹ 
+      
+      $.ajax({
+         url : 'refService', // ê°’ì„ ë³´ë‚¼ ì£¼ì†Œ
+         type : 'POST', // get or post
+         data : { // ì „ë‹¬í•˜ê³ ìí•˜ëŠ” ë°ì´í„°
+            ingre1 : ingre1, //  javascript ê°ì²´ í˜•íƒœë¡œ  name : value
+            number1 : number1
+         },
+         //dataType : 'json', // json ë°ì´í„°ë¡œ ì‘ë‹µë°›ì„ ë•Œ,
+         success : function(res){ // í†µì‹ ì´ ì„±ê³µí–ˆì„ ë•Œ ì‹¤í–‰ë˜ëŠ” í•¨ìˆ˜
+            // res --> Serverì—ì„œ ì‘ë‹µí•´ì¤€ ë°ì´í„°ê°€ ë§¤ê°œë³€ìˆ˜ì— ìë™ìœ¼ë¡œ ë‹´ê¹€
+            low_print(ingre1, number1);
 
-		// ajax 
-		// ºñµ¿±â Åë½Å
-		
-		$.ajax({
-			url : 'refService', 
-			type : 'post', 
-			data : {
-				'ingre2' : ingre2,
-				'number2' : number2
-			},
-			success : function(res){ 
-				mid_print(ingre2, number2);
+         },
+         error : function(){ // í†µì‹ ì´ ì‹¤íŒ¨í•œê²½ìš°ì— ì‹¤í–‰ë˜ëŠ” í•¨ìˆ˜ 
+            alert("error");
+         }
+      });
+      
+   }
+   
+   function low_print(ingre1, number1){
+      // divì— ì¶”ê°€
+      // jqury ì—ì„œ html í•˜ëŠ” ì½”ë“œ
+      // $('ì„ íƒì').html('ë¬¸ìì—´'); --> ë®ì–´ì“°ê¸° ë‚´ìš©ë¬¼ì„ ì‹¹ ì§€ì›Œë²„ë¦¬ê³  'ë¬¸ìì—´'êµì²´
+      // $('ì„ íƒì').after(); --> ì„ íƒì ë°”ë¡œ ì•ì—
+      // $('ì„ íƒì').before(); --> ë°”ë¡œë’¤
+      // $('ì„ íƒì').append(); --> ì„ íƒì ì•ˆì— ìš”ì†Œ ì¶”ê°€ 
+      tr = `
+         <tr> 
+            <td><a href="detail?ingre1=`+ ingre1 +`&number1=`+ number1+`">` + ingre1 +`</a></td>
+            <td>` + number1 + `</td>
+         </tr>
+      `;
+      
+      
+      $('tbody[id=low]').append(tr);
+      
+   }
+   function mid_save() {
+      // inputíƒœê·¸ ê°’ ê°€ì ¸ì˜¤ê¸°
+      var ingre2 = $('input[name=ingre2]').val()
+      var number2 = $('input[name=number2]').val()
 
-			},
-			error : function(){ 
-				alert("error");
-			}
-		});
-		
-	}
-	function mid_print(ingre2, number2){
-		tr = `
-			<tr> 
-				<td><a href="detail?ingre2=`+ ingre2 +`&number2=`+ number2+`">` + ingre2 +`</a></td>
-				<td>` + number2 + `</td>
-			</tr>
-		`;
-		
-		
-		$('tbody[id=mid]').append(tr);
-		
-	}
-	function high_save() {
-		// inputÅÂ±× °ª °¡Á®¿À±â
-		var ingre3 = $('input[name=ingre3]').val()
-		var number3 = $('input[name=number3]').val()
+      // ajax 
+      // ë¹„ë™ê¸° í†µì‹ 
+      
+      $.ajax({
+         url : 'refService', 
+         type : 'post', 
+         data : {
+            'ingre2' : ingre2,
+            'number2' : number2
+         },
+         success : function(res){ 
+            mid_print(ingre2, number2);
 
-		// ajax 
-		// ºñµ¿±â Åë½Å
-		
-		$.ajax({
-			url : 'refService', 
-			type : 'post', 
-			data : { 
-				'ingre3' : ingre3,
-				'number3' : number3
-			},
-			success : function(res){ 
-				high_print(ingre3, number3);
-			},
-			error : function(){ 
-				alert("error");
-			}
-		});
-		
-	}
+         },
+         error : function(){ 
+            alert("error");
+         }
+      });
+      
+   }
+   function mid_print(ingre2, number2){
+      tr = `
+         <tr> 
+            <td><a href="detail?ingre2=`+ ingre2 +`&number2=`+ number2+`">` + ingre2 +`</a></td>
+            <td>` + number2 + `</td>
+         </tr>
+      `;
+      
+      
+      $('tbody[id=mid]').append(tr);
+      
+   }
+   function high_save() {
+      // inputíƒœê·¸ ê°’ ê°€ì ¸ì˜¤ê¸°
+      var ingre3 = $('input[name=ingre3]').val()
+      var number3 = $('input[name=number3]').val()
 
-	function high_print(ingre3, number3){
+      // ajax 
+      // ë¹„ë™ê¸° í†µì‹ 
+      
+      $.ajax({
+         url : 'refService', 
+         type : 'post', 
+         data : { 
+            'ingre3' : ingre3,
+            'number3' : number3
+         },
+         success : function(res){ 
+            high_print(ingre3, number3);
+         },
+         error : function(){ 
+            alert("error");
+         }
+      });
+      
+   }
 
-		tr = `
-			<tr> 
-				<td><a href="detail?ingre3=`+ ingre3 +`&number3=`+ number3+`">` + ingre3 +`</a></td>
-				<td>` + number3 + `</td>
-			</tr>
-		`;
-		
-		
-		$('tbody[id=high]').append(tr);
-		
-	}
-	</script>
+   function high_print(ingre3, number3){
 
-		<!-- </div> -->
+      tr = `
+         <tr> 
+            <td><a href="detail?ingre3=`+ ingre3 +`&number3=`+ number3+`">` + ingre3 +`</a></td>
+            <td>` + number3 + `</td>
+         </tr>
+      `;
+      
+      
+      $('tbody[id=high]').append(tr);
+      
+   }
+   </script>
+
+	<!-- </div> -->
 
 	</div>
 
 	<div class="gototop js-top">
 		<a href="#" class="js-gotop"><i class="icon-arrow-up"></i></a>
 	</div>
+
+
+<div class="timer"></div>
+<script src="js/timerMain.js" type="module"></script>
+
 
 	<!-- jQuery -->
 	<script src="js/jquery.min.js"></script>

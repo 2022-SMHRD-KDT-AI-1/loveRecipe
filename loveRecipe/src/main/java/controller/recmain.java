@@ -20,6 +20,8 @@ public class recmain extends HttpServlet {
 
 		viewrefVO vo = new viewrefVO(href);
 
+		response.setCharacterEncoding("UTF-8");
+		
 		request.setAttribute("vo", vo);
 
 		RequestDispatcher rd = request.getRequestDispatcher("detailvrec.jsp");

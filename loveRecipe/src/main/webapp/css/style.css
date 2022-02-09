@@ -936,7 +936,7 @@ form label {
 }
 
 #gtco-subscribe {
-  background: #0098EF;
+  background: #3DB2FF;
 }
 #gtco-subscribe .form-control {
   background: transparent;
@@ -967,15 +967,15 @@ form label {
   color: #fff;
 }
 #gtco-subscribe .btn {
-  height: 46px;
+  height: 35px;
   border: none !important;
   background: #FBB448;
   color: #fff;
   font-size: 16px;
   text-transform: uppercase;
   font-weight: 400;
-  padding-left: 50px;
-  padding-right: 50px;
+  padding-left: 71px;
+  padding-right: 71px;
 }
 #gtco-subscribe .form-inline .form-group {
   width: 100% !important;
@@ -1957,6 +1957,16 @@ form label {
   }
 }
 
+#ref1, #ref2, #ref3 {
+	display: flex;
+	justify-content: center;
+	padding: 10;
+	opacity: 0.7;
+}
 
+.column {
+	text-align: justify;
+	column-count: 2;
+}
 
 /*# sourceMappingURL=style.css.map */

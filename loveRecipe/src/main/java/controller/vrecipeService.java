@@ -23,6 +23,8 @@ public class vrecipeService extends HttpServlet {
 		int calory = Integer.parseInt(request.getParameter("calory"));
 
 		viewrefVO vo = new viewrefVO(rname, ingre, calory, type);
+		
+		response.setCharacterEncoding("UTF-8");
 
 		request.setAttribute("vo", vo);
 

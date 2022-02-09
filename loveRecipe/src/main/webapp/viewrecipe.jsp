@@ -229,7 +229,7 @@
 	function save() {
 
 	$.ajax({
-		url : 'viewrecService', // 값을 보낼 주소
+		url : 'vrecipeService', // 값을 보낼 주소
 		type : 'post', // get or post
 		dataType : 'json', // json 데이터로 응답받을 때,
 		success : function(res){ // 통신이 성공했을 때 실행되는 함수
@@ -276,7 +276,7 @@
 	function save1() {
 
 		$.ajax({
-			url : 'vrecsequence', // 값을 보낼 주소
+			url : 'recsequence', // 값을 보낼 주소
 			type : 'post', // get or post
 			dataType : 'json', // json 데이터로 응답받을 때,
 			success : function(res){ // 통신이 성공했을 때 실행되는 함수
@@ -314,7 +314,7 @@
 		function save2() {
 
 			$.ajax({
-				url : 'recmainservice', // 값을 보낼 주소
+				url : 'recmain', // 값을 보낼 주소
 				type : 'post', // get or post
 				dataType : 'json', // json 데이터로 응답받을 때,
 				success : function(res){ // 통신이 성공했을 때 실행되는 함수

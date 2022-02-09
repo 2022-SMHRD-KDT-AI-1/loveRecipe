@@ -20,6 +20,8 @@ public class recsequence extends HttpServlet {
 		String href = request.getParameter("href");
 
 		viewrefVO vo = new viewrefVO(sequence, href);
+		
+		response.setCharacterEncoding("UTF-8");
 
 		request.setAttribute("vo", vo);
 

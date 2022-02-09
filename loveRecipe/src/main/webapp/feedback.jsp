@@ -85,7 +85,7 @@
 					<div class="col-sm-4 col-xs-12">
 						<div id="gtco-logo">
 							<a href="main.jsp"><em class="cursive-font"
-								style="font-size: 3rem">레시피를 부탁해!</em></a>
+								style="font-size: 3rem">레시피를 부탁해</em></a>
 						</div>
 					</div>
 					<div class="col-xs-8 text-right menu-1">
@@ -107,7 +107,7 @@
 		</nav>
 
 		<header id="gtco-header" class="gtco-cover gtco-cover-sm"
-			role="banner" style="background-image: url(images/img_bg_3.jpg)">
+			role="banner" style="background-image: url(images/refrigerator2.jpg)">
 			<div class="overlay"></div>
 			<div class="gtco-container">
 				<div class="row">

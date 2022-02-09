@@ -1,10 +1,15 @@
+<%@page import="java.awt.print.Printable"%>
+<%@page import="model.menuvo"%>
+<%@page import="java.util.ArrayList"%>
+<%@page import="model.MemberVO"%>
+<%@page import="model.DAO"%>
 <%@ page language="java" contentType="text/html; charset=EUC-KR"
 	pageEncoding="EUC-KR"%>
 <!DOCTYPE HTML>
 <!--
-	Aesthetic by gettemplates.co
-	Twitter: http://twitter.com/gettemplateco
-	URL: http://gettemplates.co
+   Aesthetic by gettemplates.co
+   Twitter: http://twitter.com/gettemplateco
+   URL: http://gettemplates.co
 -->
 <html>
 <head>
@@ -34,6 +39,9 @@
 	rel="stylesheet">
 <link href="https://fonts.googleapis.com/css?family=Kaushan+Script"
 	rel="stylesheet">
+<link
+	href="https://fonts.googleapis.com/css2?family=Nanum+Brush+Script&display=swap"
+	rel="stylesheet">
 
 <!-- Animate.css -->
 <link rel="stylesheet" href="css/animate.css">
@@ -61,12 +69,17 @@
 <script src="js/modernizr-2.6.2.min.js"></script>
 <!-- FOR IE9 below -->
 <!--[if lt IE 9]>
-	<script src="js/respond.min.js"></script>
-	<![endif]-->
+   <script src="js/respond.min.js"></script>
+   <![endif]-->
 
 
 </head>
 <body>
+	<%
+		DAO dao = new DAO();
+	MemberVO info = (MemberVO) session.getAttribute("info");
+	ArrayList<menuvo> menulist = (ArrayList) session.getAttribute("menulist");
+	%>
 
 	<div class="gtco-loader"></div>
 
@@ -80,7 +93,8 @@
 				<div class="row">
 					<div class="col-sm-4 col-xs-12">
 						<div id="gtco-logo">
-							<a href="main.jsp">레시피를 부탁해! <em>.</em></a>
+							<a href="main.jsp"><em class="cursive-font"
+								style="font-size: 3rem">레시피를 부탁해</em></a>
 						</div>
 					</div>
 					<div class="col-xs-8 text-right menu-1">
@@ -113,55 +127,33 @@
 						<div class="row row-mt-15em">
 							<div class="col-md-7 mt-text animate-box"
 								data-animate-effect="fadeInUp">
-								<h1 class="cursive-font">로그인을 하세요!</h1>
+								<%
+									if (info != null) {
+								%>
+								<%
+									if (info.getId().equals("admin")) {
+								%>
+								<h1>관리자님 환영합니다</h1>
+								<%
+									}
+								%>
+								<h1><%=info.getNickname()%>
+									님 이 검색하신 결과입니다!
+								</h1>
+								<%
+									} else {
+								%>
+								<h1>로그인을 하세요!</h1>
+								<%
+									}
+								%>
 							</div>
-							<div class="col-md-4 col-md-push-1 animate-box"
-								data-animate-effect="fadeInRight">
-								<div class="form-wrap">
-									<div class="tab">
-
-										<div class="tab-content">
-											<div class="tab-content-inner active" data-content="signup">
-												<h3 class="cursive-font">login</h3>
-												<form action="LoginService" method="POST"">
-													<div class="row form-group"></div>
-													<div class="row form-group">
-														<div class="col-md-12">
-															<label>id</label> <input type="text" name="id"
-																class="form-control">
-														</div>
-													</div>
-
-													<div class="row form-group">
-														<div class="col-md-12">
-															<label>pw</label> <input type="password" name="pw"
-																class="form-control">
-														</div>
-													</div>
-
-													<div class="row form-group">
-														<div class="col-md-12">
-															<input type="submit" class="btn btn-primary btn-block"
-																value="login"> <a href="new.jsp">회원가입</a>
-														</div>
-
-													</div>
 
 
-												</form>
-											</div>
 
-
-										</div>
-									</div>
-								</div>
-							</div>
 						</div>
-
-
 					</div>
 				</div>
-			</div>
 		</header>
 
 
@@ -170,275 +162,115 @@
 			<div class="gtco-container">
 				<div class="row">
 					<div class="col-md-8 col-md-offset-2 text-center gtco-heading">
-						<h2 class="cursive-font primary-color">검색결과창 필요</h2>
+						<h2 class="cursive-font primary-color"><%=menulist.size()%>개의
+							결과가 검색되엇습니다.
+						</h2>
 					</div>
 				</div>
 				<div class="row">
-
+					<%
+						if (menulist != null) {
+						for (int i = 0; i < menulist.size(); i++) {
+					%>
 					<div class="col-lg-4 col-md-4 col-sm-6">
-						<a href="images/img_1.jpg" class="fh5co-card-item image-popup">
+					
+						<div class="fh5co-card-item image-popup">
 							<figure>
 								<div class="overlay">
 									<i class="ti-plus"></i>
 								</div>
-								<img src="images/img_1.jpg" alt="Image" class="img-responsive">
+								<img src=<%=menulist.get(i).getImage()%> alt="Image"
+									class="img-responsive">
 							</figure>
 							<div class="fh5co-text">
-								<h2>Fresh Mushrooms</h2>
-								<p>Far far away, behind the word mountains, far from the
-									countries Vokalia..</p>
-								<p>
-									<span class="price cursive-font">$19.15</span>
-								</p>
+							
+								<h2>요리 이름 : <%=menulist.get(i).getName()%></h2>
+								<h2>국가 분류 : <%=menulist.get(i).getCountry()%></h2>
+								<h2>방법 분류 : <%=menulist.get(i).getFoodtype()%></h2>
+						
+								
+								
+								<h2>총칼로리 : <%=menulist.get(i).getCalory()%>kcal</h2>
+
+							
 							</div>
-						</a>
-					</div>
-					<div class="col-lg-4 col-md-4 col-sm-6">
-						<a href="images/img_2.jpg" class="fh5co-card-item image-popup">
-							<figure>
-								<div class="overlay">
-									<i class="ti-plus"></i>
-								</div>
-								<img src="images/img_2.jpg" alt="Image" class="img-responsive">
-							</figure>
-							<div class="fh5co-text">
-								<h2>Cheese and Garlic Toast</h2>
-								<p>Far far away, behind the word mountains, far from the
-									countries Vokalia..</p>
-								<p>
-									<span class="price cursive-font">$20.99</span>
-								</p>
-							</div>
-						</a>
-					</div>
-					<div class="col-lg-4 col-md-4 col-sm-6">
-						<a href="images/img_3.jpg" class="fh5co-card-item image-popup">
-							<figure>
-								<div class="overlay">
-									<i class="ti-plus"></i>
-								</div>
-								<img src="images/img_3.jpg" alt="Image" class="img-responsive">
-							</figure>
-							<div class="fh5co-text">
-								<h2>Grilled Chiken Salad</h2>
-								<p>Far far away, behind the word mountains, far from the
-									countries Vokalia..</p>
-								<p>
-									<span class="price cursive-font">$8.99</span>
-								</p>
-
-							</div>
-						</a>
-					</div>
-
-
-					<div class="col-lg-4 col-md-4 col-sm-6">
-						<a href="images/img_4.jpg" class="fh5co-card-item image-popup">
-							<figure>
-								<div class="overlay">
-									<i class="ti-plus"></i>
-								</div>
-								<img src="images/img_4.jpg" alt="Image" class="img-responsive">
-							</figure>
-							<div class="fh5co-text">
-								<h2>Organic Egg</h2>
-								<p>Far far away, behind the word mountains, far from the
-									countries Vokalia..</p>
-								<p>
-									<span class="price cursive-font">$12.99</span>
-								</p>
-							</div>
-						</a>
-					</div>
-
-					<div class="col-lg-4 col-md-4 col-sm-6">
-						<a href="images/img_5.jpg" class="fh5co-card-item image-popup">
-							<figure>
-								<div class="overlay">
-									<i class="ti-plus"></i>
-								</div>
-								<img src="images/img_5.jpg" alt="Image" class="img-responsive">
-							</figure>
-							<div class="fh5co-text">
-								<h2>Tomato Soup with Chicken</h2>
-								<p>Far far away, behind the word mountains, far from the
-									countries Vokalia..</p>
-								<p>
-									<span class="price cursive-font">$23.10</span>
-								</p>
-							</div>
-						</a>
-					</div>
-
-					<div class="col-lg-4 col-md-4 col-sm-6">
-						<a href="images/img_6.jpg" class="fh5co-card-item image-popup">
-							<figure>
-								<div class="overlay">
-									<i class="ti-plus"></i>
-								</div>
-								<img src="images/img_6.jpg" alt="Image" class="img-responsive">
-							</figure>
-							<div class="fh5co-text">
-								<h2>Salad with Crispy Chicken</h2>
-								<p>Far far away, behind the word mountains, far from the
-									countries Vokalia..</p>
-								<p>
-									<span class="price cursive-font">$5.59</span>
-								</p>
-							</div>
-						</a>
-					</div>
-
-				</div>
-			</div>
-		</div>
-
-		<div id="gtco-features">
-			<div class="gtco-container">
-				<div class="row">
-					<div
-						class="col-md-8 col-md-offset-2 text-center gtco-heading animate-box">
-						<h2 class="cursive-font">Our Services</h2>
-						<p>사용자들의 행복은 언제나 개발자의 행복</p>
-					</div>
-				</div>
-				<div class="row">
-					<div class="col-md-4 col-sm-6">
-						<div class="feature-center animate-box"
-							data-animate-effect="fadeIn">
-							<span class="icon"> <i class="ti-face-smile"></i>
-							</span>
-							<h3>Happy</h3>
-							<p>요리하는 즐거움</p>
 						</div>
+					<a href="viewrecipen.jsp">레시피 보기</a><br><br>
 					</div>
-					<div class="col-md-4 col-sm-6">
-						<div class="feature-center animate-box"
-							data-animate-effect="fadeIn">
-							<span class="icon"> <i class="ti-thought"></i>
-							</span>
-							<h3>Creative</h3>
-							<p>창의적인 레시피</p>
-						</div>
-					</div>
-					<div class="col-md-4 col-sm-6">
-						<div class="feature-center animate-box"
-							data-animate-effect="fadeIn">
-							<span class="icon"> <i class="ti-check"></i>
-							</span>
-							<h3>check</h3>
-							<p>냉장고 관리</p>
-						</div>
-					</div>
-					<div class="col-md-4 col-sm-6">
-						<div class="feature-center animate-box"
-							data-animate-effect="fadeIn">
-							<span class="icon"> <i class="ti-timer"></i>
-							</span>
-							<h3>Time</h3>
-							<p>레시피 고민시간 감소</p>
-						</div>
-					</div>
-
-
-				</div>
-
-			</div>
-		</div>
+					<%
+						}
+					}
+					%>
 
 
 
 
 
-		<div id="gtco-subscribe">
-			<div class="gtco-container">
-				<div class="row animate-box">
-					<div class="col-md-8 col-md-offset-2 text-center gtco-heading">
-						<h2 class="cursive-font">feedback</h2>
-						<p>사이트를 쓰면서 불편햇던점을 보내주세요!</p>
-					</div>
-				</div>
-				<div class="row animate-box">
-					<div class="col-md-8 col-md-offset-2">
-						<form class="form-inline">
-							<div class="col-md-6 col-sm-6">
-								<div class="form-group">
-									<label for="feedback" class="sr-only">feedback</label> <input
-										type="feedback" class="form-control" id="feedback"
-										placeholder="불편했던점을 보내주세요!">
+
+
+
+
+					<footer id="gtco-footer" role="contentinfo"
+						style="background-image: url(images/img_bg_1.jpg)"
+						data-stellar-background-ratio="0.5">
+						<div class="overlay"></div>
+						<div class="gtco-container">
+							<div class="row row-pb-md">
+
+
+
+
+								<div class="col-md-12 text-center">
+									<div class="gtco-widget">
+										<h3>Get Social</h3>
+										<ul class="gtco-social-icons">
+											<li><a href="#"><i class="icon-twitter"></i></a></li>
+											<li><a href="#"><i class="icon-facebook"></i></a></li>
+											<li><a href="#"><i class="icon-linkedin"></i></a></li>
+											<li><a href="#"><i class="icon-dribbble"></i></a></li>
+										</ul>
+									</div>
 								</div>
+
 							</div>
-							<div class="col-md-6 col-sm-6">
-								<button type="submit" class="btn btn-default btn-block">send</button>
-							</div>
-						</form>
-					</div>
-				</div>
-			</div>
-		</div>
-
-		<footer id="gtco-footer" role="contentinfo"
-			style="background-image: url(images/img_bg_1.jpg)"
-			data-stellar-background-ratio="0.5">
-			<div class="overlay"></div>
-			<div class="gtco-container">
-				<div class="row row-pb-md">
 
 
 
-
-					<div class="col-md-12 text-center">
-						<div class="gtco-widget">
-							<h3>Get Social</h3>
-							<ul class="gtco-social-icons">
-								<li><a href="#"><i class="icon-twitter"></i></a></li>
-								<li><a href="#"><i class="icon-facebook"></i></a></li>
-								<li><a href="#"><i class="icon-linkedin"></i></a></li>
-								<li><a href="#"><i class="icon-dribbble"></i></a></li>
-							</ul>
 						</div>
-					</div>
+					</footer>
+					<!-- </div> -->
 
 				</div>
 
+				<div class="gototop js-top">
+					<a href="#" class="js-gotop"><i class="icon-arrow-up"></i></a>
+				</div>
+
+				<!-- jQuery -->
+				<script src="js/jquery.min.js"></script>
+				<!-- jQuery Easing -->
+				<script src="js/jquery.easing.1.3.js"></script>
+				<!-- Bootstrap -->
+				<script src="js/bootstrap.min.js"></script>
+				<!-- Waypoints -->
+				<script src="js/jquery.waypoints.min.js"></script>
+				<!-- Carousel -->
+				<script src="js/owl.carousel.min.js"></script>
+				<!-- countTo -->
+				<script src="js/jquery.countTo.js"></script>
+
+				<!-- Stellar Parallax -->
+				<script src="js/jquery.stellar.min.js"></script>
+
+				<!-- Magnific Popup -->
+				<script src="js/jquery.magnific-popup.min.js"></script>
+				<script src="js/magnific-popup-options.js"></script>
+
+				<script src="js/moment.min.js"></script>
+				<script src="js/bootstrap-datetimepicker.min.js"></script>
 
 
-			</div>
-		</footer>
-		<!-- </div> -->
-
-	</div>
-
-	<div class="gototop js-top">
-		<a href="#" class="js-gotop"><i class="icon-arrow-up"></i></a>
-	</div>
-
-	<!-- jQuery -->
-	<script src="js/jquery.min.js"></script>
-	<!-- jQuery Easing -->
-	<script src="js/jquery.easing.1.3.js"></script>
-	<!-- Bootstrap -->
-	<script src="js/bootstrap.min.js"></script>
-	<!-- Waypoints -->
-	<script src="js/jquery.waypoints.min.js"></script>
-	<!-- Carousel -->
-	<script src="js/owl.carousel.min.js"></script>
-	<!-- countTo -->
-	<script src="js/jquery.countTo.js"></script>
-
-	<!-- Stellar Parallax -->
-	<script src="js/jquery.stellar.min.js"></script>
-
-	<!-- Magnific Popup -->
-	<script src="js/jquery.magnific-popup.min.js"></script>
-	<script src="js/magnific-popup-options.js"></script>
-
-	<script src="js/moment.min.js"></script>
-	<script src="js/bootstrap-datetimepicker.min.js"></script>
-
-
-	<!-- Main -->
-	<script src="js/main.js"></script>
-
+				<!-- Main -->
+				<script src="js/main.js"></script>
 </body>
 </html>

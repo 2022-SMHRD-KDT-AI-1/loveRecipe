@@ -1,5 +1,5 @@
-<%@ page language="java" contentType="text/html; charset=EUC-KR"
-	pageEncoding="EUC-KR"%>
+<%@ page language="java" contentType="text/html; charset=utf-8"
+	pageEncoding="utf-8"%>
 <!DOCTYPE HTML>
 <!--
 	Aesthetic by gettemplates.co
@@ -10,7 +10,7 @@
 <head>
 <meta charset="utf-8">
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
-<title>·¹½ÃÇÇ¸¦ ºÎÅ¹ÇØ &mdash; Free Website Template, Free HTML5
+<title>ë ˆì‹œí”¼ë¥¼ ë¶€íƒí•´ &mdash; Free Website Template, Free HTML5
 	Template by GetTemplates.co</title>
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <meta name="description"
@@ -37,6 +37,8 @@
 <link
 	href="https://fonts.googleapis.com/css2?family=Nanum+Brush+Script&display=swap"
 	rel="stylesheet">
+<link href="https://fonts.googleapis.com/icon?family=Material+Icons"
+      rel="stylesheet">
 
 <!-- Animate.css -->
 <link rel="stylesheet" href="css/animate.css">
@@ -84,7 +86,7 @@
 					<div class="col-sm-4 col-xs-12">
 						<div id="gtco-logo">
 							<a href="main.jsp"><em class="cursive-font"
-								style="font-size: 3rem">·¹½ÃÇÇ¸¦ ºÎÅ¹ÇØ!</em></a>
+								style="font-size: 3rem">ë ˆì‹œí”¼ë¥¼ ë¶€íƒí•´</em></a>
 						</div>
 					</div>
 					<div class="col-xs-8 text-right menu-1">
@@ -92,9 +94,9 @@
 							<li><a href="menu.jsp">Menu</a></li>
 							<li class="has-dropdown"><a href="services.jsp">Services</a>
 								<ul class="dropdown">
-									<li><a href="refigator.jsp">³ª¸¸ÀÇ ³ÃÀå°í</a></li>
-									<li><a href="mealplan.jsp">½Ä´ÜÂ¥±â</a></li>
-									<li><a href="newrecipe.jsp">·¹½ÃÇÇµî·Ï</a></li>
+									<li><a href="refigator.jsp">ë‚˜ë§Œì˜ ëƒ‰ìž¥ê³ </a></li>
+									<li><a href="mealplan.jsp">ì‹ë‹¨ì§œê¸°</a></li>
+									<li><a href="newrecipe.jsp">ë ˆì‹œí”¼ë“±ë¡</a></li>
 								</ul></li>
 							<li><a href="feedback.jsp">feedback</a></li>
 							<li class="btn-cta"><a href="main.jsp"><span>login</span></a></li>
@@ -106,7 +108,7 @@
 		</nav>
 
 		<header id="gtco-header" class="gtco-cover gtco-cover-md"
-			role="banner" style="background-image: url(images/img_bg_1.jpg)"
+			role="banner" style="background-image: url(images/main.jpg)"
 			data-stellar-background-ratio="0.5">
 			<div class="overlay"></div>
 			<div class="gtco-container">
@@ -119,7 +121,7 @@
 								data-animate-effect="fadeInUp">
 								<h1>find your recipe</h1>
 							</div>
-							<div class="col-md-4 col-md-push-1 animate-box"
+							<div class="col-md-5 col-md-push-1 animate-box"
 								data-animate-effect="fadeInRight">
 								<div class="form-wrap">
 									<div class="tab">
@@ -127,77 +129,59 @@
 										<div class="tab-content">
 											<div class="tab-content-inner active" data-content="signup">
 												<h3 class="cursive-font">search</h3>
-												<form action="recipesearch">
+												<form action="menuservice">
+
+
 
 													<div class="row form-group">
-														<label>ÁÖÀç·áº°</label><br> <label><input
-															type="radio" name="ingrident" value="fork">µÅÁö°í±â</label> <label><input
-															type="radio" name="ingrident" value="beaf">¼Ò°í±â</label> <label><input
-															type="radio" name="ingrident" value="chicken">´ß°í±â</label>
-														<label><input type="radio" name="ingrident"
-															value="fish">»ý¼±</label> <label><input
-															type="radio" name="ingrident" value="noodle">¸é</label> <label><input
-															type="radio" name="ingrident" value="fruit">°úÀÏ</label> <label><input
-															type="radio" name="ingrident" value="rice">½Ò</label> <label><input
-															type="radio" name="ingrident" value="duck">¿À¸®°í±â</label>
+														<label>ë‚˜ë¼ë³„ë ˆì‹œí”¼</label><br> <label><input
+															type="radio" name="contry" value="í•œì‹">í•œì‹</label> <label><input
+															type="radio" name="contry" value="ì–‘ì‹">ì–‘ì‹</label> <label><input
+															type="radio" name="contry" value="ì¤‘ì‹">ì¤‘ì‹</label> <label><input
+															type="radio" name="contry" value="ì¼ì‹">ì¼ì‹</label> <label><input
+															type="radio" name="contry" value="ë™ë‚¨ì•„">ë™ë‚¨ì•„</label> <label><input
+															type="radio" name="contry" value="ì´íƒˆë¦¬ì•„">ì´íƒˆë¦¬ì•„</label> <label><input
+															type="radio" name="contry" value="ë©•ì‹œì½”">ë©•ì‹œì½”</label> <label><input
+															type="radio" name="contry" value="í“¨ì „">í“¨ì „</label> <label><input
+															type="radio" name="contry" value="ë‚ ì”¨">ë‚ ì”¨</label>
 													</div>
 
 													<div class="row form-group">
-														<label>³ª¶óº°·¹½ÃÇÇ</label><br> <label><input
-															type="radio" name="object" value="korea">ÇÑ½Ä</label> <label><input
-															type="radio" name="object" value="western">¾ç½Ä</label> <label><input
-															type="radio" name="object" value="china">Áß½Ä</label> <label><input
-															type="radio" name="object" value="japan">ÀÏ½Ä</label> <label><input
-															type="radio" name="object" value="se_asia">µ¿³²¾Æ</label> <label><input
-															type="radio" name="object" value="italy">ÀÌÅ»¸®¾Æ</label> <label><input
-															type="radio" name="object" value="mexico">¸ß½ÃÄÚ</label> <label><input
-															type="radio" name="object" value="fusion">Ç»Àü</label> <label><input
-															type="radio" name="object" value="fusion">³¯¾¾</label>
-													</div>
-													<div class="row form-group">
-														<label>Á¾·ùº°·¹½ÃÇÇ</label><br> <label><input
-															type="radio" name="type" value="guie">±¸ÀÌ</label> <label><input
-															type="radio" name="type" value="guk">±¹</label> <label><input
-															type="radio" name="type" value="grtang">±×¶óÅÁ/¸®Á¶¶Ç</label> <label><input
-															type="radio" name="type" value="namul">³ª¹°/»ýÃ¤/»ø·¯µå</label>
-														<label><input type="radio" name="type"
-															value="ttuk">¶±/ÇÑ°ú</label> <label><input
-															type="radio" name="type" value="dosilack">µµ½Ã¶ô/°£½Ä</label>
-														<label><input type="radio" name="type"
-															value="mundu">¸¸µÎ/¸é·ù</label> <label><input
-															type="radio" name="type" value="kimchi">¹Ø¹ÝÂù/±èÄ¡</label> <label><input
-															type="radio" name="type" value="bap">¹ä/Á×/½ºÇÁ</label> <label><input
-															type="radio" name="type" value="bokum">ººÀ½</label> <label><input
-															type="radio" name="type" value="buchim">ºÎÄ§</label> <label><input
-															type="radio" name="type" value="bbang">»§/°úÀÚ</label> <label><input
-															type="radio" name="type" value="sandwich">»÷µåÀ§Ä¡/ÇÜ¹ö°Å</label>
+                                             <label>ì¢…ë¥˜ë³„ë ˆì‹œí”¼</label><br>
+                                                <label><input type="radio" name="type" value="êµ¬ì´">êµ¬ì´</label>
+                                             <label><input type="radio" name="type" value="êµ­">êµ­</label>
+                                             <label><input type="radio" name="type" value="ê·¸ë¼íƒ•,ë¦¬ì¡°ë˜">ê·¸ë¼íƒ•/ë¦¬ì¡°ë˜</label>
+                                             <label><input type="radio" name="type" value="ë‚˜ë¬¼,ìƒì±„,ìƒëŸ¬ë“œ">ë‚˜ë¬¼/ìƒì±„/ìƒëŸ¬ë“œ</label>
+                                             <label><input type="radio" name="type" value="ë–¡,í•œê³¼">ë–¡,í•œê³¼</label>
+                                             <label><input type="radio" name="type" value="ë„ì‹œë½,ê°„ì‹">ë„ì‹œë½/ê°„ì‹</label>
+                                             <label><input type="radio" name="type" value="ë§Œë‘,ë©´ë¥˜">ë§Œë‘/ë©´ë¥˜</label>
+                                             <label><input type="radio" name="type" value="ë°‘ë°˜ì°¬,ê¹€ì¹˜">ë°‘ë°˜ì°¬/ê¹€ì¹˜</label>
+                                             
+                                             <label><input type="radio" name="type" value="ë°¥,ì£½,ìŠ¤í”„">ë°¥/ì£½/ìŠ¤í”„</label>
+                                             <label><input type="radio" name="type" value="ë³¶ìŒ">ë³¶ìŒ</label>
+                                             <label><input type="radio" name="type" value="ë¶€ì¹¨">ë¶€ì¹¨</label>
+                                             <label><input type="radio" name="type" value="ë¹µ,ê³¼ìž">ë¹µ/ê³¼ìž</label>
+                                             <label><input type="radio" name="type" value="ìƒŒë“œìœ„ì¹˜,í–„ë²„ê±°">ìƒŒë“œìœ„ì¹˜/í–„ë²„ê±°</label>
+                                             
+                                             <label><input type="radio" name="type" value="ì–‘ë…ìž¥">ì–‘ë…ìž¥</label>
+                                             <label><input type="radio" name="type" value="ì–‘ì‹">ì–‘ì‹</label>
+                                             <label><input type="radio" name="type" value="ìŒë£Œ">ìŒë£Œ</label>
+                                             
+                                             <label><input type="radio" name="type" value="ì¡°ë¦¼">ì¡°ë¦¼</label>
+                                             <label><input type="radio" name="type" value="ì°Œê°œ,ì „ê³¨,ìŠ¤íŠœ">ì°Œê°œ/ì „ê³¨/ìŠ¤íŠœ</label>
+                                             <label><input type="radio" name="type" value="ì°œ">ì°œ</label>
+                                             <label><input type="radio" name="type" value="í”¼ìž">í”¼ìž</label>
+                                             <label><input type="radio" name="type" value="í›„ì‹">í›„ì‹</label>
+                                             <label><input type="radio" name="type" value="íŠ€ê¹€,ì»¤í‹€ë¦¿">íŠ€ê¹€/ì»¤í‹€ë¦¿</label>
+                                    </div>
 
-														<label><input type="radio" name="type"
-															value="yangnum">¾ç³äÀå</label> <label><input
-															type="radio" name="type" value="yangsik">¾ç½Ä</label> <label><input
-															type="radio" name="type" value="umryo">À½·á</label> <label><input
-															type="radio" name="type" value="jorim">Á¶¸²</label> <label><input
-															type="radio" name="type" value="zzikae">Âî°³/Àü°ñ/½ºÆ©</label>
-														<label><input type="radio" name="type"
-															value="zzim">Âò</label> <label><input type="radio"
-															name="type" value="pizza">ÇÇÀÚ</label> <label><input
-															type="radio" name="type" value="husik">ÈÄ½Ä</label> <label><input
-															type="radio" name="type" value="tikim">Æ¢±è/Ä¿Æ²¸´</label>
-													</div>
+<div class="gtco-container">
+
 
 													<div class="row form-group">
 
-														<label>Á¦Ã¶±¸ºÐÀ¯¹«</label> <label>(°¡Á®¿À´Â ·¹½ÃÇÇÀÇ Àç·áÀÇ Á¦Ã¶À¯¹«¸¦
-															ÆÇ´Ü)</label> <select class="form-control" name="seasonal">
-															<option value="o">o</option>
-															<option value="x">x</option>
-														</select>
-
-													</div>
-													<div class="row form-group">
-
-														<label>ÃÖ´ë Ä®·Î¸® ÁöÁ¤</label> <input type="number" name="kcal"
-															class="form-control" placeholder="¿øÇÏ½Ã´Â Ä®·Î¸®ÀÇ ÃÖ´ë°ª">
+														<label>ìµœëŒ€ ì¹¼ë¡œë¦¬ ì§€ì •</label> <input type="number" name="kcal"
+															class="form-control" placeholder="ì›í•˜ì‹œëŠ” ì¹¼ë¡œë¦¬ì˜ ìµœëŒ€ê°’">
 													</div>
 
 
@@ -214,7 +198,7 @@
 
 												</form>
 											</div>
-
+</div>
 
 										</div>
 									</div>
@@ -238,9 +222,9 @@
 			<div class="gtco-container text-center">
 				<div class="display-t">
 					<div class="display-tc">
-						<h1 class="cursive-font">&ldquo;À½½Ä¿¡ ´ëÇÑ »ç¶ûÃ³·³ Áø½ÇµÈ »ç¶ûÀº
-							¾ø´Ù.&rdquo;</h1>
-						<p>&mdash; Á¶Áö ¹ö³ªµå ¼î</p>
+						<h1 class="cursive-font">&ldquo;ìŒì‹ì— ëŒ€í•œ ì‚¬ëž‘ì²˜ëŸ¼ ì§„ì‹¤ëœ ì‚¬ëž‘ì€
+							ì—†ë‹¤.&rdquo;</h1>
+						<p>&mdash; ì¡°ì§€ ë²„ë‚˜ë“œ ì‡¼</p>
 					</div>
 				</div>
 			</div>
@@ -285,6 +269,11 @@
 	<div class="gototop js-top">
 		<a href="#" class="js-gotop"><i class="icon-arrow-up"></i></a>
 	</div>
+
+
+<div class="timer"></div>
+<script src="js/timerMain.js" type="module"></script>
+
 
 	<!-- jQuery -->
 	<script src="js/jquery.min.js"></script>
