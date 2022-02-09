@@ -345,7 +345,7 @@
 						data-animate-effect="fadeInUp">
 						<div class="feature-center">
 							<span class="counter js-counter" data-from="0"
-								data-to="18" data-speed="3000"
+								data-to="<%=foodType %>" data-speed="3000"
 								data-refresh-interval="50">1</span> <span class="counter-label">조리
 								방법</span>
 						</div>
@@ -354,7 +354,7 @@
 						data-animate-effect="fadeInUp">
 						<div class="feature-center">
 							<span class="counter js-counter" data-from="0"
-								data-to="178" data-speed="3000"
+								data-to="<%=memberCount %>" data-speed="3000"
 								data-refresh-interval="50">1</span> <span class="counter-label">총
 								회원수</span>
 						</div>
@@ -363,7 +363,7 @@
 						data-animate-effect="fadeInUp">
 						<div class="feature-center">
 							<span class="counter js-counter" data-from="0"
-								data-to="1482" data-speed="3000"
+								data-to="<%=recipeCount %>" data-speed="3000"
 								data-refresh-interval="50">1</span> <span class="counter-label">레시피
 								수</span>
 
