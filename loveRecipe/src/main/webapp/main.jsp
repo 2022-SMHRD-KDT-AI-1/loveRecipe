@@ -4,9 +4,9 @@
 	pageEncoding="EUC-KR"%>
 <!DOCTYPE HTML>
 <!--
-   Aesthetic by gettemplates.co
-   Twitter: http://twitter.com/gettemplateco
-   URL: http://gettemplates.co
+	Aesthetic by gettemplates.co
+	Twitter: http://twitter.com/gettemplateco
+	URL: http://gettemplates.co
 -->
 <html>
 <head>
@@ -39,8 +39,6 @@
 <link
 	href="https://fonts.googleapis.com/css2?family=Nanum+Brush+Script&display=swap"
 	rel="stylesheet">
-<link href="https://fonts.googleapis.com/icon?family=Material+Icons"
-      rel="stylesheet">
 
 <!-- Animate.css -->
 <link rel="stylesheet" href="css/animate.css">
@@ -68,8 +66,8 @@
 <script src="js/modernizr-2.6.2.min.js"></script>
 <!-- FOR IE9 below -->
 <!--[if lt IE 9]>
-   <script src="js/respond.min.js"></script>
-   <![endif]-->
+	<script src="js/respond.min.js"></script>
+	<![endif]-->
 
 
 </head>
@@ -79,15 +77,17 @@
 
 
 	<%
-		DAO dao = new DAO();
+	 	DAO dao = new DAO();
 		MemberVO info = (MemberVO) session.getAttribute("info");
-
-		int foodType = dao.foodType();
-		int memberCount = dao.memberCount();
+		
 		int recipeCount = dao.recipeCount();
+		System.out.println("recipeCount : " + recipeCount);
+		int membercount = dao.memberCount();
+		System.out.println("memberCount : " + membercount);
+
 	%>
 
-
+	
 	<div class="gtco-loader"></div>
 
 	<div id="page">
@@ -250,6 +250,7 @@
 
 			
 		</div>
+<<<<<<< HEAD
 
 		<div id="gtco-features" style="background-color: #3DB2FF;">
 			<div class="gtco-container">
@@ -269,6 +270,234 @@
 							<h3>Happy</h3>
 							<p>요리하는 즐거움</p>
 						</div>
+=======
+
+	
+	<div id="gtco-features">
+		<div class="gtco-container">
+			<div class="row">
+				<div class="col-md-8 col-md-offset-2 text-center gtco-heading animate-box">
+					<h2 class="cursive-font">Our Services</h2>
+					<p>사용자들의 행복은 언제나 개발자의 행복</p>
+				</div>
+			</div>
+			<div class="row">
+				<div class="col-md-4 col-sm-6">
+					<div class="feature-center animate-box" data-animate-effect="fadeIn">
+						<span class="icon">
+							<i class="ti-face-smile"></i>
+						</span>
+						<h3>Happy</h3>
+						<p>요리하는 즐거움</p>
+					</div>
+				</div>
+				<div class="col-md-4 col-sm-6">
+					<div class="feature-center animate-box" data-animate-effect="fadeIn">
+						<span class="icon">
+							<i class="ti-thought"></i>
+						</span>
+						<h3>Creative</h3>
+						<p>창의적인 레시피</p>
+					</div>
+				</div>
+				<div class="col-md-4 col-sm-6">
+					<div class="feature-center animate-box" data-animate-effect="fadeIn">
+						<span class="icon">
+							<i class="ti-check"></i>
+						</span>
+						<h3>check</h3>
+						<p>냉장고 관리</p>
+					</div>
+				</div>
+				<div class="col-md-4 col-sm-6">
+					<div class="feature-center animate-box" data-animate-effect="fadeIn">
+						<span class="icon">
+							<i class="ti-timer"></i>
+						</span>
+						<h3>Time</h3>
+						<p>레시피 고민시간 감소</p>
+					</div>
+				</div>
+				
+
+			</div>
+		
+		</div>
+	</div>
+
+
+
+  
+  <script type="text/javascript">
+    var count = 0;
+    var time = 0;
+    var choice = 0;
+
+    function noodle() {
+
+      clearInterval(time); // 타이머 우선 초기화 시켜주기(time initialize)
+      /* 
+       
+          ID로 가져오기
+         // select의 value를 가져오기 : value
+         var val = document.getElementById("selid").value;
+         alert(val);   // 확인용
+         // select의 index값을 가져오기 : selectedIndex
+         var indexNum = document.getElementById("selid").selectedIndex;
+         alert(indexNum);   // 확인용
+       */
+
+
+      //    name으로 index 찾기
+      choice = document.frm.myChoice.selectedIndex;
+      //   alert(choice);
+
+      // 찾은 index로 value찾기
+      count = parseInt(document.frm.myChoice.options[choice].value);
+
+      alert(count);
+
+      // 타이머 함수 1초씩 호출하는 함수 만들기
+      time = setInterval("myTimer()", 1000);
+
+    }
+
+    function myTimer() {
+      count = count - 1; // 타이머 선택 숫자에서 -1씩 감산함(갱신되기 때문)
+
+      document.getElementById("countdown").innerHTML = "완료까지 <b>" + count + "</b>초 남았습니다.";
+      if (count == 0) {
+        clearInterval(time); // 시간 초기화
+        alert("시간이 완료되었습니다.")
+      }
+    }
+
+    document.oncontextmenu = function () {
+      alert("마우스의 우클릭은 사용할 수 없습니다.")
+      return false;
+    }
+  </script>
+
+
+	<div class="gtco-cover gtco-cover-sm" style="background-image: url(images/img_bg_1.jpg)"  data-stellar-background-ratio="0.5">
+		<div class="overlay"></div>
+		<div class="gtco-container text-center">
+			<div class="display-t">
+				<div class="display-tc">
+					<h1 class="cursive-font">&ldquo;음식에 대한 사랑처럼 진실된 사랑은 없다.&rdquo;</h1>
+					<p>&mdash; 조지 버나드 쇼</p>
+				</div>	
+			</div>
+		</div>
+	</div>
+
+	<div id="gtco-counter" class="gtco-section">
+		<div class="gtco-container">
+
+			<div class="row">
+				<div class="col-md-8 col-md-offset-2 text-center gtco-heading animate-box">
+					<h2 class="cursive-font primary-color">그거 아세요? </h2>
+					<p>식사법이 잘못되었다면 약이 소용없고, 식사법이 옳다면 약이 필요없다</p>
+				</div>
+			</div>
+
+			<div class="row">
+				
+				<div class="col-md-3 col-sm-6 animate-box" data-animate-effect="fadeInUp">
+					<div class="feature-center">
+						<span class="counter js-counter" data-from="0" data-to="5" data-speed="5000" data-refresh-interval="50">1</span>
+						<span class="counter-label">평균 평점</span>
+
+					</div>
+				</div>
+				<div class="col-md-3 col-sm-6 animate-box" data-animate-effect="fadeInUp">
+					<div class="feature-center">
+						<span class="counter js-counter" data-from="0" data-to="43" data-speed="5000" data-refresh-interval="50">1</span>
+						<span class="counter-label">조리 방법</span>
+					</div>
+				</div>
+				<div class="col-md-3 col-sm-6 animate-box" data-animate-effect="fadeInUp">
+					<div class="feature-center">
+						<span class="counter js-counter" data-from="0" data-to="<%=membercount%>" data-speed="5000" data-refresh-interval="50">1</span>
+						<span class="counter-label">총 회원수</span>
+					</div>
+				</div>
+				<div class="col-md-3 col-sm-6 animate-box" data-animate-effect="fadeInUp">
+					<div class="feature-center">
+						<span class="counter js-counter" data-from="0" data-to="<%=recipeCount %>"  data-speed="5000" data-refresh-interval="50">1</span>
+						<span class="counter-label">레시피 수</span>
+
+					</div>
+				</div>
+					
+			</div>
+		</div>
+	</div>
+
+	
+
+	
+
+	<footer id="gtco-footer" role="contentinfo" style="background-image: url(images/img_bg_1.jpg)" data-stellar-background-ratio="0.5">
+		<div class="overlay"></div>
+		<div class="gtco-container">
+			<div class="row row-pb-md">
+
+				
+
+				
+				<div class="col-md-12 text-center">
+					<div class="gtco-widget">
+						<h3>Get Social</h3>
+						<ul class="gtco-social-icons">
+							<li><a href="#"><i class="icon-twitter"></i></a></li>
+							<li><a href="#"><i class="icon-facebook"></i></a></li>
+							<li><a href="#"><i class="icon-linkedin"></i></a></li>
+							<li><a href="#"><i class="icon-dribbble"></i></a></li>
+
+						</ul>
+					</div>
+				</div>
+
+			</div>
+	
+
+	</div>
+
+	<div class="gototop js-top">
+		<a href="#" class="js-gotop"><i class="icon-arrow-up"></i></a>
+	</div>
+
+	<!-- jQuery -->
+	<script src="js/jquery.min.js"></script>
+	<!-- jQuery Easing -->
+	<script src="js/jquery.easing.1.3.js"></script>
+	<!-- Bootstrap -->
+	<script src="js/bootstrap.min.js"></script>
+	<!-- Waypoints -->
+	<script src="js/jquery.waypoints.min.js"></script>
+	<!-- Carousel -->
+	<script src="js/owl.carousel.min.js"></script>
+	<!-- countTo -->
+	<script src="js/jquery.countTo.js"></script>
+
+	<!-- Stellar Parallax -->
+	<script src="js/jquery.stellar.min.js"></script>
+
+	<!-- Magnific Popup -->
+	<script src="js/jquery.magnific-popup.min.js"></script>
+	<script src="js/magnific-popup-options.js"></script>
+
+	<script src="js/moment.min.js"></script>
+	<script src="js/bootstrap-datetimepicker.min.js"></script>
+
+
+	<!-- Main -->
+	<script src="js/main.js"></script>
+
+</body>
+=======
+>>>>>>> refs/remotes/origin/master
 					</div>
 					<div class="col-md-4 col-sm-6">
 						<div class="feature-center animate-box"
@@ -345,7 +574,11 @@
 						data-animate-effect="fadeInUp">
 						<div class="feature-center">
 							<span class="counter js-counter" data-from="0"
+<<<<<<< HEAD
 								data-to="18" data-speed="3000"
+=======
+								data-to="" data-speed="3000"
+>>>>>>> refs/remotes/origin/master
 								data-refresh-interval="50">1</span> <span class="counter-label">조리
 								방법</span>
 						</div>
@@ -354,7 +587,11 @@
 						data-animate-effect="fadeInUp">
 						<div class="feature-center">
 							<span class="counter js-counter" data-from="0"
+<<<<<<< HEAD
 								data-to="178" data-speed="3000"
+=======
+								data-to="<%=membercount%>" data-speed="3000"
+>>>>>>> refs/remotes/origin/master
 								data-refresh-interval="50">1</span> <span class="counter-label">총
 								회원수</span>
 						</div>
@@ -440,4 +677,5 @@
 			<!-- Main -->
 			<script src="js/main.js"></script>
 </body>
+
 </html>

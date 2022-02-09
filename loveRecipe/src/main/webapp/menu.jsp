@@ -78,10 +78,88 @@
 	<div id="page">
 
 
+<header>
+	<div class="row row-mt-15em">
+						<div class="col-md-7 mt-text animate-box" data-animate-effect="fadeInUp">
+							<h1 > find your recipe </h1>	
+						</div>
+						
+					</div>
+							
+					
+				</div>
+			</div>
+		</div>
+	
+	</header>
+				
+
+					
+										
+		<div class="gtco-container" style=" font-size:1.5em ">
+											<h3 class="cursive-font" style="font-size:1.5em" >
+												search</h3>
+											<form action="recipesearch">
+											
+												<div class="row form-group">
+															<label>주재료별</label><br>
+					    						     		<label><input type="radio" name="ingrident" value="fork">돼지고기</label>
+															<label><input type="radio" name="ingrident" value="beaf">소고기</label>
+															<label><input type="radio" name="ingrident" value="chicken">닭고기</label>
+															<label><input type="radio" name="ingrident" value="fish">생선</label>
+															<label><input type="radio" name="ingrident" value="noodle">면</label>
+															<label><input type="radio" name="ingrident" value="fruit">과일</label>
+															<label><input type="radio" name="ingrident" value="rice">쌀</label>
+															<label><input type="radio" name="ingrident" value="duck">오리고기</label>
+												</div>
+												
+												<div class="row form-group">
+															<label>나라별레시피</label><br>
+					    						     		<label><input type="radio" name="object" value="korea">한식</label>
+					    						     		<label><input type="radio" name="object" value="western">양식</label>
+															<label><input type="radio" name="object" value="china">중식</label>
+															<label><input type="radio" name="object" value="japan">일식</label>
+															<label><input type="radio" name="object" value="se_asia">동남아</label>
+															<label><input type="radio" name="object" value="italy">이탈리아</label>
+															<label><input type="radio" name="object" value="mexico">멕시코</label>
+															<label><input type="radio" name="object" value="fusion">퓨전</label>
+															<label><input type="radio" name="object" value="fusion">날씨</label>
+												</div>
+												<div class="row form-group">
+															<label>종류별레시피</label><br>
+					    						     		<label><input type="radio" name="type" value="guie">구이</label>
+															<label><input type="radio" name="type" value="guk">국</label>
+															<label><input type="radio" name="type" value="grtang">그라탕/리조또</label>
+															<label><input type="radio" name="type" value="namul">나물/생채/샐러드</label>
+															<label><input type="radio" name="type" value="ttuk">떡/한과</label>
+															<label><input type="radio" name="type" value="dosilack">도시락/간식</label>
+															<label><input type="radio" name="type" value="mundu">만두/면류</label>
+															<label><input type="radio" name="type" value="kimchi">밑반찬/김치</label>
+															
+															<label><input type="radio" name="type" value="bap">밥/죽/스프</label>
+															<label><input type="radio" name="type" value="bokum">볶음</label>
+															<label><input type="radio" name="type" value="buchim">부침</label>
+															<label><input type="radio" name="type" value="bbang">빵/과자</label>
+															<label><input type="radio" name="type" value="sandwich">샌드위치/햄버거</label>
+															
+															<label><input type="radio" name="type" value="yangnum">양념장</label>
+															<label><input type="radio" name="type" value="yangsik">양식</label>
+															<label><input type="radio" name="type" value="umryo">음료</label>
+															
+															<label><input type="radio" name="type" value="jorim">조림</label>
+															<label><input type="radio" name="type" value="zzikae">찌개/전골/스튜</label>
+															<label><input type="radio" name="type" value="zzim">찜</label>
+															<label><input type="radio" name="type" value="pizza">피자</label>
+															<label><input type="radio" name="type" value="husik">후식</label>
+															<label><input type="radio" name="type" value="tikim">튀김/커틀릿</label>
+												</div>
+
 		<!-- <div class="page-inner"> -->
 		<nav class="gtco-nav" role="navigation">
 			<div class="gtco-container">
 
+
+<<<<<<< HEAD
 				<div class="row">
 					<div class="col-sm-4 col-xs-12">
 						<div id="gtco-logo">
@@ -191,26 +269,84 @@
 															<input type="submit" class="btn btn-primary btn-block"
 																value="search">
 
+=======
+
+												<div class="row form-group">
+													
+														<label>제철구분유무</label>
+														<select class="form-control" name="seasonal">
+														<option value="o">o</option>
+														<option value="x">x</option>
+														</select>
+													
+												</div>
+												<div class="row form-group">
+													
+														<label>최대 칼로리 지정</label>
+														<input type="number" name="kcal" class="form-control" placeholder="원하시는 칼로리의 최대값">
+>>>>>>> refs/remotes/origin/master
 														</div>
+									
+												 
 
+												<div class="row form-group">
+													<div class="col-md-12">
+														<input type="submit" class="btn btn-primary btn-block" value="search">
+														
 													</div>
+													
+												</div>
 
+<<<<<<< HEAD
 
 												</form>
 											</div>
 </div>
 
+=======
+									
+											</form>	
+>>>>>>> refs/remotes/origin/master
 										</div>
+
+										
 									</div>
-								</div>
-							</div>
-						</div>
+						
+	
+	
 
-
-					</div>
-				</div>
+	<div class="gtco-cover gtco-cover-sm" style="background-image: url(images/img_bg_1.jpg)"  data-stellar-background-ratio="0.5">
+		<div class="overlay"></div>
+		<div class="gtco-container text-center">
+			<div class="display-t">
+				<div class="display-tc">
+					<h1 class="cursive-font">&ldquo;음식에 대한 사랑처럼 진실된 사랑은 없다.&rdquo;</h1> 
+					<p>&mdash; 조지 버나드 쇼</p>
+				</div>	
 			</div>
-		</header>
+		</div>
+	</div>
+
+	
+	
+
+
+	<footer id="gtco-footer" role="contentinfo" style="background-image: url(images/img_bg_1.jpg)" data-stellar-background-ratio="0.5">
+		<div class="overlay"></div>
+		<div class="gtco-container">
+			<div class="row row-pb-md">
+
+				
+
+				
+				<div class="col-md-12 text-center">
+					<div class="gtco-widget">
+						<h3>Get Social</h3>
+						<ul class="gtco-social-icons">
+							<li><a href="#"><i class="icon-twitter"></i></a></li>
+							<li><a href="#"><i class="icon-facebook"></i></a></li>
+							<li><a href="#"><i class="icon-linkedin"></i></a></li>
+							<li><a href="#"><i class="icon-dribbble"></i></a></li>
 
 
 

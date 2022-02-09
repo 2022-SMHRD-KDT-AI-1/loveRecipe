@@ -2,6 +2,7 @@ package controller;
 
 import java.io.IOException;
 import java.lang.reflect.Member;
+import java.util.ArrayList;
 
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
@@ -12,6 +13,7 @@ import javax.servlet.http.HttpSession;
 
 import model.DAO;
 import model.MemberVO;
+import model.refivo;
 
 @WebServlet("/LoginService")
 public class LoginService extends HttpServlet {

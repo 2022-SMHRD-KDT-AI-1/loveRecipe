@@ -91,6 +91,16 @@ h1, h2, h3, h4, h5, h6, figure {
   padding-left: 15px;
   padding-right: 15px;
 }
+.gtco-container1{
+  max-width: 1100px;
+  position: absolute;
+  margin: 0 auto;
+  padding-left: 15px;
+  padding-right: 15px;
+}
+
+
+
 
 .gtco-nav {
   background: linear-gradient(90deg, #191919, #F5F2E7);
@@ -661,6 +671,10 @@ form label {
   font-family: 'Nanum Brush Script', cursive;
 }
 
+.refi-font {
+  font-family: 'Open Sans Script', cursive;
+}
+
 .primary-color {
   color: #FBB448 !important;
 }
@@ -788,6 +802,9 @@ form label {
 }
 
 #gtco-features {
+  background: #FBB448;
+}
+#gtco-features1 {
   background: #FBB448;
 }
 #gtco-features .gtco-heading h2 {
