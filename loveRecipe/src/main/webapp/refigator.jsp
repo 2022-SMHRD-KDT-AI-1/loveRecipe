@@ -1,10 +1,6 @@
 <%@page import="model.ingrivo"%>
 <%@page import="model.refivo"%>
-<<<<<<< HEAD
 <%@page import="java.util.ArrayList"%>
-=======
-<%@page import="java.util.ArrayList"%>
->>>>>>> refs/remotes/origin/master
 <%@page import="model.MemberVO"%>
 <%@page import="model.DAO"%>
 <%@ page language="java" contentType="text/html; charset=utf-8"
@@ -39,12 +35,8 @@
 <meta name="twitter:url" content="" />
 <meta name="twitter:card" content="" />
 
-	<link href="https://fonts.googleapis.com/css?family=Lato:300,400,700" rel="stylesheet">
-	<link href="https://fonts.googleapis.com/css?family=Kaushan+Script" rel="stylesheet">
-	<link
-	href="https://fonts.googleapis.com/css2?family=Nanum+Brush+Script&display=swap"
+<link href="https://fonts.googleapis.com/css?family=Lato:300,400,700"
 	rel="stylesheet">
-<<<<<<< HEAD
 <link href="https://fonts.googleapis.com/css?family=Kaushan+Script"
 	rel="stylesheet">
 <link
@@ -63,19 +55,6 @@
 <!-- Bootstrap  -->
 <link rel="stylesheet" href="css/bootstrap.css">
 
-=======
-	
-	
-	<!-- Animate.css -->
-	<link rel="stylesheet" href="css/animate.css">
-	<!-- Icomoon Icon Fonts-->
-	<link rel="stylesheet" href="css/icomoon.css">
-	<!-- Themify Icons-->
-	<link rel="stylesheet" href="css/themify-icons.css">
-	<!-- Bootstrap  -->
-	<link rel="stylesheet" href="css/bootstrap.css">
-
->>>>>>> refs/remotes/origin/master
 
 <!-- Animate.css -->
 <link rel="stylesheet" href="css/animate.css">
@@ -109,16 +88,9 @@
    <![endif]-->
 
 <<<<<<< HEAD
-<<<<<<< HEAD
 </head>
 <body>
-=======
-<<<<<<< HEAD
-	</head>
-	<body>
->>>>>>> refs/remotes/origin/master
 	<%
-<<<<<<< HEAD
 		DAO dao = new DAO();
 	MemberVO info = (MemberVO) session.getAttribute("info");
 	ArrayList<refivo> refilist = null;
@@ -129,24 +101,12 @@
 	} else {
 		refilist = null;
 	}
-=======
-	 	DAO dao = new DAO();
-		MemberVO info = (MemberVO) session.getAttribute("info");
-		ArrayList<refivo> refilist = null;
-		ArrayList<ingrivo> ingrilist = null;
-		
-		if (info!=null){refilist = dao.selectrefi(info.getId());}
->>>>>>> refs/remotes/origin/master
 	%>
-		
+
 	<div class="gtco-loader"></div>
 
 	<div id="page">
-<<<<<<< HEAD
 
-=======
-
->>>>>>> refs/remotes/origin/master
 		<!-- <div class="page-inner"> -->
 		<nav class="gtco-nav" role="navigation">
 			<div class="gtco-container">
@@ -154,12 +114,7 @@
 				<div class="row">
 					<div class="col-sm-4 col-xs-12">
 						<div id="gtco-logo">
-<<<<<<< HEAD
 							<a href="main.jsp"><em class="cursive-font" style="font-size: 3rem">Î†àÏãúÌîºÎ•º Î∂ÄÌÉÅÌï¥</em></a>
-=======
-							<a href="main.jsp">∑πΩ√««∏¶ ∫Œ≈π«ÿ! <em></em></a>
-
->>>>>>> refs/remotes/origin/master
 						</div>
 					</div>
 					<div class="col-xs-8 text-right menu-1">
@@ -212,53 +167,6 @@
 					</div>
 				</div>
 			</div>
-		</div>
-	</header>
-	<div id="gtco-features">
-		<div class="gtco-container">
-			<div class="row animate-box">
-				<div class="col-md-8 col-md-offset-2 text-center gtco-heading">
-					<table width="800px" , align="center">
-					<caption><h2 class="cursive-font" >«ˆ¿Á ∫∏¿Ø ¿Á∑·</h2></caption>
-					<tr style="font-size:1.5em">
-					<th>¿Á∑·</th>
-					<th>∞πºˆ</th>
-					
-					<th>¿Á∑·≈∏¿‘</th>
-					<th>¿Ø≈Î±‚«—</th>
-					<th>¡¶√∂</th>
-					<th>ƒÆ∑Œ∏Æ</th>
-					<th>«ˆ¿Á¿Âº“</th>
-					<th>±«¿Â¿Âº“</th>
-					</tr>
-					<% if (refilist != null && info!= null){ for (int i=0; i<refilist.size();i++){
-						ingrilist = dao.selectingri(refilist.get(i).getIngre_name());
-						String ingriname = refilist.get(i).getIngre_name();
-					%>
-					<tr>
-					<td><%= refilist.get(i).getIngre_name() %></td>
-					<td><%= refilist.get(i).getIngre_amount() %></td>	
-					
-					<td><%=ingrilist.get(0).getType() %></td>
-					<td><%=dao.expire(ingrilist.get(0).getExpire())%></td>
-					<td><%=ingrilist.get(0).getSeason() %></td>
-					<td><%=ingrilist.get(0).getCarloy() %></td>
-					<td><%= refilist.get(i).getIngre_temp() %></td>
-					<td><%=ingrilist.get(0).getTempt() %></td>
-					
-					<td>
-					<form action="deleteingri">
-					<input type="hidden" name="delete" value="<%= ingriname %>">
-					<button type="submit">DELTE</button>
-					</form></td>		
-					</tr>
-					<%}} %>
-					</table>
-						
-					</div>
-				</div>	
-			</div>
-<<<<<<< HEAD
 	</div>
 	</header>
 	<div id="gtco-features" style="background-image: url(images/refrigerator4.jpg)">
@@ -317,108 +225,6 @@
 						%>
 					</table>
 				</div>
-=======
-		</div>
-	</div>
-	<div id="gtco-features">
-		<div class="gtco-container" style="right: 400px;  font-size:1.5em">
-			<div class="row animate-box">
-				<div class="col-md-5 col-md-offset-2 text-center gtco-heading">
-					<h2 class="cursive-font" style="border:1px solid gray; color: black">≥√µøΩ«</h2>
-					<fieldset style="border:1px solid gray;">
-						<label class="cursive-font">¿Á∑·∏Ì: </label>
-							<input type="text" name = "ingre1"><br>
-						<label class="cursive-font">¿Á∑·ºˆ: </label>
-							<input type="number" name="number1"><br>
-							<input type = "button" value="µÓ∑œ" onClick="low_save();">
-						
-					</fieldset>
-					<div id = "ref1" style = "background-color: #289AFF	; color:black" class="cursive-font">
-						<table>
-							<thead>
-								<tr>
-									<td>¿Á∑·</td>
-									<td>∞πºˆ</td>
-								</tr>
-							</thead>
-							
-							<tbody id="low">
-							
-							</tbody>
-						</table>
-					</div>
-				</div>	
-			</div>
-		</div>
-	</div>
-
-	<div id="gtco-features">
-		<div class="gtco-container" style="bottom: 630px; left: 170px; font-size:1.5em ">
-			<div class="row animate-box">
-				<div class="col-md-5 col-md-offset-2 text-center gtco-heading">
-					<h2 class="cursive-font" style="border:1px solid gray; color: black">≥√¿ÂΩ«</h2>			
-						<fieldset style="border:1px solid gray;">
-					
-						<label class="cursive-font">¿Á∑·∏Ì: </label>
-							<input type="text" name = "ingre2"><br>
-						<label class="cursive-font">¿Á∑·ºˆ: </label>
-							<input type="number" name="number2"><br>
-							<input type = "button" value="µÓ∑œ" onClick="mid_save()">
-					
-					</fieldset>
-					<div id = "ref2" style = "background-color: #289AFF	; color:black" class="cursive-font">
-						<table>
-							<thead>
-								<tr>
-									<td>¿Á∑·</td>
-									<td>∞πºˆ</td>
-								</tr>
-							</thead>
-							
-							<tbody id="mid">
-							
-							</tbody>
-						</table>
-					</div>
-				</div>
-			</div>
-		</div>
-	</div>
-
-	<div id="gtco-features">
-		<div class="gtco-container" style="bottom: 1250px; left: 800px ;  font-size:1.5em">
-			<div class="row animate-box">
-				<div class="col-md-5 col-md-offset-2 text-center gtco-heading">
-					<h2 class="cursive-font" style="border:1px solid gray; color: black">ªÛø¬</h2>
-						<fieldset style="border:1px solid gray;"> 
-
-							<form action="#">
-
-							<label class="cursive-font">¿Á∑·∏Ì: </label>
-								<input type="text" name = "ingre3"><br>
-							<label class="cursive-font">¿Á∑·ºˆ: </label>
-								<input type="number" name="number3"><br>
-								<input type = "button" value="µÓ∑œ" onClick="high_save()">
-
-							</form>
-						</fieldset>
-
-						<div id = "ref3" style = "background-color: #289AFF	; color:black" class="cursive-font">
-						<table>
-							<thead>
-								<tr>
-									<td>¿Á∑·</td>
-									<td>∞πºˆ</td>
-								</tr>
-							</thead>
-							
-							<tbody id="high">
-							
-							</tbody>
-						</table>
-
-					</div>
->>>>>>> refs/remotes/origin/master
 				</div>
 			</div>
 		</div>
@@ -445,7 +251,6 @@
                            </tr>
                         </thead>
 
-<<<<<<< HEAD
                         <tbody id="low">
 
                         </tbody>
@@ -517,15 +322,6 @@
             </div>
          </div>
       </div>
-=======
-	
-						</div>
-					</div>
-	
-		<script type="text/javascript"
-			src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-		<script type="text/javascript">
->>>>>>> refs/remotes/origin/master
 	
 
 	<script type="text/javascript"
