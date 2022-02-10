@@ -18,6 +18,6 @@
 
 ## 대표이미지
 ![image](https://user-images.githubusercontent.com/97660625/153343146-5587a20a-55d2-4d9b-b78a-892c81a7f4a8.png)
-## 서비스 UR
+## 서비스 URL
 http://project-student-e.ddns.net:9002/loveRecipe/main.jsp
 
