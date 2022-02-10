@@ -99,7 +99,6 @@
 							<li class="has-dropdown"><a href="services.jsp">Services</a>
 								<ul class="dropdown">
 									<li><a href="refigator.jsp">나만의 냉장고</a></li>
-									<li><a href="mealplan.jsp">식단짜기</a></li>
 									<li><a href="newrecipe.jsp">레시피등록</a></li>
 								</ul></li>
 							<li><a href="feedback.jsp">feedback</a></li>
