@@ -106,7 +106,17 @@
 									<li><a href="newrecipe.jsp">레시피등록</a></li>
 								</ul></li>
 							<li><a href="feedback.jsp">feedback</a></li>
+							<%
+								if (info != null) {
+							%>
+							<li class="btn-cta"><a href="LogoutService"><span>logout</span></a></li>
+							<%
+								} else {
+							%>
 							<li class="btn-cta"><a href="main.jsp"><span>login</span></a></li>
+							<%
+								}
+							%>
 						</ul>
 					</div>
 				</div>

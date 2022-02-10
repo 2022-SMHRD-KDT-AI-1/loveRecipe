@@ -1,3 +1,5 @@
+<%@page import="model.MemberVO"%>
+<%@page import="model.DAO"%>
 <%@ page language="java" contentType="text/html; charset=utf-8"
 	pageEncoding="utf-8"%>
 <!DOCTYPE HTML>
@@ -38,7 +40,7 @@
 	href="https://fonts.googleapis.com/css2?family=Nanum+Brush+Script&display=swap"
 	rel="stylesheet">
 <link href="https://fonts.googleapis.com/icon?family=Material+Icons"
-      rel="stylesheet">
+	rel="stylesheet">
 
 <!-- Animate.css -->
 <link rel="stylesheet" href="css/animate.css">
@@ -73,6 +75,11 @@
 </head>
 <body>
 
+	<%
+		DAO dao = new DAO();
+	MemberVO info = (MemberVO) session.getAttribute("info");
+	%>
+
 	<div class="gtco-loader"></div>
 
 	<div id="page">
@@ -98,7 +105,17 @@
 									<li><a href="newrecipe.jsp">레시피등록</a></li>
 								</ul></li>
 							<li><a href="feedback.jsp">feedback</a></li>
+							<%
+								if (info != null) {
+							%>
+							<li class="btn-cta"><a href="LogoutService"><span>logout</span></a></li>
+							<%
+								} else {
+							%>
 							<li class="btn-cta"><a href="main.jsp"><span>login</span></a></li>
+							<%
+								}
+							%>
 						</ul>
 					</div>
 				</div>
@@ -146,122 +163,120 @@
 													</div>
 
 													<div class="row form-group">
-                                             <label>종류별레시피</label><br>
-                                                <label><input type="radio" name="type" value="구이">구이</label>
-                                             <label><input type="radio" name="type" value="국">국</label>
-                                             <label><input type="radio" name="type" value="그라탕,리조또">그라탕/리조또</label>
-                                             <label><input type="radio" name="type" value="나물,생채,샐러드">나물/생채/샐러드</label>
-                                             <label><input type="radio" name="type" value="떡,한과">떡,한과</label>
-                                             <label><input type="radio" name="type" value="도시락,간식">도시락/간식</label>
-                                             <label><input type="radio" name="type" value="만두,면류">만두/면류</label>
-                                             <label><input type="radio" name="type" value="밑반찬,김치">밑반찬/김치</label>
-                                             
-                                             <label><input type="radio" name="type" value="밥,죽,스프">밥/죽/스프</label>
-                                             <label><input type="radio" name="type" value="볶음">볶음</label>
-                                             <label><input type="radio" name="type" value="부침">부침</label>
-                                             <label><input type="radio" name="type" value="빵,과자">빵/과자</label>
-                                             <label><input type="radio" name="type" value="샌드위치,햄버거">샌드위치/햄버거</label>
-                                             
-                                             <label><input type="radio" name="type" value="양념장">양념장</label>
-                                             <label><input type="radio" name="type" value="양식">양식</label>
-                                             <label><input type="radio" name="type" value="음료">음료</label>
-                                             
-                                             <label><input type="radio" name="type" value="조림">조림</label>
-                                             <label><input type="radio" name="type" value="찌개,전골,스튜">찌개/전골/스튜</label>
-                                             <label><input type="radio" name="type" value="찜">찜</label>
-                                             <label><input type="radio" name="type" value="피자">피자</label>
-                                             <label><input type="radio" name="type" value="후식">후식</label>
-                                             <label><input type="radio" name="type" value="튀김,커틀릿">튀김/커틀릿</label>
-                                    </div>
+														<label>종류별레시피</label><br> <label><input
+															type="radio" name="type" value="구이">구이</label> <label><input
+															type="radio" name="type" value="국">국</label> <label><input
+															type="radio" name="type" value="그라탕,리조또">그라탕/리조또</label>
+														<label><input type="radio" name="type"
+															value="나물,생채,샐러드">나물/생채/샐러드</label> <label><input
+															type="radio" name="type" value="떡,한과">떡,한과</label> <label><input
+															type="radio" name="type" value="도시락,간식">도시락/간식</label> <label><input
+															type="radio" name="type" value="만두,면류">만두/면류</label> <label><input
+															type="radio" name="type" value="밑반찬,김치">밑반찬/김치</label> <label><input
+															type="radio" name="type" value="밥,죽,스프">밥/죽/스프</label> <label><input
+															type="radio" name="type" value="볶음">볶음</label> <label><input
+															type="radio" name="type" value="부침">부침</label> <label><input
+															type="radio" name="type" value="빵,과자">빵/과자</label> <label><input
+															type="radio" name="type" value="샌드위치,햄버거">샌드위치/햄버거</label>
 
-<div class="gtco-container">
+														<label><input type="radio" name="type" value="양념장">양념장</label>
+														<label><input type="radio" name="type" value="양식">양식</label>
+														<label><input type="radio" name="type" value="음료">음료</label>
 
-
-													<div class="row form-group">
-
-														<label>최대 칼로리 지정</label> <input type="number" name="kcal"
-															class="form-control" placeholder="원하시는 칼로리의 최대값">
+														<label><input type="radio" name="type" value="조림">조림</label>
+														<label><input type="radio" name="type"
+															value="찌개,전골,스튜">찌개/전골/스튜</label> <label><input
+															type="radio" name="type" value="찜">찜</label> <label><input
+															type="radio" name="type" value="피자">피자</label> <label><input
+															type="radio" name="type" value="후식">후식</label> <label><input
+															type="radio" name="type" value="튀김,커틀릿">튀김/커틀릿</label>
 													</div>
 
+													<div class="gtco-container">
 
 
-													<div class="row form-group">
-														<div class="col-md-12">
-															<input type="submit" class="btn btn-primary btn-block"
-																value="search">
+														<div class="row form-group">
 
+															<label>최대 칼로리 지정</label> <input type="number" name="kcal"
+																class="form-control" placeholder="원하시는 칼로리의 최대값">
 														</div>
 
-													</div>
 
 
+														<div class="row form-group">
+															<div class="col-md-12">
+																<input type="submit" class="btn btn-primary btn-block"
+																	value="search">
+
+															</div>
+
+														</div>
 												</form>
 											</div>
-</div>
-
 										</div>
+
 									</div>
 								</div>
 							</div>
 						</div>
-
-
 					</div>
+
+
 				</div>
 			</div>
-		</header>
+	</div>
+	</header>
 
 
 
 
-		<div class="gtco-cover gtco-cover-sm"
-			style="background-image: url(images/img_bg_1.jpg)"
-			data-stellar-background-ratio="0.5">
-			<div class="overlay"></div>
-			<div class="gtco-container text-center">
-				<div class="display-t">
-					<div class="display-tc">
-						<h1 class="cursive-font">&ldquo;음식에 대한 사랑처럼 진실된 사랑은
-							없다.&rdquo;</h1>
-						<p>&mdash; 조지 버나드 쇼</p>
-					</div>
+	<div class="gtco-cover gtco-cover-sm"
+		style="background-image: url(images/img_bg_1.jpg)"
+		data-stellar-background-ratio="0.5">
+		<div class="overlay"></div>
+		<div class="gtco-container text-center">
+			<div class="display-t">
+				<div class="display-tc">
+					<h1 class="cursive-font">&ldquo;음식에 대한 사랑처럼 진실된 사랑은 없다.&rdquo;</h1>
+					<p>&mdash; 조지 버나드 쇼</p>
 				</div>
 			</div>
 		</div>
+	</div>
 
 
 
 
 
-		<footer id="gtco-footer" role="contentinfo"
-			style="background-image: url(images/img_bg_1.jpg)"
-			data-stellar-background-ratio="0.5">
-			<div class="overlay"></div>
-			<div class="gtco-container">
-				<div class="row row-pb-md">
+	<footer id="gtco-footer" role="contentinfo"
+		style="background-image: url(images/img_bg_1.jpg)"
+		data-stellar-background-ratio="0.5">
+		<div class="overlay"></div>
+		<div class="gtco-container">
+			<div class="row row-pb-md">
 
 
 
 
-					<div class="col-md-12 text-center">
-						<div class="gtco-widget">
-							<h3>Get Social</h3>
-							<ul class="gtco-social-icons">
-								<li><a href="#"><i class="icon-twitter"></i></a></li>
-								<li><a href="#"><i class="icon-facebook"></i></a></li>
-								<li><a href="#"><i class="icon-linkedin"></i></a></li>
-								<li><a href="#"><i class="icon-dribbble"></i></a></li>
-							</ul>
-						</div>
+				<div class="col-md-12 text-center">
+					<div class="gtco-widget">
+						<h3>Get Social</h3>
+						<ul class="gtco-social-icons">
+							<li><a href="#"><i class="icon-twitter"></i></a></li>
+							<li><a href="#"><i class="icon-facebook"></i></a></li>
+							<li><a href="#"><i class="icon-linkedin"></i></a></li>
+							<li><a href="#"><i class="icon-dribbble"></i></a></li>
+						</ul>
 					</div>
-
 				</div>
 
-
-
 			</div>
-		</footer>
-		<!-- </div> -->
+
+
+
+		</div>
+	</footer>
+	<!-- </div> -->
 
 	</div>
 
@@ -270,8 +285,8 @@
 	</div>
 
 
-<div class="timer"></div>
-<script src="js/timerMain.js" type="module"></script>
+	<div class="timer"></div>
+	<script src="js/timerMain.js" type="module"></script>
 
 
 	<!-- jQuery -->

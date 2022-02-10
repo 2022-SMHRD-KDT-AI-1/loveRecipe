@@ -1,3 +1,5 @@
+<%@page import="model.MemberVO"%>
+<%@page import="model.DAO"%>
 <%@ page language="java" contentType="text/html; charset=EUC-KR"
 	pageEncoding="EUC-KR"%>
 <!DOCTYPE HTML>
@@ -72,6 +74,11 @@
 </head>
 <body>
 
+	<%
+		DAO dao = new DAO();
+	MemberVO info = (MemberVO) session.getAttribute("info");
+	%>
+
 	<div class="gtco-loader"></div>
 
 	<div id="page">
@@ -97,7 +104,17 @@
 									<li><a href="newrecipe.jsp">레시피등록</a></li>
 								</ul></li>
 							<li><a href="feedback.jsp">feedback</a></li>
+							<%
+								if (info != null) {
+							%>
+							<li class="btn-cta"><a href="LogoutService"><span>logout</span></a></li>
+							<%
+								} else {
+							%>
 							<li class="btn-cta"><a href="main.jsp"><span>login</span></a></li>
+							<%
+								}
+							%>
 						</ul>
 					</div>
 				</div>
