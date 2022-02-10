@@ -111,7 +111,7 @@
 								<ul class="dropdown">
 									<li><a href="refigator.jsp">나만의 냉장고</a></li>
 									<li><a href="newrecipe.jsp">레시피등록</a></li>
-								</ul></li>
+								</ul></li> 
 							<li><a href="feedback.jsp">feedback</a></li>
 							<%
 									if (info != null){ }else {
