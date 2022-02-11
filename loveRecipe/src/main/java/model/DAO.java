@@ -15,9 +15,14 @@ public class DAO {
 	MemberVO vo = null;
 	refivo refi = null;
 	ingrivo ingri = null;
+<<<<<<< HEAD
 	String expired ;
 	viewrefVO vo1 = null;
 	menuvo menu = null;
+=======
+	String expired;
+	menuvo menu = null;
+>>>>>>> branch 'master' of https://github.com/2022-SMHRD-KDT-AI-1/loveRecipe.git
 
 	public void DBconn() {
 		try {
@@ -162,13 +167,11 @@ public class DAO {
 		return cnt;
 	}
 
-
-	//회원정보변경 메소드
-	 public int update(MemberVO vo) {
-		 try {
-			 	DBconn();
-				String sql = "update test_member set pw=?, nickname =?, email=? where id=? ";
-
+	// 회원정보변경 메소드
+	public int update(MemberVO vo) {
+		try {
+			DBconn();
+			String sql = "update test_member set pw=?, nickname =?, email=? where id=? ";
 
 			psmt = conn.prepareStatement(sql);
 
@@ -177,9 +180,7 @@ public class DAO {
 			psmt.setString(3, vo.getEmail());
 			psmt.setString(4, vo.getId());
 
-				cnt= psmt.executeUpdate();
-				
-
+			cnt = psmt.executeUpdate();
 
 			if (cnt != 0) {
 				System.out.print("수정성공 ");
@@ -187,7 +188,6 @@ public class DAO {
 			} else {
 				System.out.println("수정실패");
 			}
-
 
 		} catch (Exception e) {
 			e.printStackTrace();
@@ -197,13 +197,11 @@ public class DAO {
 		return cnt;
 	}
 
-
 	// 피드백 업로드 메소드
 	public int feedupload(feedDTO dto) {
 		try {
 
 			DBconn();
-
 
 			String sql = "insert into feed_board values(feed_seq.nextval, ?, ?, sysdate)";
 
@@ -234,7 +232,6 @@ public class DAO {
 
 			psmt = conn.prepareStatement(sql);
 			rs = psmt.executeQuery();
-
 
 			while (rs.next()) {
 
@@ -328,116 +325,147 @@ public class DAO {
 		}
 		return recipeCount;
 	}
-	
+
 	// 냉장고에 재료입력
-	public int insertrefi(int number1,String temp,String id,String ingre1) {
-		
+	public int insertrefi(int number1, String temp, String id, String ingre1) {
+
 		try {
 			DBconn();
-			//필요한정보 - 재료이름,재료양,유저아이디
-			String sql = "insert into test_refi values(refi_seq.nextval, "
-					+ "refi_seq2.nextval, ?,?, sysdate ,?,?)";
-			
+			// 필요한정보 - 재료이름,재료양,유저아이디
+			String sql = "insert into test_refi values(refi_seq.nextval, " + "refi_seq2.nextval, ?,?, sysdate ,?,?)";
+
 			psmt = conn.prepareStatement(sql);
-			
-			psmt.setInt(1,number1);
-			psmt.setString(2,temp);
-			psmt.setString(3,id);
+
+			psmt.setInt(1, number1);
+			psmt.setString(2, temp);
+			psmt.setString(3, id);
 			psmt.setString(4, ingre1);
 
 			cnt = psmt.executeUpdate();
-			
+
 		} catch (Exception e) {
 			e.printStackTrace();
 		} finally {
 			DBclose();
-		} return cnt;
+		}
+		return cnt;
 	}
-	
-	//냉장고에 지금 보유한 재료 가져오기
+
+	// 냉장고에 지금 보유한 재료 가져오기
 	public ArrayList<refivo> selectrefi(String id) {
 		ArrayList<refivo> refilist = new ArrayList<refivo>();
 		try {
 			DBconn();
-			//필요한 정보 - 재료명,갯수,현재보관장소
-			String sql ="select * from test_refi where mb_id= ?";
-			
+			// 필요한 정보 - 재료명,갯수,현재보관장소
+			String sql = "select * from test_refi where mb_id= ?";
+
 			psmt = conn.prepareStatement(sql);
 
 			psmt.setString(1, id);
 			rs = psmt.executeQuery();
-			
-			 while(rs.next()) {
+
+			while (rs.next()) {
 
 				int ingre_amount = rs.getInt(3);
 				String ingre_temp = rs.getString(4);
+<<<<<<< HEAD
 				String ingre_name = rs.getString(7);				
 				//가져온 데이터 값 vo에넣고 Arraylisy화 하여 리턴하기
+=======
+				String ingre_name = rs.getString(7);
+
+//				System.out.println(ingre_amount);
+//				System.out.println(ingre_temp);
+//				System.out.println(ingre_name);
+
+>>>>>>> branch 'master' of https://github.com/2022-SMHRD-KDT-AI-1/loveRecipe.git
 				refi = new refivo(ingre_amount, ingre_temp, ingre_name);
 				refilist.add(refi);
-				
+
 			}
-			 
+
 		} catch (Exception e) {
 			e.printStackTrace();
 		} finally {
 			DBclose();
-		} return refilist;
+		}
+		return refilist;
 	}
+<<<<<<< HEAD
 	
 	//냉장고에 보유한 재료의 상세정보 가져오기
+=======
+
+	// 냉장고에 보유한 재료의 상세정보 가져오기
+>>>>>>> branch 'master' of https://github.com/2022-SMHRD-KDT-AI-1/loveRecipe.git
 	public ArrayList<ingrivo> selectingri(String name) {
 		ArrayList<ingrivo> ingrilist = new ArrayList<ingrivo>();
 		try {
 			DBconn();
-			//필요한정보 -재료명,재료타입,유통기한,제철,칼로리,권장보관장소
-			String sql ="select * from test_ingredient where ingre_name=?";
-			
+			// 필요한정보 -재료명,재료타입,유통기한,제철,칼로리,권장보관장소
+			String sql = "select * from test_ingredient where ingre_name=?";
+
 			psmt = conn.prepareStatement(sql);
 			psmt.setString(1, name);
 			
 			
 			rs = psmt.executeQuery();
-			while(rs.next()) {
+			while (rs.next()) {
 				String type = rs.getString(3);
 				int expire = rs.getInt(4);
 				String season = rs.getString(5);
 				int carloy = rs.getInt(6);
 				String tempt = rs.getString(7);
+<<<<<<< HEAD
 				
 				//가져온 데이터 값 vo에넣고 Arraylisy화 하여 리턴하기
+=======
+
+				System.out.println(type);
+				System.out.println(expire);
+				System.out.println(season);
+				System.out.println(carloy);
+				System.out.println(tempt);
+
+>>>>>>> branch 'master' of https://github.com/2022-SMHRD-KDT-AI-1/loveRecipe.git
 				ingri = new ingrivo(type, season, tempt, expire, carloy);
 				ingrilist.add(ingri);
-				
+
 			}
 		} catch (Exception e) {
 			e.printStackTrace();
 		} finally {
 			DBclose();
-		} 
+		}
 		return ingrilist;
 	}
+<<<<<<< HEAD
 	
 	//냉장고에잇는 재료 유통기한 표시
+=======
+
+>>>>>>> branch 'master' of https://github.com/2022-SMHRD-KDT-AI-1/loveRecipe.git
 	public String expire(int num) {
 
 		try {
 			DBconn();
 			String sql = "select to_char (sysdate+?) from dual";
-			
+
 			psmt = conn.prepareStatement(sql);
-			psmt.setInt(1, num); 
+			psmt.setInt(1, num);
 			rs = psmt.executeQuery();
-			
-			if(rs.next()) {
+
+			if (rs.next()) {
 				expired = rs.getString(1);
 			}
 		} catch (Exception e) {
 			e.printStackTrace();
 		} finally {
 			DBclose();
-		} return expired;
+		}
+		return expired;
 	}
+<<<<<<< HEAD
 	
 	
 	public int deleteingri(String id, String ingri ) {
@@ -592,3 +620,71 @@ public class DAO {
     
 	}
 
+=======
+
+	public int deleteingri(String id, String ingri) {
+		try {
+			DBconn();
+			String sql = "delete from test_refi where mb_id = ? and ingre_name=?";
+			psmt = conn.prepareStatement(sql);
+
+			psmt.setString(1, id);
+			psmt.setString(2, ingri);
+
+			cnt = psmt.executeUpdate();
+
+		} catch (Exception e) {
+			e.printStackTrace();
+		} finally {
+			DBclose();
+		}
+		return cnt;
+	}
+
+	// 메뉴검색하는기능
+	public ArrayList<menuvo> selectmenu(String contry, String type, String kcal) {
+		ArrayList<menuvo> menulist = new ArrayList<menuvo>();
+		try {
+			DBconn();
+
+			String sql = "select * from recipe where  FOOD_TYPE =  ?  and RECIPE_COUNTRY = ? and RECIPE_CALORY<? ";
+
+			psmt = conn.prepareStatement(sql);
+			psmt.setString(1, type);
+			psmt.setString(2, contry);
+			psmt.setString(3, kcal);
+
+			rs = psmt.executeQuery();
+			while (rs.next()) {
+
+				String name = rs.getString(2);
+				String foodtype = rs.getString(3);
+				String country = rs.getString(4);
+				String calory = rs.getString(5);
+				String ingre = rs.getString(6);
+				String method = rs.getString(7);
+				String image = rs.getString(8);
+
+				System.out.println("실행");
+				System.out.println("name= " + name);
+				System.out.println("foodtype= " + foodtype);
+				System.out.println("country= " + country);
+				System.out.println("calory= " + calory);
+				System.out.println("ingre= " + ingre);
+				System.out.println("method= " + method);
+				System.out.println("image= " + image);
+				menu = new menuvo(name, foodtype, country, calory, ingre, method, image);
+				menulist.add(menu);
+			}
+
+		} catch (Exception e) {
+			e.printStackTrace();
+		} finally {
+			DBclose();
+		}
+		return menulist;
+
+	}
+
+}
+>>>>>>> branch 'master' of https://github.com/2022-SMHRD-KDT-AI-1/loveRecipe.git

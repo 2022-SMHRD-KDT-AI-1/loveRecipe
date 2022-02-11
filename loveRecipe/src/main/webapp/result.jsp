@@ -103,11 +103,20 @@
 							<li class="has-dropdown"><a href="services.jsp">Services</a>
 								<ul class="dropdown">
 									<li><a href="refigator.jsp">나만의 냉장고</a></li>
-									<li><a href="mealplan.jsp">식단짜기</a></li>
 									<li><a href="newrecipe.jsp">레시피등록</a></li>
 								</ul></li>
 							<li><a href="feedback.jsp">feedback</a></li>
+							<%
+								if (info != null) {
+							%>
+							<li class="btn-cta"><a href="LogoutService"><span>logout</span></a></li>
+							<%
+								} else {
+							%>
 							<li class="btn-cta"><a href="main.jsp"><span>login</span></a></li>
+							<%
+								}
+							%>
 						</ul>
 					</div>
 				</div>
@@ -173,7 +182,12 @@
 						for (int i = 0; i < menulist.size(); i++) {
 					%>
 					<div class="col-lg-4 col-md-4 col-sm-6">
+<<<<<<< HEAD
 						
+=======
+					
+						<div class="fh5co-card-item image-popup">
+>>>>>>> branch 'master' of https://github.com/2022-SMHRD-KDT-AI-1/loveRecipe.git
 							<figure>
 								<div class="overlay">
 									<i class="ti-plus"></i>
@@ -182,6 +196,7 @@
 									class="img-responsive">
 							</figure>
 							<div class="fh5co-text">
+<<<<<<< HEAD
 								<h2>요리 이름 : <%=menulist.get(i).getName()%></h2>
 								<h2>국가 분류 : <%=menulist.get(i).getCountry()%></h2>
 								<h2>방법 분류 : <%=menulist.get(i).getFoodtype()%></h2>
@@ -192,8 +207,74 @@
 								
 
 						
-							</div>
+=======
+							
+								<h2>요리 이름 : <%=menulist.get(i).getName()%></h2>
+								<h2>국가 분류 : <%=menulist.get(i).getCountry()%></h2>
+								<h2>방법 분류 : <%=menulist.get(i).getFoodtype()%></h2>
 						
+								
+								
+								<h2>총칼로리 : <%=menulist.get(i).getCalory()%>kcal</h2>
+
+							
+>>>>>>> branch 'master' of https://github.com/2022-SMHRD-KDT-AI-1/loveRecipe.git
+							</div>
+<<<<<<< HEAD
+						
+					</div>
+					<%
+						}
+					}
+					%>
+
+
+
+
+
+
+
+
+
+					<footer id="gtco-footer" role="contentinfo"
+						style="background-image: url(images/img_bg_1.jpg)"
+						data-stellar-background-ratio="0.5">
+						<div class="overlay"></div>
+						<div class="gtco-container">
+							<div class="row row-pb-md">
+
+
+
+
+								<div class="col-md-12 text-center">
+									<div class="gtco-widget">
+										<h3>Get Social</h3>
+										<ul class="gtco-social-icons">
+											<li><a href="#"><i class="icon-twitter"></i></a></li>
+											<li><a href="#"><i class="icon-facebook"></i></a></li>
+											<li><a href="#"><i class="icon-linkedin"></i></a></li>
+											<li><a href="#"><i class="icon-dribbble"></i></a></li>
+										</ul>
+									</div>
+								</div>
+
+							</div>
+
+
+
+=======
+>>>>>>> branch 'master' of https://github.com/2022-SMHRD-KDT-AI-1/loveRecipe.git
+						</div>
+<<<<<<< HEAD
+					</footer>
+					<!-- </div> -->
+
+				</div>
+
+				<div class="gototop js-top">
+					<a href="#" class="js-gotop"><i class="icon-arrow-up"></i></a>
+=======
+					<a href="viewrecipen.jsp">레시피 보기</a><br><br>
 					</div>
 					<%
 						}
@@ -238,12 +319,16 @@
 					</footer>
 					<!-- </div> -->
 
+>>>>>>> branch 'master' of https://github.com/2022-SMHRD-KDT-AI-1/loveRecipe.git
 				</div>
 
+<<<<<<< HEAD
+=======
 				<div class="gototop js-top">
 					<a href="#" class="js-gotop"><i class="icon-arrow-up"></i></a>
 				</div>
 
+>>>>>>> branch 'master' of https://github.com/2022-SMHRD-KDT-AI-1/loveRecipe.git
 				<!-- jQuery -->
 				<script src="js/jquery.min.js"></script>
 				<!-- jQuery Easing -->

@@ -27,6 +27,7 @@ public class vrecipeService extends HttpServlet {
 		
 		request.setAttribute("info", info);
 
+<<<<<<< HEAD
 		response.setCharacterEncoding("UTF-8");
 		
 		PrintWriter out = response.getWriter();
@@ -35,6 +36,16 @@ public class vrecipeService extends HttpServlet {
 		String json = gson.toJson(info);
 		System.out.println(json);
 		out.print(json);
+=======
+		viewrefVO vo = new viewrefVO(rname, ingre, calory, type);
+		
+		response.setCharacterEncoding("UTF-8");
+
+		request.setAttribute("vo", vo);
+
+		RequestDispatcher rd = request.getRequestDispatcher("detailvrec.jsp");
+		rd.forward(request, response);
+>>>>>>> branch 'master' of https://github.com/2022-SMHRD-KDT-AI-1/loveRecipe.git
 	}
 
 }

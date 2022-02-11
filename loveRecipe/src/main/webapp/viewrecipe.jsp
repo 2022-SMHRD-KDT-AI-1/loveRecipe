@@ -331,6 +331,131 @@
 
 			</div>
 		</footer>
+<<<<<<< HEAD
+=======
+		<script type="text/javascript"
+			src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+		<script type="text/javascript">
+	
+	function save() {
+
+	$.ajax({
+		url : 'vrecipeService', // 값을 보낼 주소
+		type : 'post', // get or post
+		dataType : 'json', // json 데이터로 응답받을 때,
+		success : function(res){ // 통신이 성공했을 때 실행되는 함수
+				// res --> Server에서 응답해준 데이터가 매개변수에 자동으로 담김
+			table(res);
+		},
+		error : function(){ // 통신이 실패한경우에 실행되는 함수 
+			alert("error");
+		}
+	});
+		
+	}
+	
+	function table(res){
+		$('form[id=rec]').html('');
+		labels = [];
+		datas = [];
+		for (var i = 0; i < res.length; i++) {
+			
+			var json = res[i];
+			
+			tr = `
+				<div class="row form-group">
+					<label>레시피명 : `+json.rname+`</label><br>
+				</div>
+				<div class="row form-group">
+					<label>`+json.type+`</label><br>
+				</div>
+				<div class="row form-group">
+					<label>칼로리 : `+json.calory+`kcal</label><br>
+				</div>
+				<div class="row form-group">	
+						<label>식재료 : `+json.ingre+`</label>
+				</div>
+			`;
+			
+			$('form[id=rec]').append(tr);
+			labels.push(json.rname);
+			datas.push(json.calory);
+			labels.push(json.type);
+			labels.push(json.ingre);
+		}
+	}
+	function save1() {
+
+		$.ajax({
+			url : 'recsequence', // 값을 보낼 주소
+			type : 'post', // get or post
+			dataType : 'json', // json 데이터로 응답받을 때,
+			success : function(res){ // 통신이 성공했을 때 실행되는 함수
+					// res --> Server에서 응답해준 데이터가 매개변수에 자동으로 담김
+				table1(res);
+			},
+			error : function(){ // 통신이 실패한경우에 실행되는 함수 
+				alert("error");
+			}
+		});
+			
+		}
+		
+		function table1(res){
+			$('ol[class=recipe]').html('');
+			labels = [];
+			for (var i = 0; i < res.length; i++) {
+				
+				var json = res[i];
+				
+				tr = `
+					<div class = "img-cover">
+						<img src="`+json.href+`">
+					</div>
+					<p>
+						`+json.sequence+`
+					</p>
+				`;
+				
+				$('ol[class=recipe]').append(tr);
+				labels.push(json.sequence);
+				labels.push(json.href);
+			}
+		}
+		function save2() {
+
+			$.ajax({
+				url : 'recmain', // 값을 보낼 주소
+				type : 'post', // get or post
+				dataType : 'json', // json 데이터로 응답받을 때,
+				success : function(res){ // 통신이 성공했을 때 실행되는 함수
+						// res --> Server에서 응답해준 데이터가 매개변수에 자동으로 담김
+					table2(res);
+				},
+				error : function(){ // 통신이 실패한경우에 실행되는 함수 
+					alert("error");
+				}
+			});
+				
+			}
+			
+			function table2(res){
+				$('ol[class=main-img]').html('');
+				labels = [];
+					tr = `
+						<div class="main-image">
+							<img src="`+res[res.length-1].href+`">
+						</div>
+					`;
+					
+				$('ol[class=main-img]').append(tr);
+				labels.push(res.href);
+			}
+	$(document).ready(save());
+	$(document).ready(save1());
+	$(document).ready(save2());
+	</script>
+>>>>>>> branch 'master' of https://github.com/2022-SMHRD-KDT-AI-1/loveRecipe.git
 		<!-- </div> -->
 
 	</div>

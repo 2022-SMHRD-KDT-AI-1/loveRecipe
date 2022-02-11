@@ -52,7 +52,7 @@ protected void service(HttpServletRequest request, HttpServletResponse response)
     System.out.println("writer :"+ writer);
     System.out.println("content :"+ content);
     System.out.println("fileName :"+ fileName);
-    
+    System.out.println("fileName :"+ fileName);
     DAO dao = new DAO();
     BoardDTO dto = new BoardDTO(title , writer,fileName, content);
     int cnt = dao.upload(dto);

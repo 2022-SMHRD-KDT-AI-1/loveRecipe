@@ -1,3 +1,5 @@
+<%@page import="model.MemberVO"%>
+<%@page import="model.DAO"%>
 <%@ page language="java" contentType="text/html; charset=EUC-KR"
 	pageEncoding="EUC-KR"%>
 <!DOCTYPE HTML>
@@ -77,6 +79,11 @@
 </head>
 <body>
 
+	<%
+		DAO dao = new DAO();
+	MemberVO info = (MemberVO) session.getAttribute("info");
+	%>
+
 	<div class="gtco-loader"></div>
 
 	<div id="page">
@@ -90,7 +97,7 @@
 					<div class="col-sm-4 col-xs-12">
 						<div id="gtco-logo">
 							<a href="main.jsp"><em class="cursive-font"
-								style="font-size: 3rem">레시피를 부탁해!</em></a>
+								style="font-size: 3rem">레시피를 부탁해</em></a>
 						</div>
 					</div>
 					<div class="col-xs-8 text-right menu-1">
@@ -99,11 +106,20 @@
 							<li class="has-dropdown"><a href="services.jsp">Services</a>
 								<ul class="dropdown">
 									<li><a href="refigator.jsp">나만의 냉장고</a></li>
-									<li><a href="mealplan.jsp">식단짜기</a></li>
 									<li><a href="newrecipe.jsp">레시피등록</a></li>
 								</ul></li>
 							<li><a href="feedback.jsp">feedback</a></li>
+							<%
+								if (info != null) {
+							%>
+							<li class="btn-cta"><a href="LogoutService"><span>logout</span></a></li>
+							<%
+								} else {
+							%>
 							<li class="btn-cta"><a href="main.jsp"><span>login</span></a></li>
+							<%
+								}
+							%>
 						</ul>
 					</div>
 				</div>

@@ -43,7 +43,11 @@
 	href="https://fonts.googleapis.com/css2?family=Nanum+Brush+Script&display=swap"
 	rel="stylesheet">
 <link href="https://fonts.googleapis.com/icon?family=Material+Icons"
+<<<<<<< HEAD
       rel="stylesheet">
+=======
+	rel="stylesheet">
+>>>>>>> branch 'master' of https://github.com/2022-SMHRD-KDT-AI-1/loveRecipe.git
 
 
 <!-- Animate.css -->
@@ -88,6 +92,9 @@
    <![endif]-->
 
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> branch 'master' of https://github.com/2022-SMHRD-KDT-AI-1/loveRecipe.git
 </head>
 <body>
 	<%
@@ -114,7 +121,12 @@
 				<div class="row">
 					<div class="col-sm-4 col-xs-12">
 						<div id="gtco-logo">
+<<<<<<< HEAD
 							<a href="main.jsp"><em class="cursive-font" style="font-size: 3rem">레시피를 부탁해</em></a>
+=======
+							<a href="main.jsp"><em class="cursive-font"
+								style="font-size: 3rem">레시피를 부탁해</em></a>
+>>>>>>> branch 'master' of https://github.com/2022-SMHRD-KDT-AI-1/loveRecipe.git
 						</div>
 					</div>
 					<div class="col-xs-8 text-right menu-1">
@@ -123,11 +135,24 @@
 							<li class="has-dropdown"><a href="services.jsp">Services</a>
 								<ul class="dropdown">
 									<li><a href="refigator.jsp">나만의 냉장고</a></li>
+<<<<<<< HEAD
 									<li><a href="mealplan.jsp">식단짜기</a></li>
+=======
+>>>>>>> branch 'master' of https://github.com/2022-SMHRD-KDT-AI-1/loveRecipe.git
 									<li><a href="newrecipe.jsp">레시피등록</a></li>
 								</ul></li>
 							<li><a href="feedback.jsp">feedback</a></li>
+							<%
+								if (info != null) {
+							%>
+							<li class="btn-cta"><a href="LogoutService"><span>logout</span></a></li>
+							<%
+								} else {
+							%>
 							<li class="btn-cta"><a href="main.jsp"><span>login</span></a></li>
+							<%
+								}
+							%>
 						</ul>
 					</div>
 				</div>
@@ -169,10 +194,16 @@
 			</div>
 	</div>
 	</header>
+<<<<<<< HEAD
 	<div id="gtco-features" style="background-image: url(images/refrigerator4.jpg)">
+=======
+	<div id="gtco-features"
+		style="background-image: url(images/refrigerator4.jpg)">
+>>>>>>> branch 'master' of https://github.com/2022-SMHRD-KDT-AI-1/loveRecipe.git
 		<div class="gtco-container">
 			<div class="row animate-box">
 				<div class="col-md-8 col-md-offset-2 text-center gtco-heading">
+<<<<<<< HEAD
 				<div  id="ref1" style="background-color: #464E2E; color: white">
 					<table border="1" width="800px" align="center">
 						<caption>
@@ -229,6 +260,125 @@
 						%>
 					</table>
 				</div>
+=======
+					<div id="ref1" style="background-color: #464E2E; color: white">
+						<table border="1" width="800px" align="center">
+							<caption>
+								<h2 class="cursive-font">현재 보유 재료</h2>
+							</caption>
+							<tr style="font-size: 1.5em">
+								<th>재료</th>
+								<th>갯수</th>
+
+								<th>재료타입</th>
+								<th>유통기한</th>
+								<th>제철</th>
+								<th>칼로리</th>
+								<th>현재장소</th>
+								<th>권장장소</th>
+							</tr>
+							<%
+								if (refilist != null && info != null) {
+								for (int i = 0; i < refilist.size(); i++) {
+									ingrilist = dao.selectingri(refilist.get(i).getIngre_name());
+									String ingriname = refilist.get(i).getIngre_name();
+							%>
+							<tr>
+								<td><%=refilist.get(i).getIngre_name()%></td>
+								<td><%=refilist.get(i).getIngre_amount()%></td>
+								<%
+									if (ingrilist != null) {
+								%>
+								<td><%=ingrilist.get(0).getType()%></td>
+								<td><%=dao.expire(ingrilist.get(0).getExpire())%></td>
+								<td><%=ingrilist.get(0).getSeason()%></td>
+								<td><%=ingrilist.get(0).getCarloy()%></td>
+								<td><%=refilist.get(i).getIngre_temp()%></td>
+								<td><%=ingrilist.get(0).getTempt()%></td>
+								<%
+									} else {
+								}
+								%>
+								<td>
+									<form action="deleteingri">
+										<input type="hidden" name="ingri" value="<%=ingriname%>">
+										<input type="hidden" name="id" value="<%=info.getId()%>">
+										<button type="submit" style="color: black;">
+											<span class="material-icons">delete_forever</span>
+										</button>
+									</form>
+								</td>
+							</tr>
+							<%
+								}
+							}
+							%>
+						</table>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	</div>
+	<div id="gtco-subscribe" style="background-image: url(images/ice.jpg)">
+		<div class="gtco-container">
+			<div class="row animate-box">
+				<div class="col-md-8 col-md-offset-2 text-right gtco-heading">
+					<h2 class="cursive-font" style="color: #055052;">냉동실</h2>
+					<fieldset>
+						<form action="#">
+							<input type="text" name="ingre1" placeholder="재료명을 입력하세요."><br>
+							<input type="number" name="number1" placeholder="갯수를 입력하세요."><br>
+							<input type="button" value="등록" onClick="low_save();" class="btn">
+						</form>
+					</fieldset>
+					<div id="ref1" style="background-color: green; color: white">
+						<table>
+							<thead>
+								<tr>
+									<td>재료</td>
+									<td>갯수</td>
+								</tr>
+							</thead>
+
+							<tbody id="low">
+
+							</tbody>
+						</table>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<div id="gtco-subscribe"
+		style="background-image: url(images/fruit.jpg)">
+		<div class="gtco-container">
+			<div class="row animate-box">
+				<div class="col-md-8 col-md-offset-2 text-right gtco-heading">
+					<h2 class="cursive-font">냉장실</h2>
+					<fieldset>
+						<form action="#">
+							<input type="text" name="ingre2" placeholder="재료명을 입력하세요."><br>
+							<input type="number" name="number2" placeholder="갯수를 입력하세요."><br>
+							<input type="button" value="등록" onClick="mid_save()" class="btn">
+						</form>
+					</fieldset>
+					<div id="ref2" style="background-color: red; color: white">
+						<table>
+							<thead>
+								<tr>
+									<td>재료</td>
+									<td>갯수</td>
+								</tr>
+							</thead>
+
+							<tbody id="mid">
+
+							</tbody>
+						</table>
+					</div>
+>>>>>>> branch 'master' of https://github.com/2022-SMHRD-KDT-AI-1/loveRecipe.git
 				</div>
 			</div>
 		</div>
@@ -255,8 +405,43 @@
                            </tr>
                         </thead>
 
+<<<<<<< HEAD
                         <tbody id="low">
+=======
+	<div id="gtco-subscribe"
+		style="background-image: url(images/onion.jpg)">
+		<div class="gtco-container">
+			<div class="row animate-box">
+				<div class="col-md-8 col-md-offset-2 text-right gtco-heading">
+					<h2 class="cursive-font" style="color: #865439">상온</h2>
+					<fieldset>
+						<form action="#">
+							<input type="text" name="ingre3" placeholder="재료명을 입력하세요."><br>
+							<input type="number" name="number3" placeholder="갯수를 입력하세요."><br>
+							<input type="button" value="등록" onClick="high_save()" class="btn">
+						</form>
+					</fieldset>
+					<div id="ref3" style="background-color: #865439; color: white">
+						<table>
+							<thead>
+								<tr>
+									<td>재료</td>
+									<td>갯수</td>
+								</tr>
+							</thead>
 
+							<tbody id="high">
+
+							</tbody>
+						</table>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+>>>>>>> branch 'master' of https://github.com/2022-SMHRD-KDT-AI-1/loveRecipe.git
+
+<<<<<<< HEAD
                         </tbody>
                      </table>
                   </div>
@@ -327,6 +512,8 @@
          </div>
       </div>
 	
+=======
+>>>>>>> branch 'master' of https://github.com/2022-SMHRD-KDT-AI-1/loveRecipe.git
 
 	<script type="text/javascript"
 		src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
@@ -463,8 +650,13 @@
 	</div>
 
 
+<<<<<<< HEAD
 <div class="timer"></div>
 <script src="js/timerMain.js" type="module"></script>
+=======
+	<div class="timer"></div>
+	<script src="js/timerMain.js" type="module"></script>
+>>>>>>> branch 'master' of https://github.com/2022-SMHRD-KDT-AI-1/loveRecipe.git
 
 
 	<!-- jQuery -->
