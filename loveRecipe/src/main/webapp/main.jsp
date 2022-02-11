@@ -12,7 +12,7 @@
 <head>
 <meta charset="utf-8">
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
-<title>·¹½ÃÇÇ¸¦ ºÎÅ¹ÇØ &mdash; Free Website Template, Free HTML5
+<title>ë ˆì‹œí”¼ë¥¼ ë¶€íƒí•´ &mdash; Free Website Template, Free HTML5
 	Template by GetTemplates.co</title>
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <meta name="description"
@@ -40,53 +40,6 @@
 	href="https://fonts.googleapis.com/css2?family=Nanum+Brush+Script&display=swap"
 	rel="stylesheet">
 <link href="https://fonts.googleapis.com/icon?family=Material+Icons"
-<<<<<<< HEAD
-      rel="stylesheet">
-
-<!-- Animate.css -->
-<link rel="stylesheet" href="css/animate.css">
-<!-- Icomoon Icon Fonts-->
-<link rel="stylesheet" href="css/icomoon.css">
-<!-- Themify Icons-->
-<link rel="stylesheet" href="css/themify-icons.css">
-<!-- Bootstrap  -->
-<link rel="stylesheet" href="css/bootstrap.css">
-
-<!-- Magnific Popup -->
-<link rel="stylesheet" href="css/magnific-popup.css">
-
-<!-- Bootstrap DateTimePicker -->
-<link rel="stylesheet" href="css/bootstrap-datetimepicker.min.css">
-
-<!-- Owl Carousel  -->
-<link rel="stylesheet" href="css/owl.carousel.min.css">
-<link rel="stylesheet" href="css/owl.theme.default.min.css">
-
-<!-- Theme style  -->
-<link rel="stylesheet" href="css/style.css">
-
-<!-- Modernizr JS -->
-<script src="js/modernizr-2.6.2.min.js"></script>
-<!-- FOR IE9 below -->
-<!--[if lt IE 9]>
-   <script src="js/respond.min.js"></script>
-   <![endif]-->
-
-
-</head>
-
-<body>
-
-
-
-	<%
-		DAO dao = new DAO();
-		MemberVO info = (MemberVO) session.getAttribute("info");
-
-		int foodType = dao.foodType();
-		int memberCount = dao.memberCount();
-		int recipeCount = dao.recipeCount();
-=======
 	rel="stylesheet">
 
 <!-- Animate.css -->
@@ -132,7 +85,6 @@
 	int foodType = dao.foodType();
 	int memberCount = dao.memberCount();
 	int recipeCount = dao.recipeCount();
->>>>>>> branch 'master' of https://github.com/2022-SMHRD-KDT-AI-1/loveRecipe.git
 	%>
 
 
@@ -149,7 +101,7 @@
 					<div class="col-sm-4 col-xs-12">
 						<div id="gtco-logo">
 							<a href="main.jsp"><em class="cursive-font"
-								style="font-size: 3rem">·¹½ÃÇÇ¸¦ ºÎÅ¹ÇØ</em></a>
+								style="font-size: 3rem">ë ˆì‹œí”¼ë¥¼ ë¶€íƒí•´</em></a>
 						</div>
 					</div>
 					<div class="col-xs-8 text-right menu-1">
@@ -157,30 +109,21 @@
 							<li><a href="menu.jsp">Menu</a></li>
 							<li class="has-dropdown"><a href="services.jsp">Services</a>
 								<ul class="dropdown">
-									<li><a href="refigator.jsp">³ª¸¸ÀÇ ³ÃÀå°í</a></li>
-									<li><a href="newrecipe.jsp">·¹½ÃÇÇµî·Ï</a></li>
+									<li><a href="refigator.jsp">ë‚˜ë§Œì˜ ëƒ‰ìž¥ê³ </a></li>
+									<li><a href="newrecipe.jsp">ë ˆì‹œí”¼ë“±ë¡</a></li>
 								</ul></li>
 							<li><a href="feedback.jsp">feedback</a></li>
 							<%
-<<<<<<< HEAD
-									if (info != null){ }else {
-								%>
-=======
 								if (info != null) {
 							%>
 							<li class="btn-cta"><a href="LogoutService"><span>logout</span></a></li>
 							<%
 								} else {
 							%>
->>>>>>> branch 'master' of https://github.com/2022-SMHRD-KDT-AI-1/loveRecipe.git
 							<li class="btn-cta"><a href="main.jsp"><span>login</span></a></li>
-<<<<<<< HEAD
-							<% }  %>
-=======
 							<%
 								}
 							%>
->>>>>>> branch 'master' of https://github.com/2022-SMHRD-KDT-AI-1/loveRecipe.git
 						</ul>
 					</div>
 				</div>
@@ -206,12 +149,12 @@
 								<%
 									if (info.getId().equals("admin")) {
 								%>
-								<h1>°ü¸®ÀÚ´Ô È¯¿µÇÕ´Ï´Ù</h1>
+								<h1>ê´€ë¦¬ìžë‹˜ í™˜ì˜í•©ë‹ˆë‹¤</h1>
 								<%
 									}
 								%>
 								<h1><%=info.getNickname()%>
-									´Ô È¯¿µÇÕ´Ï´Ù
+									ë‹˜ í™˜ì˜í•©ë‹ˆë‹¤
 								</h1>
 								<%
 									} else {
@@ -276,17 +219,17 @@
 																if (info.getId().equals("admin")) {
 															%>
 
-															<a href="veiwmember.jsp">È¸¿ø Á¤º¸ °ü¸®</a>
+															<a href="veiwmember.jsp">íšŒì› ì •ë³´ ê´€ë¦¬</a>
 															<%
 																}
 															%>
-															<a href="LogoutService">·Î±×¾Æ¿ô</a> <a href="updateuser.jsp">È¸¿øÁ¤º¸º¯°æ</a>
+															<a href="LogoutService">ë¡œê·¸ì•„ì›ƒ</a> <a href="updateuser.jsp">íšŒì›ì •ë³´ë³€ê²½</a>
 
 															<%
 																} else {
 															%>
 															<input type="submit" class="btn btn-primary btn-block"
-																value="login"> <a href="new.jsp">È¸¿ø°¡ÀÔ</a>
+																value="login"> <a href="new.jsp">íšŒì›ê°€ìž…</a>
 															<%
 																}
 															%>
@@ -310,49 +253,7 @@
 			</div>
 		</header>
 
-			
-		</div>
 
-<<<<<<< HEAD
-		<div id="gtco-features" style="background-color: #3DB2FF;">
-			<div class="gtco-container">
-				<div class="row">
-					<div
-						class="col-md-8 col-md-offset-2 text-center gtco-heading animate-box">
-						<h2 class="cursive-font">Our Services</h2>
-						<p>»ç¿ëÀÚµéÀÇ Çàº¹Àº ¾ðÁ¦³ª °³¹ßÀÚÀÇ Çàº¹</p>
-					</div>
-				</div>
-				<div class="row">
-					<div class="col-md-4 col-sm-6">
-						<div class="feature-center animate-box"
-							data-animate-effect="fadeIn">
-							<span class="icon"> <i class="ti-face-smile"></i>
-							</span>
-							<h3>Happy</h3>
-							<p>¿ä¸®ÇÏ´Â Áñ°Å¿ò</p>
-						</div>
-					</div>
-					<div class="col-md-4 col-sm-6">
-						<div class="feature-center animate-box"
-							data-animate-effect="fadeIn">
-							<span class="icon"> <i class="ti-thought"></i>
-							</span>
-							<h3>Creative</h3>
-							<p>Ã¢ÀÇÀûÀÎ ·¹½ÃÇÇ</p>
-						</div>
-					</div>
-					<div class="col-md-4 col-sm-6">
-						<div class="feature-center animate-box"
-							data-animate-effect="fadeIn">
-							<span class="icon"> <i class="ti-check"></i>
-							</span>
-							<h3>check</h3>
-							<p>³ÃÀå°í °ü¸®</p>
-						</div>
-					</div>
-					
-=======
 	</div>
 
 	<div id="gtco-features" style="background-color: #FBB448;">
@@ -361,7 +262,7 @@
 				<div
 					class="col-md-8 col-md-offset-2 text-center gtco-heading animate-box">
 					<h2 class="cursive-font">Our Services</h2>
-					<p>»ç¿ëÀÚµéÀÇ Çàº¹Àº ¾ðÁ¦³ª °³¹ßÀÚÀÇ Çàº¹</p>
+					<p>ì‚¬ìš©ìžë“¤ì˜ í–‰ë³µì€ ì–¸ì œë‚˜ ê°œë°œìžì˜ í–‰ë³µ</p>
 				</div>
 			</div>
 			<div class="row">
@@ -371,7 +272,7 @@
 						<span class="icon"> <i class="ti-face-smile"></i>
 						</span>
 						<h3>Happy</h3>
-						<p>¿ä¸®ÇÏ´Â Áñ°Å¿ò</p>
+						<p>ìš”ë¦¬í•˜ëŠ” ì¦ê±°ì›€</p>
 					</div>
 				</div>
 				<div class="col-md-4 col-sm-6">
@@ -380,7 +281,7 @@
 						<span class="icon"> <i class="ti-thought"></i>
 						</span>
 						<h3>Creative</h3>
-						<p>Ã¢ÀÇÀûÀÎ ·¹½ÃÇÇ</p>
+						<p>ì°½ì˜ì ì¸ ë ˆì‹œí”¼</p>
 					</div>
 				</div>
 				<div class="col-md-4 col-sm-6">
@@ -389,7 +290,7 @@
 						<span class="icon"> <i class="ti-check"></i>
 						</span>
 						<h3>check</h3>
-						<p>³ÃÀå°í °ü¸®</p>
+						<p>ëƒ‰ìž¥ê³  ê´€ë¦¬</p>
 					</div>
 				</div>
 
@@ -402,7 +303,7 @@
 
 	<script type="text/javascript">
 		document.oncontextmenu = function() {
-			alert("¸¶¿ì½ºÀÇ ¿ìÅ¬¸¯Àº »ç¿ëÇÒ ¼ö ¾ø½À´Ï´Ù.")
+			alert("ë§ˆìš°ìŠ¤ì˜ ìš°í´ë¦­ì€ ì‚¬ìš©í•  ìˆ˜ ì—†ìŠµë‹ˆë‹¤.")
 			return false;
 		}
 	</script>
@@ -415,8 +316,8 @@
 		<div class="gtco-container text-center">
 			<div class="display-t">
 				<div class="display-tc">
-					<h1 class="cursive-font">&ldquo;À½½Ä¿¡ ´ëÇÑ »ç¶ûÃ³·³ Áø½ÇµÈ »ç¶ûÀº ¾ø´Ù.&rdquo;</h1>
-					<p>&mdash; Á¶Áö ¹ö³ªµå ¼î</p>
+					<h1 class="cursive-font">&ldquo;ìŒì‹ì— ëŒ€í•œ ì‚¬ëž‘ì²˜ëŸ¼ ì§„ì‹¤ëœ ì‚¬ëž‘ì€ ì—†ë‹¤.&rdquo;</h1>
+					<p>&mdash; ì¡°ì§€ ë²„ë‚˜ë“œ ì‡¼</p>
 				</div>
 			</div>
 		</div>
@@ -428,8 +329,8 @@
 			<div class="row">
 				<div
 					class="col-md-8 col-md-offset-2 text-center gtco-heading animate-box">
-					<h2 class="cursive-font primary-color">±×°Å ¾Æ¼¼¿ä?</h2>
-					<p>½Ä»ç¹ýÀÌ Àß¸øµÇ¾ú´Ù¸é ¾àÀÌ ¼Ò¿ë¾ø°í, ½Ä»ç¹ýÀÌ ¿Ç´Ù¸é ¾àÀÌ ÇÊ¿ä¾ø´Ù.</p>
+					<h2 class="cursive-font primary-color">ê·¸ê±° ì•„ì„¸ìš”?</h2>
+					<p>ì‹ì‚¬ë²•ì´ ìž˜ëª»ë˜ì—ˆë‹¤ë©´ ì•½ì´ ì†Œìš©ì—†ê³ , ì‹ì‚¬ë²•ì´ ì˜³ë‹¤ë©´ ì•½ì´ í•„ìš”ì—†ë‹¤.</p>
 				</div>
 			</div>
 
@@ -440,7 +341,7 @@
 					<div class="feature-center">
 						<span class="counter js-counter" data-from="0" data-to="5"
 							data-speed="3000" data-refresh-interval="50">1</span> <span
-							class="counter-label">Æò±Õ ÆòÁ¡</span>
+							class="counter-label">í‰ê·  í‰ì </span>
 
 					</div>
 				</div>
@@ -449,8 +350,8 @@
 					<div class="feature-center">
 						<span class="counter js-counter" data-from="0"
 							data-to="<%=foodType%>" data-speed="3000"
-							data-refresh-interval="50">1</span> <span class="counter-label">Á¶¸®
-							¹æ¹ý</span>
+							data-refresh-interval="50">1</span> <span class="counter-label">ì¡°ë¦¬
+							ë°©ë²•</span>
 					</div>
 				</div>
 				<div class="col-md-3 col-sm-6 animate-box"
@@ -458,8 +359,8 @@
 					<div class="feature-center">
 						<span class="counter js-counter" data-from="0"
 							data-to="<%=memberCount%>" data-speed="3000"
-							data-refresh-interval="50">1</span> <span class="counter-label">ÃÑ
-							È¸¿ø¼ö</span>
+							data-refresh-interval="50">1</span> <span class="counter-label">ì´
+							íšŒì›ìˆ˜</span>
 					</div>
 				</div>
 				<div class="col-md-3 col-sm-6 animate-box"
@@ -467,11 +368,10 @@
 					<div class="feature-center">
 						<span class="counter js-counter" data-from="0"
 							data-to="<%=recipeCount%>" data-speed="3000"
-							data-refresh-interval="50">1</span> <span class="counter-label">·¹½ÃÇÇ
-							¼ö</span>
+							data-refresh-interval="50">1</span> <span class="counter-label">ë ˆì‹œí”¼
+							ìˆ˜</span>
 
 					</div>
->>>>>>> branch 'master' of https://github.com/2022-SMHRD-KDT-AI-1/loveRecipe.git
 				</div>
 
 			</div>
@@ -510,64 +410,8 @@
 
 		</div>
 
-<<<<<<< HEAD
-		<div id="gtco-counter" class="gtco-section">
-			<div class="gtco-container">
-
-				<div class="row">
-					<div
-						class="col-md-8 col-md-offset-2 text-center gtco-heading animate-box">
-						<h2 class="cursive-font primary-color">±×°Å ¾Æ¼¼¿ä?</h2>
-						<p>½Ä»ç¹ýÀÌ Àß¸øµÇ¾ú´Ù¸é ¾àÀÌ ¼Ò¿ë¾ø°í, ½Ä»ç¹ýÀÌ ¿Ç´Ù¸é ¾àÀÌ ÇÊ¿ä¾ø´Ù.</p>
-					</div>
-				</div>
-
-				<div class="row">
-
-					<div class="col-md-3 col-sm-6 animate-box"
-						data-animate-effect="fadeInUp">
-						<div class="feature-center">
-							<span class="counter js-counter" data-from="0" data-to="5"
-								data-speed="3000" data-refresh-interval="50">1</span> <span
-								class="counter-label">Æò±Õ ÆòÁ¡</span>
-
-						</div>
-					</div>
-					<div class="col-md-3 col-sm-6 animate-box"
-						data-animate-effect="fadeInUp">
-						<div class="feature-center">
-							<span class="counter js-counter" data-from="0"
-								data-to="18" data-speed="3000"
-								data-refresh-interval="50">1</span> <span class="counter-label">Á¶¸®
-								¹æ¹ý</span>
-						</div>
-					</div>
-					<div class="col-md-3 col-sm-6 animate-box"
-						data-animate-effect="fadeInUp">
-						<div class="feature-center">
-							<span class="counter js-counter" data-from="0"
-								data-to="178" data-speed="3000"
-								data-refresh-interval="50">1</span> <span class="counter-label">ÃÑ
-								È¸¿ø¼ö</span>
-						</div>
-					</div>
-					<div class="col-md-3 col-sm-6 animate-box"
-						data-animate-effect="fadeInUp">
-						<div class="feature-center">
-							<span class="counter js-counter" data-from="0"
-								data-to="1482" data-speed="3000"
-								data-refresh-interval="50">1</span> <span class="counter-label">·¹½ÃÇÇ
-								¼ö</span>
-
-						</div>
-					</div>
-
-				</div>
-			</div>
-=======
 		<div class="gototop js-top">
 			<a href="#" class="js-gotop"><i class="icon-arrow-up"></i></a>
->>>>>>> branch 'master' of https://github.com/2022-SMHRD-KDT-AI-1/loveRecipe.git
 		</div>
 
 		<div class="timer"></div>
