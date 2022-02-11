@@ -1,7 +1,7 @@
 <%@page import="model.MemberVO"%>
 <%@page import="model.DAO"%>
-<%@ page language="java" contentType="text/html; charset=EUC-KR"
-	pageEncoding="EUC-KR"%>
+<%@ page language="java" contentType="text/html; charset=utf-8"
+	pageEncoding="utf-8"%>
 <!DOCTYPE HTML>
 <!--
 	Aesthetic by gettemplates.co
@@ -12,7 +12,7 @@
 <head>
 <meta charset="utf-8">
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
-<title>·¹½ÃÇÇ¸¦ ºÎÅ¹ÇØ &mdash; Free Website Template, Free HTML5
+<title>ë ˆì‹œí”¼ë¥¼ ë¶€íƒí•´ &mdash; Free Website Template, Free HTML5
 	Template by GetTemplates.co</title>
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <meta name="description"
@@ -92,7 +92,7 @@
 					<div class="col-sm-4 col-xs-12">
 						<div id="gtco-logo">
 							<a href="main.jsp"><em class="cursive-font"
-								style="font-size: 3rem">·¹½ÃÇÇ¸¦ ºÎÅ¹ÇØ</em></a>
+								style="font-size: 3rem">ë ˆì‹œí”¼ë¥¼ ë¶€íƒí•´</em></a>
 						</div>
 					</div>
 					<div class="col-xs-8 text-right menu-1">
@@ -100,8 +100,8 @@
 							<li><a href="menu.jsp">Menu</a></li>
 							<li class="has-dropdown"><a href="services.jsp">Services</a>
 								<ul class="dropdown">
-									<li><a href="refigator.jsp">³ª¸¸ÀÇ ³ÃÀå°í</a></li>
-									<li><a href="newrecipe.jsp">·¹½ÃÇÇµî·Ï</a></li>
+									<li><a href="refigator.jsp">ë‚˜ë§Œì˜ ëƒ‰ì¥ê³ </a></li>
+									<li><a href="newrecipe.jsp">ë ˆì‹œí”¼ë“±ë¡</a></li>
 								</ul></li>
 							<li><a href="feedback.jsp">feedback</a></li>
 							<%
@@ -162,7 +162,7 @@
 									<div class="col-md-12">
 										<label class="sr-only" for="message">Message</label>
 										<textarea name="message" id="message" cols="30" rows="10"
-											class="form-control" placeholder="»ç¿ëÇÏ½Ã¸é¼­ ºÒÆíÇŞ´øÁ¡À» º¸³»ÁÖ¼¼¿ä!"></textarea>
+											class="form-control" placeholder="ì‚¬ìš©í•˜ì‹œë©´ì„œ ë¶ˆí¸í–‡ë˜ì ì„ ë³´ë‚´ì£¼ì„¸ìš”!"></textarea>
 									</div>
 								</div>
 								<div class="form-group">

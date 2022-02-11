@@ -1,7 +1,7 @@
 <%@page import="model.MemberVO"%>
 <%@page import="model.DAO"%>
-<%@ page language="java" contentType="text/html; charset=EUC-KR"
-	pageEncoding="EUC-KR"%>
+<%@ page language="java" contentType="text/html; charset=utf-8"
+	pageEncoding="utf-8"%>
 <!DOCTYPE HTML>
 <!--
 	Aesthetic by gettemplates.co
@@ -12,7 +12,7 @@
 <head>
 <meta charset="utf-8">
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
-<title>·¹½ÃÇÇ¸¦ ºÎÅ¹ÇØ &mdash; Free Website Template, Free HTML5
+<title>ë ˆì‹œí”¼ë¥¼ ë¶€íƒí•´ &mdash; Free Website Template, Free HTML5
 	Template by GetTemplates.co</title>
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <meta name="description"
@@ -40,7 +40,7 @@
 	href="https://fonts.googleapis.com/css2?family=Nanum+Brush+Script&display=swap"
 	rel="stylesheet">
 <link href="https://fonts.googleapis.com/icon?family=Material+Icons"
-      rel="stylesheet">
+	rel="stylesheet">
 
 <!-- Animate.css -->
 <link rel="stylesheet" href="css/animate.css">
@@ -80,7 +80,7 @@
 		DAO dao = new DAO();
 	MemberVO info = (MemberVO) session.getAttribute("info");
 	%>
-	
+
 	<div class="gtco-loader"></div>
 
 	<div id="page">
@@ -93,7 +93,8 @@
 				<div class="row">
 					<div class="col-sm-4 col-xs-12">
 						<div id="gtco-logo">
-							<a href="main.jsp"><em class="cursive-font" style="font-size: 3rem">·¹½ÃÇÇ¸¦ ºÎÅ¹ÇØ</em></a>
+							<a href="main.jsp"><em class="cursive-font"
+								style="font-size: 3rem">ë ˆì‹œí”¼ë¥¼ ë¶€íƒí•´</em></a>
 						</div>
 					</div>
 					<div class="col-xs-8 text-right menu-1">
@@ -101,8 +102,8 @@
 							<li><a href="menu.jsp">Menu</a></li>
 							<li class="has-dropdown"><a href="services.jsp">Services</a>
 								<ul class="dropdown">
-									<li><a href="refigator.jsp">³ª¸¸ÀÇ ³ÃÀå°í</a></li>
-									<li><a href="newrecipe.jsp">·¹½ÃÇÇµî·Ï</a></li>
+									<li><a href="refigator.jsp">ë‚˜ë§Œì˜ ëƒ‰ìž¥ê³ </a></li>
+									<li><a href="newrecipe.jsp">ë ˆì‹œí”¼ë“±ë¡</a></li>
 								</ul></li>
 							<li><a href="feedback.jsp">feedback</a></li>
 							<%
@@ -149,76 +150,76 @@
 				<div class="row">
 					<div class="col-md-12">
 						<div class="col-md-6 animate-box">
-							<h3>·¹½ÃÇÇ ¾÷·Îµå</h3>
+							<h3>ë ˆì‹œí”¼ ì—…ë¡œë“œ</h3>
 
 							<form action="recipeuploadService" method="post"
 								enctype="multipart/form-data">
 								<div>
-									<label>·¹½ÃÇÇ±¹°¡</label><br> ÇÑ½Ä<input type="radio"
-										name="object" value="korea"> Áß½Ä<input type="radio"
-										name="object" value="china"> ÀÏ½Ä<input type="radio"
-										name="object" value="japan"> ¾ç½Ä <input type="radio"
-										name="object" value="euro"> µ¿³²¾Æ <input type="radio"
-										name="object" value="phlipean"> ÀÌÅ»¸®¾Æ <input
-										type="radio" name="object" value="italy"> ¸ß½ÃÄÚ <input
-										type="radio" name="object" value="mexico"> Ç»Àü<input
+									<label>ë ˆì‹œí”¼êµ­ê°€</label><br> í•œì‹<input type="radio"
+										name="object" value="korea"> ì¤‘ì‹<input type="radio"
+										name="object" value="china"> ì¼ì‹<input type="radio"
+										name="object" value="japan"> ì–‘ì‹ <input type="radio"
+										name="object" value="euro"> ë™ë‚¨ì•„ <input type="radio"
+										name="object" value="phlipean"> ì´íƒˆë¦¬ì•„ <input
+										type="radio" name="object" value="italy"> ë©•ì‹œì½” <input
+										type="radio" name="object" value="mexico"> í“¨ì „<input
 										type="radio" name="object" value="fuzen">
 								</div>
 								<div>
-									<label>·¹½ÃÇÇÁ¾·ù</label><br> ±¸ÀÌ<input type="radio" name="type"
-										value="guie"> ±¹<input type="radio" name="type"
-										value="guk"> ±×¶óÅÁ/¸®Á¶¶Ç<input type="radio" name="type"
-										value="grtang"> ³ª¹°/»ýÃ¤/»ø·¯µå <input type="radio"
-										name="type" value="namul"> ¶±/ÇÑ°ú <input type="radio"
-										name="type" value="ttuk"> µµ½Ã¶ô/°£½Ä <input type="radio"
-										name="type" value="dosilack"> ¸¸µÎ/¸é·ù <input
-										type="radio" name="type" value="mundu"> ¹Ø¹ÝÂù/±èÄ¡<input
-										type="radio" name="type" value="kimchi"> ¹ä/Á×/½ºÇÁ <input
-										type="radio" name="type" value="bap"> ººÀ½ <input
-										type="radio" name="type" value="bokum"> ºÎÄ§ <input
-										type="radio" name="type" value="buchim"> »§/°úÀÚ<input
-										type="radio" name="type" value="bbang"> »÷µåÀ§Ä¡/ÇÜ¹ö°Å <input
-										type="radio" name="type" value="sandwich"> ¾ç³äÀå <input
-										type="radio" name="type" value="yangnum"> ¾ç½Ä <input
-										type="radio" name="type" value="yangsik"> À½·á<input
-										type="radio" name="type" value="umryo"> Á¶¸² <input
-										type="radio" name="type" value="jorim"> Âî°³/Àü°ñ/½ºÆ© <input
-										type="radio" name="type" value="zzikae"> Âò<input
-										type="radio" name="type" value="zzim"> ÇÇÀÚ <input
-										type="radio" name="type" value="pizza"> ÈÄ½Ä<input
-										type="radio" name="type" value="husik"> Æ¢±è/Ä¿Æ²¸´<input
+									<label>ë ˆì‹œí”¼ì¢…ë¥˜</label><br> êµ¬ì´<input type="radio" name="type"
+										value="guie"> êµ­<input type="radio" name="type"
+										value="guk"> ê·¸ë¼íƒ•/ë¦¬ì¡°ë˜<input type="radio" name="type"
+										value="grtang"> ë‚˜ë¬¼/ìƒì±„/ìƒëŸ¬ë“œ <input type="radio"
+										name="type" value="namul"> ë–¡/í•œê³¼ <input type="radio"
+										name="type" value="ttuk"> ë„ì‹œë½/ê°„ì‹ <input type="radio"
+										name="type" value="dosilack"> ë§Œë‘/ë©´ë¥˜ <input
+										type="radio" name="type" value="mundu"> ë°‘ë°˜ì°¬/ê¹€ì¹˜<input
+										type="radio" name="type" value="kimchi"> ë°¥/ì£½/ìŠ¤í”„ <input
+										type="radio" name="type" value="bap"> ë³¶ìŒ <input
+										type="radio" name="type" value="bokum"> ë¶€ì¹¨ <input
+										type="radio" name="type" value="buchim"> ë¹µ/ê³¼ìž<input
+										type="radio" name="type" value="bbang"> ìƒŒë“œìœ„ì¹˜/í–„ë²„ê±° <input
+										type="radio" name="type" value="sandwich"> ì–‘ë…ìž¥ <input
+										type="radio" name="type" value="yangnum"> ì–‘ì‹ <input
+										type="radio" name="type" value="yangsik"> ìŒë£Œ<input
+										type="radio" name="type" value="umryo"> ì¡°ë¦¼ <input
+										type="radio" name="type" value="jorim"> ì°Œê°œ/ì „ê³¨/ìŠ¤íŠœ <input
+										type="radio" name="type" value="zzikae"> ì°œ<input
+										type="radio" name="type" value="zzim"> í”¼ìž <input
+										type="radio" name="type" value="pizza"> í›„ì‹<input
+										type="radio" name="type" value="husik"> íŠ€ê¹€/ì»¤í‹€ë¦¿<input
 										type="radio" name="type" value="tikim">
 								</div>
 
 
 
 								<div>
-									<label>Á¦¸ñ</label> <input type="text" id="title" name="title"
-										class="form-control" placeholder="Á¦¸ñ">
+									<label>ì œëª©</label> <input type="text" id="title" name="title"
+										class="form-control" placeholder="ì œëª©">
 								</div>
 
 								<div>
-									<label>ÀÛ¼ºÀÚ</label><br> <input type="text" id="writer"
-										name="writer" class="writer" placeholder="ÀÛ¼ºÀÚ">
+									<label>ìž‘ì„±ìž</label><br> <input type="text" id="writer"
+										name="writer" class="writer" placeholder="ìž‘ì„±ìž">
 								</div>
 
 
 
 								<div>
-									<label>Á¶¸®¼ø¼­</label> <input type="file" name="filename"
+									<label>ì¡°ë¦¬ìˆœì„œ</label> <input type="file" name="filename"
 										style="float: right;" class="form-control">
 									<textarea rows="10" name="content" style="resize: none;"
 										class="form-control"></textarea>
 								</div>
 								<div>
 
-									<label>·¹½ÃÇÇ Ä®·Î¸®</label> <input type="number" name="kcal"
-										class="form-control" placeholder="¿øÇÏ½Ã´Â Ä®·Î¸®ÀÇ ÃÖ´ë°ª">
+									<label>ë ˆì‹œí”¼ ì¹¼ë¡œë¦¬</label> <input type="number" name="kcal"
+										class="form-control" placeholder="ì›í•˜ì‹œëŠ” ì¹¼ë¡œë¦¬ì˜ ìµœëŒ€ê°’">
 								</div>
 
 								<div>
-									<input type="reset" value="ÃÊ±âÈ­" class="btn btn-primary">
-									<input type="submit" value="ÀÛ¼ºÇÏ±â" class="btn btn-primary">
+									<input type="reset" value="ì´ˆê¸°í™”" class="btn btn-primary">
+									<input type="submit" value="ìž‘ì„±í•˜ê¸°" class="btn btn-primary">
 								</div>
 
 							</form>

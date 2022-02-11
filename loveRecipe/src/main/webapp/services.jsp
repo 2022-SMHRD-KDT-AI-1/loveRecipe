@@ -1,7 +1,7 @@
 <%@page import="model.MemberVO"%>
 <%@page import="model.DAO"%>
-<%@ page language="java" contentType="text/html; charset=EUC-KR"
-	pageEncoding="EUC-KR"%>
+<%@ page language="java" contentType="text/html; charset=utf-8"
+	pageEncoding="utf-8"%>
 <!DOCTYPE HTML>
 <!--
 	Aesthetic by gettemplates.co
@@ -12,7 +12,7 @@
 <head>
 <meta charset="utf-8">
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
-<title>·¹½ÃÇÇ¸¦ ºÎÅ¹ÇØ &mdash; Free Website Template, Free HTML5
+<title>ë ˆì‹œí”¼ë¥¼ ë¶€íƒí•´ &mdash; Free Website Template, Free HTML5
 	Template by GetTemplates.co</title>
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <meta name="description"
@@ -97,7 +97,7 @@
 					<div class="col-sm-4 col-xs-12">
 						<div id="gtco-logo">
 							<a href="main.jsp"><em class="cursive-font"
-								style="font-size: 3rem">·¹½ÃÇÇ¸¦ ºÎÅ¹ÇØ</em></a>
+								style="font-size: 3rem">ë ˆì‹œí”¼ë¥¼ ë¶€íƒí•´</em></a>
 						</div>
 					</div>
 					<div class="col-xs-8 text-right menu-1">
@@ -105,8 +105,8 @@
 							<li><a href="menu.jsp">Menu</a></li>
 							<li class="has-dropdown"><a href="services.jsp">Services</a>
 								<ul class="dropdown">
-									<li><a href="refigator.jsp">³ª¸¸ÀÇ ³ÃÀå°í</a></li>
-									<li><a href="newrecipe.jsp">·¹½ÃÇÇµî·Ï</a></li>
+									<li><a href="refigator.jsp">ë‚˜ë§Œì˜ ëƒ‰ìž¥ê³ </a></li>
+									<li><a href="newrecipe.jsp">ë ˆì‹œí”¼ë“±ë¡</a></li>
 								</ul></li>
 							<li><a href="feedback.jsp">feedback</a></li>
 							<%
@@ -171,8 +171,8 @@
 							data-animate-effect="fadeIn">
 							<span class="icon"> <i class="ti-crown"></i>
 							</span>
-							<h3>½Ç½Ã°£ ±Þ»ó½Â ¿ä¸®</h3>
-							<p>½Ç½Ã°£ ±Þ»ó½Â ¿ä¸® ·¹½ÃÇÇ ³ëÃâ</p>
+							<h3>ì‹¤ì‹œê°„ ê¸‰ìƒìŠ¹ ìš”ë¦¬</h3>
+							<p>ì‹¤ì‹œê°„ ê¸‰ìƒìŠ¹ ìš”ë¦¬ ë ˆì‹œí”¼ ë…¸ì¶œ</p>
 						</div>
 					</div>
 					<div class="col-md-4 col-sm-6">
@@ -180,8 +180,8 @@
 							data-animate-effect="fadeIn">
 							<span class="icon"> <i class="ti-apple"></i>
 							</span>
-							<h3>·¹½ÃÇÇÃßÃµ</h3>
-							<p>°Ë»öÇÊÅÍ¸µÀ» ÅëÇÑ ÃÖÀûÀÇ ·¹½ÃÇÇ ÃßÃµ</p>
+							<h3>ë ˆì‹œí”¼ì¶”ì²œ</h3>
+							<p>ê²€ìƒ‰í•„í„°ë§ì„ í†µí•œ ìµœì ì˜ ë ˆì‹œí”¼ ì¶”ì²œ</p>
 						</div>
 					</div>
 					<div class="col-md-4 col-sm-6">
@@ -189,8 +189,8 @@
 							data-animate-effect="fadeIn">
 							<span class="icon"> <i class="ti-check-box"></i>
 							</span>
-							<h3>½Ä´ÜÂ¥±â</h3>
-							<p>ÃßÃµ¹ÞÀº ·¹½ÃÇÇ¸¦ È°¿ëÇÏ¿© ½Ä´ÜÂ¥±â</p>
+							<h3>ì‹ë‹¨ì§œê¸°</h3>
+							<p>ì¶”ì²œë°›ì€ ë ˆì‹œí”¼ë¥¼ í™œìš©í•˜ì—¬ ì‹ë‹¨ì§œê¸°</p>
 						</div>
 					</div>
 					<div class="col-md-4 col-sm-6">
@@ -198,8 +198,8 @@
 							data-animate-effect="fadeIn">
 							<span class="icon"> <i class="ti-layout-grid2"></i>
 							</span>
-							<h3>³ª¸¸ÀÇ ³ÃÀå°í</h3>
-							<p>°¡Áö°íÀÕ´Â Àç·á ³ÃÀå°íÀÇ º¸°ü,°ü¸®±â´É</p>
+							<h3>ë‚˜ë§Œì˜ ëƒ‰ìž¥ê³ </h3>
+							<p>ê°€ì§€ê³ ìž‡ëŠ” ìž¬ë£Œ ëƒ‰ìž¥ê³ ì˜ ë³´ê´€,ê´€ë¦¬ê¸°ëŠ¥</p>
 						</div>
 					</div>
 					<div class="col-md-4 col-sm-6">
@@ -207,8 +207,8 @@
 							data-animate-effect="fadeIn">
 							<span class="icon"> <i class="ti-cloud-up"></i>
 							</span>
-							<h3>·¹½ÃÇÇ ¾÷·Îµå</h3>
-							<p>³ª¸¸ÀÇ ·¹½ÃÇÇ ¾÷·Îµå±â´É</p>
+							<h3>ë ˆì‹œí”¼ ì—…ë¡œë“œ</h3>
+							<p>ë‚˜ë§Œì˜ ë ˆì‹œí”¼ ì—…ë¡œë“œê¸°ëŠ¥</p>
 						</div>
 					</div>
 					<div class="col-md-4 col-sm-6">
@@ -216,8 +216,8 @@
 							data-animate-effect="fadeIn">
 							<span class="icon"> <i class="ti-thumb-up"></i>
 							</span>
-							<h3>ÁÁ¾Æ¿ä</h3>
-							<p>·¹½ÃÇÇ È°¿ë ÈÄ º°Á¡°ú ÁÁ¾Æ¿ä ³²±â±â</p>
+							<h3>ì¢‹ì•„ìš”</h3>
+							<p>ë ˆì‹œí”¼ í™œìš© í›„ ë³„ì ê³¼ ì¢‹ì•„ìš” ë‚¨ê¸°ê¸°</p>
 						</div>
 					</div>
 
@@ -234,10 +234,10 @@
 				<div class="display-t">
 					<div class="display-tc">
 						<h1 class="cursive-font">
-							&ldquo;¾î¸®¼®Àº ÀÚ´Â ¸Ö¸®¼­ Çàº¹À» Ã£°í,<br>Çö¸íÇÑ ÀÚ´Â ÀÚ½ÅÀÇ ¹ßÄ¡¿¡¼­ Çàº¹À»
-							Å°¿ö°£´Ù.&rdquo;
+							&ldquo;ì–´ë¦¬ì„ì€ ìžëŠ” ë©€ë¦¬ì„œ í–‰ë³µì„ ì°¾ê³ ,<br>í˜„ëª…í•œ ìžëŠ” ìžì‹ ì˜ ë°œì¹˜ì—ì„œ í–‰ë³µì„
+							í‚¤ì›Œê°„ë‹¤.&rdquo;
 						</h1>
-						<p>&mdash; Á¦ÀÓ½º ¿ÀÆæÇÏÀÓ</p>
+						<p>&mdash; ì œìž„ìŠ¤ ì˜¤íŽœí•˜ìž„</p>
 					</div>
 				</div>
 			</div>
@@ -249,7 +249,7 @@
 				<div class="row animate-box">
 					<div class="col-md-8 col-md-offset-2 text-center gtco-heading">
 						<h2 class="cursive-font">feedback</h2>
-						<p>»çÀÌÆ®¸¦ ¾²¸é¼­ ºÒÆíÇÞ´øÁ¡À» º¸³»ÁÖ¼¼¿ä!</p>
+						<p>ì‚¬ì´íŠ¸ë¥¼ ì“°ë©´ì„œ ë¶ˆíŽ¸í–‡ë˜ì ì„ ë³´ë‚´ì£¼ì„¸ìš”!</p>
 					</div>
 				</div>
 				<div class="row animate-box">
@@ -259,7 +259,7 @@
 								<div class="form-group">
 									<label for="feedback" class="sr-only">feedback</label> <input
 										type="feedback" class="form-control" id="feedback"
-										placeholder="ºÒÆíÇß´øÁ¡À» º¸³»ÁÖ¼¼¿ä!">
+										placeholder="ë¶ˆíŽ¸í–ˆë˜ì ì„ ë³´ë‚´ì£¼ì„¸ìš”!">
 								</div>
 							</div>
 							<div class="col-md-6 col-sm-6">

@@ -3,8 +3,8 @@
 <%@page import="java.util.ArrayList"%>
 <%@page import="model.MemberVO"%>
 <%@page import="model.DAO"%>
-<%@ page language="java" contentType="text/html; charset=EUC-KR"
-	pageEncoding="EUC-KR"%>
+<%@ page language="java" contentType="text/html; charset=utf-8"
+	pageEncoding="utf-8"%>
 <!DOCTYPE HTML>
 <!--
    Aesthetic by gettemplates.co
@@ -182,7 +182,7 @@
 						for (int i = 0; i < menulist.size(); i++) {
 					%>
 					<div class="col-lg-4 col-md-4 col-sm-6">
-					
+
 						<div class="fh5co-card-item image-popup">
 							<figure>
 								<div class="overlay">
@@ -192,19 +192,29 @@
 									class="img-responsive">
 							</figure>
 							<div class="fh5co-text">
-							
-								<h2>요리 이름 : <%=menulist.get(i).getName()%></h2>
-								<h2>국가 분류 : <%=menulist.get(i).getCountry()%></h2>
-								<h2>방법 분류 : <%=menulist.get(i).getFoodtype()%></h2>
-						
-								
-								
-								<h2>총칼로리 : <%=menulist.get(i).getCalory()%>kcal</h2>
 
-							
+								<h2>
+									요리 이름 :
+									<%=menulist.get(i).getName()%></h2>
+								<h2>
+									국가 분류 :
+									<%=menulist.get(i).getCountry()%></h2>
+								<h2>
+									방법 분류 :
+									<%=menulist.get(i).getFoodtype()%></h2>
+
+
+
+								<h2>
+									총칼로리 :
+									<%=menulist.get(i).getCalory()%>kcal
+								</h2>
+
+
 							</div>
 						</div>
-					<a href="viewrecipen.jsp">레시피 보기</a><br><br>
+						<a href="viewrecipen.jsp">레시피 보기</a><br>
+						<br>
 					</div>
 					<%
 						}

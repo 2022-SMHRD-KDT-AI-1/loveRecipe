@@ -1,5 +1,5 @@
-<%@ page language="java" contentType="text/html; charset=EUC-KR"
-	pageEncoding="EUC-KR"%>
+<%@ page language="java" contentType="text/html; charset=utf-8"
+	pageEncoding="utf-8"%>
 <!DOCTYPE HTML>
 <!--
 	Aesthetic by gettemplates.co
@@ -10,7 +10,7 @@
 <head>
 <meta charset="utf-8">
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
-<title>·¹½ÃÇÇ¸¦ ºÎÅ¹ÇØ &mdash; Free Website Template, Free HTML5
+<title>ë ˆì‹œí”¼ë¥¼ ë¶€íƒí•´ &mdash; Free Website Template, Free HTML5
 	Template by GetTemplates.co</title>
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <meta name="description"
@@ -81,7 +81,7 @@
 				<div class="row">
 					<div class="col-sm-4 col-xs-12">
 						<div id="gtco-logo">
-							<a href="main.jsp">·¹½ÃÇÇ¸¦ ºÎÅ¹ÇØ! <em>.</em></a>
+							<a href="main.jsp">ë ˆì‹œí”¼ë¥¼ ë¶€íƒí•´! <em>.</em></a>
 						</div>
 					</div>
 					<div class="col-xs-8 text-right menu-1">
@@ -89,9 +89,9 @@
 							<li><a href="menu.jsp">Menu</a></li>
 							<li class="has-dropdown"><a href="services.jsp">Services</a>
 								<ul class="dropdown">
-									<li><a href="refigator.jsp">³ª¸¸ÀÇ ³ÃÀå°í</a></li>
-									<li><a href="mealplan.jsp">½Ä´ÜÂ¥±â</a></li>
-									<li><a href="newrecipe.jsp">·¹½ÃÇÇµî·Ï</a></li>
+									<li><a href="refigator.jsp">ë‚˜ë§Œì˜ ëƒ‰ì¥ê³ </a></li>
+									<li><a href="mealplan.jsp">ì‹ë‹¨ì§œê¸°</a></li>
+									<li><a href="newrecipe.jsp">ë ˆì‹œí”¼ë“±ë¡</a></li>
 								</ul></li>
 							<li><a href="feedback.jsp">feedback</a></li>
 							<li class="btn-cta"><a href="main.jsp"><span>login</span></a></li>
@@ -128,40 +128,40 @@
 				<div class="row">
 					<div class="col-md-12">
 						<div class="col-md-6 animate-box">
-							<h3>È¸¿ø°¡ÀÔ</h3>
+							<h3>íšŒì›ê°€ì…</h3>
 							<form action="JoinService" method="POST">
 								<div class="row form-group">
 									<div class="col-md-12">
 										<label>id</label> <input type="text" name="id"
-											class="form-control" placeholder="¾ÆÀÌµğ">
+											class="form-control" placeholder="ì•„ì´ë””">
 									</div>
 
 								</div>
 								<div class="row form-group">
 									<div class="col-md-12">
 										<label>pw</label> <input type="password" name="pw"
-											class="form-control" placeholder="ºñ¹Ğ¹øÈ£">
+											class="form-control" placeholder="ë¹„ë°€ë²ˆí˜¸">
 									</div>
 
 								</div>
 								<div class="row form-group">
 									<div class="col-md-12">
 										<label>nickname</label> <input type="text" name="nickname"
-											class="form-control" placeholder="´Ğ³×ÀÓ">
+											class="form-control" placeholder="ë‹‰ë„¤ì„">
 									</div>
 
 								</div>
 								<div class="row form-group">
 									<div class="col-md-12">
 										<label>email</label> <input type="text" name="email"
-											class="form-control" placeholder="ÀÌ¸ŞÀÏ">
+											class="form-control" placeholder="ì´ë©”ì¼">
 									</div>
 
 								</div>
 								<div class="row form-group">
 									<div class="col-md-12">
 										<label>phone</label> <input type="text" name="phone"
-											class="form-control" placeholder="ÀüÈ­¹øÈ£">
+											class="form-control" placeholder="ì „í™”ë²ˆí˜¸">
 									</div>
 
 								</div>

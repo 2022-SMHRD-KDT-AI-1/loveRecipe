@@ -1,5 +1,5 @@
-<%@ page language="java" contentType="text/html; charset=EUC-KR"
-	pageEncoding="EUC-KR"%>
+<%@ page language="java" contentType="text/html; charset=utf-8"
+	pageEncoding="utf-8"%>
 <!DOCTYPE HTML>
 <!--
 	Aesthetic by gettemplates.co
@@ -10,7 +10,7 @@
 <head>
 <meta charset="utf-8">
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
-<title>·¹½ÃÇÇ¸¦ ºÎÅ¹ÇØ &mdash; Free Website Template, Free HTML5
+<title>ë ˆì‹œí”¼ë¥¼ ë¶€íƒí•´ &mdash; Free Website Template, Free HTML5
 	Template by GetTemplates.co</title>
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <meta name="description"
@@ -86,7 +86,7 @@
 					<div class="col-sm-4 col-xs-12">
 						<div id="gtco-logo">
 							<a href="main.jsp"><em class="cursive-font"
-								style="font-size: 3rem">·¹½ÃÇÇ¸¦ ºÎÅ¹ÇØ!</em></a>
+								style="font-size: 3rem">ë ˆì‹œí”¼ë¥¼ ë¶€íƒí•´!</em></a>
 						</div>
 					</div>
 					<div class="col-xs-8 text-right menu-1">
@@ -94,9 +94,9 @@
 							<li><a href="menu.jsp">Menu</a></li>
 							<li class="has-dropdown"><a href="services.jsp">Services</a>
 								<ul class="dropdown">
-									<li><a href="refigator.jsp">³ª¸¸ÀÇ ³ÃÀå°í</a></li>
-									<li><a href="mealplan.jsp">½Ä´ÜÂ¥±â</a></li>
-									<li><a href="newrecipe.jsp">·¹½ÃÇÇµî·Ï</a></li>
+									<li><a href="refigator.jsp">ë‚˜ë§Œì˜ ëƒ‰ìž¥ê³ </a></li>
+									<li><a href="mealplan.jsp">ì‹ë‹¨ì§œê¸°</a></li>
+									<li><a href="newrecipe.jsp">ë ˆì‹œí”¼ë“±ë¡</a></li>
 								</ul></li>
 							<li><a href="feedback.jsp">feedback</a></li>
 							<li class="btn-cta"><a href="main.jsp"><span>login</span></a></li>
@@ -138,54 +138,54 @@
 											<div class="tab-content-inner active" data-content="signup">
 
 												<h2
-													style="font-family: 'Nanum Brush Script', cursive; font-size: 46px;">°¨ÀÚÄ¡Áî±¸ÀÌ</h2>
+													style="font-family: 'Nanum Brush Script', cursive; font-size: 46px;">ê°ìžì¹˜ì¦ˆêµ¬ì´</h2>
 												<form action="recipesearch" id="rec"></form>
 											</div>
 											<div class="row form-group">
-												<label>±¹°¡ºÐ·ù : ¾ç½Ä</label><br>
+												<label>êµ­ê°€ë¶„ë¥˜ : ì–‘ì‹</label><br>
 											</div>
 											<div class="row form-group">
-												<label>¹æ¹ýºÐ·ù : ±¸ÀÌ</label><br>
+												<label>ë°©ë²•ë¶„ë¥˜ : êµ¬ì´</label><br>
 											</div>
 											<div class="row form-group">
-												<label>Ä®·Î¸® : 183kcal</label><br>
+												<label>ì¹¼ë¡œë¦¬ : 183kcal</label><br>
 											</div>
 											<div class="row form-group">
 												<table>
 													<thead>
 														<tr>
-															<td>Àç·á</td>
-															<td>°¹¼ö</td>
+															<td>ìž¬ë£Œ</td>
+															<td>ê°¯ìˆ˜</td>
 														</tr>
 													</thead>
 													<tbody>
 														<tr>
-															<td>°¨ÀÚ</td>
-															<td>7°³</td>
+															<td>ê°ìž</td>
+															<td>7ê°œ</td>
 														</tr>
 														<tr>
-															<td>¼Ò±Ý</td>
-															<td>1ÀÛÀº¼ú</td>
+															<td>ì†Œê¸ˆ</td>
+															<td>1ìž‘ì€ìˆ </td>
 														</tr>
 														<tr>
-															<td>Ã¼´ÙÄ¡Áî</td>
-															<td>³Ë³ËÇÏ°Ô</td>
+															<td>ì²´ë‹¤ì¹˜ì¦ˆ</td>
+															<td>ë„‰ë„‰í•˜ê²Œ</td>
 														</tr>
 														<tr>
-															<td>¸ðÂ¥·¼¶óÄ¡Áî</td>
-															<td>³Ë³ËÇÏ°Ô</td>
+															<td>ëª¨ì§œë ë¼ì¹˜ì¦ˆ</td>
+															<td>ë„‰ë„‰í•˜ê²Œ</td>
 														</tr>
 														<tr>
-															<td>ÆÄ¸¶»êÄ¡Áî</td>
-															<td>¾à°£</td>
+															<td>íŒŒë§ˆì‚°ì¹˜ì¦ˆ</td>
+															<td>ì•½ê°„</td>
 														</tr>
 														<tr>
-															<td>¹öÅÍ</td>
-															<td>¾à°£</td>
+															<td>ë²„í„°</td>
+															<td>ì•½ê°„</td>
 														</tr>
 														<tr>
-															<td>ÆÄ½½¸®°¡·ç</td>
-															<td>¼Ö¼Ö</td>
+															<td>íŒŒìŠ¬ë¦¬ê°€ë£¨</td>
+															<td>ì†”ì†”</td>
 														</tr>
 													</tbody>
 												</table>
@@ -211,96 +211,98 @@
 
 			<table border=0 width="1100" align="center" style="font-size: 22px;">
 				<tr height="100px">
-					<td colspan="3" align="center"><h3 style="font-size: 36px;"><br>·¹½ÃÇÇ</h3></td>
+					<td colspan="3" align="center"><h3 style="font-size: 36px;">
+							<br>ë ˆì‹œí”¼
+						</h3></td>
 				</tr>
 				<tr>
 					<td><img
 						src="https://recipe1.ezmember.co.kr/cache/recipe/2016/06/23/2191278351b6871fabc4c4dc18f55c8b1.jpg"
 						width="500"></td>
 					<td width="30px" rowspan="12"></td>
-					<td><b>1.</b> °¨ÀÚ´Â ³Ë³ËÇÏ°Ô »î¾ÆµÎ¾ú´Âµ¥¿ä.<br>°¨ÀÚ¸¦ ±ú²ýÇÏ°Ô ¾ÄÀº ÈÄ ³¿ºñ¿¡ ³Ö°í
-						°¨ÀÚ°¡ Àá±æ µí ¸» µíÇÏ°Ô ¹°À» º×°í ³¿ºñ ¶Ñ²±À» µ¤°í ¼¾ ºÒ·Î »î´Ù°¡ ²úÀ¸¸é Áß¾à ºÒ·Î ³õ°í Àº±ÙÈ÷ ÀÍÈü´Ï´Ù.</td>
+					<td><b>1.</b> ê°ìžëŠ” ë„‰ë„‰í•˜ê²Œ ì‚¶ì•„ë‘ì—ˆëŠ”ë°ìš”.<br>ê°ìžë¥¼ ê¹¨ë—í•˜ê²Œ ì”»ì€ í›„ ëƒ„ë¹„ì— ë„£ê³ 
+						ê°ìžê°€ ìž ê¸¸ ë“¯ ë§ ë“¯í•˜ê²Œ ë¬¼ì„ ë¶“ê³  ëƒ„ë¹„ ëšœê»‘ì„ ë®ê³  ì„¼ ë¶ˆë¡œ ì‚¶ë‹¤ê°€ ë“ìœ¼ë©´ ì¤‘ì•½ ë¶ˆë¡œ ë†“ê³  ì€ê·¼ížˆ ìµíž™ë‹ˆë‹¤.</td>
 				</tr>
 				<tr>
 					<td><img
 						src="https://recipe1.ezmember.co.kr/cache/recipe/2016/06/23/c541d7c3beafd52613800214ac9094471.jpg"
 						width="500"></td>
-					<td><b>2.</b> 20ºÐ Á¤µµ »î°í Á£°¡¶ôÀ¸·Î ²Ú Áú·¯¼­ ¼³ÄÈÇÏ°Ô µé¾î°¡¸é ³¿ºñ ¹Ù´Ú¿¡ ¹°À» ¹Ù´Ú¿¡
-						Á¶±Ý¸¸ ³²±â°í ¸ðµÎ µû¶ó ¹ö¸³´Ï´Ù. ±×·± ÈÄ ¼Ò±Ý 1 ÀÛÀº ¼ú ³Ö°í Èçµé¾î ÁØ ÈÄ ¶Ñ²±À» µ¤°í ¾àºÒ·Î 8ºÐ Á¤µµ ¶äÀ»
-						µéÀÔ´Ï´Ù.</td>
+					<td><b>2.</b> 20ë¶„ ì •ë„ ì‚¶ê³  ì “ê°€ë½ìœ¼ë¡œ ê¾¹ ì§ˆëŸ¬ì„œ ì„¤ì»¹í•˜ê²Œ ë“¤ì–´ê°€ë©´ ëƒ„ë¹„ ë°”ë‹¥ì— ë¬¼ì„ ë°”ë‹¥ì—
+						ì¡°ê¸ˆë§Œ ë‚¨ê¸°ê³  ëª¨ë‘ ë”°ë¼ ë²„ë¦½ë‹ˆë‹¤. ê·¸ëŸ° í›„ ì†Œê¸ˆ 1 ìž‘ì€ ìˆ  ë„£ê³  í”ë“¤ì–´ ì¤€ í›„ ëšœê»‘ì„ ë®ê³  ì•½ë¶ˆë¡œ 8ë¶„ ì •ë„ ëœ¸ì„
+						ë“¤ìž…ë‹ˆë‹¤.</td>
 				</tr>
 				<tr>
 					<td><img
 						src="https://recipe1.ezmember.co.kr/cache/recipe/2016/06/23/f5aebb892c9a2df8ad67d002259fb8331.jpg"
 						width="500"></td>
-					<td><b>3.</b> °Ñ¿¡ Â¬Á¶¸§ÇÏ°Ô °£µµ µé°í ÇØ¼­ ±×³É Áý¾î¸Ô¾îµµ °¨ÀÚ°¡ ¾ÆÁÖ ¸ÀÁý´Ï´Ù. ¿ª½Ã ÇÞ°¨ÀÚ¶ó
-						Æ÷±ÙÇÏ°í ´Þ´ÞÇÕ´Ï´Ù. ±×¸©¿¡ ´ã¾Æ ³õ°í ±º°ÍÁúÇÏµí ÇÏ³ª¾¿ Áý¾î¸Ô°Ô µÇ´õ¶ó°í¿ä.</td>
+					<td><b>3.</b> ê²‰ì— ì§­ì¡°ë¦„í•˜ê²Œ ê°„ë„ ë“¤ê³  í•´ì„œ ê·¸ëƒ¥ ì§‘ì–´ë¨¹ì–´ë„ ê°ìžê°€ ì•„ì£¼ ë§›ì§‘ë‹ˆë‹¤. ì—­ì‹œ í–‡ê°ìžë¼
+						í¬ê·¼í•˜ê³  ë‹¬ë‹¬í•©ë‹ˆë‹¤. ê·¸ë¦‡ì— ë‹´ì•„ ë†“ê³  êµ°ê²ƒì§ˆí•˜ë“¯ í•˜ë‚˜ì”© ì§‘ì–´ë¨¹ê²Œ ë˜ë”ë¼ê³ ìš”.</td>
 				</tr>
 				<tr>
 					<td><img
 						src="https://recipe1.ezmember.co.kr/cache/recipe/2016/06/23/fcb6d4cffee4d950b5f7973aeb641bff1.jpg"
 						width="500"></td>
-					<td><b>4.</b> »î¾Æ ³õÀº °¨ÀÚ¸¦ ¸î °³ ¸Ô°í ³ª´Ï °¨ÀÚ°¡ ÀÏ°ö °³°¡ ³²¾Ò´õ¶ó°í¿ä. Á¤¸» ¶á±Ý¾ø´Ù´Â
-						¸»À» ÀÌ·² ¶§ µÎ°í ÇÏ´Â ¸»ÀÎ°¡ ½Í¾î¿ä. ¸Ó¸´¼Ó¿¡ È× Áö³ª°¡´Â »ý°¢ ¿Á¼ö¼ö ¹öÅÍ±¸ÀÌ°¡ »ý°¢³ª´õ¶ó°í¿ä. ±×·¡¼­ ¸¸µé°Ô µÈ
-						°¨ÀÚÄ¡Áî±¸ÀÌ~¤¾¤¾</td>
+					<td><b>4.</b> ì‚¶ì•„ ë†“ì€ ê°ìžë¥¼ ëª‡ ê°œ ë¨¹ê³  ë‚˜ë‹ˆ ê°ìžê°€ ì¼ê³± ê°œê°€ ë‚¨ì•˜ë”ë¼ê³ ìš”. ì •ë§ ëœ¬ê¸ˆì—†ë‹¤ëŠ”
+						ë§ì„ ì´ëŸ´ ë•Œ ë‘ê³  í•˜ëŠ” ë§ì¸ê°€ ì‹¶ì–´ìš”. ë¨¸ë¦¿ì†ì— íœ™ ì§€ë‚˜ê°€ëŠ” ìƒê° ì˜¥ìˆ˜ìˆ˜ ë²„í„°êµ¬ì´ê°€ ìƒê°ë‚˜ë”ë¼ê³ ìš”. ê·¸ëž˜ì„œ ë§Œë“¤ê²Œ ëœ
+						ê°ìžì¹˜ì¦ˆêµ¬ì´~ã…Žã…Ž</td>
 				</tr>
 				<tr>
 					<td><img
 						src="https://recipe1.ezmember.co.kr/cache/recipe/2016/06/23/9bdbe1e1607d65262e67e7526e37b2e01.jpg"
 						width="500"></td>
-					<td><b>5.</b> °¨ÀÚ ²®ÁúÀº ¹þ±âÁö ¾Ê¾Ò°í¿ä. ±×´ë·Î °¨ÀÚ²®Áú¿¡´Ù ¹öÅÍ¸¦ ¹Ù¸£°í ½ÃÀÛÀ» ÇØµµ µÇÁö¸¸
-						±â¸§ ¹¯´Â °Ô ½È¾î¼­ ¸ÕÀú °¨ÀÚºÎÅÍ ¾ã°Ô ½ä¾îÁÝ´Ï´Ù. ´õ ¾ã°Ô ½ä¸é ÁÁ°ÚÁö¿ä. ¤»¤» Àú´Â °¨ÀÚ°¡ ºÎ¼­Áö´Â ´À³¦¿¡ Á¹¾Æ¼­
-						¾à°¨ µÎÅùÇÕ´Ï´Ù.¤¾¤¾</td>
+					<td><b>5.</b> ê°ìž ê»ì§ˆì€ ë²—ê¸°ì§€ ì•Šì•˜ê³ ìš”. ê·¸ëŒ€ë¡œ ê°ìžê»ì§ˆì—ë‹¤ ë²„í„°ë¥¼ ë°”ë¥´ê³  ì‹œìž‘ì„ í•´ë„ ë˜ì§€ë§Œ
+						ê¸°ë¦„ ë¬»ëŠ” ê²Œ ì‹«ì–´ì„œ ë¨¼ì € ê°ìžë¶€í„° ì–‡ê²Œ ì°ì–´ì¤ë‹ˆë‹¤. ë” ì–‡ê²Œ ì°ë©´ ì¢‹ê² ì§€ìš”. ã…‹ã…‹ ì €ëŠ” ê°ìžê°€ ë¶€ì„œì§€ëŠ” ëŠë‚Œì— ì¡¸ì•„ì„œ
+						ì•½ê° ë‘íˆ¼í•©ë‹ˆë‹¤.ã…Žã…Ž</td>
 				</tr>
 				<tr>
 					<td><img
 						src="https://recipe1.ezmember.co.kr/cache/recipe/2016/06/23/8b5f02d90f817e60048666125e2af0461.jpg"
 						width="500"></td>
-					<td><b>6.</b> ÀÚ~ °¨ÀÚ ½ã ÈÄ µÚÁý¾î º¸¸é ÀÌ·± ¸ð¾çÀÔ´Ï´Ù. ³Ê¹« ³¡±îÁö Ä®ÁýÀ» ³ÖÀ¸¸é °¨ÀÚ°¡ ÈÅ
-						Àß¶óÁö´Ï±ñ ÁÖÀÇÇØ¼­ Ä®ÁýÀ» ³Ö¾îÁÖ°í¿ä. °¨ÀÚ´Â ¸ðµÎ °°Àº ¸ð¾çÀ¸·Î ½ä¾îÁÖ°í¿ä.</td>
+					<td><b>6.</b> ìž~ ê°ìž ì¬ í›„ ë’¤ì§‘ì–´ ë³´ë©´ ì´ëŸ° ëª¨ì–‘ìž…ë‹ˆë‹¤. ë„ˆë¬´ ëê¹Œì§€ ì¹¼ì§‘ì„ ë„£ìœ¼ë©´ ê°ìžê°€ í›…
+						ìž˜ë¼ì§€ë‹ˆê¹ ì£¼ì˜í•´ì„œ ì¹¼ì§‘ì„ ë„£ì–´ì£¼ê³ ìš”. ê°ìžëŠ” ëª¨ë‘ ê°™ì€ ëª¨ì–‘ìœ¼ë¡œ ì°ì–´ì£¼ê³ ìš”.</td>
 				</tr>
 				<tr>
 					<td><img
 						src="https://recipe1.ezmember.co.kr/cache/recipe/2016/06/23/018da08c06092acd8d1779c8ff5be8461.jpg"
 						width="500"></td>
-					<td><b>7.</b> Àú´Â Áý¿¡ ¸¶µé·» ÆÒÀÌ ÀÖ¾î¼­ ÆÒ¿¡´Ù ½î¿Á ³Ö¾îÁá¾î¿ä. ±×³É ÆÒ¿¡´Ù ³Ö¾îµµ ºÎ¼­ÁöÁø
-						¾Ê¾Æ¿ä. ¤¾¤¾ ±×·¡µµ ¸¶µé·» ÆÒ¿¡´Ù °¨ÀÚ¸¦ ³ÖÀ¸´Ï ¾ÈÁ¤ÀûÀÌ±ä ÇÏ³×¿ä.</td>
+					<td><b>7.</b> ì €ëŠ” ì§‘ì— ë§ˆë“¤ë Œ íŒ¬ì´ ìžˆì–´ì„œ íŒ¬ì—ë‹¤ ì˜ì˜¥ ë„£ì–´ì¤¬ì–´ìš”. ê·¸ëƒ¥ íŒ¬ì—ë‹¤ ë„£ì–´ë„ ë¶€ì„œì§€ì§„
+						ì•Šì•„ìš”. ã…Žã…Ž ê·¸ëž˜ë„ ë§ˆë“¤ë Œ íŒ¬ì—ë‹¤ ê°ìžë¥¼ ë„£ìœ¼ë‹ˆ ì•ˆì •ì ì´ê¸´ í•˜ë„¤ìš”.</td>
 				</tr>
 				<tr>
 					<td><img
 						src="https://recipe1.ezmember.co.kr/cache/recipe/2016/06/23/0f8b9bef3905a7649f835f7b1027d2da1.jpg"
 						width="500"></td>
-					<td><b>8.</b> °¨ÀÚ ¹ú¾îÁø Æ´À¸·Î ¸ðÂ¥·¼¶óÄ¡Áî¿Í Ã¼´ÙÄ¡Áî¸¦ ³Ö¾îÁÙ °Å¿¹¿ä. Áö³­¹ø »÷µåÀ§Ä¡ ¸¸µé°í
-						³²Àº ½Ä»§ ²®Áúµµ ³²Àº ¸¶µé·» ÆÒ¿¡´Ù°¡ ¹öÅÍ¸¦ ¹Ù¸£°í ÆÄ¸¶»ê Ä¡Áî¸¦ »Ñ·Á¼­ ±¸¿ï ÁØºñ¸¦ Çß°í¿ä. °¨ÀÚ¿¡´Ù Ã¼´õÄ¡Áî¸¦
-						³Ö°í¿ä.</td>
+					<td><b>8.</b> ê°ìž ë²Œì–´ì§„ í‹ˆìœ¼ë¡œ ëª¨ì§œë ë¼ì¹˜ì¦ˆì™€ ì²´ë‹¤ì¹˜ì¦ˆë¥¼ ë„£ì–´ì¤„ ê±°ì˜ˆìš”. ì§€ë‚œë²ˆ ìƒŒë“œìœ„ì¹˜ ë§Œë“¤ê³ 
+						ë‚¨ì€ ì‹ë¹µ ê»ì§ˆë„ ë‚¨ì€ ë§ˆë“¤ë Œ íŒ¬ì—ë‹¤ê°€ ë²„í„°ë¥¼ ë°”ë¥´ê³  íŒŒë§ˆì‚° ì¹˜ì¦ˆë¥¼ ë¿Œë ¤ì„œ êµ¬ìš¸ ì¤€ë¹„ë¥¼ í–ˆê³ ìš”. ê°ìžì—ë‹¤ ì²´ë”ì¹˜ì¦ˆë¥¼
+						ë„£ê³ ìš”.</td>
 				</tr>
 				<tr>
 					<td><img
 						src="https://recipe1.ezmember.co.kr/cache/recipe/2016/06/23/a67a8c0292c357ed6042fed60554efb11.jpg"
 						width="500"></td>
-					<td><b>9.</b> ¸ðÀÚ·¼¶óÄ¡Áîµµ ³Ö¾îÁá¾î¿ä. ±×·± ÈÄ ¹öÅÍµµ À§¿¡ ¾²À¹ ¹ß¶óÁÖ°í¿ä. ¼öºÏÇÏ°Ô Ä¡Áî Á¾·ù¸¦
-						°¨ÀÚ Æ´À¸·Î ³Ö¾îÁÖ¾ú¾î¿ä. Ä¡Áî¸¦ ³Ë³ËÇÏ°Ô ³Ö¾îÁÖ´Â °Ô ÁÁÀ» °Í °°¾Æ¿ä. Ä¡Áî°¡ ¿Àºì¿¡ µé¾î°¡¼­ ³ìÀ¸¸é À§°¡ »ìÂ¦
-						ºñ´õ¶ó°í¿ä.</td>
+					<td><b>9.</b> ëª¨ìžë ë¼ì¹˜ì¦ˆë„ ë„£ì–´ì¤¬ì–´ìš”. ê·¸ëŸ° í›„ ë²„í„°ë„ ìœ„ì— ì“°ìœ½ ë°œë¼ì£¼ê³ ìš”. ìˆ˜ë¶í•˜ê²Œ ì¹˜ì¦ˆ ì¢…ë¥˜ë¥¼
+						ê°ìž í‹ˆìœ¼ë¡œ ë„£ì–´ì£¼ì—ˆì–´ìš”. ì¹˜ì¦ˆë¥¼ ë„‰ë„‰í•˜ê²Œ ë„£ì–´ì£¼ëŠ” ê²Œ ì¢‹ì„ ê²ƒ ê°™ì•„ìš”. ì¹˜ì¦ˆê°€ ì˜¤ë¸ì— ë“¤ì–´ê°€ì„œ ë…¹ìœ¼ë©´ ìœ„ê°€ ì‚´ì§
+						ë¹„ë”ë¼ê³ ìš”.</td>
 				</tr>
 				<tr>
 					<td><img
 						src="https://recipe1.ezmember.co.kr/cache/recipe/2016/06/23/02faf9688c8efb4ee403aa6c200348b31.jpg"
 						width="500"></td>
-					<td><b>10.</b> ÆÄ¸¶»ê Ä¡Áî¿Í ÆÄ½½¸®°¡·çµµ ¼Ö¼Ö ºÎ·ÁÁÝ´Ï´Ù. ¿Àºì¿¡¼­ 240µµ¿¡ 20ºÐ ±¸¿ö³Â¾î¿ä.</td>
+					<td><b>10.</b> íŒŒë§ˆì‚° ì¹˜ì¦ˆì™€ íŒŒìŠ¬ë¦¬ê°€ë£¨ë„ ì†”ì†” ë¶€ë ¤ì¤ë‹ˆë‹¤. ì˜¤ë¸ì—ì„œ 240ë„ì— 20ë¶„ êµ¬ì›Œëƒˆì–´ìš”.</td>
 				</tr>
 				<tr>
 					<td><img
 						src="https://recipe1.ezmember.co.kr/cache/recipe/2016/06/23/e8b860ad5e3a6173a1186f8ee7074c2c1.jpg"
 						width="500"></td>
-					<td><b>11.</b> ³ë¸©ÇÑ °¨ÀÚÄ¡Áî±¸ÀÌ »ý°¢º¸´Ù ÈÎ¾À ´õ ¿¹»Û ¸ð¾çÀÌ ³ª¿Í¼­ °¨µ¿Çß¾î¿ä. º¸±â¸¸ ÇØµµ
-						±ºÄ§ÀÌ µ¹Áö¿ä.~</td>
+					<td><b>11.</b> ë…¸ë¦‡í•œ ê°ìžì¹˜ì¦ˆêµ¬ì´ ìƒê°ë³´ë‹¤ í›¨ì”¬ ë” ì˜ˆìœ ëª¨ì–‘ì´ ë‚˜ì™€ì„œ ê°ë™í–ˆì–´ìš”. ë³´ê¸°ë§Œ í•´ë„
+						êµ°ì¹¨ì´ ëŒì§€ìš”.~</td>
 				</tr>
 				<tr>
 					<td><img
 						src="https://recipe1.ezmember.co.kr/cache/recipe/2016/06/23/42c3dc70a378d85c6a5030197ad122aa1.jpg"
 						width="500"></td>
-					<td><b>12.</b> »çÀÌ»çÀÌ¿¡ ÇÜÀ» ³Ö¾îÁàµµ ÁÁ°Ú´Ù´Â »ý°¢ÀÌ ´Ù ¸¸µé°í ³ª´Ï ³ª³×¿ä. ±×¸®°í Á» ´õ
-						Â¬Á¶¸§ ¸ÅÄÞÇÏ´Ï ¶ó¸é ¼öÇÁ¸¦ »Ñ·Áµµ ÁÁÀ» °Í °°°í¿ä. ¤»¤» ´Ù ¸¸µé°í ³ª¼­ ÀÌ·± ¸»ÀÌ ¹«½¼ ~~¤¾¤¾</td>
+					<td><b>12.</b> ì‚¬ì´ì‚¬ì´ì— í–„ì„ ë„£ì–´ì¤˜ë„ ì¢‹ê² ë‹¤ëŠ” ìƒê°ì´ ë‹¤ ë§Œë“¤ê³  ë‚˜ë‹ˆ ë‚˜ë„¤ìš”. ê·¸ë¦¬ê³  ì¢€ ë”
+						ì§­ì¡°ë¦„ ë§¤ì½¤í•˜ë‹ˆ ë¼ë©´ ìˆ˜í”„ë¥¼ ë¿Œë ¤ë„ ì¢‹ì„ ê²ƒ ê°™ê³ ìš”. ã…‹ã…‹ ë‹¤ ë§Œë“¤ê³  ë‚˜ì„œ ì´ëŸ° ë§ì´ ë¬´ìŠ¨ ~~ã…Žã…Ž</td>
 				</tr>
 				<tr height="100px">
 					<td colspan="3"></td>

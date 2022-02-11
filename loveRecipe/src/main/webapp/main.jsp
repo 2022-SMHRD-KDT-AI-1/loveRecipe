@@ -1,7 +1,7 @@
 <%@page import="model.DAO"%>
 <%@page import="model.MemberVO"%>
-<%@ page language="java" contentType="text/html; charset=EUC-KR"
-	pageEncoding="EUC-KR"%>
+<%@ page language="java" contentType="text/html; charset=utf-8"
+	pageEncoding="utf-8"%>
 <!DOCTYPE HTML>
 <!--
    Aesthetic by gettemplates.co
@@ -81,7 +81,6 @@
 	<%
 		DAO dao = new DAO();
 	MemberVO info = (MemberVO) session.getAttribute("info");
-
 	int foodType = dao.foodType();
 	int memberCount = dao.memberCount();
 	int recipeCount = dao.recipeCount();
