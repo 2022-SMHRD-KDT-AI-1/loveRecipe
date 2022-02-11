@@ -10,7 +10,7 @@
 <head>
 <meta charset="utf-8">
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
-<title>·¹½ÃÇÇ¸¦ ºÎÅ¹ÇØ &mdash; Free Website Template, Free HTML5
+<title>ë ˆì‹œí”¼ë¥¼ ë¶€íƒí•´ &mdash; Free Website Template, Free HTML5
 	Template by GetTemplates.co</title>
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <meta name="description"
@@ -84,7 +84,7 @@
 					<div class="col-sm-4 col-xs-12">
 						<div id="gtco-logo">
 							<a href="main.jsp"><em class="cursive-font"
-								style="font-size: 3rem">·¹½ÃÇÇ¸¦ ºÎÅ¹ÇØ!</em></a>
+								style="font-size: 3rem">ë ˆì‹œí”¼ë¥¼ ë¶€íƒí•´!</em></a>
 						</div>
 					</div>
 					<div class="col-xs-8 text-right menu-1">
@@ -92,9 +92,9 @@
 							<li><a href="menu.jsp">Menu</a></li>
 							<li class="has-dropdown"><a href="services.jsp">Services</a>
 								<ul class="dropdown">
-									<li><a href="refigator.jsp">³ª¸¸ÀÇ ³ÃÀå°í</a></li>
-									<li><a href="mealplan.jsp">½Ä´ÜÂ¥±â</a></li>
-									<li><a href="newrecipe.jsp">·¹½ÃÇÇµî·Ï</a></li>
+									<li><a href="refigator.jsp">ë‚˜ë§Œì˜ ëƒ‰ìž¥ê³ </a></li>
+									<li><a href="mealplan.jsp">ì‹ë‹¨ì§œê¸°</a></li>
+									<li><a href="newrecipe.jsp">ë ˆì‹œí”¼ë“±ë¡</a></li>
 								</ul></li>
 							<li><a href="feedback.jsp">feedback</a></li>
 							<li class="btn-cta"><a href="main.jsp"><span>login</span></a></li>
@@ -117,13 +117,9 @@
 						<div class="row row-mt-15em">
 							<div class="col-md-7 mt-text animate-box"
 								data-animate-effect="fadeInUp">
+								<ol class="main-img">
 
-
-								<img
-									src="https://recipe1.ezmember.co.kr/cache/recipe/2016/06/23/c0ad0ea5a3bf9ce990a64fa6be9662da1.jpg"
-									width="500">
-
-
+								</ol>
 
 
 							</div>
@@ -135,58 +131,10 @@
 										<div class="tab-content">
 											<div class="tab-content-inner active" data-content="signup">
 
-												<h3 class="cursive-font">°¨ÀÚÄ¡Áî±¸ÀÌ</h3>
+												<h3 class="cursive-font">ë ˆì‹œí”¼</h3>
 												<form action="recipesearch" id="rec"></form>
 											</div>
-											<div class="row form-group">
-												<label>±¹°¡ºÐ·ù : ¾ç½Ä</label><br>
-											</div>
-											<div class="row form-group">
-												<label>¹æ¹ýºÐ·ù : ±¸ÀÌ</label><br>
-											</div>
-											<div class="row form-group">
-												<label>Ä®·Î¸® : 183kcal</label><br>
-											</div>
-											<div class="row form-group">
-												<table>
-													<thead>
-														<tr>
-															<td>Àç·á</td>
-															<td>°¹¼ö</td>
-														</tr>
-													</thead>
-													<tbody>
-														<tr>
-															<td>°¨ÀÚ</td>
-															<td>7°³</td>
-														</tr>
-														<tr>
-															<td>¼Ò±Ý</td>
-															<td>1ÀÛÀº¼ú</td>
-														</tr>
-														<tr>
-															<td>Ã¼´ÙÄ¡Áî</td>
-															<td>³Ë³ËÇÏ°Ô</td>
-														</tr>
-														<tr>
-															<td>¸ðÂ¥·¼¶óÄ¡Áî</td>
-															<td>³Ë³ËÇÏ°Ô</td>
-														</tr>
-														<tr>
-															<td>ÆÄ¸¶»êÄ¡Áî</td>
-															<td>¾à°£</td>
-														</tr>
-														<tr>
-															<td>¹öÅÍ</td>
-															<td>¾à°£</td>
-														</tr>
-														<tr>
-															<td>ÆÄ½½¸®°¡·ç</td>
-															<td>¼Ö¼Ö</td>
-														</tr>
-													</tbody>
-												</table>
-											</div>
+
 
 										</div>
 									</div>
@@ -201,107 +149,50 @@
 		</header>
 
 
+		<div class="gtco-cover gtco-cover-sm"
+			style="background-image: url(images/img_bg_1.jpg)"
+			data-stellar-background-ratio="0.5">
+			<div class="overlay"></div>
+			<div class="gtco-container text-center">
+				<div class="display-t">
+					<div class="display-tc">
+						<ol class="recipe">
 
-
-		<div
-			style="background: linear-gradient(90deg, #FDF6F0, #FFFDDE); text-align: left;">
-
-			<table border=0 width="1100" align="center" style="font-size: 22px;">
-			<tr height="100px">
-			<td colspan="3"><h2>·¹½ÃÇÇ</h2></td>
-			</tr>
-				<tr>
-					<td><img
-						src="https://recipe1.ezmember.co.kr/cache/recipe/2016/06/23/2191278351b6871fabc4c4dc18f55c8b1.jpg"
-						width="500"></td><td width="30px" rowspan="12"></td>
-					<td><b>1.</b>¡¡°¨ÀÚ´Â ³Ë³ËÇÏ°Ô »î¾ÆµÎ¾ú´Âµ¥¿ä.<br>°¨ÀÚ¸¦ ±ú²ýÇÏ°Ô ¾ÄÀº ÈÄ ³¿ºñ¿¡ ³Ö°í °¨ÀÚ°¡ Àá±æ µí ¸» µíÇÏ°Ô
-						¹°À» º×°í ³¿ºñ ¶Ñ²±À» µ¤°í ¼¾ ºÒ·Î »î´Ù°¡ ²úÀ¸¸é Áß¾à ºÒ·Î ³õ°í Àº±ÙÈ÷ ÀÍÈü´Ï´Ù.</td>
-				</tr>
-				<tr>
-					<td><img
-						src="https://recipe1.ezmember.co.kr/cache/recipe/2016/06/23/c541d7c3beafd52613800214ac9094471.jpg"
-						width="500"></td>
-					<td><b>2.</b>¡¡20ºÐ Á¤µµ »î°í Á£°¡¶ôÀ¸·Î ²Ú Áú·¯¼­ ¼³ÄÈÇÏ°Ô µé¾î°¡¸é ³¿ºñ ¹Ù´Ú¿¡ ¹°À» ¹Ù´Ú¿¡ Á¶±Ý¸¸ ³²±â°í
-						¸ðµÎ µû¶ó ¹ö¸³´Ï´Ù. ±×·± ÈÄ ¼Ò±Ý 1 ÀÛÀº ¼ú ³Ö°í Èçµé¾î ÁØ ÈÄ ¶Ñ²±À» µ¤°í ¾àºÒ·Î 8ºÐ Á¤µµ ¶äÀ» µéÀÔ´Ï´Ù.</td>
-				</tr>
-				<tr>
-					<td><img
-						src="https://recipe1.ezmember.co.kr/cache/recipe/2016/06/23/f5aebb892c9a2df8ad67d002259fb8331.jpg"
-						width="500"></td>
-					<td><b>3.</b>¡¡°Ñ¿¡ Â¬Á¶¸§ÇÏ°Ô °£µµ µé°í ÇØ¼­ ±×³É Áý¾î¸Ô¾îµµ °¨ÀÚ°¡ ¾ÆÁÖ ¸ÀÁý´Ï´Ù. ¿ª½Ã ÇÞ°¨ÀÚ¶ó Æ÷±ÙÇÏ°í
-						´Þ´ÞÇÕ´Ï´Ù. ±×¸©¿¡ ´ã¾Æ ³õ°í ±º°ÍÁúÇÏµí ÇÏ³ª¾¿ Áý¾î¸Ô°Ô µÇ´õ¶ó°í¿ä.</td>
-				</tr>
-				<tr>
-					<td><img
-						src="https://recipe1.ezmember.co.kr/cache/recipe/2016/06/23/fcb6d4cffee4d950b5f7973aeb641bff1.jpg"
-						width="500"></td>
-					<td><b>4.</b>¡¡»î¾Æ ³õÀº °¨ÀÚ¸¦ ¸î °³ ¸Ô°í ³ª´Ï °¨ÀÚ°¡ ÀÏ°ö °³°¡ ³²¾Ò´õ¶ó°í¿ä. Á¤¸» ¶á±Ý¾ø´Ù´Â ¸»À» ÀÌ·² ¶§
-						µÎ°í ÇÏ´Â ¸»ÀÎ°¡ ½Í¾î¿ä. ¸Ó¸´¼Ó¿¡ È× Áö³ª°¡´Â »ý°¢ ¿Á¼ö¼ö ¹öÅÍ±¸ÀÌ°¡ »ý°¢³ª´õ¶ó°í¿ä. ±×·¡¼­ ¸¸µé°Ô µÈ
-						°¨ÀÚÄ¡Áî±¸ÀÌ~¤¾¤¾</td>
-				</tr>
-				<tr>
-					<td><img
-						src="https://recipe1.ezmember.co.kr/cache/recipe/2016/06/23/9bdbe1e1607d65262e67e7526e37b2e01.jpg"
-						width="500"></td>
-					<td><b>5.</b>¡¡°¨ÀÚ ²®ÁúÀº ¹þ±âÁö ¾Ê¾Ò°í¿ä. ±×´ë·Î °¨ÀÚ²®Áú¿¡´Ù ¹öÅÍ¸¦ ¹Ù¸£°í ½ÃÀÛÀ» ÇØµµ µÇÁö¸¸ ±â¸§ ¹¯´Â °Ô
-						½È¾î¼­ ¸ÕÀú °¨ÀÚºÎÅÍ ¾ã°Ô ½ä¾îÁÝ´Ï´Ù. ´õ ¾ã°Ô ½ä¸é ÁÁ°ÚÁö¿ä. ¤»¤» Àú´Â °¨ÀÚ°¡ ºÎ¼­Áö´Â ´À³¦¿¡ Á¹¾Æ¼­ ¾à°¨
-						µÎÅùÇÕ´Ï´Ù.¤¾¤¾</td>
-				</tr>
-				<tr>
-					<td><img
-						src="https://recipe1.ezmember.co.kr/cache/recipe/2016/06/23/8b5f02d90f817e60048666125e2af0461.jpg"
-						width="500"></td>
-					<td><b>6.</b>¡¡ÀÚ~ °¨ÀÚ ½ã ÈÄ µÚÁý¾î º¸¸é ÀÌ·± ¸ð¾çÀÔ´Ï´Ù. ³Ê¹« ³¡±îÁö Ä®ÁýÀ» ³ÖÀ¸¸é °¨ÀÚ°¡ ÈÅ Àß¶óÁö´Ï±ñ
-						ÁÖÀÇÇØ¼­ Ä®ÁýÀ» ³Ö¾îÁÖ°í¿ä. °¨ÀÚ´Â ¸ðµÎ °°Àº ¸ð¾çÀ¸·Î ½ä¾îÁÖ°í¿ä.</td>
-				</tr>
-				<tr>
-					<td><img
-						src="https://recipe1.ezmember.co.kr/cache/recipe/2016/06/23/018da08c06092acd8d1779c8ff5be8461.jpg"
-						width="500"></td>
-					<td><b>7.</b>¡¡Àú´Â Áý¿¡ ¸¶µé·» ÆÒÀÌ ÀÖ¾î¼­ ÆÒ¿¡´Ù ½î¿Á ³Ö¾îÁá¾î¿ä. ±×³É ÆÒ¿¡´Ù ³Ö¾îµµ ºÎ¼­ÁöÁø ¾Ê¾Æ¿ä. ¤¾¤¾
-						±×·¡µµ ¸¶µé·» ÆÒ¿¡´Ù °¨ÀÚ¸¦ ³ÖÀ¸´Ï ¾ÈÁ¤ÀûÀÌ±ä ÇÏ³×¿ä.</td>
-				</tr>
-				<tr>
-					<td><img
-						src="https://recipe1.ezmember.co.kr/cache/recipe/2016/06/23/0f8b9bef3905a7649f835f7b1027d2da1.jpg"
-						width="500"></td>
-					<td><b>8.</b>¡¡°¨ÀÚ ¹ú¾îÁø Æ´À¸·Î ¸ðÂ¥·¼¶óÄ¡Áî¿Í Ã¼´ÙÄ¡Áî¸¦ ³Ö¾îÁÙ °Å¿¹¿ä. Áö³­¹ø »÷µåÀ§Ä¡ ¸¸µé°í ³²Àº ½Ä»§
-						²®Áúµµ ³²Àº ¸¶µé·» ÆÒ¿¡´Ù°¡ ¹öÅÍ¸¦ ¹Ù¸£°í ÆÄ¸¶»ê Ä¡Áî¸¦ »Ñ·Á¼­ ±¸¿ï ÁØºñ¸¦ Çß°í¿ä. °¨ÀÚ¿¡´Ù Ã¼´õÄ¡Áî¸¦ ³Ö°í¿ä.</td>
-				</tr>
-				<tr>
-					<td><img
-						src="https://recipe1.ezmember.co.kr/cache/recipe/2016/06/23/a67a8c0292c357ed6042fed60554efb11.jpg"
-						width="500"></td>
-					<td><b>9.</b>¡¡¸ðÀÚ·¼¶óÄ¡Áîµµ ³Ö¾îÁá¾î¿ä. ±×·± ÈÄ ¹öÅÍµµ À§¿¡ ¾²À¹ ¹ß¶óÁÖ°í¿ä. ¼öºÏÇÏ°Ô Ä¡Áî Á¾·ù¸¦ °¨ÀÚ Æ´À¸·Î
-						³Ö¾îÁÖ¾ú¾î¿ä. Ä¡Áî¸¦ ³Ë³ËÇÏ°Ô ³Ö¾îÁÖ´Â °Ô ÁÁÀ» °Í °°¾Æ¿ä. Ä¡Áî°¡ ¿Àºì¿¡ µé¾î°¡¼­ ³ìÀ¸¸é À§°¡ »ìÂ¦ ºñ´õ¶ó°í¿ä.</td>
-				</tr>
-				<tr>
-					<td><img
-						src="https://recipe1.ezmember.co.kr/cache/recipe/2016/06/23/02faf9688c8efb4ee403aa6c200348b31.jpg"
-						width="500"></td>
-					<td><b>10.</b>¡¡ÆÄ¸¶»ê Ä¡Áî¿Í ÆÄ½½¸®°¡·çµµ ¼Ö¼Ö ºÎ·ÁÁÝ´Ï´Ù. ¿Àºì¿¡¼­ 240µµ¿¡ 20ºÐ ±¸¿ö³Â¾î¿ä.</td>
-				</tr>
-				<tr>
-					<td><img
-						src="https://recipe1.ezmember.co.kr/cache/recipe/2016/06/23/e8b860ad5e3a6173a1186f8ee7074c2c1.jpg"
-						width="500"></td>
-					<td><b>11.</b>¡¡³ë¸©ÇÑ °¨ÀÚÄ¡Áî±¸ÀÌ »ý°¢º¸´Ù ÈÎ¾À ´õ ¿¹»Û ¸ð¾çÀÌ ³ª¿Í¼­ °¨µ¿Çß¾î¿ä. º¸±â¸¸ ÇØµµ ±ºÄ§ÀÌ
-						µ¹Áö¿ä.~</td>
-				</tr>
-				<tr>
-					<td><img
-						src="https://recipe1.ezmember.co.kr/cache/recipe/2016/06/23/42c3dc70a378d85c6a5030197ad122aa1.jpg"
-						width="500"></td>
-					<td><b>12.</b>¡¡»çÀÌ»çÀÌ¿¡ ÇÜÀ» ³Ö¾îÁàµµ ÁÁ°Ú´Ù´Â »ý°¢ÀÌ ´Ù ¸¸µé°í ³ª´Ï ³ª³×¿ä. ±×¸®°í Á» ´õ Â¬Á¶¸§ ¸ÅÄÞÇÏ´Ï
-						¶ó¸é ¼öÇÁ¸¦ »Ñ·Áµµ ÁÁÀ» °Í °°°í¿ä. ¤»¤» ´Ù ¸¸µé°í ³ª¼­ ÀÌ·± ¸»ÀÌ ¹«½¼ ~~¤¾¤¾</td>
-				</tr>
-			</table>
+						</ol>
+					</div>
+				</div>
+			</div>
 		</div>
 
 
 
 
-
+		<div id="gtco-subscribe">
+			<div class="gtco-container">
+				<div class="row animate-box">
+					<div class="col-md-8 col-md-offset-2 text-center gtco-heading">
+						<h2 class="cursive-font">feedback</h2>
+						<p>ì‚¬ì´íŠ¸ë¥¼ ì“°ë©´ì„œ ë¶ˆíŽ¸í–‡ë˜ì ì„ ë³´ë‚´ì£¼ì„¸ìš”!</p>
+					</div>
+				</div>
+				<div class="row animate-box">
+					<div class="col-md-8 col-md-offset-2">
+						<form class="form-inline">
+							<div class="col-md-6 col-sm-6">
+								<div class="form-group">
+									<label for="feedback" class="sr-only">feedback</label> <input
+										type="feedback" class="form-control" id="feedback"
+										placeholder="ë¶ˆíŽ¸í–ˆë˜ì ì„ ë³´ë‚´ì£¼ì„¸ìš”!">
+								</div>
+							</div>
+							<div class="col-md-6 col-sm-6">
+								<button type="submit" class="btn btn-default btn-block">send</button>
+							</div>
+						</form>
+					</div>
+				</div>
+			</div>
+		</div>
 
 		<footer id="gtco-footer" role="contentinfo"
 			style="background-image: url(images/img_bg_1.jpg)"
@@ -331,8 +222,6 @@
 
 			</div>
 		</footer>
-<<<<<<< HEAD
-=======
 		<script type="text/javascript"
 			src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
 		<script type="text/javascript">
@@ -340,14 +229,14 @@
 	function save() {
 
 	$.ajax({
-		url : 'vrecipeService', // °ªÀ» º¸³¾ ÁÖ¼Ò
+		url : 'vrecipeService', // ê°’ì„ ë³´ë‚¼ ì£¼ì†Œ
 		type : 'post', // get or post
-		dataType : 'json', // json µ¥ÀÌÅÍ·Î ÀÀ´ä¹ÞÀ» ¶§,
-		success : function(res){ // Åë½ÅÀÌ ¼º°øÇßÀ» ¶§ ½ÇÇàµÇ´Â ÇÔ¼ö
-				// res --> Server¿¡¼­ ÀÀ´äÇØÁØ µ¥ÀÌÅÍ°¡ ¸Å°³º¯¼ö¿¡ ÀÚµ¿À¸·Î ´ã±è
+		dataType : 'json', // json ë°ì´í„°ë¡œ ì‘ë‹µë°›ì„ ë•Œ,
+		success : function(res){ // í†µì‹ ì´ ì„±ê³µí–ˆì„ ë•Œ ì‹¤í–‰ë˜ëŠ” í•¨ìˆ˜
+				// res --> Serverì—ì„œ ì‘ë‹µí•´ì¤€ ë°ì´í„°ê°€ ë§¤ê°œë³€ìˆ˜ì— ìžë™ìœ¼ë¡œ ë‹´ê¹€
 			table(res);
 		},
-		error : function(){ // Åë½ÅÀÌ ½ÇÆÐÇÑ°æ¿ì¿¡ ½ÇÇàµÇ´Â ÇÔ¼ö 
+		error : function(){ // í†µì‹ ì´ ì‹¤íŒ¨í•œê²½ìš°ì— ì‹¤í–‰ë˜ëŠ” í•¨ìˆ˜ 
 			alert("error");
 		}
 	});
@@ -364,16 +253,16 @@
 			
 			tr = `
 				<div class="row form-group">
-					<label>·¹½ÃÇÇ¸í : `+json.rname+`</label><br>
+					<label>ë ˆì‹œí”¼ëª… : `+json.rname+`</label><br>
 				</div>
 				<div class="row form-group">
 					<label>`+json.type+`</label><br>
 				</div>
 				<div class="row form-group">
-					<label>Ä®·Î¸® : `+json.calory+`kcal</label><br>
+					<label>ì¹¼ë¡œë¦¬ : `+json.calory+`kcal</label><br>
 				</div>
 				<div class="row form-group">	
-						<label>½ÄÀç·á : `+json.ingre+`</label>
+						<label>ì‹ìž¬ë£Œ : `+json.ingre+`</label>
 				</div>
 			`;
 			
@@ -387,14 +276,14 @@
 	function save1() {
 
 		$.ajax({
-			url : 'recsequence', // °ªÀ» º¸³¾ ÁÖ¼Ò
+			url : 'recsequence', // ê°’ì„ ë³´ë‚¼ ì£¼ì†Œ
 			type : 'post', // get or post
-			dataType : 'json', // json µ¥ÀÌÅÍ·Î ÀÀ´ä¹ÞÀ» ¶§,
-			success : function(res){ // Åë½ÅÀÌ ¼º°øÇßÀ» ¶§ ½ÇÇàµÇ´Â ÇÔ¼ö
-					// res --> Server¿¡¼­ ÀÀ´äÇØÁØ µ¥ÀÌÅÍ°¡ ¸Å°³º¯¼ö¿¡ ÀÚµ¿À¸·Î ´ã±è
+			dataType : 'json', // json ë°ì´í„°ë¡œ ì‘ë‹µë°›ì„ ë•Œ,
+			success : function(res){ // í†µì‹ ì´ ì„±ê³µí–ˆì„ ë•Œ ì‹¤í–‰ë˜ëŠ” í•¨ìˆ˜
+					// res --> Serverì—ì„œ ì‘ë‹µí•´ì¤€ ë°ì´í„°ê°€ ë§¤ê°œë³€ìˆ˜ì— ìžë™ìœ¼ë¡œ ë‹´ê¹€
 				table1(res);
 			},
-			error : function(){ // Åë½ÅÀÌ ½ÇÆÐÇÑ°æ¿ì¿¡ ½ÇÇàµÇ´Â ÇÔ¼ö 
+			error : function(){ // í†µì‹ ì´ ì‹¤íŒ¨í•œê²½ìš°ì— ì‹¤í–‰ë˜ëŠ” í•¨ìˆ˜ 
 				alert("error");
 			}
 		});
@@ -425,14 +314,14 @@
 		function save2() {
 
 			$.ajax({
-				url : 'recmain', // °ªÀ» º¸³¾ ÁÖ¼Ò
+				url : 'recmain', // ê°’ì„ ë³´ë‚¼ ì£¼ì†Œ
 				type : 'post', // get or post
-				dataType : 'json', // json µ¥ÀÌÅÍ·Î ÀÀ´ä¹ÞÀ» ¶§,
-				success : function(res){ // Åë½ÅÀÌ ¼º°øÇßÀ» ¶§ ½ÇÇàµÇ´Â ÇÔ¼ö
-						// res --> Server¿¡¼­ ÀÀ´äÇØÁØ µ¥ÀÌÅÍ°¡ ¸Å°³º¯¼ö¿¡ ÀÚµ¿À¸·Î ´ã±è
+				dataType : 'json', // json ë°ì´í„°ë¡œ ì‘ë‹µë°›ì„ ë•Œ,
+				success : function(res){ // í†µì‹ ì´ ì„±ê³µí–ˆì„ ë•Œ ì‹¤í–‰ë˜ëŠ” í•¨ìˆ˜
+						// res --> Serverì—ì„œ ì‘ë‹µí•´ì¤€ ë°ì´í„°ê°€ ë§¤ê°œë³€ìˆ˜ì— ìžë™ìœ¼ë¡œ ë‹´ê¹€
 					table2(res);
 				},
-				error : function(){ // Åë½ÅÀÌ ½ÇÆÐÇÑ°æ¿ì¿¡ ½ÇÇàµÇ´Â ÇÔ¼ö 
+				error : function(){ // í†µì‹ ì´ ì‹¤íŒ¨í•œê²½ìš°ì— ì‹¤í–‰ë˜ëŠ” í•¨ìˆ˜ 
 					alert("error");
 				}
 			});
@@ -455,7 +344,6 @@
 	$(document).ready(save1());
 	$(document).ready(save2());
 	</script>
->>>>>>> branch 'master' of https://github.com/2022-SMHRD-KDT-AI-1/loveRecipe.git
 		<!-- </div> -->
 
 	</div>
