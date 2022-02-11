@@ -16,28 +16,7 @@ import model.MemberVO;
 
 @WebServlet("/refService")
 public class refService extends HttpServlet {
-<<<<<<< HEAD
-	private static final long serialVersionUID = 1L;
-
-	protected void service(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-		
-		HttpSession session = request.getSession();
-		MemberVO info = (MemberVO) session.getAttribute("info");
-		DAO dao  = new DAO();
-
-		// 파라미터 수집
-		if (request.getParameter("ingre1") != null && request.getParameter("number1") != null) {
-		
-			//입력한 데이터와 입력한 사용자의 아이디 가져오기
-			String ingre1 = request.getParameter("ingre1");
-			int number1 = Integer.parseInt(request.getParameter("number1"));
-			String id = info.getId();
-			String temp = "냉동";
-			
-
-=======
    private static final long serialVersionUID = 1L;
->>>>>>> branch 'master' of https://github.com/2022-SMHRD-KDT-AI-1/loveRecipe.git
 
    protected void service(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
       
@@ -45,23 +24,10 @@ public class refService extends HttpServlet {
       MemberVO info = (MemberVO) session.getAttribute("info");
       DAO dao  = new DAO();
 
-<<<<<<< HEAD
-			PrintWriter out = response.getWriter();
-
-			//가져온 파라미터 InsertRefi메소드에 넣어주기
-			int result = dao.insertrefi(number1, temp, id, ingre1);
-			if (result>0) {
-				System.out.println("재료입력성공");
-			} else {
-				System.out.println("재료입력실패");
-			}
-
-=======
       // 파라미터 수집
       if (request.getParameter("ingre1") != null && request.getParameter("number1") != null) {
          String ingre1 = request.getParameter("ingre1");
          int number1 = Integer.parseInt(request.getParameter("number1"));
->>>>>>> branch 'master' of https://github.com/2022-SMHRD-KDT-AI-1/loveRecipe.git
 
          String id = info.getId();
          String temp = "냉동";
