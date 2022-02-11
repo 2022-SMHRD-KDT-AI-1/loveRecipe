@@ -16,6 +16,8 @@ public class DAO {
 	refivo refi = null;
 	ingrivo ingri = null;
 	String expired ;
+	viewrefVO vo1 = null;
+	menuvo menu = null;
 
 	public void DBconn() {
 		try {
@@ -369,12 +371,8 @@ public class DAO {
 
 				int ingre_amount = rs.getInt(3);
 				String ingre_temp = rs.getString(4);
-				String ingre_name = rs.getString(7);
-				
-//				System.out.println(ingre_amount);
-//				System.out.println(ingre_temp);
-//				System.out.println(ingre_name);
-				
+				String ingre_name = rs.getString(7);				
+				//가져온 데이터 값 vo에넣고 Arraylisy화 하여 리턴하기
 				refi = new refivo(ingre_amount, ingre_temp, ingre_name);
 				refilist.add(refi);
 				
@@ -386,6 +384,7 @@ public class DAO {
 			DBclose();
 		} return refilist;
 	}
+	
 	//냉장고에 보유한 재료의 상세정보 가져오기
 	public ArrayList<ingrivo> selectingri(String name) {
 		ArrayList<ingrivo> ingrilist = new ArrayList<ingrivo>();
@@ -396,6 +395,8 @@ public class DAO {
 			
 			psmt = conn.prepareStatement(sql);
 			psmt.setString(1, name);
+			
+			
 			rs = psmt.executeQuery();
 			while(rs.next()) {
 				String type = rs.getString(3);
@@ -404,12 +405,7 @@ public class DAO {
 				int carloy = rs.getInt(6);
 				String tempt = rs.getString(7);
 				
-				System.out.println(type);
-				System.out.println(expire);
-				System.out.println(season);
-				System.out.println(carloy);
-				System.out.println(tempt);
-				
+				//가져온 데이터 값 vo에넣고 Arraylisy화 하여 리턴하기
 				ingri = new ingrivo(type, season, tempt, expire, carloy);
 				ingrilist.add(ingri);
 				
@@ -421,6 +417,8 @@ public class DAO {
 		} 
 		return ingrilist;
 	}
+	
+	//냉장고에잇는 재료 유통기한 표시
 	public String expire(int num) {
 
 		try {
@@ -433,7 +431,6 @@ public class DAO {
 			
 			if(rs.next()) {
 				expired = rs.getString(1);
-				System.out.println(expired);
 			}
 		} catch (Exception e) {
 			e.printStackTrace();
@@ -441,4 +438,157 @@ public class DAO {
 			DBclose();
 		} return expired;
 	}
-}
+	
+	
+	public int deleteingri(String id, String ingri ) {
+		try {
+			DBconn();
+			String sql = "delete from test_refi where mb_id = ? and ingre_name=?";
+			psmt = conn.prepareStatement(sql);
+			
+			psmt.setString(1,id);
+			psmt.setString(2,ingri);
+			
+			cnt = psmt.executeUpdate();
+
+			
+		} catch (Exception e) {
+			e.printStackTrace();
+		} finally {
+			DBclose();
+		} return cnt;
+	}
+	
+	//레시피 표기페이지 메인 사진 메소드(요리 순서 그림의 마지막 그림 가져올것)
+	public ArrayList<viewrefVO> recMain() {
+	      ArrayList<viewrefVO> list = new ArrayList<viewrefVO>();
+	      try {
+	         DBconn();
+	         String sql = "select href from t_cooking";
+
+	         psmt = conn.prepareStatement(sql);
+	         rs = psmt.executeQuery();
+
+	         while (rs.next()) {
+
+	            String href = rs.getString(1);
+
+	            vo1 = new viewrefVO(href);
+	            list.add(vo1);
+	         }
+
+	      } catch (Exception e) {
+	         e.printStackTrace();
+	      } finally {
+	         DBclose();
+	      }
+	      return list;
+
+	   }
+	   
+
+	   //레시피 정보 메소드(이름, 재료, 요리방식, 칼로리)
+	   public ArrayList<viewrefVO> recInfo() {
+	      ArrayList<viewrefVO> list = new ArrayList<viewrefVO>();
+	      try {
+	         DBconn();
+	         String sql = "select rname, ingre, calory, type from t_cooking";
+
+	         psmt = conn.prepareStatement(sql);
+	         rs = psmt.executeQuery();
+
+	         while (rs.next()) {
+
+	            String rname = rs.getString(1);
+	            String ingre = rs.getString(2);
+	            String type = rs.getString(3);
+	            int calory = rs.getInt(4);
+
+	            vo1 = new viewrefVO(rname, ingre, calory, type);
+	            list.add(vo1);
+	         }
+
+	      } catch (Exception e) {
+	         e.printStackTrace();
+	      } finally {
+	         DBclose();
+	      }
+	      return list;
+	   }
+
+	
+	   //레시피 순서 메소드
+	   public ArrayList<viewrefVO> recSequence() {
+	      ArrayList<viewrefVO> list = new ArrayList<viewrefVO>();
+	      try {
+	         DBconn();
+	         String sql = "select sequence, href from t_cooking";
+
+	         psmt = conn.prepareStatement(sql);
+	         rs = psmt.executeQuery();
+
+	         while (rs.next()) {
+
+	            String sequence = rs.getString(1);
+	            String href = rs.getString(2);
+
+	            vo1 = new viewrefVO(sequence, href);
+	            list.add(vo1);
+	         }
+
+	      } catch (Exception e) {
+	         e.printStackTrace();
+	      } finally {
+	         DBclose();
+	      }
+	      return list;
+	   }
+	
+	
+	
+	//메뉴검색하는기능
+    public ArrayList<menuvo> selectmenu( String contry, String type, String kcal) {
+    	ArrayList<menuvo> menulist = new ArrayList<menuvo>(); 
+	         try {
+	            DBconn();
+	            
+	            String sql = "select * from recipe where  FOOD_TYPE =  ?  and RECIPE_COUNTRY = ? and RECIPE_CALORY<? ";
+	            //가져온값 sql문에 입력     
+	            psmt = conn.prepareStatement(sql);
+	            psmt.setString(1, type);
+	            psmt.setString(2, contry);
+	            psmt.setString(3, kcal);	            
+	            
+	            //sql문에서 나온 값 getString으로 가져오기
+	            rs = psmt.executeQuery();      
+	            while(rs.next()) {
+	            
+	               String name =rs.getString(2);
+	               String foodtype =rs.getString(3);
+	               String country =rs.getString(4);
+	               String calory = rs.getString(5);
+	               String ingre = rs.getString(6);
+	               String method = rs.getString(7);
+	               String image = rs.getString(8);
+	               
+	            //가져온값 설정한 MenuVO에 넣어주기
+	               menu = new menuvo(name, foodtype, country , calory , ingre ,method ,image);
+	            //가져온값 설정한 MenuVO를 ArrayList<menuvo> menulist로 넣어주기
+	               menulist.add(menu);
+	            }
+	            
+	            
+	            
+	         } catch (Exception e) {
+	            e.printStackTrace();
+	         } finally {
+	            DBclose();
+	         }
+	         //menulist값 리턴
+	         return menulist;
+
+	      }
+    
+    
+	}
+

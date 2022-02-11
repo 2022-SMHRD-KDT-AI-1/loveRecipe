@@ -26,11 +26,13 @@ public class refService extends HttpServlet {
 
 		// 파라미터 수집
 		if (request.getParameter("ingre1") != null && request.getParameter("number1") != null) {
+		
+			//입력한 데이터와 입력한 사용자의 아이디 가져오기
 			String ingre1 = request.getParameter("ingre1");
 			int number1 = Integer.parseInt(request.getParameter("number1"));
-
 			String id = info.getId();
 			String temp = "냉동";
+			
 
 
 
@@ -38,7 +40,7 @@ public class refService extends HttpServlet {
 
 			PrintWriter out = response.getWriter();
 
-			
+			//가져온 파라미터 InsertRefi메소드에 넣어주기
 			int result = dao.insertrefi(number1, temp, id, ingre1);
 			if (result>0) {
 				System.out.println("재료입력성공");

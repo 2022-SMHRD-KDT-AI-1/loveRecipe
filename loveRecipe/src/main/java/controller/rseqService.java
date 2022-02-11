@@ -11,26 +11,26 @@ import javax.servlet.http.HttpServletResponse;
 
 import com.google.gson.Gson;
 
+import model.DAO;
 import model.viewrefVO;
 
-public class recmainservice extends HttpServlet {
+public class rseqService extends HttpServlet {
 	private static final long serialVersionUID = 1L;
 
 	protected void service(HttpServletRequest request, HttpServletResponse response)
 			throws ServletException, IOException {
 
-		viewrefVO vo1 = new viewrefVO(
-				"https://cloudfront.haemukja.com/vh.php?url=https://d1hk7gw6lgygff.cloudfront.net/uploads/direction/image_file/7855/org_resized__B9_E4_C7_C7_C0_DA4.jpg&convert=jpgmin&rt=600");
-		ArrayList<viewrefVO> list = new ArrayList<viewrefVO>();
-
-		list.add(vo1);
+		DAO dao = new DAO();
+		ArrayList<viewrefVO> info = dao.recSequence();
+		
+		request.setAttribute("info", info);
 
 		response.setCharacterEncoding("UTF-8");
-
+		
 		PrintWriter out = response.getWriter();
-
+		
 		Gson gson = new Gson();
-		String json = gson.toJson(list);
+		String json = gson.toJson(info);
 		System.out.println(json);
 		out.print(json);
 	}

@@ -117,9 +117,13 @@
 						<div class="row row-mt-15em">
 							<div class="col-md-7 mt-text animate-box"
 								data-animate-effect="fadeInUp">
-								<ol class="main-img">
 
-								</ol>
+
+								<img
+									src="https://recipe1.ezmember.co.kr/cache/recipe/2016/06/23/c0ad0ea5a3bf9ce990a64fa6be9662da1.jpg"
+									width="500">
+
+
 
 
 							</div>
@@ -131,10 +135,58 @@
 										<div class="tab-content">
 											<div class="tab-content-inner active" data-content="signup">
 
-												<h3 class="cursive-font">레시피</h3>
+												<h3 class="cursive-font">감자치즈구이</h3>
 												<form action="recipesearch" id="rec"></form>
 											</div>
-
+											<div class="row form-group">
+												<label>국가분류 : 양식</label><br>
+											</div>
+											<div class="row form-group">
+												<label>방법분류 : 구이</label><br>
+											</div>
+											<div class="row form-group">
+												<label>칼로리 : 183kcal</label><br>
+											</div>
+											<div class="row form-group">
+												<table>
+													<thead>
+														<tr>
+															<td>재료</td>
+															<td>갯수</td>
+														</tr>
+													</thead>
+													<tbody>
+														<tr>
+															<td>감자</td>
+															<td>7개</td>
+														</tr>
+														<tr>
+															<td>소금</td>
+															<td>1작은술</td>
+														</tr>
+														<tr>
+															<td>체다치즈</td>
+															<td>넉넉하게</td>
+														</tr>
+														<tr>
+															<td>모짜렐라치즈</td>
+															<td>넉넉하게</td>
+														</tr>
+														<tr>
+															<td>파마산치즈</td>
+															<td>약간</td>
+														</tr>
+														<tr>
+															<td>버터</td>
+															<td>약간</td>
+														</tr>
+														<tr>
+															<td>파슬리가루</td>
+															<td>솔솔</td>
+														</tr>
+													</tbody>
+												</table>
+											</div>
 
 										</div>
 									</div>
@@ -149,50 +201,107 @@
 		</header>
 
 
-		<div class="gtco-cover gtco-cover-sm"
-			style="background-image: url(images/img_bg_1.jpg)"
-			data-stellar-background-ratio="0.5">
-			<div class="overlay"></div>
-			<div class="gtco-container text-center">
-				<div class="display-t">
-					<div class="display-tc">
-						<ol class="recipe">
 
-						</ol>
-					</div>
-				</div>
-			</div>
+
+		<div
+			style="background: linear-gradient(90deg, #FDF6F0, #FFFDDE); text-align: left;">
+
+			<table border=0 width="1100" align="center" style="font-size: 22px;">
+			<tr height="100px">
+			<td colspan="3"><h2>레시피</h2></td>
+			</tr>
+				<tr>
+					<td><img
+						src="https://recipe1.ezmember.co.kr/cache/recipe/2016/06/23/2191278351b6871fabc4c4dc18f55c8b1.jpg"
+						width="500"></td><td width="30px" rowspan="12"></td>
+					<td><b>1.</b>　감자는 넉넉하게 삶아두었는데요.<br>감자를 깨끗하게 씻은 후 냄비에 넣고 감자가 잠길 듯 말 듯하게
+						물을 붓고 냄비 뚜껑을 덮고 센 불로 삶다가 끓으면 중약 불로 놓고 은근히 익힙니다.</td>
+				</tr>
+				<tr>
+					<td><img
+						src="https://recipe1.ezmember.co.kr/cache/recipe/2016/06/23/c541d7c3beafd52613800214ac9094471.jpg"
+						width="500"></td>
+					<td><b>2.</b>　20분 정도 삶고 젓가락으로 꾹 질러서 설컹하게 들어가면 냄비 바닥에 물을 바닥에 조금만 남기고
+						모두 따라 버립니다. 그런 후 소금 1 작은 술 넣고 흔들어 준 후 뚜껑을 덮고 약불로 8분 정도 뜸을 들입니다.</td>
+				</tr>
+				<tr>
+					<td><img
+						src="https://recipe1.ezmember.co.kr/cache/recipe/2016/06/23/f5aebb892c9a2df8ad67d002259fb8331.jpg"
+						width="500"></td>
+					<td><b>3.</b>　겉에 짭조름하게 간도 들고 해서 그냥 집어먹어도 감자가 아주 맛집니다. 역시 햇감자라 포근하고
+						달달합니다. 그릇에 담아 놓고 군것질하듯 하나씩 집어먹게 되더라고요.</td>
+				</tr>
+				<tr>
+					<td><img
+						src="https://recipe1.ezmember.co.kr/cache/recipe/2016/06/23/fcb6d4cffee4d950b5f7973aeb641bff1.jpg"
+						width="500"></td>
+					<td><b>4.</b>　삶아 놓은 감자를 몇 개 먹고 나니 감자가 일곱 개가 남았더라고요. 정말 뜬금없다는 말을 이럴 때
+						두고 하는 말인가 싶어요. 머릿속에 휙 지나가는 생각 옥수수 버터구이가 생각나더라고요. 그래서 만들게 된
+						감자치즈구이~ㅎㅎ</td>
+				</tr>
+				<tr>
+					<td><img
+						src="https://recipe1.ezmember.co.kr/cache/recipe/2016/06/23/9bdbe1e1607d65262e67e7526e37b2e01.jpg"
+						width="500"></td>
+					<td><b>5.</b>　감자 껍질은 벗기지 않았고요. 그대로 감자껍질에다 버터를 바르고 시작을 해도 되지만 기름 묻는 게
+						싫어서 먼저 감자부터 얇게 썰어줍니다. 더 얇게 썰면 좋겠지요. ㅋㅋ 저는 감자가 부서지는 느낌에 졸아서 약감
+						두툼합니다.ㅎㅎ</td>
+				</tr>
+				<tr>
+					<td><img
+						src="https://recipe1.ezmember.co.kr/cache/recipe/2016/06/23/8b5f02d90f817e60048666125e2af0461.jpg"
+						width="500"></td>
+					<td><b>6.</b>　자~ 감자 썬 후 뒤집어 보면 이런 모양입니다. 너무 끝까지 칼집을 넣으면 감자가 훅 잘라지니깐
+						주의해서 칼집을 넣어주고요. 감자는 모두 같은 모양으로 썰어주고요.</td>
+				</tr>
+				<tr>
+					<td><img
+						src="https://recipe1.ezmember.co.kr/cache/recipe/2016/06/23/018da08c06092acd8d1779c8ff5be8461.jpg"
+						width="500"></td>
+					<td><b>7.</b>　저는 집에 마들렌 팬이 있어서 팬에다 쏘옥 넣어줬어요. 그냥 팬에다 넣어도 부서지진 않아요. ㅎㅎ
+						그래도 마들렌 팬에다 감자를 넣으니 안정적이긴 하네요.</td>
+				</tr>
+				<tr>
+					<td><img
+						src="https://recipe1.ezmember.co.kr/cache/recipe/2016/06/23/0f8b9bef3905a7649f835f7b1027d2da1.jpg"
+						width="500"></td>
+					<td><b>8.</b>　감자 벌어진 틈으로 모짜렐라치즈와 체다치즈를 넣어줄 거예요. 지난번 샌드위치 만들고 남은 식빵
+						껍질도 남은 마들렌 팬에다가 버터를 바르고 파마산 치즈를 뿌려서 구울 준비를 했고요. 감자에다 체더치즈를 넣고요.</td>
+				</tr>
+				<tr>
+					<td><img
+						src="https://recipe1.ezmember.co.kr/cache/recipe/2016/06/23/a67a8c0292c357ed6042fed60554efb11.jpg"
+						width="500"></td>
+					<td><b>9.</b>　모자렐라치즈도 넣어줬어요. 그런 후 버터도 위에 쓰윽 발라주고요. 수북하게 치즈 종류를 감자 틈으로
+						넣어주었어요. 치즈를 넉넉하게 넣어주는 게 좋을 것 같아요. 치즈가 오븐에 들어가서 녹으면 위가 살짝 비더라고요.</td>
+				</tr>
+				<tr>
+					<td><img
+						src="https://recipe1.ezmember.co.kr/cache/recipe/2016/06/23/02faf9688c8efb4ee403aa6c200348b31.jpg"
+						width="500"></td>
+					<td><b>10.</b>　파마산 치즈와 파슬리가루도 솔솔 부려줍니다. 오븐에서 240도에 20분 구워냈어요.</td>
+				</tr>
+				<tr>
+					<td><img
+						src="https://recipe1.ezmember.co.kr/cache/recipe/2016/06/23/e8b860ad5e3a6173a1186f8ee7074c2c1.jpg"
+						width="500"></td>
+					<td><b>11.</b>　노릇한 감자치즈구이 생각보다 훨씬 더 예쁜 모양이 나와서 감동했어요. 보기만 해도 군침이
+						돌지요.~</td>
+				</tr>
+				<tr>
+					<td><img
+						src="https://recipe1.ezmember.co.kr/cache/recipe/2016/06/23/42c3dc70a378d85c6a5030197ad122aa1.jpg"
+						width="500"></td>
+					<td><b>12.</b>　사이사이에 햄을 넣어줘도 좋겠다는 생각이 다 만들고 나니 나네요. 그리고 좀 더 짭조름 매콤하니
+						라면 수프를 뿌려도 좋을 것 같고요. ㅋㅋ 다 만들고 나서 이런 말이 무슨 ~~ㅎㅎ</td>
+				</tr>
+			</table>
 		</div>
 
 
 
 
-		<div id="gtco-subscribe">
-			<div class="gtco-container">
-				<div class="row animate-box">
-					<div class="col-md-8 col-md-offset-2 text-center gtco-heading">
-						<h2 class="cursive-font">feedback</h2>
-						<p>사이트를 쓰면서 불편햇던점을 보내주세요!</p>
-					</div>
-				</div>
-				<div class="row animate-box">
-					<div class="col-md-8 col-md-offset-2">
-						<form class="form-inline">
-							<div class="col-md-6 col-sm-6">
-								<div class="form-group">
-									<label for="feedback" class="sr-only">feedback</label> <input
-										type="feedback" class="form-control" id="feedback"
-										placeholder="불편했던점을 보내주세요!">
-								</div>
-							</div>
-							<div class="col-md-6 col-sm-6">
-								<button type="submit" class="btn btn-default btn-block">send</button>
-							</div>
-						</form>
-					</div>
-				</div>
-			</div>
-		</div>
+
 
 		<footer id="gtco-footer" role="contentinfo"
 			style="background-image: url(images/img_bg_1.jpg)"
@@ -222,128 +331,6 @@
 
 			</div>
 		</footer>
-		<script type="text/javascript"
-			src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-		<script type="text/javascript">
-	
-	function save() {
-
-	$.ajax({
-		url : 'viewrecService', // 값을 보낼 주소
-		type : 'post', // get or post
-		dataType : 'json', // json 데이터로 응답받을 때,
-		success : function(res){ // 통신이 성공했을 때 실행되는 함수
-				// res --> Server에서 응답해준 데이터가 매개변수에 자동으로 담김
-			table(res);
-		},
-		error : function(){ // 통신이 실패한경우에 실행되는 함수 
-			alert("error");
-		}
-	});
-		
-	}
-	
-	function table(res){
-		$('form[id=rec]').html('');
-		labels = [];
-		datas = [];
-		for (var i = 0; i < res.length; i++) {
-			
-			var json = res[i];
-			
-			tr = `
-				<div class="row form-group">
-					<label>레시피명 : `+json.rname+`</label><br>
-				</div>
-				<div class="row form-group">
-					<label>`+json.type+`</label><br>
-				</div>
-				<div class="row form-group">
-					<label>칼로리 : `+json.calory+`kcal</label><br>
-				</div>
-				<div class="row form-group">	
-						<label>식재료 : `+json.ingre+`</label>
-				</div>
-			`;
-			
-			$('form[id=rec]').append(tr);
-			labels.push(json.rname);
-			datas.push(json.calory);
-			labels.push(json.type);
-			labels.push(json.ingre);
-		}
-	}
-	function save1() {
-
-		$.ajax({
-			url : 'vrecsequence', // 값을 보낼 주소
-			type : 'post', // get or post
-			dataType : 'json', // json 데이터로 응답받을 때,
-			success : function(res){ // 통신이 성공했을 때 실행되는 함수
-					// res --> Server에서 응답해준 데이터가 매개변수에 자동으로 담김
-				table1(res);
-			},
-			error : function(){ // 통신이 실패한경우에 실행되는 함수 
-				alert("error");
-			}
-		});
-			
-		}
-		
-		function table1(res){
-			$('ol[class=recipe]').html('');
-			labels = [];
-			for (var i = 0; i < res.length; i++) {
-				
-				var json = res[i];
-				
-				tr = `
-					<div class = "img-cover">
-						<img src="`+json.href+`">
-					</div>
-					<p>
-						`+json.sequence+`
-					</p>
-				`;
-				
-				$('ol[class=recipe]').append(tr);
-				labels.push(json.sequence);
-				labels.push(json.href);
-			}
-		}
-		function save2() {
-
-			$.ajax({
-				url : 'recmainservice', // 값을 보낼 주소
-				type : 'post', // get or post
-				dataType : 'json', // json 데이터로 응답받을 때,
-				success : function(res){ // 통신이 성공했을 때 실행되는 함수
-						// res --> Server에서 응답해준 데이터가 매개변수에 자동으로 담김
-					table2(res);
-				},
-				error : function(){ // 통신이 실패한경우에 실행되는 함수 
-					alert("error");
-				}
-			});
-				
-			}
-			
-			function table2(res){
-				$('ol[class=main-img]').html('');
-				labels = [];
-					tr = `
-						<div class="main-image">
-							<img src="`+res[res.length-1].href+`">
-						</div>
-					`;
-					
-				$('ol[class=main-img]').append(tr);
-				labels.push(res.href);
-			}
-	$(document).ready(save());
-	$(document).ready(save1());
-	$(document).ready(save2());
-	</script>
 		<!-- </div> -->
 
 	</div>

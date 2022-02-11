@@ -2,6 +2,7 @@ package controller;
 
 import java.io.IOException;
 import java.io.PrintWriter;
+import java.util.ArrayList;
 
 import javax.servlet.RequestDispatcher;
 import javax.servlet.ServletException;
@@ -9,6 +10,9 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
+import com.google.gson.Gson;
+
+import model.DAO;
 import model.viewrefVO;
 
 public class vrecipeService extends HttpServlet {
@@ -17,17 +21,20 @@ public class vrecipeService extends HttpServlet {
 	protected void service(HttpServletRequest request, HttpServletResponse response)
 			throws ServletException, IOException {
 
-		String rname = request.getParameter("rname");
-		String ingre = request.getParameter("ingre");
-		String type = request.getParameter("type");
-		int calory = Integer.parseInt(request.getParameter("calory"));
+		
+		DAO dao = new DAO();
+		ArrayList<viewrefVO> info = dao.recInfo();
+		
+		request.setAttribute("info", info);
 
-		viewrefVO vo = new viewrefVO(rname, ingre, calory, type);
-
-		request.setAttribute("vo", vo);
-
-		RequestDispatcher rd = request.getRequestDispatcher("detailvrec.jsp");
-		rd.forward(request, response);
+		response.setCharacterEncoding("UTF-8");
+		
+		PrintWriter out = response.getWriter();
+		
+		Gson gson = new Gson();
+		String json = gson.toJson(info);
+		System.out.println(json);
+		out.print(json);
 	}
 
 }

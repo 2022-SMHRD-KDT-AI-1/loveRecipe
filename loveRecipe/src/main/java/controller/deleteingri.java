@@ -20,27 +20,22 @@ public class deleteingri extends HttpServlet {
       request.setCharacterEncoding("UTF-8");
       
       
-      String name = request.getParameter("delete");
+      String ingri = request.getParameter("ingri");
+      String id = request.getParameter("id");
       
-      System.out.println("삭제할 재료 : "+name);
-   
-
+      System.out.println("삭제할 재료 : "+ingri);
+      System.out.println("아이디주인 : "+id);
+       
+      DAO dao = new DAO();
+      int cnt = dao.deleteingri(id, ingri);	 
+    
+      if(cnt >0) {
+         System.out.println("재료 삭제 성공");
+         
+      }else {
+         System.out.println("재료 삭제 실패");
+      }
       
-  
-//      DAO dao = new DAO();
-//      int cnt = dao.update(info);
-//      
-//
-//    
-//      if(cnt >0) {
-//         System.out.println("재료 삭제 성공");
-//         
-//        
-//         session.setAttribute("info", info);
-//      }else {
-//         System.out.println("재료 삭제 실패");
-//      }
-//      
       response.sendRedirect("refigator.jsp");
       
       

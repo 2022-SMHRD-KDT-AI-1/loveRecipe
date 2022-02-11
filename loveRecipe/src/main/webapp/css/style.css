@@ -91,16 +91,6 @@ h1, h2, h3, h4, h5, h6, figure {
   padding-left: 15px;
   padding-right: 15px;
 }
-.gtco-container1{
-  max-width: 1100px;
-  position: absolute;
-  margin: 0 auto;
-  padding-left: 15px;
-  padding-right: 15px;
-}
-
-
-
 
 .gtco-nav {
   background: linear-gradient(90deg, #191919, #F5F2E7);
@@ -671,10 +661,6 @@ form label {
   font-family: 'Nanum Brush Script', cursive;
 }
 
-.refi-font {
-  font-family: 'Open Sans Script', cursive;
-}
-
 .primary-color {
   color: #FBB448 !important;
 }
@@ -802,9 +788,6 @@ form label {
 }
 
 #gtco-features {
-  background: #FBB448;
-}
-#gtco-features1 {
   background: #FBB448;
 }
 #gtco-features .gtco-heading h2 {
@@ -953,7 +936,7 @@ form label {
 }
 
 #gtco-subscribe {
-  background: #0098EF;
+  background: #3DB2FF;
 }
 #gtco-subscribe .form-control {
   background: transparent;
@@ -984,15 +967,15 @@ form label {
   color: #fff;
 }
 #gtco-subscribe .btn {
-  height: 46px;
+  height: 35px;
   border: none !important;
   background: #FBB448;
   color: #fff;
   font-size: 16px;
   text-transform: uppercase;
   font-weight: 400;
-  padding-left: 50px;
-  padding-right: 50px;
+  padding-left: 71px;
+  padding-right: 71px;
 }
 #gtco-subscribe .form-inline .form-group {
   width: 100% !important;
@@ -1974,6 +1957,11 @@ form label {
   }
 }
 
-
+#ref1, #ref2, #ref3 {
+	display: flex;
+	justify-content: center;
+	padding: 10;
+	opacity: 0.7;
+}
 
 /*# sourceMappingURL=style.css.map */
