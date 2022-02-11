@@ -15,22 +15,18 @@ public class DAO {
 	MemberVO vo = null;
 	refivo refi = null;
 	ingrivo ingri = null;
-<<<<<<< HEAD
-	String expired ;
-	viewrefVO vo1 = null;
-	menuvo menu = null;
-=======
 	String expired;
 	menuvo menu = null;
->>>>>>> branch 'master' of https://github.com/2022-SMHRD-KDT-AI-1/loveRecipe.git
+
+	String[] temp_menu = new String[3];// 저장용
 
 	public void DBconn() {
 		try {
 			Class.forName("oracle.jdbc.driver.OracleDriver");
 
-			String url = "jdbc:oracle:thin:@localhost:1521:xe";
-			String dbid = "hr";
-			String dbpw = "hr";
+			String url = "jdbc:oracle:thin:@project-db-stu.ddns.net:1524:xe";
+			String dbid = "campus_e_3_0115";
+			String dbpw = "smhrd3";
 			conn = DriverManager.getConnection(url, dbid, dbpw);
 
 		} catch (Exception e) {
@@ -63,7 +59,7 @@ public class DAO {
 
 			DBconn();
 
-			String sql = "select * from test_member where id = ? and pw =?";
+			String sql = "select * from t_member where mb_id = ? and mb_pw =?";
 
 			psmt = conn.prepareStatement(sql);
 
@@ -74,9 +70,9 @@ public class DAO {
 
 			if (rs.next()) {
 
-				String uid = rs.getString(2);
-				String upw = rs.getString(3);
-				String nickname = rs.getString(4);
+				String uid = rs.getString(1);
+				String upw = rs.getString(2);
+				String nickname = rs.getString(3);
 
 				vo = new MemberVO(uid, upw, nickname);
 
@@ -102,7 +98,7 @@ public class DAO {
 			System.out.println(dto.getEmail());
 			System.out.println(dto.getPhone());
 
-			String sql = "insert into test_member values(test_seq.nextval, ? , ? , ? , ? , ? ,sysdate)";
+			String sql = "insert into t_member(mb_id,mb_pw,mb_nick,admin_yn,mb_phone,mb_email) values(?, ? , ? , ? , ? ,?)";
 
 			// sql -> DB에 전달
 			psmt = conn.prepareStatement(sql);
@@ -111,8 +107,10 @@ public class DAO {
 			psmt.setString(1, dto.getId());
 			psmt.setString(2, dto.getPw());
 			psmt.setString(3, dto.getNickname());
-			psmt.setString(4, dto.getEmail());
+			psmt.setString(4, "Y");
 			psmt.setString(5, dto.getPhone());
+			psmt.setString(6, dto.getEmail());
+
 			// 실행
 			cnt = psmt.executeUpdate();
 
@@ -129,7 +127,7 @@ public class DAO {
 		try {
 			DBconn();
 
-			String sql = "insert into web_board values(num_board.nextval, ?, ?, ?, ?, sysdate)";
+			String sql = "insert into web_board(writer,title,filename,content) values( ?, ?, ?, ? )";
 
 			psmt = conn.prepareStatement(sql);
 
@@ -152,11 +150,13 @@ public class DAO {
 		try {
 			DBconn();
 
-			String sql = "insert into web_message values(num_message.nextval, , , , sysdate)";
+			String sql = "insert into web_message(sendname,receiveemail,message) values(? ,? ,? )";
 
 			psmt = conn.prepareStatement(sql);
 
-			psmt.setString(1, message);
+			psmt.setString(1, sendName);
+			psmt.setString(2, receiveEmail);
+			psmt.setString(3, message);
 
 			cnt = psmt.executeUpdate();
 		} catch (Exception e) {
@@ -171,7 +171,7 @@ public class DAO {
 	public int update(MemberVO vo) {
 		try {
 			DBconn();
-			String sql = "update test_member set pw=?, nickname =?, email=? where id=? ";
+			String sql = "update t_member set mb_pw=?, mb_nick =?, mb_email=? where mb_id=? ";
 
 			psmt = conn.prepareStatement(sql);
 
@@ -203,7 +203,7 @@ public class DAO {
 
 			DBconn();
 
-			String sql = "insert into feed_board values(feed_seq.nextval, ?, ?, sysdate)";
+			String sql = "insert into feed_board(writer,content) values(?, ?)";
 
 			psmt = conn.prepareStatement(sql);
 
@@ -228,7 +228,7 @@ public class DAO {
 
 			DBconn();
 
-			String sql = "select id,pw,nickname from test_member";
+			String sql = "select mb_id,mb_pw,mb_nick from t_member";
 
 			psmt = conn.prepareStatement(sql);
 			rs = psmt.executeQuery();
@@ -259,7 +259,7 @@ public class DAO {
 
 			DBconn();
 			// SQL문 작성
-			String sql = "SELECT count (DISTINCT food_type) FROM recipe";
+			String sql = "SELECT count (DISTINCT how_to_cook) FROM t_recipe";
 
 			// preparestatement 메소드 사용해서 sql문을 DB에 전달
 			psmt = conn.prepareStatement(sql);
@@ -286,7 +286,7 @@ public class DAO {
 		try {
 
 			DBconn();
-			String sql = "select count (*) from test_member";
+			String sql = "select count (*) from t_member";
 
 			psmt = conn.prepareStatement(sql);
 
@@ -309,7 +309,7 @@ public class DAO {
 		try {
 
 			DBconn();
-			String sql = "select count (*) from recipe";
+			String sql = "select count (*) from t_recipe";
 
 			psmt = conn.prepareStatement(sql);
 
@@ -332,14 +332,14 @@ public class DAO {
 		try {
 			DBconn();
 			// 필요한정보 - 재료이름,재료양,유저아이디
-			String sql = "insert into test_refi values(refi_seq.nextval, " + "refi_seq2.nextval, ?,?, sysdate ,?,?)";
+			String sql = "insert into T_MY_INGREDIENT(ingre_amount,temperature_kind,mb_id,ingre_name) values(?,?,?,?)";
 
 			psmt = conn.prepareStatement(sql);
 
-			psmt.setInt(1, number1);
-			psmt.setString(2, temp);
-			psmt.setString(3, id);
-			psmt.setString(4, ingre1);
+			psmt.setInt(1, number1); // 양
+			psmt.setString(2, temp); // 온도
+			psmt.setString(3, id); // 아이디
+			psmt.setString(4, ingre1);// 재료명
 
 			cnt = psmt.executeUpdate();
 
@@ -357,7 +357,7 @@ public class DAO {
 		try {
 			DBconn();
 			// 필요한 정보 - 재료명,갯수,현재보관장소
-			String sql = "select * from test_refi where mb_id= ?";
+			String sql = "select ingre_amount, temperature_kind, ingre_name from T_MY_INGREDIENT where mb_id= ?";
 
 			psmt = conn.prepareStatement(sql);
 
@@ -366,19 +366,14 @@ public class DAO {
 
 			while (rs.next()) {
 
-				int ingre_amount = rs.getInt(3);
-				String ingre_temp = rs.getString(4);
-<<<<<<< HEAD
-				String ingre_name = rs.getString(7);				
-				//가져온 데이터 값 vo에넣고 Arraylisy화 하여 리턴하기
-=======
-				String ingre_name = rs.getString(7);
+				int ingre_amount = rs.getInt(1);
+				String ingre_temp = rs.getString(2);
+				String ingre_name = rs.getString(3);
 
-//				System.out.println(ingre_amount);
-//				System.out.println(ingre_temp);
-//				System.out.println(ingre_name);
+//            System.out.println(ingre_amount);
+//            System.out.println(ingre_temp);
+//            System.out.println(ingre_name);
 
->>>>>>> branch 'master' of https://github.com/2022-SMHRD-KDT-AI-1/loveRecipe.git
 				refi = new refivo(ingre_amount, ingre_temp, ingre_name);
 				refilist.add(refi);
 
@@ -391,35 +386,25 @@ public class DAO {
 		}
 		return refilist;
 	}
-<<<<<<< HEAD
-	
-	//냉장고에 보유한 재료의 상세정보 가져오기
-=======
 
 	// 냉장고에 보유한 재료의 상세정보 가져오기
->>>>>>> branch 'master' of https://github.com/2022-SMHRD-KDT-AI-1/loveRecipe.git
 	public ArrayList<ingrivo> selectingri(String name) {
 		ArrayList<ingrivo> ingrilist = new ArrayList<ingrivo>();
 		try {
 			DBconn();
 			// 필요한정보 -재료명,재료타입,유통기한,제철,칼로리,권장보관장소
-			String sql = "select * from test_ingredient where ingre_name=?";
+			String sql = "select * from t_ingredient where ingre_name=?";
+			// String sql ="select * from test_ingredient where ingre_name=?";
 
 			psmt = conn.prepareStatement(sql);
 			psmt.setString(1, name);
-			
-			
 			rs = psmt.executeQuery();
 			while (rs.next()) {
 				String type = rs.getString(3);
 				int expire = rs.getInt(4);
 				String season = rs.getString(5);
-				int carloy = rs.getInt(6);
+				int carloy = (int) rs.getFloat(6);
 				String tempt = rs.getString(7);
-<<<<<<< HEAD
-				
-				//가져온 데이터 값 vo에넣고 Arraylisy화 하여 리턴하기
-=======
 
 				System.out.println(type);
 				System.out.println(expire);
@@ -427,7 +412,6 @@ public class DAO {
 				System.out.println(carloy);
 				System.out.println(tempt);
 
->>>>>>> branch 'master' of https://github.com/2022-SMHRD-KDT-AI-1/loveRecipe.git
 				ingri = new ingrivo(type, season, tempt, expire, carloy);
 				ingrilist.add(ingri);
 
@@ -439,12 +423,7 @@ public class DAO {
 		}
 		return ingrilist;
 	}
-<<<<<<< HEAD
-	
-	//냉장고에잇는 재료 유통기한 표시
-=======
 
->>>>>>> branch 'master' of https://github.com/2022-SMHRD-KDT-AI-1/loveRecipe.git
 	public String expire(int num) {
 
 		try {
@@ -457,6 +436,7 @@ public class DAO {
 
 			if (rs.next()) {
 				expired = rs.getString(1);
+				System.out.println(expired);
 			}
 		} catch (Exception e) {
 			e.printStackTrace();
@@ -465,215 +445,174 @@ public class DAO {
 		}
 		return expired;
 	}
-<<<<<<< HEAD
-	
-	
-	public int deleteingri(String id, String ingri ) {
-		try {
-			DBconn();
-			String sql = "delete from test_refi where mb_id = ? and ingre_name=?";
-			psmt = conn.prepareStatement(sql);
-			
-			psmt.setString(1,id);
-			psmt.setString(2,ingri);
-			
-			cnt = psmt.executeUpdate();
 
-			
-		} catch (Exception e) {
-			e.printStackTrace();
-		} finally {
-			DBclose();
-		} return cnt;
-	}
-	
-	//레시피 표기페이지 메인 사진 메소드(요리 순서 그림의 마지막 그림 가져올것)
+	// 레시피 표기페이지 메인 사진 메소드(요리 순서 그림의 마지막 그림 가져올것)
 	public ArrayList<viewrefVO> recMain() {
-	      ArrayList<viewrefVO> list = new ArrayList<viewrefVO>();
-	      try {
-	         DBconn();
-	         String sql = "select href from t_cooking";
-
-	         psmt = conn.prepareStatement(sql);
-	         rs = psmt.executeQuery();
-
-	         while (rs.next()) {
-
-	            String href = rs.getString(1);
-
-	            vo1 = new viewrefVO(href);
-	            list.add(vo1);
-	         }
-
-	      } catch (Exception e) {
-	         e.printStackTrace();
-	      } finally {
-	         DBclose();
-	      }
-	      return list;
-
-	   }
-	   
-
-	   //레시피 정보 메소드(이름, 재료, 요리방식, 칼로리)
-	   public ArrayList<viewrefVO> recInfo() {
-	      ArrayList<viewrefVO> list = new ArrayList<viewrefVO>();
-	      try {
-	         DBconn();
-	         String sql = "select rname, ingre, calory, type from t_cooking";
-
-	         psmt = conn.prepareStatement(sql);
-	         rs = psmt.executeQuery();
-
-	         while (rs.next()) {
-
-	            String rname = rs.getString(1);
-	            String ingre = rs.getString(2);
-	            String type = rs.getString(3);
-	            int calory = rs.getInt(4);
-
-	            vo1 = new viewrefVO(rname, ingre, calory, type);
-	            list.add(vo1);
-	         }
-
-	      } catch (Exception e) {
-	         e.printStackTrace();
-	      } finally {
-	         DBclose();
-	      }
-	      return list;
-	   }
-
-	
-	   //레시피 순서 메소드
-	   public ArrayList<viewrefVO> recSequence() {
-	      ArrayList<viewrefVO> list = new ArrayList<viewrefVO>();
-	      try {
-	         DBconn();
-	         String sql = "select sequence, href from t_cooking";
-
-	         psmt = conn.prepareStatement(sql);
-	         rs = psmt.executeQuery();
-
-	         while (rs.next()) {
-
-	            String sequence = rs.getString(1);
-	            String href = rs.getString(2);
-
-	            vo1 = new viewrefVO(sequence, href);
-	            list.add(vo1);
-	         }
-
-	      } catch (Exception e) {
-	         e.printStackTrace();
-	      } finally {
-	         DBclose();
-	      }
-	      return list;
-	   }
-	
-	
-	
-	//메뉴검색하는기능
-    public ArrayList<menuvo> selectmenu( String contry, String type, String kcal) {
-    	ArrayList<menuvo> menulist = new ArrayList<menuvo>(); 
-	         try {
-	            DBconn();
-	            
-	            String sql = "select * from recipe where  FOOD_TYPE =  ?  and RECIPE_COUNTRY = ? and RECIPE_CALORY<? ";
-	            //가져온값 sql문에 입력     
-	            psmt = conn.prepareStatement(sql);
-	            psmt.setString(1, type);
-	            psmt.setString(2, contry);
-	            psmt.setString(3, kcal);	            
-	            
-	            //sql문에서 나온 값 getString으로 가져오기
-	            rs = psmt.executeQuery();      
-	            while(rs.next()) {
-	            
-	               String name =rs.getString(2);
-	               String foodtype =rs.getString(3);
-	               String country =rs.getString(4);
-	               String calory = rs.getString(5);
-	               String ingre = rs.getString(6);
-	               String method = rs.getString(7);
-	               String image = rs.getString(8);
-	               
-	            //가져온값 설정한 MenuVO에 넣어주기
-	               menu = new menuvo(name, foodtype, country , calory , ingre ,method ,image);
-	            //가져온값 설정한 MenuVO를 ArrayList<menuvo> menulist로 넣어주기
-	               menulist.add(menu);
-	            }
-	            
-	            
-	            
-	         } catch (Exception e) {
-	            e.printStackTrace();
-	         } finally {
-	            DBclose();
-	         }
-	         //menulist값 리턴
-	         return menulist;
-
-	      }
-    
-    
-	}
-
-=======
-
-	public int deleteingri(String id, String ingri) {
+		ArrayList<viewrefVO> list = new ArrayList<viewrefVO>();
+		viewrefVO vo1 = null;
 		try {
 			DBconn();
-			String sql = "delete from test_refi where mb_id = ? and ingre_name=?";
+			String sql = "select main_photo from t_cooking";
+
 			psmt = conn.prepareStatement(sql);
+			rs = psmt.executeQuery();
 
-			psmt.setString(1, id);
-			psmt.setString(2, ingri);
+			while (rs.next()) {
 
-			cnt = psmt.executeUpdate();
+				String href = rs.getString(1);
+
+				vo1 = new viewrefVO(href);
+				list.add(vo1);
+			}
 
 		} catch (Exception e) {
 			e.printStackTrace();
 		} finally {
 			DBclose();
 		}
-		return cnt;
+		return list;
+
 	}
 
+	// 레시피 정보 메소드(이름, 재료, 요리방식, 칼로리)
+	public ArrayList<viewrefVO> recInfo() {
+		ArrayList<viewrefVO> list = new ArrayList<viewrefVO>();
+		viewrefVO vo1 = null;
+		try {
+			DBconn();
+			String sql = "select recipe_name, ingre_name from t_cooking";
+			// 칼로리랑 요리방식은 따로 긁ㅇ와
+			psmt = conn.prepareStatement(sql);
+			rs = psmt.executeQuery();
+
+			while (rs.next()) {
+
+				String rname = rs.getString(1);
+				String ingre = rs.getString(2);
+				String type = returnType(ingre); // 반환용 함수 콜
+				int calory = returnCalory(ingre); // 반환용 함수
+
+				vo1 = new viewrefVO(rname, ingre, calory, type);
+				list.add(vo1);
+			}
+
+		} catch (Exception e) {
+			e.printStackTrace();
+		} finally {
+			DBclose();
+		}
+		return list;
+	}
+
+	// --------------------------------------------
+	// 칼로리랑 type따로 반환하는
+	public int returnCalory(String ingre) {
+		int calory = 0;
+		try {
+			DBconn();
+			String sql = "select recipe_calory from t_recipe";
+			psmt = conn.prepareStatement(sql);
+			rs = psmt.executeQuery();
+			if (rs.next()) {
+				calory = rs.getInt(1);
+			}
+
+		} catch (Exception e) {
+			e.printStackTrace();
+		} finally {
+			DBclose();
+		}
+		return calory;
+	}
+
+	public String returnType(String ingre) {
+		String type = "";// =how_to_cook
+		try {
+			DBconn();
+			String sql = "select how_to_cook  from t_recipe";
+			psmt = conn.prepareStatement(sql);
+			rs = psmt.executeQuery();
+			if (rs.next()) {
+				type = rs.getString(1);
+			}
+
+		} catch (Exception e) {
+			e.printStackTrace();
+		} finally {
+			DBclose();
+		}
+		return type;
+	}
+
+	// --------------------------------------------
+
+	// 레시피 순서 메소드
+	public ArrayList<viewrefVO> recSequence() {
+		ArrayList<viewrefVO> list = new ArrayList<viewrefVO>();
+		viewrefVO vo1 = null;
+		try {
+			DBconn();
+			String sql = "select cooking_seq, main_photo from t_cooking";
+
+			psmt = conn.prepareStatement(sql);
+			rs = psmt.executeQuery();
+
+			while (rs.next()) {
+
+				String sequence = rs.getString(1);
+				String href = rs.getString(2);
+
+				vo1 = new viewrefVO(sequence, href);
+				list.add(vo1);
+			}
+
+		} catch (Exception e) {
+			e.printStackTrace();
+		} finally {
+			DBclose();
+		}
+		return list;
+	}
+
+	// <-------------------------------------추가
 	// 메뉴검색하는기능
-	public ArrayList<menuvo> selectmenu(String contry, String type, String kcal) {
+	public ArrayList<menuvo> selectmenu(String food_type, String how_to_cook, String kcal) {
 		ArrayList<menuvo> menulist = new ArrayList<menuvo>();
 		try {
 			DBconn();
 
-			String sql = "select * from recipe where  FOOD_TYPE =  ?  and RECIPE_COUNTRY = ? and RECIPE_CALORY<? ";
+			String sql = "select * from t_recipe where  how_to_cook =  ?  and food_type = ? and RECIPE_CALORY<? ";
 
 			psmt = conn.prepareStatement(sql);
-			psmt.setString(1, type);
-			psmt.setString(2, contry);
+			psmt.setString(1, how_to_cook);
+			psmt.setString(2, food_type);
 			psmt.setString(3, kcal);
 
 			rs = psmt.executeQuery();
 			while (rs.next()) {
 
 				String name = rs.getString(2);
-				String foodtype = rs.getString(3);
 				String country = rs.getString(4);
-				String calory = rs.getString(5);
-				String ingre = rs.getString(6);
-				String method = rs.getString(7);
-				String image = rs.getString(8);
+				String foodtype = rs.getString(5);
+				String calory = rs.getString(6);
+
+				searchMenu(name);
+				String ingre = temp_menu[0];// 쿠킹 ->레시피 이름넘겨주고 그에 해당하는 재료
+				String method = temp_menu[1];// 쿠킹
+				String image = temp_menu[2]; // 쿠킹
 
 				System.out.println("실행");
-				System.out.println("name= " + name);
-				System.out.println("foodtype= " + foodtype);
-				System.out.println("country= " + country);
-				System.out.println("calory= " + calory);
-				System.out.println("ingre= " + ingre);
-				System.out.println("method= " + method);
-				System.out.println("image= " + image);
+				System.out.println(name);
+				System.out.println(foodtype);
+				System.out.println(country);
+				System.out.println(calory);
+				System.out.println(ingre);
+				System.out.println(method);
+				System.out.println(image);
+
+				// 레시피이름, 조리방법, 분야, 칼로리, 재료, 조리방법, 이미지
 				menu = new menuvo(name, foodtype, country, calory, ingre, method, image);
+				// 여기서 오류발생
 				menulist.add(menu);
 			}
 
@@ -686,5 +625,29 @@ public class DAO {
 
 	}
 
-}
->>>>>>> branch 'master' of https://github.com/2022-SMHRD-KDT-AI-1/loveRecipe.git
+	public void searchMenu(String name) {
+		try {
+			DBconn();
+
+			String sql = "select ingre_name,cooking_method,main_photo from t_cooking where recipe_name=?";
+
+			psmt = conn.prepareStatement(sql);
+			psmt.setString(1, name);
+
+			rs = psmt.executeQuery();
+			if (rs.next()) {
+				temp_menu[0] = rs.getString(1);
+				temp_menu[1] = rs.getString(2);
+				temp_menu[2] = rs.getString(3);
+			}
+		}
+
+		catch (Exception e) {
+			e.printStackTrace();
+		} finally {
+			DBclose();
+		}
+
+	}
+
+} 
