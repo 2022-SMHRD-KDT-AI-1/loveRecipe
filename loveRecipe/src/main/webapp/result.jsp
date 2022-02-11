@@ -15,7 +15,7 @@
 <head>
 <meta charset="utf-8">
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
-<title>·¹½ÃÇÇ¸¦ ºÎÅ¹ÇØ &mdash; Free Website Template, Free HTML5
+<title>ë ˆì‹œí”¼ë¥¼ ë¶€íƒí•´ &mdash; Free Website Template, Free HTML5
 	Template by GetTemplates.co</title>
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <meta name="description"
@@ -94,7 +94,7 @@
 					<div class="col-sm-4 col-xs-12">
 						<div id="gtco-logo">
 							<a href="main.jsp"><em class="cursive-font"
-								style="font-size: 3rem">·¹½ÃÇÇ¸¦ ºÎÅ¹ÇØ</em></a>
+								style="font-size: 3rem">ë ˆì‹œí”¼ë¥¼ ë¶€íƒí•´</em></a>
 						</div>
 					</div>
 					<div class="col-xs-8 text-right menu-1">
@@ -102,8 +102,8 @@
 							<li><a href="menu.jsp">Menu</a></li>
 							<li class="has-dropdown"><a href="services.jsp">Services</a>
 								<ul class="dropdown">
-									<li><a href="refigator.jsp">³ª¸¸ÀÇ ³ÃÀå°í</a></li>
-									<li><a href="newrecipe.jsp">·¹½ÃÇÇµî·Ï</a></li>
+									<li><a href="refigator.jsp">ë‚˜ë§Œì˜ ëƒ‰ì¥ê³ </a></li>
+									<li><a href="newrecipe.jsp">ë ˆì‹œí”¼ë“±ë¡</a></li>
 								</ul></li>
 							<li><a href="feedback.jsp">feedback</a></li>
 							<%
@@ -142,17 +142,17 @@
 								<%
 									if (info.getId().equals("admin")) {
 								%>
-								<h1>°ü¸®ÀÚ´Ô È¯¿µÇÕ´Ï´Ù</h1>
+								<h1>ê´€ë¦¬ìë‹˜ í™˜ì˜í•©ë‹ˆë‹¤</h1>
 								<%
 									}
 								%>
 								<h1><%=info.getNickname()%>
-									´Ô ÀÌ °Ë»öÇÏ½Å °á°úÀÔ´Ï´Ù!
+									ë‹˜ ì´ ê²€ìƒ‰í•˜ì‹  ê²°ê³¼ì…ë‹ˆë‹¤!
 								</h1>
 								<%
 									} else {
 								%>
-								<h1>·Î±×ÀÎÀ» ÇÏ¼¼¿ä!</h1>
+								<h1>ë¡œê·¸ì¸ì„ í•˜ì„¸ìš”!</h1>
 								<%
 									}
 								%>
@@ -171,8 +171,8 @@
 			<div class="gtco-container">
 				<div class="row">
 					<div class="col-md-8 col-md-offset-2 text-center gtco-heading">
-						<h2 class="cursive-font primary-color"><%=menulist.size()%>°³ÀÇ
-							°á°ú°¡ °Ë»öµÇ¾ù½À´Ï´Ù.
+						<h2 class="cursive-font primary-color"><%=menulist.size()%>ê°œì˜
+							ê²°ê³¼ê°€ ê²€ìƒ‰ë˜ì—‡ìŠµë‹ˆë‹¤.
 						</h2>
 					</div>
 				</div>
@@ -182,12 +182,8 @@
 						for (int i = 0; i < menulist.size(); i++) {
 					%>
 					<div class="col-lg-4 col-md-4 col-sm-6">
-<<<<<<< HEAD
-						
-=======
 					
 						<div class="fh5co-card-item image-popup">
->>>>>>> branch 'master' of https://github.com/2022-SMHRD-KDT-AI-1/loveRecipe.git
 							<figure>
 								<div class="overlay">
 									<i class="ti-plus"></i>
@@ -196,85 +192,19 @@
 									class="img-responsive">
 							</figure>
 							<div class="fh5co-text">
-<<<<<<< HEAD
-								<h2>¿ä¸® ÀÌ¸§ : <%=menulist.get(i).getName()%></h2>
-								<h2>±¹°¡ ºĞ·ù : <%=menulist.get(i).getCountry()%></h2>
-								<h2>¹æ¹ı ºĞ·ù : <%=menulist.get(i).getFoodtype()%></h2>
-								<h2>ÃÑÄ®·Î¸® : <%=menulist.get(i).getCalory()%>kcal</h2>
-						
-								<h2><a href="viewrecipe.jsp">»ó¼¼Á¤º¸ È®ÀÎ</a></h2>
-						
-								
-
-						
-=======
 							
-								<h2>¿ä¸® ÀÌ¸§ : <%=menulist.get(i).getName()%></h2>
-								<h2>±¹°¡ ºĞ·ù : <%=menulist.get(i).getCountry()%></h2>
-								<h2>¹æ¹ı ºĞ·ù : <%=menulist.get(i).getFoodtype()%></h2>
+								<h2>ìš”ë¦¬ ì´ë¦„ : <%=menulist.get(i).getName()%></h2>
+								<h2>êµ­ê°€ ë¶„ë¥˜ : <%=menulist.get(i).getCountry()%></h2>
+								<h2>ë°©ë²• ë¶„ë¥˜ : <%=menulist.get(i).getFoodtype()%></h2>
 						
 								
 								
-								<h2>ÃÑÄ®·Î¸® : <%=menulist.get(i).getCalory()%>kcal</h2>
+								<h2>ì´ì¹¼ë¡œë¦¬ : <%=menulist.get(i).getCalory()%>kcal</h2>
 
 							
->>>>>>> branch 'master' of https://github.com/2022-SMHRD-KDT-AI-1/loveRecipe.git
 							</div>
-<<<<<<< HEAD
-						
-					</div>
-					<%
-						}
-					}
-					%>
-
-
-
-
-
-
-
-
-
-					<footer id="gtco-footer" role="contentinfo"
-						style="background-image: url(images/img_bg_1.jpg)"
-						data-stellar-background-ratio="0.5">
-						<div class="overlay"></div>
-						<div class="gtco-container">
-							<div class="row row-pb-md">
-
-
-
-
-								<div class="col-md-12 text-center">
-									<div class="gtco-widget">
-										<h3>Get Social</h3>
-										<ul class="gtco-social-icons">
-											<li><a href="#"><i class="icon-twitter"></i></a></li>
-											<li><a href="#"><i class="icon-facebook"></i></a></li>
-											<li><a href="#"><i class="icon-linkedin"></i></a></li>
-											<li><a href="#"><i class="icon-dribbble"></i></a></li>
-										</ul>
-									</div>
-								</div>
-
-							</div>
-
-
-
-=======
->>>>>>> branch 'master' of https://github.com/2022-SMHRD-KDT-AI-1/loveRecipe.git
 						</div>
-<<<<<<< HEAD
-					</footer>
-					<!-- </div> -->
-
-				</div>
-
-				<div class="gototop js-top">
-					<a href="#" class="js-gotop"><i class="icon-arrow-up"></i></a>
-=======
-					<a href="viewrecipen.jsp">·¹½ÃÇÇ º¸±â</a><br><br>
+					<a href="viewrecipen.jsp">ë ˆì‹œí”¼ ë³´ê¸°</a><br><br>
 					</div>
 					<%
 						}
@@ -319,16 +249,12 @@
 					</footer>
 					<!-- </div> -->
 
->>>>>>> branch 'master' of https://github.com/2022-SMHRD-KDT-AI-1/loveRecipe.git
 				</div>
 
-<<<<<<< HEAD
-=======
 				<div class="gototop js-top">
 					<a href="#" class="js-gotop"><i class="icon-arrow-up"></i></a>
 				</div>
 
->>>>>>> branch 'master' of https://github.com/2022-SMHRD-KDT-AI-1/loveRecipe.git
 				<!-- jQuery -->
 				<script src="js/jquery.min.js"></script>
 				<!-- jQuery Easing -->
