@@ -1,8 +1,5 @@
-<<<<<<< HEAD
-=======
 <%@page import="model.MemberVO"%>
 <%@page import="model.DAO"%>
->>>>>>> branch 'master' of https://github.com/2022-SMHRD-KDT-AI-1/loveRecipe.git
 <%@ page language="java" contentType="text/html; charset=utf-8"
 	pageEncoding="utf-8"%>
 <!DOCTYPE HTML>
@@ -43,11 +40,7 @@
 	href="https://fonts.googleapis.com/css2?family=Nanum+Brush+Script&display=swap"
 	rel="stylesheet">
 <link href="https://fonts.googleapis.com/icon?family=Material+Icons"
-<<<<<<< HEAD
-      rel="stylesheet">
-=======
 	rel="stylesheet">
->>>>>>> branch 'master' of https://github.com/2022-SMHRD-KDT-AI-1/loveRecipe.git
 
 <!-- Animate.css -->
 <link rel="stylesheet" href="css/animate.css">
@@ -109,13 +102,6 @@
 							<li class="has-dropdown"><a href="services.jsp">Services</a>
 								<ul class="dropdown">
 									<li><a href="refigator.jsp">나만의 냉장고</a></li>
-<<<<<<< HEAD
-									<li><a href="mealplan.jsp">식단짜기</a></li>
-									<li><a href="newrecipe.jsp">레시피등록</a></li>
-								</ul></li>
-							<li><a href="feedback.jsp">feedback</a></li>
-							<li class="btn-cta"><a href="main.jsp"><span>login</span></a></li>
-=======
 									<li><a href="newrecipe.jsp">레시피등록</a></li>
 								</ul></li>
 							<li><a href="feedback.jsp">feedback</a></li>
@@ -130,13 +116,10 @@
 							<%
 								}
 							%>
->>>>>>> branch 'master' of https://github.com/2022-SMHRD-KDT-AI-1/loveRecipe.git
 						</ul>
 					</div>
 				</div>
 
-<<<<<<< HEAD
-=======
 			</div>
 		</nav>
 
@@ -257,33 +240,12 @@
 					<h1 class="cursive-font">&ldquo;음식에 대한 사랑처럼 진실된 사랑은 없다.&rdquo;</h1>
 					<p>&mdash; 조지 버나드 쇼</p>
 				</div>
->>>>>>> branch 'master' of https://github.com/2022-SMHRD-KDT-AI-1/loveRecipe.git
 			</div>
-		</nav>
-
-<<<<<<< HEAD
-		<header id="gtco-header" class="gtco-cover gtco-cover-md"
-			role="banner" style="background-image: url(images/main.jpg)"
-			data-stellar-background-ratio="0.5">
-			<div class="overlay"></div>
-			<div class="gtco-container">
-				<div class="row">
-					<div class="col-md-12 col-md-offset-0 text-left">
-=======
->>>>>>> branch 'master' of https://github.com/2022-SMHRD-KDT-AI-1/loveRecipe.git
+		</div>
+	</div>
 
 
-<<<<<<< HEAD
-						<div class="row row-mt-15em">
-							<div class="col-md-7 mt-text animate-box"
-								data-animate-effect="fadeInUp">
-								<h1>find your recipe</h1>
-							</div>
-							<div class="col-md-5 col-md-push-1 animate-box"
-								data-animate-effect="fadeInRight">
-								<div class="form-wrap">
-									<div class="tab">
-=======
+
 
 
 	<footer id="gtco-footer" role="contentinfo"
@@ -292,112 +254,10 @@
 		<div class="overlay"></div>
 		<div class="gtco-container">
 			<div class="row row-pb-md">
->>>>>>> branch 'master' of https://github.com/2022-SMHRD-KDT-AI-1/loveRecipe.git
-
-<<<<<<< HEAD
-										<div class="tab-content">
-											<div class="tab-content-inner active" data-content="signup">
-												<h3 class="cursive-font">search</h3>
-												<form action="menuservice">
-=======
->>>>>>> branch 'master' of https://github.com/2022-SMHRD-KDT-AI-1/loveRecipe.git
-
-
-
-<<<<<<< HEAD
-													<div class="row form-group">
-														<label>나라별레시피</label><br> <label><input
-															type="radio" name="contry" value="한식">한식</label> <label><input
-															type="radio" name="contry" value="양식">양식</label> <label><input
-															type="radio" name="contry" value="중식">중식</label> <label><input
-															type="radio" name="contry" value="일식">일식</label> <label><input
-															type="radio" name="contry" value="동남아">동남아</label> <label><input
-															type="radio" name="contry" value="이탈리아">이탈리아</label> <label><input
-															type="radio" name="contry" value="멕시코">멕시코</label> <label><input
-															type="radio" name="contry" value="퓨전">퓨전</label> <label><input
-															type="radio" name="contry" value="날씨">날씨</label>
-													</div>
-
-													<div class="row form-group">
-                                             <label>종류별레시피</label><br>
-                                                <label><input type="radio" name="type" value="구이">구이</label>
-                                             <label><input type="radio" name="type" value="국">국</label>
-                                             <label><input type="radio" name="type" value="그라탕,리조또">그라탕/리조또</label>
-                                             <label><input type="radio" name="type" value="나물,생채,샐러드">나물/생채/샐러드</label>
-                                             <label><input type="radio" name="type" value="떡,한과">떡,한과</label>
-                                             <label><input type="radio" name="type" value="도시락,간식">도시락/간식</label>
-                                             <label><input type="radio" name="type" value="만두,면류">만두/면류</label>
-                                             <label><input type="radio" name="type" value="밑반찬,김치">밑반찬/김치</label>
-                                             
-                                             <label><input type="radio" name="type" value="밥,죽,스프">밥/죽/스프</label>
-                                             <label><input type="radio" name="type" value="볶음">볶음</label>
-                                             <label><input type="radio" name="type" value="부침">부침</label>
-                                             <label><input type="radio" name="type" value="빵,과자">빵/과자</label>
-                                             <label><input type="radio" name="type" value="샌드위치,햄버거">샌드위치/햄버거</label>
-                                             
-                                             <label><input type="radio" name="type" value="양념장">양념장</label>
-                                             <label><input type="radio" name="type" value="양식">양식</label>
-                                             <label><input type="radio" name="type" value="음료">음료</label>
-                                             
-                                             <label><input type="radio" name="type" value="조림">조림</label>
-                                             <label><input type="radio" name="type" value="찌개,전골,스튜">찌개/전골/스튜</label>
-                                             <label><input type="radio" name="type" value="찜">찜</label>
-                                             <label><input type="radio" name="type" value="피자">피자</label>
-                                             <label><input type="radio" name="type" value="후식">후식</label>
-                                             <label><input type="radio" name="type" value="튀김,커틀릿">튀김/커틀릿</label>
-                                    </div>
-
-<div class="gtco-container">
-
-
-													<div class="row form-group">
-
-														<label>최대 칼로리 지정</label> <input type="number" name="kcal"
-															class="form-control" placeholder="원하시는 칼로리의 최대값">
-													</div>
-
-
-
-													<div class="row form-group">
-														<div class="col-md-12">
-															<input type="submit" class="btn btn-primary btn-block"
-																value="search">
-
-														</div>
-
-													</div>
-
-
-												</form>
-											</div>
-</div>
-
-										</div>
-									</div>
-								</div>
-							</div>
-						</div>
-
-
-					</div>
-				</div>
-			</div>
-		</header>
 
 
 
 
-		<div class="gtco-cover gtco-cover-sm"
-			style="background-image: url(images/img_bg_1.jpg)"
-			data-stellar-background-ratio="0.5">
-			<div class="overlay"></div>
-			<div class="gtco-container text-center">
-				<div class="display-t">
-					<div class="display-tc">
-						<h1 class="cursive-font">&ldquo;음식에 대한 사랑처럼 진실된 사랑은
-							없다.&rdquo;</h1>
-						<p>&mdash; 조지 버나드 쇼</p>
-=======
 				<div class="col-md-12 text-center">
 					<div class="gtco-widget">
 						<h3>Get Social</h3>
@@ -407,7 +267,6 @@
 							<li><a href="#"><i class="icon-linkedin"></i></a></li>
 							<li><a href="#"><i class="icon-dribbble"></i></a></li>
 						</ul>
->>>>>>> branch 'master' of https://github.com/2022-SMHRD-KDT-AI-1/loveRecipe.git
 					</div>
 				</div>
 
@@ -426,13 +285,8 @@
 	</div>
 
 
-<<<<<<< HEAD
-<div class="timer"></div>
-<script src="js/timerMain.js" type="module"></script>
-=======
 	<div class="timer"></div>
 	<script src="js/timerMain.js" type="module"></script>
->>>>>>> branch 'master' of https://github.com/2022-SMHRD-KDT-AI-1/loveRecipe.git
 
 
 	<!-- jQuery -->
